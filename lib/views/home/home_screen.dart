@@ -594,7 +594,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                       isFullWidth: false,
                                       isOutlined: false,
                                       buttonTitle: Constants.contactUs.toUpperCase(),
-                                      onPressed: () async {},
+                                      onPressed: () async {
+                                        await Scrollable.ensureVisible(contactUsKey.currentContext!,
+                                            duration: const Duration(milliseconds: 1000),
+                                            curve: Curves.fastEaseInToSlowEaseOut);
+                                      },
                                       buttonTitleStyle: TextStyle(
                                         fontSize: 16,
                                         color: Colors.white,
