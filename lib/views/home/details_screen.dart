@@ -67,306 +67,323 @@ class _DetailsScreenState extends ConsumerState<DetailsScreen> {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          child: SingleChildScrollView(
-            child: (ResponsiveBreakpoints.of(context).screenWidth < 770)
-                ? Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
+          child: (ResponsiveBreakpoints.of(context).screenWidth < 770)
+              ? Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.symmetric(
+                          horizontal:
+                              ResponsiveBreakpoints.of(context).largerOrEqualTo(DESKTOP) ? 50 : 15,
+                          vertical: 10),
+                      child: Image.asset(
+                        logoImageDark,
+                        height: (ResponsiveBreakpoints.of(context).screenWidth < 750) ? 50 : 60,
+                        width: (ResponsiveBreakpoints.of(context).screenWidth < 750) ? 100 : 132,
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
                         padding: EdgeInsets.symmetric(horizontal: 50),
-                        child: Column(
-                          children: [
-                            Container(
-                              child: Row(
-                                children: [
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: Container(
-                                      height: 40,
-                                      width: 40,
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: Colors.white,
-                                      ),
-                                      child: Center(
-                                        child: Icon(Icons.arrow_back),
+                        child: SingleChildScrollView(
+                          child: Column(
+                            children: [
+                              Container(
+                                child: Row(
+                                  children: [
+                                    InkWell(
+                                      onTap: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child: Container(
+                                        height: 40,
+                                        width: 40,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Colors.white,
+                                        ),
+                                        child: Center(
+                                          child: Icon(Icons.arrow_back),
+                                        ),
                                       ),
                                     ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "Details",
+                                      textAlign: TextAlign.left,
+                                      style: GoogleFonts.poppins(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w600,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              GradientText(
+                                "Why Every Startup Needs Custom Software".toUpperCase(),
+                                style: GoogleFonts.anton(
+                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 770)
+                                      ? 30
+                                      : 50,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                                colors: [
+                                  gradientColor1,
+                                  gradientColor2,
+                                  gradientColor3,
+                                ],
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(vertical: 30),
+                                child: Image.asset(projectImage),
+                              ),
+                              Text(
+                                "In today's fast-paced digital age, startups are constantly looking for ways to differentiate themselves, streamline operations, and offer unique value to their customers. One of the most effective ways to achieve these goals is through the use of custom software. While off-the-shelf software can offer generic solutions, custom software is tailored to meet the specific needs of a business. Here's why every startup should consider investing in custom software:",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.poppins(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              titleDescriptionWidget(
+                                title: "1. Tailored Solutions for Unique Needs",
+                                description:
+                                    "Every startup has its own unique set of challenges and requirements. Custom software is designed to address these specific needs, ensuring that the software aligns perfectly with the business model, goals, and processes. This tailored approach can lead to increased efficiency and productivity.",
+                              ),
+                              titleDescriptionWidget(
+                                title: "2. Scalability",
+                                description:
+                                    "Startups are dynamic entities that grow and evolve rapidly. Custom software can be designed with scalability in mind, allowing for easy modifications and updates as the business grows. This flexibility ensures that the software remains relevant and useful throughout the startup's lifecycle.",
+                              ),
+                              titleDescriptionWidget(
+                                title: "3. Competitive Advantage",
+                                description:
+                                    "In a saturated market, differentiation is key. Custom software can provide startups with unique features and capabilities that competitors might not have. This can be a significant advantage when trying to establish a foothold in the market.",
+                              ),
+                              titleDescriptionWidget(
+                                title: "4. Integration with Existing Systems",
+                                description:
+                                    "Off-the-shelf software might not always integrate seamlessly with a startup's existing systems or third-party applications. Custom software can be designed to ensure smooth integration, reducing friction and inefficiencies.",
+                              ),
+                              titleDescriptionWidget(
+                                title: "5. Cost-Effective in the Long Run",
+                                description:
+                                    "While the initial investment in custom software might be higher than purchasing off-the-shelf solutions, the long-term benefits often outweigh the costs. Custom software can reduce the need for multiple software licenses, eliminate the costs associated with workarounds or additional integrations, and decrease training time for employees.",
+                              ),
+                              titleDescriptionWidget(
+                                title: "6. Enhanced Security",
+                                description:
+                                    "Custom software can be designed with a startup's specific security needs in mind. This can be especially important for startups dealing with sensitive data or operating in regulated industries. Custom-built solutions can offer enhanced security features tailored to the startup's requirements.",
+                              ),
+                              titleDescriptionWidget(
+                                title: "7. Improved Customer Experience",
+                                description:
+                                    "By designing software that aligns with a startup's operations and goals, it's possible to offer a better experience for customers. Whether it's through faster response times, personalized interactions, or unique features, custom software can enhance the overall customer journey.",
+                              ),
+                              titleDescriptionWidget(
+                                title: "8. Ownership and Control",
+                                description:
+                                    "Owning the rights to custom software gives startups full control over its features, updates, and modifications. This level of control can be crucial for startups that want to pivot, adapt, or introduce new features quickly.",
+                              ),
+                              titleDescriptionWidget(
+                                title: "9. Support and Maintenance",
+                                description:
+                                    "With custom software, startups often have direct access to the developers or the development team. This can lead to faster response times, better support, and more efficient troubleshooting compared to dealing with large software vendors.",
+                              ),
+                              titleDescriptionWidget(
+                                title: "10. Future-Proofing the Business",
+                                description:
+                                    "The digital landscape is constantly evolving. By investing in custom software, startups can ensure that they have a foundation that can adapt and evolve with technological advancements and market demands.",
+                              ),
+                              SizedBox(
+                                height: 34,
+                              ),
+                              titleDescriptionWidget(
+                                title: "Conclusion",
+                                description:
+                                    """While the initial investment in custom software might seem daunting, the long-term benefits are undeniable. From tailored solutions and scalability to competitive advantages and enhanced security, custom software can provide startups with the tools they need to succeed in today's competitive market. As the saying goes, "You have to spend money to make money," and in the case of custom software, the investment can lead to significant returns.""",
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                )
+              : Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.symmetric(
+                          horizontal:
+                              ResponsiveBreakpoints.of(context).largerOrEqualTo(DESKTOP) ? 50 : 15,
+                          vertical: 10),
+                      child: Image.asset(
+                        logoImageDark,
+                        height: (ResponsiveBreakpoints.of(context).screenWidth < 750) ? 50 : 60,
+                        width: (ResponsiveBreakpoints.of(context).screenWidth < 750) ? 100 : 132,
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 100),
+                        child: SingleChildScrollView(
+                          child: Column(
+                            children: [
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          child: Row(
+                                            children: [
+                                              InkWell(
+                                                onTap: () {
+                                                  Navigator.pop(context);
+                                                },
+                                                child: Container(
+                                                  height: 40,
+                                                  width: 40,
+                                                  decoration: BoxDecoration(
+                                                    shape: BoxShape.circle,
+                                                    color: Colors.white,
+                                                  ),
+                                                  child: Center(
+                                                    child: Icon(Icons.arrow_back),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 20,
+                                              ),
+                                              Text(
+                                                "Details",
+                                                textAlign: TextAlign.left,
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.w600,
+                                                  color: Colors.black,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        GradientText(
+                                          "Why Every Startup Needs Custom Software".toUpperCase(),
+                                          style: GoogleFonts.anton(
+                                            fontSize: 50,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                          colors: [
+                                            gradientColor1,
+                                            gradientColor2,
+                                            gradientColor3,
+                                          ],
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.symmetric(vertical: 30),
+                                          child: Image.asset(projectImage),
+                                        ),
+                                        Text(
+                                          "In today's fast-paced digital age, startups are constantly looking for ways to differentiate themselves, streamline operations, and offer unique value to their customers. One of the most effective ways to achieve these goals is through the use of custom software. While off-the-shelf software can offer generic solutions, custom software is tailored to meet the specific needs of a business. Here's why every startup should consider investing in custom software:",
+                                          textAlign: TextAlign.left,
+                                          style: GoogleFonts.poppins(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w400,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        titleDescriptionWidget(
+                                          title: "1. Tailored Solutions for Unique Needs",
+                                          description:
+                                              "Every startup has its own unique set of challenges and requirements. Custom software is designed to address these specific needs, ensuring that the software aligns perfectly with the business model, goals, and processes. This tailored approach can lead to increased efficiency and productivity.",
+                                        ),
+                                        titleDescriptionWidget(
+                                          title: "2. Scalability",
+                                          description:
+                                              "Startups are dynamic entities that grow and evolve rapidly. Custom software can be designed with scalability in mind, allowing for easy modifications and updates as the business grows. This flexibility ensures that the software remains relevant and useful throughout the startup's lifecycle.",
+                                        ),
+                                        titleDescriptionWidget(
+                                          title: "3. Competitive Advantage",
+                                          description:
+                                              "In a saturated market, differentiation is key. Custom software can provide startups with unique features and capabilities that competitors might not have. This can be a significant advantage when trying to establish a foothold in the market.",
+                                        ),
+                                        titleDescriptionWidget(
+                                          title: "4. Integration with Existing Systems",
+                                          description:
+                                              "Off-the-shelf software might not always integrate seamlessly with a startup's existing systems or third-party applications. Custom software can be designed to ensure smooth integration, reducing friction and inefficiencies.",
+                                        ),
+                                        titleDescriptionWidget(
+                                          title: "5. Cost-Effective in the Long Run",
+                                          description:
+                                              "While the initial investment in custom software might be higher than purchasing off-the-shelf solutions, the long-term benefits often outweigh the costs. Custom software can reduce the need for multiple software licenses, eliminate the costs associated with workarounds or additional integrations, and decrease training time for employees.",
+                                        ),
+                                        titleDescriptionWidget(
+                                          title: "6. Enhanced Security",
+                                          description:
+                                              "Custom software can be designed with a startup's specific security needs in mind. This can be especially important for startups dealing with sensitive data or operating in regulated industries. Custom-built solutions can offer enhanced security features tailored to the startup's requirements.",
+                                        ),
+                                        titleDescriptionWidget(
+                                          title: "7. Improved Customer Experience",
+                                          description:
+                                              "By designing software that aligns with a startup's operations and goals, it's possible to offer a better experience for customers. Whether it's through faster response times, personalized interactions, or unique features, custom software can enhance the overall customer journey.",
+                                        ),
+                                        titleDescriptionWidget(
+                                          title: "8. Ownership and Control",
+                                          description:
+                                              "Owning the rights to custom software gives startups full control over its features, updates, and modifications. This level of control can be crucial for startups that want to pivot, adapt, or introduce new features quickly.",
+                                        ),
+                                        titleDescriptionWidget(
+                                          title: "9. Support and Maintenance",
+                                          description:
+                                              "With custom software, startups often have direct access to the developers or the development team. This can lead to faster response times, better support, and more efficient troubleshooting compared to dealing with large software vendors.",
+                                        ),
+                                        titleDescriptionWidget(
+                                          title: "10. Future-Proofing the Business",
+                                          description:
+                                              "The digital landscape is constantly evolving. By investing in custom software, startups can ensure that they have a foundation that can adapt and evolve with technological advancements and market demands.",
+                                        ),
+                                        SizedBox(
+                                          height: 34,
+                                        ),
+                                        titleDescriptionWidget(
+                                          title: "Conclusion",
+                                          description:
+                                              """While the initial investment in custom software might seem daunting, the long-term benefits are undeniable. From tailored solutions and scalability to competitive advantages and enhanced security, custom software can provide startups with the tools they need to succeed in today's competitive market. As the saying goes, "You have to spend money to make money," and in the case of custom software, the investment can lead to significant returns.""",
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                  SizedBox(
-                                    width: 20,
-                                  ),
-                                  Text(
-                                    "Details",
-                                    textAlign: TextAlign.left,
-                                    style: GoogleFonts.poppins(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.black,
+                                  Expanded(
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: [
+                                        Image.asset(detailsPageImage),
+                                      ],
                                     ),
                                   ),
                                 ],
                               ),
-                            ),
-                            GradientText(
-                              "Why Every Startup Needs Custom Software".toUpperCase(),
-                              style: GoogleFonts.anton(
-                                fontSize:
-                                    (ResponsiveBreakpoints.of(context).screenWidth < 770) ? 30 : 50,
-                                fontWeight: FontWeight.w600,
-                              ),
-                              colors: [
-                                gradientColor1,
-                                gradientColor2,
-                                gradientColor3,
-                              ],
-                            ),
-                            Padding(
-                              padding: EdgeInsets.symmetric(vertical: 30),
-                              child: Image.asset(projectImage),
-                            ),
-                            Text(
-                              "In today's fast-paced digital age, startups are constantly looking for ways to differentiate themselves, streamline operations, and offer unique value to their customers. One of the most effective ways to achieve these goals is through the use of custom software. While off-the-shelf software can offer generic solutions, custom software is tailored to meet the specific needs of a business. Here's why every startup should consider investing in custom software:",
-                              textAlign: TextAlign.left,
-                              style: GoogleFonts.poppins(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            titleDescriptionWidget(
-                              title: "1. Tailored Solutions for Unique Needs",
-                              description:
-                                  "Every startup has its own unique set of challenges and requirements. Custom software is designed to address these specific needs, ensuring that the software aligns perfectly with the business model, goals, and processes. This tailored approach can lead to increased efficiency and productivity.",
-                            ),
-                            titleDescriptionWidget(
-                              title: "2. Scalability",
-                              description:
-                                  "Startups are dynamic entities that grow and evolve rapidly. Custom software can be designed with scalability in mind, allowing for easy modifications and updates as the business grows. This flexibility ensures that the software remains relevant and useful throughout the startup's lifecycle.",
-                            ),
-                            titleDescriptionWidget(
-                              title: "3. Competitive Advantage",
-                              description:
-                                  "In a saturated market, differentiation is key. Custom software can provide startups with unique features and capabilities that competitors might not have. This can be a significant advantage when trying to establish a foothold in the market.",
-                            ),
-                            titleDescriptionWidget(
-                              title: "4. Integration with Existing Systems",
-                              description:
-                                  "Off-the-shelf software might not always integrate seamlessly with a startup's existing systems or third-party applications. Custom software can be designed to ensure smooth integration, reducing friction and inefficiencies.",
-                            ),
-                            titleDescriptionWidget(
-                              title: "5. Cost-Effective in the Long Run",
-                              description:
-                                  "While the initial investment in custom software might be higher than purchasing off-the-shelf solutions, the long-term benefits often outweigh the costs. Custom software can reduce the need for multiple software licenses, eliminate the costs associated with workarounds or additional integrations, and decrease training time for employees.",
-                            ),
-                            titleDescriptionWidget(
-                              title: "6. Enhanced Security",
-                              description:
-                                  "Custom software can be designed with a startup's specific security needs in mind. This can be especially important for startups dealing with sensitive data or operating in regulated industries. Custom-built solutions can offer enhanced security features tailored to the startup's requirements.",
-                            ),
-                            titleDescriptionWidget(
-                              title: "7. Improved Customer Experience",
-                              description:
-                                  "By designing software that aligns with a startup's operations and goals, it's possible to offer a better experience for customers. Whether it's through faster response times, personalized interactions, or unique features, custom software can enhance the overall customer journey.",
-                            ),
-                            titleDescriptionWidget(
-                              title: "8. Ownership and Control",
-                              description:
-                                  "Owning the rights to custom software gives startups full control over its features, updates, and modifications. This level of control can be crucial for startups that want to pivot, adapt, or introduce new features quickly.",
-                            ),
-                            titleDescriptionWidget(
-                              title: "9. Support and Maintenance",
-                              description:
-                                  "With custom software, startups often have direct access to the developers or the development team. This can lead to faster response times, better support, and more efficient troubleshooting compared to dealing with large software vendors.",
-                            ),
-                            titleDescriptionWidget(
-                              title: "10. Future-Proofing the Business",
-                              description:
-                                  "The digital landscape is constantly evolving. By investing in custom software, startups can ensure that they have a foundation that can adapt and evolve with technological advancements and market demands.",
-                            ),
-                            SizedBox(
-                              height: 34,
-                            ),
-                            titleDescriptionWidget(
-                              title: "Conclusion",
-                              description:
-                                  """While the initial investment in custom software might seem daunting, the long-term benefits are undeniable. From tailored solutions and scalability to competitive advantages and enhanced security, custom software can provide startups with the tools they need to succeed in today's competitive market. As the saying goes, "You have to spend money to make money," and in the case of custom software, the investment can lead to significant returns.""",
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
-                    ],
-                  )
-                : Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: ResponsiveBreakpoints.of(context).largerOrEqualTo(DESKTOP)
-                                ? 50
-                                : 15,
-                            vertical: 10),
-                        child: Image.asset(
-                          logoImageDark,
-                          height: (ResponsiveBreakpoints.of(context).screenWidth < 750) ? 50 : 60,
-                          width: (ResponsiveBreakpoints.of(context).screenWidth < 750) ? 100 : 132,
-                        ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.symmetric(horizontal: 100),
-                        child: Column(
-                          children: [
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        child: Row(
-                                          children: [
-                                            InkWell(
-                                              onTap: () {
-                                                Navigator.pop(context);
-                                              },
-                                              child: Container(
-                                                height: 40,
-                                                width: 40,
-                                                decoration: BoxDecoration(
-                                                  shape: BoxShape.circle,
-                                                  color: Colors.white,
-                                                ),
-                                                child: Center(
-                                                  child: Icon(Icons.arrow_back),
-                                                ),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              width: 20,
-                                            ),
-                                            Text(
-                                              "Details",
-                                              textAlign: TextAlign.left,
-                                              style: GoogleFonts.poppins(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.w600,
-                                                color: Colors.black,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      GradientText(
-                                        "Why Every Startup Needs Custom Software".toUpperCase(),
-                                        style: GoogleFonts.anton(
-                                          fontSize: 50,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                        colors: [
-                                          gradientColor1,
-                                          gradientColor2,
-                                          gradientColor3,
-                                        ],
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.symmetric(vertical: 30),
-                                        child: Image.asset(projectImage),
-                                      ),
-                                      Text(
-                                        "In today's fast-paced digital age, startups are constantly looking for ways to differentiate themselves, streamline operations, and offer unique value to their customers. One of the most effective ways to achieve these goals is through the use of custom software. While off-the-shelf software can offer generic solutions, custom software is tailored to meet the specific needs of a business. Here's why every startup should consider investing in custom software:",
-                                        textAlign: TextAlign.left,
-                                        style: GoogleFonts.poppins(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      titleDescriptionWidget(
-                                        title: "1. Tailored Solutions for Unique Needs",
-                                        description:
-                                            "Every startup has its own unique set of challenges and requirements. Custom software is designed to address these specific needs, ensuring that the software aligns perfectly with the business model, goals, and processes. This tailored approach can lead to increased efficiency and productivity.",
-                                      ),
-                                      titleDescriptionWidget(
-                                        title: "2. Scalability",
-                                        description:
-                                            "Startups are dynamic entities that grow and evolve rapidly. Custom software can be designed with scalability in mind, allowing for easy modifications and updates as the business grows. This flexibility ensures that the software remains relevant and useful throughout the startup's lifecycle.",
-                                      ),
-                                      titleDescriptionWidget(
-                                        title: "3. Competitive Advantage",
-                                        description:
-                                            "In a saturated market, differentiation is key. Custom software can provide startups with unique features and capabilities that competitors might not have. This can be a significant advantage when trying to establish a foothold in the market.",
-                                      ),
-                                      titleDescriptionWidget(
-                                        title: "4. Integration with Existing Systems",
-                                        description:
-                                            "Off-the-shelf software might not always integrate seamlessly with a startup's existing systems or third-party applications. Custom software can be designed to ensure smooth integration, reducing friction and inefficiencies.",
-                                      ),
-                                      titleDescriptionWidget(
-                                        title: "5. Cost-Effective in the Long Run",
-                                        description:
-                                            "While the initial investment in custom software might be higher than purchasing off-the-shelf solutions, the long-term benefits often outweigh the costs. Custom software can reduce the need for multiple software licenses, eliminate the costs associated with workarounds or additional integrations, and decrease training time for employees.",
-                                      ),
-                                      titleDescriptionWidget(
-                                        title: "6. Enhanced Security",
-                                        description:
-                                            "Custom software can be designed with a startup's specific security needs in mind. This can be especially important for startups dealing with sensitive data or operating in regulated industries. Custom-built solutions can offer enhanced security features tailored to the startup's requirements.",
-                                      ),
-                                      titleDescriptionWidget(
-                                        title: "7. Improved Customer Experience",
-                                        description:
-                                            "By designing software that aligns with a startup's operations and goals, it's possible to offer a better experience for customers. Whether it's through faster response times, personalized interactions, or unique features, custom software can enhance the overall customer journey.",
-                                      ),
-                                      titleDescriptionWidget(
-                                        title: "8. Ownership and Control",
-                                        description:
-                                            "Owning the rights to custom software gives startups full control over its features, updates, and modifications. This level of control can be crucial for startups that want to pivot, adapt, or introduce new features quickly.",
-                                      ),
-                                      titleDescriptionWidget(
-                                        title: "9. Support and Maintenance",
-                                        description:
-                                            "With custom software, startups often have direct access to the developers or the development team. This can lead to faster response times, better support, and more efficient troubleshooting compared to dealing with large software vendors.",
-                                      ),
-                                      titleDescriptionWidget(
-                                        title: "10. Future-Proofing the Business",
-                                        description:
-                                            "The digital landscape is constantly evolving. By investing in custom software, startups can ensure that they have a foundation that can adapt and evolve with technological advancements and market demands.",
-                                      ),
-                                      SizedBox(
-                                        height: 34,
-                                      ),
-                                      titleDescriptionWidget(
-                                        title: "Conclusion",
-                                        description:
-                                            """While the initial investment in custom software might seem daunting, the long-term benefits are undeniable. From tailored solutions and scalability to competitive advantages and enhanced security, custom software can provide startups with the tools they need to succeed in today's competitive market. As the saying goes, "You have to spend money to make money," and in the case of custom software, the investment can lead to significant returns.""",
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Image.asset(detailsPageImage),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-          ),
+                    ),
+                  ],
+                ),
         ),
       ),
     );
