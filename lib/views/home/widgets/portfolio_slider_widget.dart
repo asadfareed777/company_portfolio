@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_base/utils/image_assets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -118,15 +119,19 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                                 ),
                                 Visibility(
                                   visible: isHovered,
-                                  child: Text(
-                                    (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                        ? "Lorem ipsum dolor sit amet, consec"
-                                        : "Lorem ipsum dolor sit amet, consec tetur adipiscing elit.",
-                                    textAlign: TextAlign.left,
-                                    style: GoogleFonts.poppins(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w300,
-                                      color: Colors.white.withOpacity(0.75),
+                                  child: FadeInUp(
+                                    from: 10,
+                                    duration: Duration(milliseconds: 500),
+                                    child: Text(
+                                      (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                          ? "Lorem ipsum dolor sit amet, consec"
+                                          : "Lorem ipsum dolor sit amet, consec tetur adipiscing elit.",
+                                      textAlign: TextAlign.left,
+                                      style: GoogleFonts.poppins(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w300,
+                                        color: Colors.white.withOpacity(0.75),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -222,15 +227,19 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                           ),
                           Visibility(
                             visible: isHovered,
-                            child: Text(
-                              (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                  ? "Lorem ipsum dolor sit amet, consec"
-                                  : "Lorem ipsum dolor sit amet, consec tetur adipiscing elit.",
-                              textAlign: TextAlign.left,
-                              style: GoogleFonts.poppins(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white.withOpacity(0.75),
+                            child: FadeInUp(
+                              from: 10,
+                              duration: Duration(milliseconds: 500),
+                              child: Text(
+                                (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                    ? "Lorem ipsum dolor sit amet, consec"
+                                    : "Lorem ipsum dolor sit amet, consec tetur adipiscing elit.",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.poppins(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.white.withOpacity(0.75),
+                                ),
                               ),
                             ),
                           ),

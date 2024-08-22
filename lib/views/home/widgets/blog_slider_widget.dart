@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_base/route/routes.dart';
 import 'package:flutter_base/utils/image_assets.dart';
@@ -16,15 +17,24 @@ class BlogSliderWidget extends StatefulWidget {
   State<BlogSliderWidget> createState() => _BlogSliderWidgetState();
 }
 
-class _BlogSliderWidgetState extends State<BlogSliderWidget> {
+class _BlogSliderWidgetState extends State<BlogSliderWidget> with SingleTickerProviderStateMixin {
   bool isHovered = false;
+  late AnimationController animateController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    animateController = AnimationController(vsync: this);
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onHover: (value) {
-        print(value);
+      onHover: (value) async {
         isHovered = value;
         setState(() {});
+        await animateController.forward();
       },
       onTap: () {
         Navigator.pushNamed(context, Routes.DETAILS);
@@ -77,9 +87,19 @@ class _BlogSliderWidgetState extends State<BlogSliderWidget> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Container(
+                          AnimatedContainer(
+                            height: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
+                                ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                            ? 614.h
+                                            : 331
+                                        : 289
+                                    : 398
+                                : 404,
                             width: MediaQuery.of(context).size.width,
                             padding: EdgeInsets.all(30),
+                            duration: Duration(seconds: 1),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -111,36 +131,45 @@ class _BlogSliderWidgetState extends State<BlogSliderWidget> {
                                 ),
                                 Visibility(
                                   visible: isHovered,
-                                  child: SizedBox(
-                                    height: (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                        ? 5
-                                        : 15,
+                                  child: FadeInUp(
+                                    child: SizedBox(
+                                      height: (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                          ? 5
+                                          : 15,
+                                    ),
                                   ),
                                 ),
+                                // isHovered
+                                //     ?
                                 Visibility(
                                   visible: isHovered,
-                                  child: CustomizableTextButton(
-                                    prefixButtonIcon: null,
-                                    suffixButtonIcon: null,
-                                    isFullWidth: false,
-                                    isOutlined: true,
-                                    buttonBorderColor: Colors.white30,
-                                    buttonTitle: "Read More".toUpperCase(),
-                                    onPressed: () async {},
-                                    buttonTitleStyle: TextStyle(
-                                      fontSize:
-                                          (ResponsiveBreakpoints.of(context).screenWidth < 750)
-                                              ? 12
-                                              : 14,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500,
+                                  child: FadeInUp(
+                                    from: 10,
+                                    duration: Duration(milliseconds: 500),
+                                    child: CustomizableTextButton(
+                                      prefixButtonIcon: null,
+                                      suffixButtonIcon: null,
+                                      isFullWidth: false,
+                                      isOutlined: true,
+                                      buttonBorderColor: Colors.white30,
+                                      buttonTitle: "Read More".toUpperCase(),
+                                      onPressed: () async {},
+                                      buttonTitleStyle: TextStyle(
+                                        fontSize:
+                                            (ResponsiveBreakpoints.of(context).screenWidth < 750)
+                                                ? 12
+                                                : 14,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                      buttonBorderRadius: 6,
+                                      buttonColor: Colors.transparent,
+                                      horizontalPadding: 30,
+                                      verticalPadding: 8,
                                     ),
-                                    buttonBorderRadius: 6,
-                                    buttonColor: Colors.transparent,
-                                    horizontalPadding: 30,
-                                    verticalPadding: 8,
                                   ),
-                                ),
+                                )
+                                // : Container(),
                               ],
                             ),
                           ),
@@ -233,24 +262,29 @@ class _BlogSliderWidgetState extends State<BlogSliderWidget> {
                           ),
                           Visibility(
                             visible: isHovered,
-                            child: CustomizableTextButton(
-                              prefixButtonIcon: null,
-                              suffixButtonIcon: null,
-                              isFullWidth: false,
-                              isOutlined: true,
-                              buttonBorderColor: Colors.white30,
-                              buttonTitle: "Read More".toUpperCase(),
-                              onPressed: () async {},
-                              buttonTitleStyle: TextStyle(
-                                fontSize:
-                                    (ResponsiveBreakpoints.of(context).screenWidth < 750) ? 12 : 14,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
+                            child: FadeInUp(
+                              from: 10,
+                              duration: Duration(milliseconds: 500),
+                              child: CustomizableTextButton(
+                                prefixButtonIcon: null,
+                                suffixButtonIcon: null,
+                                isFullWidth: false,
+                                isOutlined: true,
+                                buttonBorderColor: Colors.white30,
+                                buttonTitle: "Read More".toUpperCase(),
+                                onPressed: () async {},
+                                buttonTitleStyle: TextStyle(
+                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 750)
+                                      ? 12
+                                      : 14,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                buttonBorderRadius: 6,
+                                buttonColor: Colors.transparent,
+                                horizontalPadding: 30,
+                                verticalPadding: 8,
                               ),
-                              buttonBorderRadius: 6,
-                              buttonColor: Colors.transparent,
-                              horizontalPadding: 30,
-                              verticalPadding: 8,
                             ),
                           ),
                         ],

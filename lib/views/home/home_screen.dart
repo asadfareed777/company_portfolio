@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:animated_digit/animated_digit.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,7 @@ import 'package:infinite_carousel/infinite_carousel.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -39,10 +41,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   final portfolioKey = GlobalKey();
   final blogKey = GlobalKey();
   final contactUsKey = GlobalKey();
+  final counterKey = GlobalKey();
   bool showNavBar = false;
   ScrollController _portfolioScroll1Controller = ScrollController();
   PageController _portfolioScrollController = PageController();
   int portfolioPageNumber = 0;
+
+  AnimatedDigitController satisfiedCustomersController = AnimatedDigitController(0);
+  AnimatedDigitController daysOfOperationController = AnimatedDigitController(0);
+  AnimatedDigitController completeProjectsController = AnimatedDigitController(0);
+  AnimatedDigitController satisfiedCustomers1Controller = AnimatedDigitController(0);
 
   TextEditingController yourNameEditingController = TextEditingController();
   TextEditingController yourPhoneEditingController = TextEditingController();
@@ -103,7 +111,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   onPressed: () async {
                     Navigator.pop(context);
                     await Scrollable.ensureVisible(homeKey.currentContext!,
-                        duration: const Duration(milliseconds: 1000),
+                        duration: const Duration(milliseconds: 3000),
                         curve: Curves.fastEaseInToSlowEaseOut);
                   },
                 ),
@@ -116,7 +124,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   onPressed: () async {
                     Navigator.pop(context);
                     await Scrollable.ensureVisible(servicesKey.currentContext!,
-                        duration: const Duration(milliseconds: 1000),
+                        duration: const Duration(milliseconds: 3000),
                         curve: Curves.fastEaseInToSlowEaseOut);
                   },
                 ),
@@ -129,7 +137,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   onPressed: () async {
                     Navigator.pop(context);
                     await Scrollable.ensureVisible(aboutKey.currentContext!,
-                        duration: const Duration(milliseconds: 1000),
+                        duration: const Duration(milliseconds: 3000),
                         curve: Curves.fastEaseInToSlowEaseOut);
                   },
                 ),
@@ -142,7 +150,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   onPressed: () async {
                     Navigator.pop(context);
                     await Scrollable.ensureVisible(portfolioKey.currentContext!,
-                        duration: const Duration(milliseconds: 1000),
+                        duration: const Duration(milliseconds: 3000),
                         curve: Curves.fastEaseInToSlowEaseOut);
                   },
                 ),
@@ -155,7 +163,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   onPressed: () async {
                     Navigator.pop(context);
                     await Scrollable.ensureVisible(blogKey.currentContext!,
-                        duration: const Duration(milliseconds: 1000),
+                        duration: const Duration(milliseconds: 3000),
                         curve: Curves.fastEaseInToSlowEaseOut);
                   },
                 ),
@@ -168,7 +176,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   onPressed: () async {
                     Navigator.pop(context);
                     await Scrollable.ensureVisible(contactUsKey.currentContext!,
-                        duration: const Duration(milliseconds: 1000),
+                        duration: const Duration(milliseconds: 3000),
                         curve: Curves.fastEaseInToSlowEaseOut);
                   },
                 ),
@@ -213,7 +221,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     textColor: Colors.black,
                                     onPressed: () async {
                                       await Scrollable.ensureVisible(homeKey.currentContext!,
-                                          duration: const Duration(milliseconds: 1000),
+                                          duration: const Duration(milliseconds: 3000),
                                           curve: Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
@@ -222,7 +230,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     textColor: Colors.black,
                                     onPressed: () async {
                                       await Scrollable.ensureVisible(servicesKey.currentContext!,
-                                          duration: const Duration(milliseconds: 1000),
+                                          duration: const Duration(milliseconds: 3000),
                                           curve: Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
@@ -231,7 +239,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     textColor: Colors.black,
                                     onPressed: () async {
                                       await Scrollable.ensureVisible(aboutKey.currentContext!,
-                                          duration: const Duration(milliseconds: 1000),
+                                          duration: const Duration(milliseconds: 3000),
                                           curve: Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
@@ -240,7 +248,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     textColor: Colors.black,
                                     onPressed: () async {
                                       await Scrollable.ensureVisible(portfolioKey.currentContext!,
-                                          duration: const Duration(milliseconds: 1000),
+                                          duration: const Duration(milliseconds: 3000),
                                           curve: Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
@@ -249,7 +257,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     textColor: Colors.black,
                                     onPressed: () async {
                                       await Scrollable.ensureVisible(blogKey.currentContext!,
-                                          duration: const Duration(milliseconds: 1000),
+                                          duration: const Duration(milliseconds: 3000),
                                           curve: Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
@@ -258,7 +266,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     textColor: Colors.black,
                                     onPressed: () async {
                                       await Scrollable.ensureVisible(contactUsKey.currentContext!,
-                                          duration: const Duration(milliseconds: 1000),
+                                          duration: const Duration(milliseconds: 3000),
                                           curve: Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
@@ -410,7 +418,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                       await Scrollable.ensureVisible(
                                                           homeKey.currentContext!,
                                                           duration:
-                                                              const Duration(milliseconds: 1000),
+                                                              const Duration(milliseconds: 3000),
                                                           curve: Curves.fastEaseInToSlowEaseOut);
                                                     },
                                                   ),
@@ -420,7 +428,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                       await Scrollable.ensureVisible(
                                                           servicesKey.currentContext!,
                                                           duration:
-                                                              const Duration(milliseconds: 1000),
+                                                              const Duration(milliseconds: 3000),
                                                           curve: Curves.fastEaseInToSlowEaseOut);
                                                     },
                                                   ),
@@ -430,7 +438,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                       await Scrollable.ensureVisible(
                                                           aboutKey.currentContext!,
                                                           duration:
-                                                              const Duration(milliseconds: 1000),
+                                                              const Duration(milliseconds: 3000),
                                                           curve: Curves.fastEaseInToSlowEaseOut);
                                                     },
                                                   ),
@@ -440,7 +448,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                       await Scrollable.ensureVisible(
                                                           portfolioKey.currentContext!,
                                                           duration:
-                                                              const Duration(milliseconds: 1000),
+                                                              const Duration(milliseconds: 3000),
                                                           curve: Curves.fastEaseInToSlowEaseOut);
                                                     },
                                                   ),
@@ -450,7 +458,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                       await Scrollable.ensureVisible(
                                                           blogKey.currentContext!,
                                                           duration:
-                                                              const Duration(milliseconds: 1000),
+                                                              const Duration(milliseconds: 3000),
                                                           curve: Curves.fastEaseInToSlowEaseOut);
                                                     },
                                                   ),
@@ -460,7 +468,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                       await Scrollable.ensureVisible(
                                                           contactUsKey.currentContext!,
                                                           duration:
-                                                              const Duration(milliseconds: 1000),
+                                                              const Duration(milliseconds: 3000),
                                                           curve: Curves.fastEaseInToSlowEaseOut);
                                                     },
                                                   ),
@@ -596,7 +604,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                       buttonTitle: Constants.contactUs.toUpperCase(),
                                       onPressed: () async {
                                         await Scrollable.ensureVisible(contactUsKey.currentContext!,
-                                            duration: const Duration(milliseconds: 1000),
+                                            duration: const Duration(milliseconds: 3000),
                                             curve: Curves.fastEaseInToSlowEaseOut);
                                       },
                                       buttonTitleStyle: TextStyle(
@@ -632,81 +640,81 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            GradientText(
+                              "Top Clients",
+                              style: GoogleFonts.montserrat(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                              ),
+                              colors: [
+                                gradientColor1,
+                                gradientColor2,
+                                gradientColor3,
+                              ],
+                            ),
+                            SizedBox(
+                              height: 12.h,
+                            ),
+                            Text(
+                              "Our Technology Stack",
+                              textAlign: TextAlign.left,
+                              style: GoogleFonts.poppins(
+                                fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                        ? 32
+                                        : 40
+                                    : 50,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black.withOpacity(0.75),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 60,
+                            ),
                             Wrap(
                               spacing: 30,
                               runSpacing: 30,
                               children: [
                                 serviceWidget(
-                                  onPressed: () {},
-                                  title: "Business Strategy",
-                                  content:
-                                      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                  icon: SvgPicture.asset(
-                                    websiteDevelopmentIcon,
-                                    color: primaryColor,
-                                    height: 47,
-                                    width: 47,
-                                  ),
-                                ),
+                                    onPressed: () {},
+                                    title: "Business Strategy",
+                                    content:
+                                        "I throw myself down among the tall grass by the stream as I lie close to the earth.",
+                                    image: reactImage),
                                 serviceWidget(
                                   onPressed: () {},
                                   title: "Website Development",
                                   content:
                                       "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                  icon: SvgPicture.asset(
-                                    websiteDevelopmentIcon,
-                                    color: secondaryColor,
-                                    height: 47,
-                                    width: 47,
-                                  ),
+                                  image: vueImage,
                                 ),
                                 serviceWidget(
                                   onPressed: () {},
                                   title: "Marketing & Reporting",
                                   content:
                                       "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                  icon: SvgPicture.asset(
-                                    marketingReportingIcon,
-                                    color: lightBlueColor,
-                                    height: 47,
-                                    width: 47,
-                                  ),
+                                  image: angularJsImage,
                                 ),
                                 serviceWidget(
                                   onPressed: () {},
                                   title: "Mobile App Development",
                                   content:
                                       "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                  icon: SvgPicture.asset(
-                                    mobileAppDevelopmentIcon,
-                                    color: Colors.green,
-                                    height: 47,
-                                    width: 47,
-                                  ),
+                                  image: nodeJsImage,
                                 ),
                                 serviceWidget(
                                   onPressed: () {},
                                   title: "Marketing & Reporting",
                                   content:
                                       "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                  icon: SvgPicture.asset(
-                                    marketingReportingIcon,
-                                    color: purpleColor,
-                                    height: 47,
-                                    width: 47,
-                                  ),
+                                  image: rubyOnRailsImage,
                                 ),
                                 serviceWidget(
                                   onPressed: () {},
                                   title: "Mobile App Development",
                                   content:
                                       "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                  icon: SvgPicture.asset(
-                                    mobileAppDevelopmentIcon,
-                                    color: secondaryColor,
-                                    height: 47,
-                                    width: 47,
-                                  ),
+                                  image: reactImage,
                                 ),
                               ],
                             )
@@ -1461,48 +1469,66 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                             SizedBox(
                               height: 60,
                             ),
-                            Container(
-                              child: Wrap(
-                                spacing: 30,
-                                runSpacing: 30,
-                                children: [
-                                  companyGrowthWidget(
-                                    icon: Icon(
-                                      Icons.favorite_border_outlined,
-                                      size: 44,
-                                      color: primaryColor,
+                            VisibilityDetector(
+                              key: counterKey,
+                              onVisibilityChanged: (VisibilityInfo info) {
+                                var visiblePercentage = info.visibleFraction * 100;
+                                if (visiblePercentage == 100) {
+                                  satisfiedCustomersController.addValue(987);
+                                  daysOfOperationController.addValue(789);
+                                  completeProjectsController.addValue(655);
+                                  satisfiedCustomers1Controller.addValue(475);
+                                  setState(() {});
+                                } else if (visiblePercentage < 10) {
+                                  satisfiedCustomersController.addValue(987);
+                                  daysOfOperationController.addValue(789);
+                                  completeProjectsController.addValue(655);
+                                  satisfiedCustomers1Controller.addValue(475);
+                                }
+                              },
+                              child: Container(
+                                child: Wrap(
+                                  spacing: 30,
+                                  runSpacing: 30,
+                                  children: [
+                                    companyGrowthWidget(
+                                      icon: Icon(
+                                        Icons.favorite_border_outlined,
+                                        size: 44,
+                                        color: primaryColor,
+                                      ),
+                                      title: "Satisfied Customers",
+                                      controller: satisfiedCustomersController,
                                     ),
-                                    scores: 120,
-                                    title: "Satisfied Customers",
-                                  ),
-                                  companyGrowthWidget(
-                                    icon: Icon(
-                                      Icons.access_time_outlined,
-                                      size: 44,
-                                      color: secondaryColor,
+                                    companyGrowthWidget(
+                                      icon: Icon(
+                                        Icons.access_time_outlined,
+                                        size: 44,
+                                        color: secondaryColor,
+                                      ),
+                                      title: "Days of Operation",
+                                      controller: daysOfOperationController,
                                     ),
-                                    scores: 200,
-                                    title: "Days of Operation",
-                                  ),
-                                  companyGrowthWidget(
-                                    icon: Icon(
-                                      Icons.circle_outlined,
-                                      size: 44,
-                                      color: orangeColor,
+                                    companyGrowthWidget(
+                                      icon: Icon(
+                                        Icons.circle_outlined,
+                                        size: 44,
+                                        color: orangeColor,
+                                      ),
+                                      title: "Complete Projects",
+                                      controller: completeProjectsController,
                                     ),
-                                    scores: 200,
-                                    title: "Complete Projects",
-                                  ),
-                                  companyGrowthWidget(
-                                    icon: Icon(
-                                      Icons.favorite_border_outlined,
-                                      size: 44,
-                                      color: primaryColor,
+                                    companyGrowthWidget(
+                                      icon: Icon(
+                                        Icons.favorite_border_outlined,
+                                        size: 44,
+                                        color: primaryColor,
+                                      ),
+                                      title: "Satisfied Customers",
+                                      controller: satisfiedCustomers1Controller,
                                     ),
-                                    scores: 120,
-                                    title: "Satisfied Customers",
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ],
@@ -2658,11 +2684,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                           ],
                         ),
                       ),
-                      Container(
+                      /*Container(
                         width: MediaQuery.of(context).size.width,
                         color: Colors.white,
                         child: Container(
-                          width: /*(ResponsiveBreakpoints.of(context).screenWidth < 1270)
+                          width: */ /*(ResponsiveBreakpoints.of(context).screenWidth < 1270)
                               ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
                                   ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
                                       ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
@@ -2670,7 +2696,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                           : 546
                                       : 726
                                   : 966
-                              : */
+                              : */ /*
                               1266,
                           padding: EdgeInsets.symmetric(vertical: 120),
                           color: Colors.white,
@@ -2728,7 +2754,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                             ],
                           ),
                         ),
-                      ),
+                      ),*/
                       Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.symmetric(
@@ -3100,7 +3126,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                             isFullWidth: false,
                                             isOutlined: true,
                                             buttonTitle: null,
-                                            onPressed: () async {},
+                                            onPressed: () async {
+                                              String url = "https://www.facebook.com/";
+                                              if (await canLaunchUrl(Uri.parse(url))) {
+                                                await launchUrl(Uri.parse(url));
+                                              }
+                                            },
                                             buttonTitleStyle: TextStyle(
                                               fontSize: 16,
                                               color: Colors.white,
@@ -3124,7 +3155,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                             isFullWidth: false,
                                             isOutlined: true,
                                             buttonTitle: null,
-                                            onPressed: () async {},
+                                            onPressed: () async {
+                                              String url = "https://www.linkedin.com/";
+                                              if (await canLaunchUrl(Uri.parse(url))) {
+                                                await launchUrl(Uri.parse(url));
+                                              }
+                                            },
                                             buttonTitleStyle: TextStyle(
                                               fontSize: 16,
                                               color: Colors.white,
@@ -3148,7 +3184,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                             isFullWidth: false,
                                             isOutlined: true,
                                             buttonTitle: null,
-                                            onPressed: () async {},
+                                            onPressed: () async {
+                                              String url = "https://twitter.com/";
+                                              if (await canLaunchUrl(Uri.parse(url))) {
+                                                await launchUrl(Uri.parse(url));
+                                              }
+                                            },
                                             buttonTitleStyle: TextStyle(
                                               fontSize: 16,
                                               color: Colors.white,
@@ -3172,7 +3213,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                             isFullWidth: false,
                                             isOutlined: true,
                                             buttonTitle: null,
-                                            onPressed: () async {},
+                                            onPressed: () async {
+                                              String url = "https://www.instagram.com/";
+                                              if (await canLaunchUrl(Uri.parse(url))) {
+                                                await launchUrl(Uri.parse(url));
+                                              }
+                                            },
                                             buttonTitleStyle: TextStyle(
                                               fontSize: 16,
                                               color: Colors.white,
@@ -3240,7 +3286,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  Widget companyGrowthWidget({required Widget icon, required int scores, required String title}) {
+  Widget companyGrowthWidget(
+      {required Widget icon, required String title, required AnimatedDigitController controller}) {
     return (ResponsiveBreakpoints.of(context).screenWidth < 575)
         ? Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -3266,16 +3313,28 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         SizedBox(
                           height: 20,
                         ),
-                        Text(
-                          "$scores +",
-                          textAlign: TextAlign.left,
-                          style: GoogleFonts.poppins(
+                        AnimatedDigitWidget(
+                          controller: controller,
+                          duration: Duration(seconds: 1),
+                          textStyle: TextStyle(
                             fontSize:
                                 (ResponsiveBreakpoints.of(context).screenWidth < 1250) ? 44 : 54,
                             fontWeight: FontWeight.w600,
                             color: Colors.black.withOpacity(0.75),
                           ),
+                          fractionDigits: 0,
+                          suffix: "+",
                         ),
+                        // Text(
+                        //   "$scores +",
+                        //   textAlign: TextAlign.left,
+                        //   style: GoogleFonts.poppins(
+                        //     fontSize:
+                        //         (ResponsiveBreakpoints.of(context).screenWidth < 1250) ? 44 : 54,
+                        //     fontWeight: FontWeight.w600,
+                        //     color: Colors.black.withOpacity(0.75),
+                        //   ),
+                        // ),
                         SizedBox(
                           height: 6,
                         ),
@@ -3314,15 +3373,26 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 SizedBox(
                   height: 20,
                 ),
-                Text(
-                  "$scores +",
-                  textAlign: TextAlign.left,
-                  style: GoogleFonts.poppins(
+                AnimatedDigitWidget(
+                  controller: controller,
+                  duration: Duration(seconds: 1),
+                  textStyle: TextStyle(
                     fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 1250) ? 44 : 54,
                     fontWeight: FontWeight.w600,
                     color: Colors.black.withOpacity(0.75),
                   ),
+                  fractionDigits: 0,
+                  suffix: "+",
                 ),
+                // Text(
+                //   "$scores +",
+                //   textAlign: TextAlign.left,
+                //   style: GoogleFonts.poppins(
+                //     fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 1250) ? 44 : 54,
+                //     fontWeight: FontWeight.w600,
+                //     color: Colors.black.withOpacity(0.75),
+                //   ),
+                // ),
                 SizedBox(
                   height: 6,
                 ),
@@ -3446,72 +3516,102 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       {required VoidCallback onPressed,
       required String title,
       required String content,
-      required Widget icon}) {
-    return Container(
-      height: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-          ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
-              ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                  ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                      ? 238
-                      : 332
-                  : 264
-              : 336
-          : 286,
-      width: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-          ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
-              ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                  ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                      ? 550
-                      : 243
-                  : 333
-              : 300
-          : 380,
-      padding: EdgeInsets.symmetric(
-          horizontal: (ResponsiveBreakpoints.of(context).screenWidth < 575) ? 23 : 30,
-          vertical: (ResponsiveBreakpoints.of(context).screenWidth < 575) ? 32 : 40),
-      decoration: BoxDecoration(
-        color: Colors.grey.withOpacity(0.05),
-        borderRadius: BorderRadius.circular(6),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          icon,
-          SizedBox(
-            height: (ResponsiveBreakpoints.of(context).screenWidth < 985)
-                ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                    ? 22
-                    : 10
-                : 22,
+      required String image}) {
+    return Stack(
+      children: [
+        Container(
+          height: (ResponsiveBreakpoints.of(context).screenWidth < 765)
+              ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                  ? 268
+                  : 350
+              : 310,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                height: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                    ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
+                        ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                            ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                ? 238
+                                : 310
+                            : 264
+                        : 310
+                    : 286,
+                width: (ResponsiveBreakpoints.of(context).screenWidth < 1290)
+                    ? (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                        ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
+                            ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                    ? 550
+                                    : 243
+                                : 333
+                            : 480
+                        : 520
+                    : 630,
+                padding: EdgeInsets.symmetric(
+                    horizontal: (ResponsiveBreakpoints.of(context).screenWidth < 575) ? 23 : 30,
+                    vertical: (ResponsiveBreakpoints.of(context).screenWidth < 575) ? 32 : 40),
+                decoration: BoxDecoration(
+                  color: Colors.grey.withOpacity(0.05),
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: (ResponsiveBreakpoints.of(context).screenWidth < 985)
+                          ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                              ? 22
+                              : 10
+                          : 22,
+                    ),
+                    Text(
+                      title,
+                      textAlign: TextAlign.left,
+                      style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black,
+                      ),
+                    ),
+                    SizedBox(
+                      height: (ResponsiveBreakpoints.of(context).screenWidth < 985)
+                          ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                              ? 20
+                              : 8
+                          : 20,
+                    ),
+                    Text(
+                      content,
+                      textAlign: TextAlign.left,
+                      style: GoogleFonts.poppins(
+                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 765) ? 16 : 18,
+                        fontWeight: FontWeight.w300,
+                        color: Colors.grey,
+                        height: 1.5,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
-          Text(
-            title,
-            textAlign: TextAlign.left,
-            style: GoogleFonts.poppins(
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-              color: Colors.black,
-            ),
+        ),
+        Positioned(
+          left: (ResponsiveBreakpoints.of(context).screenWidth < 575) ? 23 : 30,
+          child: Container(
+            height: 80,
+            width: 80,
+            decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage(image),
+                  fit: BoxFit.fill,
+                )),
           ),
-          SizedBox(
-            height: (ResponsiveBreakpoints.of(context).screenWidth < 985)
-                ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                    ? 20
-                    : 8
-                : 20,
-          ),
-          Text(
-            content,
-            textAlign: TextAlign.left,
-            style: GoogleFonts.poppins(
-              fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 765) ? 16 : 18,
-              fontWeight: FontWeight.w300,
-              color: Colors.grey,
-              height: 1.5,
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
