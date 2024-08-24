@@ -8,7 +8,10 @@ import '../../../utils/colors.dart';
 
 class PortfolioSliderWidget extends StatefulWidget {
   final int itemIndex;
-  const PortfolioSliderWidget({super.key, required this.itemIndex});
+  final String stackName;
+  final String projectName;
+  final String explanation;
+  const PortfolioSliderWidget({super.key, required this.itemIndex, required this.stackName, required this.projectName, required this.explanation});
 
   @override
   State<PortfolioSliderWidget> createState() => _PortfolioSliderWidgetState();
@@ -85,7 +88,7 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
                                   child: Text(
-                                    "Shop",
+                                    widget.stackName,
                                     textAlign: TextAlign.left,
                                     style: GoogleFonts.poppins(
                                       fontSize: 16,
@@ -98,7 +101,7 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                                   height: 5,
                                 ),
                                 Text(
-                                  "Creative Agency",
+                                  widget.projectName,
                                   textAlign: TextAlign.left,
                                   style: GoogleFonts.poppins(
                                     fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 990)
@@ -118,15 +121,28 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                                 ),
                                 Visibility(
                                   visible: isHovered,
-                                  child: Text(
-                                    (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                        ? "Lorem ipsum dolor sit amet, consec"
-                                        : "Lorem ipsum dolor sit amet, consec tetur adipiscing elit.",
-                                    textAlign: TextAlign.left,
-                                    style: GoogleFonts.poppins(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w300,
-                                      color: Colors.white.withOpacity(0.75),
+                                  child: SizedBox(
+                                    height: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                        ? 360.h
+                                        : 220
+                                        : 200
+                                        : 270
+                                        : 280,
+                                    child: SingleChildScrollView(
+                                      child: Text(
+                                        (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                            ? widget.explanation
+                                            : widget.explanation,
+                                        textAlign: TextAlign.left,
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w300,
+                                          color: Colors.white.withOpacity(0.75),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -191,7 +207,7 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                           Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: Text(
-                              "Shop",
+                              widget.stackName,
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
                                 fontSize: 16,
@@ -204,7 +220,7 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                             height: 5,
                           ),
                           Text(
-                            "Creative Agency",
+                            widget.projectName,
                             textAlign: TextAlign.left,
                             style: GoogleFonts.poppins(
                               fontSize:
@@ -222,15 +238,28 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                           ),
                           Visibility(
                             visible: isHovered,
-                            child: Text(
-                              (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                  ? "Lorem ipsum dolor sit amet, consec"
-                                  : "Lorem ipsum dolor sit amet, consec tetur adipiscing elit.",
-                              textAlign: TextAlign.left,
-                              style: GoogleFonts.poppins(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white.withOpacity(0.75),
+                            child: SizedBox(
+                              height: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
+                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
+                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                  ? 360.h
+                                  : 220
+                                  : 200
+                                  : 270
+                                  : 280,
+                              child: SingleChildScrollView(
+                                child: Text(
+                                  (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                      ? widget.explanation
+                                      : widget.explanation,
+                                  textAlign: TextAlign.left,
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.white.withOpacity(0.75),
+                                  ),
+                                ),
                               ),
                             ),
                           ),

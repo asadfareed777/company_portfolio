@@ -37,6 +37,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   final servicesKey = GlobalKey();
   final aboutKey = GlobalKey();
   final portfolioKey = GlobalKey();
+  final targetKey = GlobalKey();
   final blogKey = GlobalKey();
   final contactUsKey = GlobalKey();
   bool showNavBar = false;
@@ -60,6 +61,48 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     super.initState();
   }
 
+
+  final List<Map<String, String>> portfolioItems = [
+    {
+      "stackName": "Flutter",
+      "projectName": "Kuwait Mushaf - Quranic Android App",
+      "explanation":
+      "Developed using Flutter, Kuwait Mushaf is a comprehensive Quran app designed for an enriching and personalized experience. The app offers full Quran text with audio recitations from various renowned reciters. Users can explore translations in multiple languages, access detailed Tafseer from different scholars, and study the 10 readings of Quranic verses with highlighted wordings and pronunciation guides. Additionally, the app allows users to download complete recitations and customize the app's language and appearance through a robust settings screen."
+    },
+    {
+      "stackName": "Java & Kotlin",
+      "projectName": "Urbie - IoT-Based Home Automation App",
+      "explanation":
+      "Developed using Java and Kotlin, Urbie is a sophisticated IoT-based Android app designed for seamless home automation. The app enables users to control various home appliances, including fans, LEDs, and water tank levels. Leveraging AWS MQTT services for real-time cloud control and robust databases for storing current device statuses, Urbie provides a reliable and user-friendly solution for modern smart home management."
+    },
+  ];
+  final List<Map<String, String>> whyChooseUsItems = [
+    {
+      "title": "Customized Solutions",
+      "image": customizedSolution,
+      "description": "At the heart of our service philosophy is the belief that every business is unique, with its own set of challenges and goals. We don’t believe in one-size-fits-all solutions. Instead, we take the time to understand your specific needs, industry dynamics, and operational intricacies. By tailoring our strategies and solutions to align with your business objectives, we ensure that the outcomes not only meet but exceed your expectations. Our bespoke approach allows us to deliver results that drive tangible value, setting your business apart from the competition.",
+    },
+    {
+      "title": "Proven Track Record",
+      "image": provenTrackRecord,
+      "description": "Over the years, we have built a strong reputation for delivering high-quality solutions that consistently meet the demands of various industries. Our extensive portfolio showcases our ability to solve complex challenges and create innovative solutions that stand the test of time. Whether it’s in technology, finance, healthcare, or any other sector, our track record demonstrates our commitment to excellence and our capability to drive success for our clients. Each project we undertake is a testament to our expertise, creativity, and dedication to delivering exceptional results.",
+
+    },
+    {
+      "title": "Client-Centric Approach",
+      "image": clientCentricSolution,
+      "description": "Our clients are at the core of everything we do. We believe that the key to a successful partnership lies in open communication, mutual respect, and a deep understanding of our clients' needs. We take a collaborative approach, working closely with you at every stage of the project to ensure that our solutions are perfectly aligned with your vision and goals. By prioritizing your success and putting your needs first, we build long-lasting relationships based on trust, transparency, and shared achievements. Your success is our success, and we are committed to going above and beyond to ensure it.",
+
+    },
+    {
+      "title": "Scalable and Secure Solutions",
+      "image": secureSolution,
+      "description": "In today's fast-paced and ever-changing business environment, scalability and security are more important than ever. Our solutions are designed with these principles at their core. We create systems that can grow and adapt with your business, ensuring they remain effective as your needs evolve. At the same time, we place a strong emphasis on security, protecting your data and assets with the latest technologies and best practices. This dual focus on scalability and security ensures that our solutions not only meet your current needs but also position you for long-term success in a secure and sustainable way.",
+
+    },
+  ];
+
+
   @override
   Widget build(BuildContext context) {
     portfolioPageNumber = ref.watch(pageNumberProvider);
@@ -79,9 +122,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Image.asset(
-                        logoSymbolDarkImage,
-                        height: (ResponsiveBreakpoints.of(context).screenWidth < 750) ? 50 : 56,
-                        width: (ResponsiveBreakpoints.of(context).screenWidth < 750) ? 50 : 56,
+                        logoImageInvertedTechnology,
+                        height: (ResponsiveBreakpoints.of(context).screenWidth <
+                                750)
+                            ? 50
+                            : 56,
+                        width: (ResponsiveBreakpoints.of(context).screenWidth <
+                                750)
+                            ? 50
+                            : 56,
                       ),
                       InkWell(
                         onTap: () {
@@ -151,6 +200,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   color: Colors.grey.withOpacity(0.20),
                 ),
                 drawerNavButton(
+                  title: "Target",
+                  onPressed: () async {
+                    Navigator.pop(context);
+                    await Scrollable.ensureVisible(targetKey.currentContext!,
+                        duration: const Duration(milliseconds: 1000),
+                        curve: Curves.fastEaseInToSlowEaseOut);
+                  },
+                ),
+                Divider(
+                  height: 1,
+                  color: Colors.grey.withOpacity(0.20),
+                ),
+                drawerNavButton(
                   title: "Blog",
                   onPressed: () async {
                     Navigator.pop(context);
@@ -188,22 +250,32 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 child: Container(
                   color: Colors.white,
                   padding: EdgeInsets.symmetric(
-                      horizontal:
-                          ResponsiveBreakpoints.of(context).largerOrEqualTo(DESKTOP) ? 50 : 15,
+                      horizontal: ResponsiveBreakpoints.of(context)
+                              .largerOrEqualTo(DESKTOP)
+                          ? 50
+                          : 15,
                       vertical: 10),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Image.asset(
-                        logoImageDark,
-                        height: (ResponsiveBreakpoints.of(context).screenWidth < 750) ? 50 : 60,
-                        width: (ResponsiveBreakpoints.of(context).screenWidth < 750) ? 100 : 132,
+                        logoImageInvertedTechnology,
+                        height: (ResponsiveBreakpoints.of(context).screenWidth <
+                                750)
+                            ? 50
+                            : 60,
+                        width: (ResponsiveBreakpoints.of(context).screenWidth <
+                                750)
+                            ? 100
+                            : 132,
                       ),
                       Row(
                         children: [
                           Visibility(
-                            visible: !(ResponsiveBreakpoints.of(context).screenWidth < 1036),
+                            visible: !(ResponsiveBreakpoints.of(context)
+                                    .screenWidth <
+                                1036),
                             child: Container(
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -212,54 +284,84 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     title: "Home",
                                     textColor: Colors.black,
                                     onPressed: () async {
-                                      await Scrollable.ensureVisible(homeKey.currentContext!,
-                                          duration: const Duration(milliseconds: 1000),
-                                          curve: Curves.fastEaseInToSlowEaseOut);
+                                      await Scrollable.ensureVisible(
+                                          homeKey.currentContext!,
+                                          duration: const Duration(
+                                              milliseconds: 1000),
+                                          curve:
+                                              Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
                                   navButton(
                                     title: "Service",
                                     textColor: Colors.black,
                                     onPressed: () async {
-                                      await Scrollable.ensureVisible(servicesKey.currentContext!,
-                                          duration: const Duration(milliseconds: 1000),
-                                          curve: Curves.fastEaseInToSlowEaseOut);
+                                      await Scrollable.ensureVisible(
+                                          servicesKey.currentContext!,
+                                          duration: const Duration(
+                                              milliseconds: 1000),
+                                          curve:
+                                              Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
                                   navButton(
                                     title: "About",
                                     textColor: Colors.black,
                                     onPressed: () async {
-                                      await Scrollable.ensureVisible(aboutKey.currentContext!,
-                                          duration: const Duration(milliseconds: 1000),
-                                          curve: Curves.fastEaseInToSlowEaseOut);
+                                      await Scrollable.ensureVisible(
+                                          aboutKey.currentContext!,
+                                          duration: const Duration(
+                                              milliseconds: 1000),
+                                          curve:
+                                              Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
                                   navButton(
                                     title: "Portfolio",
                                     textColor: Colors.black,
                                     onPressed: () async {
-                                      await Scrollable.ensureVisible(portfolioKey.currentContext!,
-                                          duration: const Duration(milliseconds: 1000),
-                                          curve: Curves.fastEaseInToSlowEaseOut);
+                                      await Scrollable.ensureVisible(
+                                          portfolioKey.currentContext!,
+                                          duration: const Duration(
+                                              milliseconds: 1000),
+                                          curve:
+                                              Curves.fastEaseInToSlowEaseOut);
+                                    },
+                                  ),
+                                  navButton(
+                                    title: "Target",
+                                    textColor: Colors.black,
+                                    onPressed: () async {
+                                      await Scrollable.ensureVisible(
+                                          targetKey.currentContext!,
+                                          duration: const Duration(
+                                              milliseconds: 1000),
+                                          curve:
+                                          Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
                                   navButton(
                                     title: "Blog",
                                     textColor: Colors.black,
                                     onPressed: () async {
-                                      await Scrollable.ensureVisible(blogKey.currentContext!,
-                                          duration: const Duration(milliseconds: 1000),
-                                          curve: Curves.fastEaseInToSlowEaseOut);
+                                      await Scrollable.ensureVisible(
+                                          blogKey.currentContext!,
+                                          duration: const Duration(
+                                              milliseconds: 1000),
+                                          curve:
+                                              Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
                                   navButton(
                                     title: "Contact",
                                     textColor: Colors.black,
                                     onPressed: () async {
-                                      await Scrollable.ensureVisible(contactUsKey.currentContext!,
-                                          duration: const Duration(milliseconds: 1000),
-                                          curve: Curves.fastEaseInToSlowEaseOut);
+                                      await Scrollable.ensureVisible(
+                                          contactUsKey.currentContext!,
+                                          duration: const Duration(
+                                              milliseconds: 1000),
+                                          curve:
+                                              Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
                                   // CustomizableTextButton(
@@ -284,7 +386,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                           Row(
                             children: [
                               SizedBox(
-                                width: ResponsiveBreakpoints.of(context).largerOrEqualTo(DESKTOP)
+                                width: ResponsiveBreakpoints.of(context)
+                                        .largerOrEqualTo(DESKTOP)
                                     ? 50
                                     : 30,
                               ),
@@ -311,7 +414,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                               //       (ResponsiveBreakpoints.of(context).screenWidth < 765) ? 8 : 16,
                               // ),
                               Visibility(
-                                visible: ResponsiveBreakpoints.of(context).screenWidth < 1036,
+                                visible: ResponsiveBreakpoints.of(context)
+                                        .screenWidth <
+                                    1036,
                                 child: Padding(
                                   padding: EdgeInsets.only(left: 20),
                                   child: InkWell(
@@ -341,8 +446,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     children: [
                       Container(
                         key: homeKey,
-                        height: (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                            ? (ResponsiveBreakpoints.of(context).screenWidth < 760)
+                        height: (ResponsiveBreakpoints.of(context).screenWidth <
+                                1000)
+                            ? (ResponsiveBreakpoints.of(context).screenWidth <
+                                    760)
                                 ? 496
                                 : 660
                             : 720,
@@ -369,99 +476,149 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     showNavBar = false;
                                     setState(() {});
                                   }
-                                  var visiblePercentage = visibilityInfo.visibleFraction * 100;
+                                  var visiblePercentage =
+                                      visibilityInfo.visibleFraction * 100;
                                   debugPrint(
                                       'Widget ${visibilityInfo.key} is ${visiblePercentage}% visible');
                                 },
                                 child: Container(
                                   padding: EdgeInsets.symmetric(
                                       horizontal:
-                                          ResponsiveBreakpoints.of(context).largerOrEqualTo(DESKTOP)
+                                          ResponsiveBreakpoints.of(context)
+                                                  .largerOrEqualTo(DESKTOP)
                                               ? 50
                                               : 15,
                                       vertical: 20),
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
                                       Image.asset(
-                                        logoImage,
+                                        logoImageInvertedTechnology,
                                         height:
-                                            (ResponsiveBreakpoints.of(context).screenWidth < 750)
+                                            (ResponsiveBreakpoints.of(context)
+                                                        .screenWidth <
+                                                    750)
                                                 ? 50
                                                 : 60,
-                                        width: (ResponsiveBreakpoints.of(context).screenWidth < 750)
-                                            ? 100
-                                            : 132,
+                                        width:
+                                            (ResponsiveBreakpoints.of(context)
+                                                        .screenWidth <
+                                                    750)
+                                                ? 100
+                                                : 132,
                                       ),
                                       Row(
                                         children: [
                                           Visibility(
-                                            visible:
-                                                !(ResponsiveBreakpoints.of(context).screenWidth <
-                                                    1036),
+                                            visible: !(ResponsiveBreakpoints.of(
+                                                        context)
+                                                    .screenWidth <
+                                                1036),
                                             child: Container(
                                               child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.center,
                                                 children: [
                                                   navButton(
                                                     title: "Home",
                                                     onPressed: () async {
                                                       await Scrollable.ensureVisible(
-                                                          homeKey.currentContext!,
+                                                          homeKey
+                                                              .currentContext!,
                                                           duration:
-                                                              const Duration(milliseconds: 1000),
-                                                          curve: Curves.fastEaseInToSlowEaseOut);
+                                                              const Duration(
+                                                                  milliseconds:
+                                                                      1000),
+                                                          curve: Curves
+                                                              .fastEaseInToSlowEaseOut);
                                                     },
                                                   ),
                                                   navButton(
                                                     title: "Service",
                                                     onPressed: () async {
                                                       await Scrollable.ensureVisible(
-                                                          servicesKey.currentContext!,
+                                                          servicesKey
+                                                              .currentContext!,
                                                           duration:
-                                                              const Duration(milliseconds: 1000),
-                                                          curve: Curves.fastEaseInToSlowEaseOut);
+                                                              const Duration(
+                                                                  milliseconds:
+                                                                      1000),
+                                                          curve: Curves
+                                                              .fastEaseInToSlowEaseOut);
                                                     },
                                                   ),
                                                   navButton(
                                                     title: "About",
                                                     onPressed: () async {
                                                       await Scrollable.ensureVisible(
-                                                          aboutKey.currentContext!,
+                                                          aboutKey
+                                                              .currentContext!,
                                                           duration:
-                                                              const Duration(milliseconds: 1000),
-                                                          curve: Curves.fastEaseInToSlowEaseOut);
+                                                              const Duration(
+                                                                  milliseconds:
+                                                                      1000),
+                                                          curve: Curves
+                                                              .fastEaseInToSlowEaseOut);
                                                     },
                                                   ),
                                                   navButton(
                                                     title: "Portfolio",
                                                     onPressed: () async {
                                                       await Scrollable.ensureVisible(
-                                                          portfolioKey.currentContext!,
+                                                          portfolioKey
+                                                              .currentContext!,
                                                           duration:
-                                                              const Duration(milliseconds: 1000),
-                                                          curve: Curves.fastEaseInToSlowEaseOut);
+                                                              const Duration(
+                                                                  milliseconds:
+                                                                      1000),
+                                                          curve: Curves
+                                                              .fastEaseInToSlowEaseOut);
                                                     },
                                                   ),
+                                                  navButton(
+                                                    title: "Target",
+                                                    onPressed: () async {
+                                                      await Scrollable.ensureVisible(
+                                                          targetKey
+                                                              .currentContext!,
+                                                          duration:
+                                                          const Duration(
+                                                              milliseconds:
+                                                              1000),
+                                                          curve: Curves
+                                                              .fastEaseInToSlowEaseOut);
+                                                    },
+                                                  ),
+
                                                   navButton(
                                                     title: "Blog",
                                                     onPressed: () async {
                                                       await Scrollable.ensureVisible(
-                                                          blogKey.currentContext!,
+                                                          blogKey
+                                                              .currentContext!,
                                                           duration:
-                                                              const Duration(milliseconds: 1000),
-                                                          curve: Curves.fastEaseInToSlowEaseOut);
+                                                              const Duration(
+                                                                  milliseconds:
+                                                                      1000),
+                                                          curve: Curves
+                                                              .fastEaseInToSlowEaseOut);
                                                     },
                                                   ),
                                                   navButton(
                                                     title: "Contact",
                                                     onPressed: () async {
                                                       await Scrollable.ensureVisible(
-                                                          contactUsKey.currentContext!,
+                                                          contactUsKey
+                                                              .currentContext!,
                                                           duration:
-                                                              const Duration(milliseconds: 1000),
-                                                          curve: Curves.fastEaseInToSlowEaseOut);
+                                                              const Duration(
+                                                                  milliseconds:
+                                                                      1000),
+                                                          curve: Curves
+                                                              .fastEaseInToSlowEaseOut);
                                                     },
                                                   ),
                                                   // CustomizableTextButton(
@@ -486,8 +643,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                           Row(
                                             children: [
                                               SizedBox(
-                                                width: ResponsiveBreakpoints.of(context)
-                                                        .largerOrEqualTo(DESKTOP)
+                                                width: ResponsiveBreakpoints.of(
+                                                            context)
+                                                        .largerOrEqualTo(
+                                                            DESKTOP)
                                                     ? 50
                                                     : 30,
                                               ),
@@ -522,13 +681,17 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                               ),*/
                                               Visibility(
                                                 visible:
-                                                    ResponsiveBreakpoints.of(context).screenWidth <
+                                                    ResponsiveBreakpoints.of(
+                                                                context)
+                                                            .screenWidth <
                                                         1036,
                                                 child: Padding(
-                                                  padding: EdgeInsets.only(left: 20),
+                                                  padding:
+                                                      EdgeInsets.only(left: 20),
                                                   child: InkWell(
                                                     onTap: () {
-                                                      _scaffoldKey.currentState?.openDrawer();
+                                                      _scaffoldKey.currentState
+                                                          ?.openDrawer();
                                                     },
                                                     child: Icon(
                                                       Icons.menu,
@@ -546,22 +709,28 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                 ),
                               ),
                               Container(
-                                padding: EdgeInsets.symmetric(horizontal: 140.w),
+                                padding: EdgeInsets.symmetric(horizontal: 80.w),
                                 child: Column(
                                   children: [
-                                    SizedBox(height: 100.h),
+                                    SizedBox(height: 60.h),
                                     GradientText(
-                                      "Creative",
+                                      "Welcome to InvertedTech",
                                       style: GoogleFonts.montserrat(
-                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth <
+                                        fontSize: (ResponsiveBreakpoints.of(
+                                                        context)
+                                                    .screenWidth <
                                                 1200)
-                                            ? (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                ? (ResponsiveBreakpoints.of(context).screenWidth <
+                                            ? (ResponsiveBreakpoints.of(context)
+                                                        .screenWidth <
+                                                    1000)
+                                                ? (ResponsiveBreakpoints.of(
+                                                                context)
+                                                            .screenWidth <
                                                         765)
-                                                    ? 36
-                                                    : 56
-                                                : 70
-                                            : 90,
+                                                    ? 20
+                                                    : 40
+                                                : 54
+                                            : 74,
                                         fontWeight: FontWeight.w900,
                                       ),
                                       colors: [
@@ -571,15 +740,36 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                       ],
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.symmetric(horizontal: 106.w),
+                                      padding: EdgeInsets.symmetric(
+                                          horizontal: 106.w),
                                       child: Text(
-                                        "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration.",
+                                        "Innovating the Future of Technology.",
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.poppins(
                                           fontSize:
-                                              (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                  ? 16
-                                                  : 24,
+                                              (ResponsiveBreakpoints.of(context)
+                                                          .screenWidth <
+                                                      765)
+                                                  ? 18
+                                                  : 26,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.white.withOpacity(0.75),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.symmetric(
+                                          horizontal: 80.w),
+                                      child: Text(
+                                        "At InvertedTech, our vision is to revolutionize the software industry by creating innovative, user-centric solutions that empower businesses to achieve their full potential. As a dynamic software startup, we are committed to leveraging the latest technologies to deliver high-quality, scalable, and secure applications that meet the unique needs of our clients. Our mission is to drive digital transformation across various industries, ensuring our clients stay ahead in a competitive market.",
+                                        textAlign: TextAlign.center,
+                                        style: GoogleFonts.poppins(
+                                          fontSize:
+                                              (ResponsiveBreakpoints.of(context)
+                                                          .screenWidth <
+                                                      765)
+                                                  ? 13
+                                                  : 21,
                                           fontWeight: FontWeight.w300,
                                           color: Colors.white.withOpacity(0.75),
                                         ),
@@ -593,11 +783,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                       suffixButtonIcon: null,
                                       isFullWidth: false,
                                       isOutlined: false,
-                                      buttonTitle: Constants.contactUs.toUpperCase(),
+                                      buttonTitle:
+                                          Constants.contactUs.toUpperCase(),
                                       onPressed: () async {
-                                        await Scrollable.ensureVisible(contactUsKey.currentContext!,
-                                            duration: const Duration(milliseconds: 1000),
-                                            curve: Curves.fastEaseInToSlowEaseOut);
+                                        await Scrollable.ensureVisible(
+                                            contactUsKey.currentContext!,
+                                            duration: const Duration(
+                                                milliseconds: 1000),
+                                            curve:
+                                                Curves.fastEaseInToSlowEaseOut);
                                       },
                                       buttonTitleStyle: TextStyle(
                                         fontSize: 16,
@@ -607,11 +801,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                       buttonBorderRadius: 60,
                                       buttonColor: primaryColor,
                                       horizontalPadding:
-                                          (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                          (ResponsiveBreakpoints.of(context)
+                                                      .screenWidth <
+                                                  1000)
                                               ? 40
                                               : 60,
                                       verticalPadding:
-                                          (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                          (ResponsiveBreakpoints.of(context)
+                                                      .screenWidth <
+                                                  1000)
                                               ? 16
                                               : 24,
                                     ),
@@ -628,86 +826,116 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       Container(
                         key: servicesKey,
                         width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.symmetric(vertical: 120),
+                        padding: const EdgeInsets.symmetric(vertical: 120),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Wrap(
-                              spacing: 30,
-                              runSpacing: 30,
+                              spacing: 20,
+                              runSpacing: 20,
+
                               children: [
                                 serviceWidget(
                                   onPressed: () {},
-                                  title: "Business Strategy",
+                                  title: "Android Development",
                                   content:
-                                      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                  icon: SvgPicture.asset(
-                                    websiteDevelopmentIcon,
-                                    color: primaryColor,
+                                      """Our team excels in developing robust and user-friendly Android applications that run smoothly on a wide range of devices. We ensure that our apps are optimized for performance and security, providing a seamless user experience.
+Benefits:
+Customizable: Tailored to meet specific business needs.
+Scalable: Designed to handle increasing user loads.
+High Performance: Optimized for speed and efficiency.
+Extensive Market Reach: Access to a vast user base on the Android platform.
+""",
+                                  icon: Image.asset(
+                                    androidIcon,
+                                    // color: primaryColor,
                                     height: 47,
                                     width: 47,
                                   ),
                                 ),
                                 serviceWidget(
                                   onPressed: () {},
-                                  title: "Website Development",
+                                  title: "iOS Development",
                                   content:
-                                      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                  icon: SvgPicture.asset(
-                                    websiteDevelopmentIcon,
-                                    color: secondaryColor,
+                                      """We specialize in creating seamless and intuitive iOS applications that provide an exceptional user experience. Our iOS apps are known for their sleek design and robust functionality, ensuring high user engagement and satisfaction.
+Benefits:
+High Security: Built with strong security protocols to protect user data.
+Excellent Performance: Smooth and responsive user interface.
+Premium User Base: Access to a high-value demographic.
+Consistency: Consistent performance across all iOS devices.
+""",
+                                  icon: Image.asset(
+                                    appleIcon,
+                                    // color: secondaryColor,
                                     height: 47,
                                     width: 47,
                                   ),
                                 ),
                                 serviceWidget(
                                   onPressed: () {},
-                                  title: "Marketing & Reporting",
+                                  title: "Flutter",
                                   content:
-                                      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                  icon: SvgPicture.asset(
-                                    marketingReportingIcon,
-                                    color: lightBlueColor,
+                                      """Flutter is a UI toolkit developed by Google for building natively compiled applications for mobile, web, and desktop from a single codebase. We use Flutter to create high-performance apps with beautiful, expressive UIs.
+Benefits:
+Cross-Platform Development: One codebase for multiple platforms, reducing development time and cost.
+High Performance: Native performance with smooth animations.
+Expressive and Flexible UI: Customizable widgets for a unique user experience.
+Single Codebase: Easier maintenance and updates.
+""",
+                                  icon: Image.asset(
+                                    flutterIcon,
+                                    // color: lightBlueColor,
                                     height: 47,
                                     width: 47,
                                   ),
                                 ),
                                 serviceWidget(
                                   onPressed: () {},
-                                  title: "Mobile App Development",
+                                  title: "Artificial Intelligence",
                                   content:
-                                      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                  icon: SvgPicture.asset(
-                                    mobileAppDevelopmentIcon,
-                                    color: Colors.green,
+                                      """We integrate AI technologies into mobile applications to provide intelligent features such as predictive analytics, natural language processing, and image recognition. Our AI models are designed to enhance user experience and automate complex tasks.
+Benefits:
+Enhanced User Experience: Personalized recommendations and interactions.
+Automation: Automate repetitive tasks, improving efficiency.
+Data-Driven Insights: Leverage data for better decision-making.
+Advanced Features: Implement cutting-edge functionalities like facial recognition, document verification, and nudity checks.
+Specialized AI Models:
+Facial Recognition: Secure and accurate user authentication.
+Document Verification: Automated verification of user documents.
+Nudity Checks: Ensure content compliance and safety.
+Technologies Used: TensorFlow, PyTorch, OpenCV.
+""",
+                                  icon: Image.asset(
+                                    artificialIntelligence,
+                                    // color: Colors.green,
                                     height: 47,
                                     width: 47,
                                   ),
                                 ),
-                                serviceWidget(
-                                  onPressed: () {},
-                                  title: "Marketing & Reporting",
-                                  content:
-                                      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                  icon: SvgPicture.asset(
-                                    marketingReportingIcon,
-                                    color: purpleColor,
-                                    height: 47,
-                                    width: 47,
-                                  ),
-                                ),
-                                serviceWidget(
-                                  onPressed: () {},
-                                  title: "Mobile App Development",
-                                  content:
-                                      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                  icon: SvgPicture.asset(
-                                    mobileAppDevelopmentIcon,
-                                    color: secondaryColor,
-                                    height: 47,
-                                    width: 47,
-                                  ),
-                                ),
+                                // serviceWidget(
+                                //   onPressed: () {},
+                                //   title: "Marketing & Reporting",
+                                //   content:
+                                //       "I throw myself down among the tall grass by the stream as I lie close to the earth.",
+                                //   icon: SvgPicture.asset(
+                                //     marketingReportingIcon,
+                                //     color: purpleColor,
+                                //     height: 47,
+                                //     width: 47,
+                                //   ),
+                                // ),
+                                // serviceWidget(
+                                //   onPressed: () {},
+                                //   title: "Mobile App Development",
+                                //   content:
+                                //       "I throw myself down among the tall grass by the stream as I lie close to the earth.",
+                                //   icon: SvgPicture.asset(
+                                //     mobileAppDevelopmentIcon,
+                                //     color: secondaryColor,
+                                //     height: 47,
+                                //     width: 47,
+                                //   ),
+                                // ),
                               ],
                             )
                           ],
@@ -723,34 +951,49 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                           children: [
                             Container(
                               width: MediaQuery.of(context).size.width,
-                              child: (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                              child: (ResponsiveBreakpoints.of(context)
+                                          .screenWidth <
+                                      990)
                                   ? Column(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
-                                        (ResponsiveBreakpoints.of(context).screenWidth < 570)
+                                        (ResponsiveBreakpoints.of(context)
+                                                    .screenWidth <
+                                                570)
                                             ? Padding(
-                                                padding: EdgeInsets.symmetric(horizontal: 15),
+                                                padding: EdgeInsets.symmetric(
+                                                    horizontal: 15),
                                                 child: Row(
-                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
                                                   children: [
                                                     Expanded(
                                                       child: Container(
-                                                        height: (ResponsiveBreakpoints.of(context)
+                                                        height: (ResponsiveBreakpoints.of(
+                                                                        context)
                                                                     .screenWidth <
                                                                 770)
                                                             ? 596.h
                                                             : 804,
-                                                        width: (ResponsiveBreakpoints.of(context)
+                                                        width: (ResponsiveBreakpoints.of(
+                                                                        context)
                                                                     .screenWidth <
                                                                 770)
                                                             ? 516.w
                                                             : 696,
-                                                        decoration: BoxDecoration(
-                                                          image: DecorationImage(
-                                                            image: AssetImage(aboutImage),
-                                                            fit: BoxFit.fitWidth,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          image:
+                                                              DecorationImage(
+                                                            image: AssetImage(
+                                                                aboutImage),
+                                                            fit:
+                                                                BoxFit.fitWidth,
                                                           ),
-                                                          borderRadius: BorderRadius.circular(10),
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(10),
                                                         ),
                                                       ),
                                                     ),
@@ -759,45 +1002,62 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                               )
                                             : Container(
                                                 height:
-                                                    (ResponsiveBreakpoints.of(context).screenWidth <
+                                                    (ResponsiveBreakpoints.of(
+                                                                    context)
+                                                                .screenWidth <
                                                             770)
                                                         ? 596
                                                         : 804,
                                                 width:
-                                                    (ResponsiveBreakpoints.of(context).screenWidth <
+                                                    (ResponsiveBreakpoints.of(
+                                                                    context)
+                                                                .screenWidth <
                                                             770)
                                                         ? 516
                                                         : 696,
-                                                padding: EdgeInsets.symmetric(horizontal: 15),
+                                                padding: EdgeInsets.symmetric(
+                                                    horizontal: 15),
                                                 decoration: BoxDecoration(
                                                   image: DecorationImage(
-                                                    image: AssetImage(aboutImage),
+                                                    image:
+                                                        AssetImage(aboutImage),
                                                     fit: BoxFit.fill,
                                                   ),
-                                                  borderRadius: BorderRadius.circular(10),
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
                                                 ),
                                               ),
                                         SizedBox(
                                           height: 15,
                                         ),
-                                        (ResponsiveBreakpoints.of(context).screenWidth < 570)
+                                        (ResponsiveBreakpoints.of(context)
+                                                    .screenWidth <
+                                                570)
                                             ? Padding(
-                                                padding: EdgeInsets.symmetric(horizontal: 15),
+                                                padding: EdgeInsets.symmetric(
+                                                    horizontal: 15),
                                                 child: Container(
-                                                  width: (ResponsiveBreakpoints.of(context)
-                                                              .screenWidth <
-                                                          770)
-                                                      ? 516
-                                                      : 696,
+                                                  width:
+                                                      (ResponsiveBreakpoints.of(
+                                                                      context)
+                                                                  .screenWidth <
+                                                              770)
+                                                          ? 516
+                                                          : 696,
                                                   child: Column(
-                                                    mainAxisAlignment: MainAxisAlignment.start,
-                                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
                                                     children: [
                                                       GradientText(
                                                         "Read About Us",
-                                                        style: GoogleFonts.montserrat(
+                                                        style: GoogleFonts
+                                                            .montserrat(
                                                           fontSize: 16,
-                                                          fontWeight: FontWeight.w500,
+                                                          fontWeight:
+                                                              FontWeight.w500,
                                                         ),
                                                         colors: [
                                                           gradientColor1,
@@ -810,64 +1070,73 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                       ),
                                                       Text(
                                                         "Read Company Values",
-                                                        textAlign: TextAlign.left,
-                                                        style: GoogleFonts.poppins(
-                                                          fontSize:
-                                                              (ResponsiveBreakpoints.of(context)
-                                                                          .screenWidth <
-                                                                      765)
-                                                                  ? 16
-                                                                  : 50,
-                                                          fontWeight: FontWeight.w600,
-                                                          color: Colors.black.withOpacity(0.75),
+                                                        textAlign:
+                                                            TextAlign.left,
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                          fontSize: (ResponsiveBreakpoints.of(
+                                                                          context)
+                                                                      .screenWidth <
+                                                                  765)
+                                                              ? 16
+                                                              : 50,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          color: Colors.black
+                                                              .withOpacity(
+                                                                  0.75),
                                                         ),
                                                       ),
                                                       SizedBox(
                                                         height: 26.h,
                                                       ),
                                                       Text(
-                                                        "There are many variations of passages of Lorem Ipsum available,\nbut the majority have suffered alteration.",
-                                                        textAlign: TextAlign.left,
-                                                        style: GoogleFonts.poppins(
-                                                          fontSize:
-                                                              (ResponsiveBreakpoints.of(context)
-                                                                          .screenWidth <
-                                                                      765)
-                                                                  ? 16
-                                                                  : 18,
-                                                          fontWeight: FontWeight.w300,
-                                                          color: Colors.black.withOpacity(0.75),
+                                                        "Our values are the guiding principles that define who we are as a company and how we conduct our business.",
+                                                        textAlign:
+                                                            TextAlign.left,
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                          fontSize: (ResponsiveBreakpoints.of(
+                                                                          context)
+                                                                      .screenWidth <
+                                                                  765)
+                                                              ? 16
+                                                              : 18,
+                                                          fontWeight:
+                                                              FontWeight.w300,
+                                                          color: Colors.black
+                                                              .withOpacity(
+                                                                  0.75),
                                                         ),
                                                       ),
                                                       SizedBox(
                                                         height: 50,
                                                       ),
                                                       aboutUsTitleDescription(
-                                                          title: "Honest",
-                                                          description:
-                                                              "Lorem ipsum dolor sit amet, onecis et mollis."),
+                                                        title: "Integrity",
+                                                        description: "We adhere to the highest ethical standards, ensuring honesty and fairness in every action we take.",
+                                                      ),
                                                       SizedBox(
                                                         height: 30,
                                                       ),
                                                       aboutUsTitleDescription(
-                                                          title: "Strategy",
-                                                          description:
-                                                              "Lorem ipsum dolor sit amet, onecis et mollis."),
+                                                        title: "Innovation",
+                                                        description: "We are committed to fostering a culture of creativity and continuous improvement.",
+                                                      ),
                                                       SizedBox(
                                                         height: 30,
                                                       ),
                                                       aboutUsTitleDescription(
-                                                          title: "Development",
-                                                          description:
-                                                              "Lorem ipsum dolor sit amet, onecis et mollis."),
+                                                        title: "Excellence",
+                                                        description: "We strive for excellence in everything we do, delivering superior results that exceed expectations.",
+                                                      ),
                                                       SizedBox(
                                                         height: 30,
                                                       ),
                                                       aboutUsTitleDescription(
-                                                          title: "Quality",
-                                                          description:
-                                                              "Lorem ipsum dolor sit amet, onecis et mollis."),
-
+                                                        title: "Customer Focus",
+                                                        description: "Our customers are at the heart of our business, and their success is our top priority.",
+                                                      ),
                                                       /*Row(
                                                   children: [
                                                     Expanded(
@@ -895,9 +1164,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                           Expanded(
                                                             child: GradientText(
                                                               "WHY WE'RE DIFFERENT VALUES",
-                                                              style: GoogleFonts.montserrat(
+                                                              style: GoogleFonts
+                                                                  .montserrat(
                                                                 fontSize: 14,
-                                                                fontWeight: FontWeight.w600,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w600,
                                                               ),
                                                               colors: [
                                                                 gradientColor1,
@@ -914,8 +1186,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                       Container(
                                                         height: 2.4,
                                                         width: 40,
-                                                        decoration: BoxDecoration(
-                                                          gradient: LinearGradient(
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          gradient:
+                                                              LinearGradient(
                                                             colors: [
                                                               gradientColor1,
                                                               gradientColor2,
@@ -930,19 +1204,25 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                               )
                                             : Container(
                                                 width:
-                                                    (ResponsiveBreakpoints.of(context).screenWidth <
+                                                    (ResponsiveBreakpoints.of(
+                                                                    context)
+                                                                .screenWidth <
                                                             770)
                                                         ? 516
                                                         : 696,
                                                 child: Column(
-                                                  mainAxisAlignment: MainAxisAlignment.start,
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     GradientText(
                                                       "Read About Us",
-                                                      style: GoogleFonts.montserrat(
+                                                      style: GoogleFonts
+                                                          .montserrat(
                                                         fontSize: 16,
-                                                        fontWeight: FontWeight.w500,
+                                                        fontWeight:
+                                                            FontWeight.w500,
                                                       ),
                                                       colors: [
                                                         gradientColor1,
@@ -956,60 +1236,68 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                     Text(
                                                       "Read Company Values",
                                                       textAlign: TextAlign.left,
-                                                      style: GoogleFonts.poppins(
-                                                        fontSize: (ResponsiveBreakpoints.of(context)
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                        fontSize: (ResponsiveBreakpoints.of(
+                                                                        context)
                                                                     .screenWidth <
                                                                 765)
                                                             ? 16
                                                             : 50,
-                                                        fontWeight: FontWeight.w600,
-                                                        color: Colors.black.withOpacity(0.75),
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        color: Colors.black
+                                                            .withOpacity(0.75),
                                                       ),
                                                     ),
                                                     SizedBox(
                                                       height: 26.h,
                                                     ),
                                                     Text(
-                                                      "There are many variations of passages of Lorem Ipsum available,\nbut the majority have suffered alteration.",
+                                                      "Our values are the guiding principles that define who we are as a company and how we conduct our business.",
                                                       textAlign: TextAlign.left,
-                                                      style: GoogleFonts.poppins(
-                                                        fontSize: (ResponsiveBreakpoints.of(context)
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                        fontSize: (ResponsiveBreakpoints.of(
+                                                                        context)
                                                                     .screenWidth <
                                                                 765)
                                                             ? 16
                                                             : 18,
-                                                        fontWeight: FontWeight.w300,
-                                                        color: Colors.black.withOpacity(0.75),
+                                                        fontWeight:
+                                                            FontWeight.w300,
+                                                        color: Colors.black
+                                                            .withOpacity(0.75),
                                                       ),
                                                     ),
                                                     SizedBox(
                                                       height: 50,
                                                     ),
                                                     aboutUsTitleDescription(
-                                                        title: "Honest",
-                                                        description:
-                                                            "Lorem ipsum dolor sit amet, onecis et mollis."),
+                                                      title: "Integrity",
+                                                      description: "We adhere to the highest ethical standards, ensuring honesty and fairness in every action we take.",
+                                                    ),
                                                     SizedBox(
                                                       height: 30,
                                                     ),
                                                     aboutUsTitleDescription(
-                                                        title: "Strategy",
-                                                        description:
-                                                            "Lorem ipsum dolor sit amet, onecis et mollis."),
+                                                      title: "Innovation",
+                                                      description: "We are committed to fostering a culture of creativity and continuous improvement.",
+                                                    ),
                                                     SizedBox(
                                                       height: 30,
                                                     ),
                                                     aboutUsTitleDescription(
-                                                        title: "Development",
-                                                        description:
-                                                            "Lorem ipsum dolor sit amet, onecis et mollis."),
+                                                      title: "Excellence",
+                                                      description: "We strive for excellence in everything we do, delivering superior results that exceed expectations.",
+                                                    ),
                                                     SizedBox(
                                                       height: 30,
                                                     ),
                                                     aboutUsTitleDescription(
-                                                        title: "Quality",
-                                                        description:
-                                                            "Lorem ipsum dolor sit amet, onecis et mollis."),
+                                                      title: "Customer Focus",
+                                                      description: "Our customers are at the heart of our business, and their success is our top priority.",
+                                                    ),
 
                                                     /*Row(
                                                 children: [
@@ -1035,9 +1323,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                     ),
                                                     GradientText(
                                                       "WHY WE'RE DIFFERENT VALUES",
-                                                      style: GoogleFonts.montserrat(
+                                                      style: GoogleFonts
+                                                          .montserrat(
                                                         fontSize: 14,
-                                                        fontWeight: FontWeight.w600,
+                                                        fontWeight:
+                                                            FontWeight.w600,
                                                       ),
                                                       colors: [
                                                         gradientColor1,
@@ -1052,7 +1342,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                       height: 2.4,
                                                       width: 40,
                                                       decoration: BoxDecoration(
-                                                        gradient: LinearGradient(
+                                                        gradient:
+                                                            LinearGradient(
                                                           colors: [
                                                             gradientColor1,
                                                             gradientColor2,
@@ -1067,25 +1358,33 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                       ],
                                     )
                                   : Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         Container(
                                           height:
-                                              (ResponsiveBreakpoints.of(context).screenWidth < 1280)
+                                              (ResponsiveBreakpoints.of(context)
+                                                          .screenWidth <
+                                                      1280)
                                                   ? 524
                                                   : 696,
                                           width:
-                                              (ResponsiveBreakpoints.of(context).screenWidth < 1280)
+                                              (ResponsiveBreakpoints.of(context)
+                                                          .screenWidth <
+                                                      1280)
                                                   ? 452
                                                   : 633,
-                                          padding: EdgeInsets.symmetric(horizontal: 15),
+                                          padding: EdgeInsets.symmetric(
+                                              horizontal: 15),
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
                                               image: AssetImage(aboutImage),
                                               fit: BoxFit.fill,
                                             ),
-                                            borderRadius: BorderRadius.circular(10),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
                                           ),
                                         ),
                                         SizedBox(
@@ -1093,13 +1392,18 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                         ),
                                         Container(
                                           width:
-                                              (ResponsiveBreakpoints.of(context).screenWidth < 1280)
+                                              (ResponsiveBreakpoints.of(context)
+                                                          .screenWidth <
+                                                      1280)
                                                   ? 452
                                                   : 633,
-                                          padding: EdgeInsets.symmetric(horizontal: 15),
+                                          padding: EdgeInsets.symmetric(
+                                              horizontal: 15),
                                           child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               GradientText(
                                                 "Read About Us",
@@ -1120,29 +1424,35 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                 "Read Company Values",
                                                 textAlign: TextAlign.left,
                                                 style: GoogleFonts.poppins(
-                                                  fontSize: (ResponsiveBreakpoints.of(context)
-                                                              .screenWidth <
-                                                          765)
-                                                      ? 16
-                                                      : 50,
+                                                  fontSize:
+                                                      (ResponsiveBreakpoints.of(
+                                                                      context)
+                                                                  .screenWidth <
+                                                              765)
+                                                          ? 16
+                                                          : 50,
                                                   fontWeight: FontWeight.w600,
-                                                  color: Colors.black.withOpacity(0.75),
+                                                  color: Colors.black
+                                                      .withOpacity(0.75),
                                                 ),
                                               ),
                                               SizedBox(
                                                 height: 26.h,
                                               ),
                                               Text(
-                                                "There are many variations of passages of Lorem Ipsum available,\nbut the majority have suffered alteration.",
+                                                "Our values are the guiding principles that define who we are as a company and how we conduct our business.",
                                                 textAlign: TextAlign.left,
                                                 style: GoogleFonts.poppins(
-                                                  fontSize: (ResponsiveBreakpoints.of(context)
-                                                              .screenWidth <
-                                                          765)
-                                                      ? 16
-                                                      : 18,
+                                                  fontSize:
+                                                      (ResponsiveBreakpoints.of(
+                                                                      context)
+                                                                  .screenWidth <
+                                                              765)
+                                                          ? 16
+                                                          : 18,
                                                   fontWeight: FontWeight.w300,
-                                                  color: Colors.black.withOpacity(0.75),
+                                                  color: Colors.black
+                                                      .withOpacity(0.75),
                                                 ),
                                               ),
                                               SizedBox(
@@ -1152,18 +1462,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                 children: [
                                                   Expanded(
                                                     child: aboutUsTitleDescription(
-                                                        title: "Honest",
-                                                        description:
-                                                            "Lorem ipsum dolor sit amet, onecis et mollis."),
+                                                      title: "Integrity",
+                                                      description: "We adhere to the highest ethical standards, ensuring honesty and fairness in every action we take.",
+                                                    ),
                                                   ),
                                                   SizedBox(
                                                     width: 15,
                                                   ),
                                                   Expanded(
-                                                    child: aboutUsTitleDescription(
-                                                        title: "Strategy",
-                                                        description:
-                                                            "Lorem ipsum dolor sit amet, onecis et mollis."),
+                                                    child:   aboutUsTitleDescription(
+                                                      title: "Innovation",
+                                                      description: "We are committed to fostering a culture of creativity and continuous improvement.",
+
+                                                    ),
                                                   ),
                                                 ],
                                               ),
@@ -1174,18 +1485,18 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                 children: [
                                                   Expanded(
                                                     child: aboutUsTitleDescription(
-                                                        title: "Development",
-                                                        description:
-                                                            "Lorem ipsum dolor sit amet, onecis et mollis."),
+                                                      title: "Excellence",
+                                                      description: "We strive for excellence in everything we do, delivering superior results that exceed expectations.",
+                                                    ),
                                                   ),
                                                   SizedBox(
                                                     width: 15,
                                                   ),
                                                   Expanded(
-                                                    child: aboutUsTitleDescription(
-                                                        title: "Quality",
-                                                        description:
-                                                            "Lorem ipsum dolor sit amet, onecis et mollis."),
+                                                    child:   aboutUsTitleDescription(
+                                                      title: "Customer Focus",
+                                                      description: "Our customers are at the heart of our business, and their success is our top priority.",
+                                                    ),
                                                   ),
                                                 ],
                                               ),
@@ -1243,10 +1554,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   GradientText(
-                                    "Our project",
+                                    "Our Portfolio",
                                     style: GoogleFonts.montserrat(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
+                                      fontSize: 36,
+                                      fontWeight: FontWeight.w600,
                                     ),
                                     colors: [
                                       gradientColor1,
@@ -1258,15 +1569,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     height: 12.h,
                                   ),
                                   Text(
-                                    "Some of our Recent Works",
+                                    "Showcasing Our Expertise Through Successful Projects",
                                     textAlign: TextAlign.left,
                                     style: GoogleFonts.poppins(
-                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth <
+                                      fontSize: (ResponsiveBreakpoints.of(
+                                                      context)
+                                                  .screenWidth <
                                               990)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                                              ? 32
-                                              : 40
-                                          : 50,
+                                          ? (ResponsiveBreakpoints.of(context)
+                                                      .screenWidth <
+                                                  575)
+                                              ? 24
+                                              : 32
+                                          : 40,
                                       fontWeight: FontWeight.w600,
                                       color: Colors.black.withOpacity(0.75),
                                     ),
@@ -1275,12 +1590,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     height: 26.h,
                                   ),
                                   Text(
-                                    "There are many variations of passages of Lorem Ipsum available,\nbut the majority have suffered alteration.",
+                                    "We take pride in our diverse portfolio, which showcases our ability to deliver high-quality solutions across various industries.\nOne of our standout projects is the PakWheels app, a comprehensive platform for car enthusiasts.",
                                     textAlign: TextAlign.left,
                                     style: GoogleFonts.poppins(
-                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth <
+                                      fontSize: (ResponsiveBreakpoints.of(
+                                                      context)
+                                                  .screenWidth <
                                               765)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                          ? (ResponsiveBreakpoints.of(context)
+                                                      .screenWidth <
+                                                  575)
                                               ? 14
                                               : 16
                                           : 18,
@@ -1292,10 +1611,18 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     height: 50,
                                   ),
                                   Container(
-                                    width: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                            ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
-                                                ? (ResponsiveBreakpoints.of(context).screenWidth <
+                                    width: (ResponsiveBreakpoints.of(context)
+                                                .screenWidth <
+                                            1270)
+                                        ? (ResponsiveBreakpoints.of(context)
+                                                    .screenWidth <
+                                                990)
+                                            ? (ResponsiveBreakpoints.of(context)
+                                                        .screenWidth <
+                                                    770)
+                                                ? (ResponsiveBreakpoints.of(
+                                                                context)
+                                                            .screenWidth <
                                                         575)
                                                     ? 479
                                                     : 546
@@ -1307,19 +1634,35 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                               ),
                             ),
                             Container(
-                              height: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
-                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                      ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                              height: (ResponsiveBreakpoints.of(context)
+                                          .screenWidth <
+                                      1270)
+                                  ? (ResponsiveBreakpoints.of(context)
+                                              .screenWidth <
+                                          990)
+                                      ? (ResponsiveBreakpoints.of(context)
+                                                  .screenWidth <
+                                              770)
+                                          ? (ResponsiveBreakpoints.of(context)
+                                                      .screenWidth <
+                                                  575)
                                               ? 713.h
                                               : 431
                                           : 389
                                       : 498
                                   : 634,
-                              width: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
-                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                      ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                              width: (ResponsiveBreakpoints.of(context)
+                                          .screenWidth <
+                                      1270)
+                                  ? (ResponsiveBreakpoints.of(context)
+                                              .screenWidth <
+                                          990)
+                                      ? (ResponsiveBreakpoints.of(context)
+                                                  .screenWidth <
+                                              770)
+                                          ? (ResponsiveBreakpoints.of(context)
+                                                      .screenWidth <
+                                                  575)
                                               ? 479
                                               : 546
                                           : 726
@@ -1332,24 +1675,32 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                   ),
                                   Expanded(
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         Expanded(
-                                          child: LayoutBuilder(builder: (context, constraints) {
+                                          child: LayoutBuilder(
+                                              builder: (context, constraints) {
                                             return InfiniteCarousel.builder(
-                                              itemCount: 5,
-                                              itemExtent: (ResponsiveBreakpoints.of(context)
+                                              itemCount: portfolioItems.length,
+                                              itemExtent: (ResponsiveBreakpoints
+                                                              .of(context)
                                                           .screenWidth <
                                                       1270)
-                                                  ? (ResponsiveBreakpoints.of(context).screenWidth <
+                                                  ? (ResponsiveBreakpoints.of(
+                                                                  context)
+                                                              .screenWidth <
                                                           990)
-                                                      ? (ResponsiveBreakpoints.of(context)
+                                                      ? (ResponsiveBreakpoints.of(
+                                                                      context)
                                                                   .screenWidth <
                                                               770)
-                                                          ? (ResponsiveBreakpoints.of(context)
+                                                          ? (ResponsiveBreakpoints.of(
+                                                                          context)
                                                                       .screenWidth <
                                                                   575)
-                                                              ? constraints.maxWidth
+                                                              ? constraints
+                                                                  .maxWidth
                                                               : 273
                                                           : 242
                                                       : 322
@@ -1358,13 +1709,23 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                               anchor: 0.0,
                                               velocityFactor: 0.8,
                                               onIndexChanged: (index) {
-                                                ref.read(pageNumberProvider.notifier).state = index;
+                                                ref
+                                                    .read(pageNumberProvider
+                                                        .notifier)
+                                                    .state = index;
                                               },
-                                              controller: _portfolioScroll1Controller,
+                                              controller:
+                                                  _portfolioScroll1Controller,
                                               axisDirection: Axis.horizontal,
-                                              loop: true,
-                                              itemBuilder: (context, itemIndex, realIndex) {
-                                                return PortfolioSliderWidget(itemIndex: itemIndex);
+                                              loop: false,
+                                              itemBuilder: (context, itemIndex,
+                                                  realIndex) {
+                                                final item = portfolioItems[itemIndex];
+                                                return PortfolioSliderWidget(
+                                                    itemIndex: itemIndex,
+                                                  stackName: item['stackName']!,
+                                                  projectName: item['projectName']!,
+                                                  explanation: item['explanation']!,);
                                               },
                                             );
                                           }),
@@ -1382,29 +1743,40 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                               mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                portfolioPageNumber == 0 ? activeIndicator() : inActiveIndicator(),
+                                portfolioPageNumber == 0
+                                    ? activeIndicator()
+                                    : inActiveIndicator(),
                                 SizedBox(
                                   width: 20,
                                 ),
-                                portfolioPageNumber == 1 ? activeIndicator() : inActiveIndicator(),
+                                portfolioPageNumber == 1
+                                    ? activeIndicator()
+                                    : inActiveIndicator(),
                                 SizedBox(
                                   width: 20,
                                 ),
-                                portfolioPageNumber == 2 ? activeIndicator() : inActiveIndicator(),
+                                portfolioPageNumber == 2
+                                    ? activeIndicator()
+                                    : inActiveIndicator(),
                                 SizedBox(
                                   width: 20,
                                 ),
-                                portfolioPageNumber == 3 ? activeIndicator() : inActiveIndicator(),
+                                portfolioPageNumber == 3
+                                    ? activeIndicator()
+                                    : inActiveIndicator(),
                                 SizedBox(
                                   width: 20,
                                 ),
-                                portfolioPageNumber == 4 ? activeIndicator() : inActiveIndicator(),
+                                portfolioPageNumber == 4
+                                    ? activeIndicator()
+                                    : inActiveIndicator(),
                               ],
                             ),
                           ],
                         ),
                       ),
                       Container(
+                        key: targetKey,
                         width: /*(ResponsiveBreakpoints.of(context).screenWidth < 1270)
                             ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
                                 ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
@@ -1421,10 +1793,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             GradientText(
-                              "Experts grows",
+                              "Our Target Market",
                               style: GoogleFonts.montserrat(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
+                                fontSize: 36,
+                                fontWeight: FontWeight.w600,
                               ),
                               colors: [
                                 gradientColor1,
@@ -1436,73 +1808,182 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                               height: 12.h,
                             ),
                             Text(
-                              "Our Company Growth",
+                              "Tailored Solutions for Diverse Industries",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                fontSize:
-                                    (ResponsiveBreakpoints.of(context).screenWidth < 765) ? 16 : 50,
-                                fontWeight: FontWeight.w600,
+                                fontSize: (ResponsiveBreakpoints.of(context)
+                                            .screenWidth <
+                                        765)
+                                    ? 16
+                                    : 40,
+                                fontWeight: FontWeight.w500,
                                 color: Colors.black.withOpacity(0.75),
                               ),
                             ),
                             SizedBox(
                               height: 26.h,
                             ),
-                            Text(
-                              "We have grown strength over the past 20 years",
-                              textAlign: TextAlign.left,
-                              style: GoogleFonts.poppins(
-                                fontSize:
-                                    (ResponsiveBreakpoints.of(context).screenWidth < 765) ? 16 : 18,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.black.withOpacity(0.75),
+                            Padding(
+                              padding: EdgeInsets.only(left: 40.w),
+                              child: Text(
+                                "Our services are designed to meet the needs of a diverse range of industries. We understand that each industry has unique requirements, and we tailor our solutions to ensure maximum impact and efficiency.",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.poppins(
+                                  fontSize: (ResponsiveBreakpoints.of(context)
+                                              .screenWidth <
+                                          765)
+                                      ? 16
+                                      : 18,
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.black.withOpacity(0.75),
+                                ),
                               ),
                             ),
                             SizedBox(
-                              height: 60,
+                              height: 20,
                             ),
-                            Container(
-                              child: Wrap(
-                                spacing: 30,
-                                runSpacing: 30,
-                                children: [
-                                  companyGrowthWidget(
-                                    icon: Icon(
-                                      Icons.favorite_border_outlined,
-                                      size: 44,
-                                      color: primaryColor,
-                                    ),
-                                    scores: 120,
-                                    title: "Satisfied Customers",
+                            GradientText(
+                              "Industries We Serve:",
+                              style: GoogleFonts.montserrat(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                              ),
+                              colors: [
+                                gradientColor1,
+                                gradientColor2,
+                                gradientColor3,
+                              ],
+                            ),
+
+                            SizedBox(
+                              height: 40,
+                            ),
+
+                            Wrap(
+                              spacing: 30,
+                              runSpacing: 30,
+                              children: [
+                                companyGrowthWidget(
+                                  image: Image.asset(
+                                    ecommerce,
+                                    height: 44,
+                                    width: 44,
+                                    // color: secondaryColor,
                                   ),
-                                  companyGrowthWidget(
-                                    icon: Icon(
-                                      Icons.access_time_outlined,
-                                      size: 44,
-                                      color: secondaryColor,
-                                    ),
-                                    scores: 200,
-                                    title: "Days of Operation",
+                                  scores: "E-commerce",
+                                  title: """Use-Case: Online Retail Stores
+
+Description: Build comprehensive e-commerce platforms with product listings, shopping carts, payment gateways, and order tracking.
+Technologies Used: Flutter for mobile and web apps, Firebase for real-time updates, RESTful APIs for payment integration.
+Relevant Image:
+
+Use-Case: Subscription Services
+
+Description: Develop subscription-based platforms for various services, including video streaming, digital content, and more.
+Technologies Used: Flutter for UI, Firebase for user authentication and data storage, AWS for scalable backend services.
+""",
+                                ),
+                                companyGrowthWidget(
+                                  image: Image.asset(
+                                    education,
+                                    height: 44,
+                                    width: 44,
+                                    // color: orangeColor,
                                   ),
-                                  companyGrowthWidget(
-                                    icon: Icon(
-                                      Icons.circle_outlined,
-                                      size: 44,
-                                      color: orangeColor,
-                                    ),
-                                    scores: 200,
-                                    title: "Complete Projects",
+                                  scores: "Education",
+                                  title: """Use-Case: E-learning Platforms
+
+Description: Create interactive e-learning platforms with video lessons, quizzes, progress tracking, and community forums.
+Technologies Used: Flutter for cross-platform apps, Firebase for real-time data, GraphQL for efficient data fetching.
+Relevant Image:
+
+Use-Case: School Management Systems
+
+Description: Develop systems for managing school operations, including student information, attendance, grading, and communication.
+Technologies Used: Flutter for UI, Firebase for data storage, RESTful APIs for integration with third-party services.
+""",
+                                ),
+                                companyGrowthWidget(
+                                  image: Image.asset(
+                                    finance,
+                                    height: 44,
+                                    width: 44,
+                                    // color: primaryColor,
                                   ),
-                                  companyGrowthWidget(
-                                    icon: Icon(
-                                      Icons.favorite_border_outlined,
-                                      size: 44,
-                                      color: primaryColor,
-                                    ),
-                                    scores: 120,
-                                    title: "Satisfied Customers",
+                                  scores: "Finance",
+                                  title: """Use-Case: Fintech Solutions
+
+Description: Build secure and scalable fintech applications for banking, investment, and personal finance management.
+Technologies Used: Flutter for cross-platform apps, Firebase for real-time data, RESTful APIs for integration with financial services.
+Relevant Image:
+Use-Case: Investment Platforms
+
+Description: Develop platforms for managing investments, including portfolio tracking, market analysis, and trading.
+Technologies Used: Flutter for UI, Firebase for real-time data, GraphQL for efficient data querying.
+""",
+                                ),
+                                companyGrowthWidget(
+                                  image: Image.asset(
+                                    realEstate,
+                                    height: 44,
+                                    width: 44,
+                                    // color: primaryColor,
                                   ),
-                                ],
+                                  scores: "Real Estate",
+                                  title: """Use-Case: Property Listing Platforms
+
+Description: Create platforms for listing and searching properties, including advanced search filters, virtual tours, and agent contact.
+Technologies Used: Flutter for cross-platform apps, Firebase for real-time updates, RESTful APIs for integration with third-party services.
+Relevant Image:
+
+Use-Case: Real Estate Management Systems
+
+Description: Develop systems for managing real estate operations, including property management, tenant communication, and maintenance tracking.
+Technologies Used: Flutter for UI, Firebase for data storage, AWS for scalable backend services.
+""",
+                                ),
+
+
+
+
+                              ],
+                            ),
+                            SizedBox(
+                              height: 30,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 80),
+                              child: companyGrowthFullWidthWidget(
+                                image: Image.asset(
+                                  automotive,
+                                  height: 44,
+                                  width: 44,
+                                  // color: primaryColor,
+                                ),
+                                scores: "Automotive",
+                                title: """Use-Case: Dealership Management Systems
+                              
+Description: Streamline operations for car dealerships, including inventory management, customer relationship management (CRM), and sales tracking.
+Technologies Used: Flutter for cross-platform apps, Firebase for real-time data, RESTful APIs for integration with third-party services.
+Relevant Image:
+                              
+Use-Case: Car Rental Services
+                              
+Description: Develop apps for managing car rentals, including booking, fleet management, and customer support.
+Technologies Used: Flutter for mobile apps, Firebase for real-time data, AWS for scalable backend services.
+Relevant Image:
+Healthcare
+                              
+Use-Case: Telemedicine Platforms
+                              
+Description: Enable remote consultations between patients and healthcare providers, including video calls, appointment scheduling, and electronic health records (EHR) management.
+Technologies Used: Flutter for mobile and web apps, Firebase for real-time data, RESTful APIs for EHR integration.
+Relevant Image:
+Use-Case: Patient Management Systems
+                              
+Description: Manage patient information, appointments, billing, and communication in a single platform.
+Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for efficient data querying.
+                              """,
                               ),
                             ),
                           ],
@@ -1522,10 +2003,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   GradientText(
-                                    "Latest News",
+                                    "Why Choose Us",
                                     style: GoogleFonts.montserrat(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
+                                      fontSize: 36,
+                                      fontWeight: FontWeight.w600,
                                     ),
                                     colors: [
                                       gradientColor1,
@@ -1537,16 +2018,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     height: 12.h,
                                   ),
                                   Text(
-                                    "Latest News",
+                                    "Expertise in Cutting-Edge Technologies",
                                     textAlign: TextAlign.left,
                                     style: GoogleFonts.poppins(
-                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth <
+                                      fontSize: (ResponsiveBreakpoints.of(
+                                                      context)
+                                                  .screenWidth <
                                               990)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                          ? (ResponsiveBreakpoints.of(context)
+                                                      .screenWidth <
+                                                  575)
                                               ? 32
                                               : 40
                                           : 50,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       color: Colors.black.withOpacity(0.75),
                                     ),
                                   ),
@@ -1554,12 +2039,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     height: 26.h,
                                   ),
                                   Text(
-                                    "There are many variations of passages of Lorem Ipsum available,\nbut the majority have suffered alteration.",
+                                    "We stay ahead of the curve by leveraging the latest technologies to deliver innovative solutions.",
                                     textAlign: TextAlign.left,
                                     style: GoogleFonts.poppins(
-                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth <
+                                      fontSize: (ResponsiveBreakpoints.of(
+                                                      context)
+                                                  .screenWidth <
                                               765)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                          ? (ResponsiveBreakpoints.of(context)
+                                                      .screenWidth <
+                                                  575)
                                               ? 14
                                               : 16
                                           : 18,
@@ -1571,10 +2060,18 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     height: 50,
                                   ),
                                   Container(
-                                    width: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                            ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
-                                                ? (ResponsiveBreakpoints.of(context).screenWidth <
+                                    width: (ResponsiveBreakpoints.of(context)
+                                                .screenWidth <
+                                            1270)
+                                        ? (ResponsiveBreakpoints.of(context)
+                                                    .screenWidth <
+                                                990)
+                                            ? (ResponsiveBreakpoints.of(context)
+                                                        .screenWidth <
+                                                    770)
+                                                ? (ResponsiveBreakpoints.of(
+                                                                context)
+                                                            .screenWidth <
                                                         575)
                                                     ? 479
                                                     : 546
@@ -1586,19 +2083,35 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                               ),
                             ),
                             Container(
-                              height: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
-                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                      ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                              height: (ResponsiveBreakpoints.of(context)
+                                          .screenWidth <
+                                      1270)
+                                  ? (ResponsiveBreakpoints.of(context)
+                                              .screenWidth <
+                                          990)
+                                      ? (ResponsiveBreakpoints.of(context)
+                                                  .screenWidth <
+                                              770)
+                                          ? (ResponsiveBreakpoints.of(context)
+                                                      .screenWidth <
+                                                  575)
                                               ? 713.h
                                               : 431
                                           : 389
                                       : 498
                                   : 634,
-                              width: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
-                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                      ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                              width: (ResponsiveBreakpoints.of(context)
+                                          .screenWidth <
+                                      1270)
+                                  ? (ResponsiveBreakpoints.of(context)
+                                              .screenWidth <
+                                          990)
+                                      ? (ResponsiveBreakpoints.of(context)
+                                                  .screenWidth <
+                                              770)
+                                          ? (ResponsiveBreakpoints.of(context)
+                                                      .screenWidth <
+                                                  575)
                                               ? 479
                                               : 546
                                           : 726
@@ -1611,24 +2124,32 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                   ),
                                   Expanded(
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         Expanded(
-                                          child: LayoutBuilder(builder: (context, constraints) {
+                                          child: LayoutBuilder(
+                                              builder: (context, constraints) {
                                             return InfiniteCarousel.builder(
-                                              itemCount: 5,
-                                              itemExtent: (ResponsiveBreakpoints.of(context)
+                                              itemCount: whyChooseUsItems.length,
+                                              itemExtent: (ResponsiveBreakpoints
+                                                              .of(context)
                                                           .screenWidth <
                                                       1270)
-                                                  ? (ResponsiveBreakpoints.of(context).screenWidth <
+                                                  ? (ResponsiveBreakpoints.of(
+                                                                  context)
+                                                              .screenWidth <
                                                           990)
-                                                      ? (ResponsiveBreakpoints.of(context)
+                                                      ? (ResponsiveBreakpoints.of(
+                                                                      context)
                                                                   .screenWidth <
                                                               770)
-                                                          ? (ResponsiveBreakpoints.of(context)
+                                                          ? (ResponsiveBreakpoints.of(
+                                                                          context)
                                                                       .screenWidth <
                                                                   575)
-                                                              ? constraints.maxWidth
+                                                              ? constraints
+                                                                  .maxWidth
                                                               : 273
                                                           : 242
                                                       : 322
@@ -1637,13 +2158,21 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                               anchor: 0.0,
                                               velocityFactor: 0.8,
                                               onIndexChanged: (index) {
-                                                ref.read(pageNumberProvider.notifier).state = index;
+                                                ref
+                                                    .read(pageNumberProvider
+                                                        .notifier)
+                                                    .state = index;
                                               },
-                                              controller: _portfolioScroll1Controller,
+                                              controller:
+                                                  _portfolioScroll1Controller,
                                               axisDirection: Axis.horizontal,
-                                              loop: true,
-                                              itemBuilder: (context, itemIndex, realIndex) {
-                                                return BlogSliderWidget(itemIndex: itemIndex);
+                                              loop: false,
+                                              itemBuilder: (context, itemIndex,
+                                                  realIndex) {
+                                                final item = whyChooseUsItems[itemIndex];
+
+                                                return BlogSliderWidget(
+                                                    itemIndex: itemIndex, title: item['title'].toString(), description: item['description'].toString(), image: item['image'].toString(),);
                                               },
                                             );
                                           }),
@@ -1661,23 +2190,33 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                               mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                portfolioPageNumber == 0 ? activeIndicator() : inActiveIndicator(),
+                                portfolioPageNumber == 0
+                                    ? activeIndicator()
+                                    : inActiveIndicator(),
                                 SizedBox(
                                   width: 20,
                                 ),
-                                portfolioPageNumber == 1 ? activeIndicator() : inActiveIndicator(),
+                                portfolioPageNumber == 1
+                                    ? activeIndicator()
+                                    : inActiveIndicator(),
                                 SizedBox(
                                   width: 20,
                                 ),
-                                portfolioPageNumber == 2 ? activeIndicator() : inActiveIndicator(),
+                                portfolioPageNumber == 2
+                                    ? activeIndicator()
+                                    : inActiveIndicator(),
                                 SizedBox(
                                   width: 20,
                                 ),
-                                portfolioPageNumber == 3 ? activeIndicator() : inActiveIndicator(),
+                                portfolioPageNumber == 3
+                                    ? activeIndicator()
+                                    : inActiveIndicator(),
                                 SizedBox(
                                   width: 20,
                                 ),
-                                portfolioPageNumber == 4 ? activeIndicator() : inActiveIndicator(),
+                                portfolioPageNumber == 4
+                                    ? activeIndicator()
+                                    : inActiveIndicator(),
                               ],
                             ),
                           ],
@@ -1693,34 +2232,49 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                           children: [
                             Container(
                               width: MediaQuery.of(context).size.width,
-                              child: (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                              child: (ResponsiveBreakpoints.of(context)
+                                          .screenWidth <
+                                      990)
                                   ? Column(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
-                                        (ResponsiveBreakpoints.of(context).screenWidth < 570)
+                                        (ResponsiveBreakpoints.of(context)
+                                                    .screenWidth <
+                                                570)
                                             ? Padding(
-                                                padding: EdgeInsets.symmetric(horizontal: 15),
+                                                padding: EdgeInsets.symmetric(
+                                                    horizontal: 15),
                                                 child: Row(
-                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
                                                   children: [
                                                     Expanded(
                                                       child: Container(
-                                                        height: (ResponsiveBreakpoints.of(context)
+                                                        height: (ResponsiveBreakpoints.of(
+                                                                        context)
                                                                     .screenWidth <
                                                                 770)
                                                             ? 596.h
                                                             : 804,
-                                                        width: (ResponsiveBreakpoints.of(context)
+                                                        width: (ResponsiveBreakpoints.of(
+                                                                        context)
                                                                     .screenWidth <
                                                                 770)
                                                             ? 516.w
                                                             : 696,
-                                                        decoration: BoxDecoration(
-                                                          image: DecorationImage(
-                                                            image: AssetImage(aboutImage),
-                                                            fit: BoxFit.fitWidth,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          image:
+                                                              DecorationImage(
+                                                            image: AssetImage(
+                                                                aboutImage),
+                                                            fit:
+                                                                BoxFit.fitWidth,
                                                           ),
-                                                          borderRadius: BorderRadius.circular(10),
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(10),
                                                         ),
                                                       ),
                                                     ),
@@ -1729,45 +2283,62 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                               )
                                             : Container(
                                                 height:
-                                                    (ResponsiveBreakpoints.of(context).screenWidth <
+                                                    (ResponsiveBreakpoints.of(
+                                                                    context)
+                                                                .screenWidth <
                                                             770)
                                                         ? 596
                                                         : 804,
                                                 width:
-                                                    (ResponsiveBreakpoints.of(context).screenWidth <
+                                                    (ResponsiveBreakpoints.of(
+                                                                    context)
+                                                                .screenWidth <
                                                             770)
                                                         ? 516
                                                         : 696,
-                                                padding: EdgeInsets.symmetric(horizontal: 15),
+                                                padding: EdgeInsets.symmetric(
+                                                    horizontal: 15),
                                                 decoration: BoxDecoration(
                                                   image: DecorationImage(
-                                                    image: AssetImage(aboutImage),
+                                                    image:
+                                                        AssetImage(aboutImage),
                                                     fit: BoxFit.fill,
                                                   ),
-                                                  borderRadius: BorderRadius.circular(10),
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
                                                 ),
                                               ),
                                         SizedBox(
                                           height: 15,
                                         ),
-                                        (ResponsiveBreakpoints.of(context).screenWidth < 570)
+                                        (ResponsiveBreakpoints.of(context)
+                                                    .screenWidth <
+                                                570)
                                             ? Padding(
-                                                padding: EdgeInsets.symmetric(horizontal: 15),
+                                                padding: EdgeInsets.symmetric(
+                                                    horizontal: 15),
                                                 child: Container(
-                                                  width: (ResponsiveBreakpoints.of(context)
-                                                              .screenWidth <
-                                                          770)
-                                                      ? 516
-                                                      : 696,
+                                                  width:
+                                                      (ResponsiveBreakpoints.of(
+                                                                      context)
+                                                                  .screenWidth <
+                                                              770)
+                                                          ? 516
+                                                          : 696,
                                                   child: Column(
-                                                    mainAxisAlignment: MainAxisAlignment.start,
-                                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
                                                     children: [
                                                       GradientText(
-                                                        "Let's Say Hi",
-                                                        style: GoogleFonts.montserrat(
-                                                          fontSize: 16,
-                                                          fontWeight: FontWeight.w500,
+                                                        "Contact Us",
+                                                        style: GoogleFonts
+                                                            .montserrat(
+                                                          fontSize: 36,
+                                                          fontWeight:
+                                                              FontWeight.w500,
                                                         ),
                                                         colors: [
                                                           gradientColor1,
@@ -1779,124 +2350,81 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                         height: 12.h,
                                                       ),
                                                       Text(
-                                                        "Contact With Us",
-                                                        textAlign: TextAlign.left,
-                                                        style: GoogleFonts.poppins(
-                                                          fontSize:
-                                                              (ResponsiveBreakpoints.of(context)
-                                                                          .screenWidth <
-                                                                      765)
-                                                                  ? 16
-                                                                  : 50,
-                                                          fontWeight: FontWeight.w600,
-                                                          color: Colors.black.withOpacity(0.75),
+                                                        "Get in Touch",
+                                                        textAlign:
+                                                            TextAlign.left,
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                          fontSize: (ResponsiveBreakpoints.of(
+                                                                          context)
+                                                                      .screenWidth <
+                                                                  765)
+                                                              ? 16
+                                                              : 50,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          color: Colors.black
+                                                              .withOpacity(
+                                                                  0.75),
+                                                        ),
+                                                      ),
+                                                      SizedBox(
+                                                        height: 12.h,
+                                                      ),
+                                                      Text(
+                                                        "Let's Discuss Your Project",
+                                                        textAlign:
+                                                            TextAlign.left,
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                          fontSize: (ResponsiveBreakpoints.of(
+                                                                          context)
+                                                                      .screenWidth <
+                                                                  765)
+                                                              ? 12
+                                                              : 38,
+                                                          fontWeight:
+                                                              FontWeight.w300,
+                                                          color: Colors.black
+                                                              .withOpacity(
+                                                                  0.75),
                                                         ),
                                                       ),
                                                       SizedBox(
                                                         height: 26.h,
                                                       ),
-                                                      Row(
-                                                        children: [
-                                                          Expanded(
-                                                            child: Row(
-                                                              children: [
-                                                                Text(
-                                                                  "Call us directly: ",
-                                                                  textAlign: TextAlign.left,
-                                                                  style: GoogleFonts.poppins(
-                                                                    fontSize:
-                                                                        (ResponsiveBreakpoints.of(
-                                                                                        context)
-                                                                                    .screenWidth <
-                                                                                765)
-                                                                            ? 16
-                                                                            : 14,
-                                                                    fontWeight: FontWeight.w300,
-                                                                    color: Colors.black
-                                                                        .withOpacity(0.75),
-                                                                  ),
-                                                                ),
-                                                                SizedBox(
-                                                                  width: 10,
-                                                                ),
-                                                                Expanded(
-                                                                  child: Text(
-                                                                    "+111 227 228 222",
-                                                                    textAlign: TextAlign.left,
-                                                                    style: GoogleFonts.poppins(
-                                                                      fontSize:
-                                                                          (ResponsiveBreakpoints.of(
-                                                                                          context)
-                                                                                      .screenWidth <
-                                                                                  765)
-                                                                              ? 14
-                                                                              : 17,
-                                                                      fontWeight: FontWeight.w700,
-                                                                      color: Colors.black,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ],
+                                                      Text(
+                                                        "Ready to take your business to the next level? Contact us today to discuss your project and how we can help you achieve your goals.",
+                                                        textAlign:
+                                                        TextAlign
+                                                            .left,
+                                                        style: GoogleFonts
+                                                            .poppins(
+                                                          fontSize:
+                                                          (ResponsiveBreakpoints.of(context).screenWidth <
+                                                              765)
+                                                              ? 16
+                                                              : 14,
+                                                          fontWeight:
+                                                          FontWeight
+                                                              .w300,
+                                                          color: Colors
+                                                              .black
+                                                              .withOpacity(
+                                                              0.75),
+                                                        ),
                                                       ),
-                                                      SizedBox(
-                                                        height: 20.h,
-                                                      ),
-                                                      Row(
-                                                        children: [
-                                                          Expanded(
-                                                            child: Row(
-                                                              children: [
-                                                                Text(
-                                                                  "Contact Email: ",
-                                                                  textAlign: TextAlign.left,
-                                                                  style: GoogleFonts.poppins(
-                                                                    fontSize:
-                                                                        (ResponsiveBreakpoints.of(
-                                                                                        context)
-                                                                                    .screenWidth <
-                                                                                765)
-                                                                            ? 16
-                                                                            : 14,
-                                                                    fontWeight: FontWeight.w300,
-                                                                    color: Colors.black
-                                                                        .withOpacity(0.75),
-                                                                  ),
-                                                                ),
-                                                                SizedBox(
-                                                                  width: 10,
-                                                                ),
-                                                                Expanded(
-                                                                  child: Text(
-                                                                    "abdulmannanijaz99@gmail.com",
-                                                                    textAlign: TextAlign.left,
-                                                                    style: GoogleFonts.poppins(
-                                                                      fontSize:
-                                                                          (ResponsiveBreakpoints.of(
-                                                                                          context)
-                                                                                      .screenWidth <
-                                                                                  765)
-                                                                              ? 14
-                                                                              : 17,
-                                                                      fontWeight: FontWeight.w700,
-                                                                      color: Colors.black,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
+
+
                                                       SizedBox(
                                                         height: 50,
                                                       ),
                                                       CustomizableTextField(
-                                                        controller: yourNameEditingController,
+                                                        controller:
+                                                            yourNameEditingController,
                                                         hintText: yourNameText,
-                                                        focusNode: yourNameFocusNode,
+                                                        focusNode:
+                                                            yourNameFocusNode,
                                                         validator: (value) {
                                                           // if (value!.isEmpty) {
                                                           //   return cnicEmptyValidationText;
@@ -1913,23 +2441,32 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                         suffixIcon: null,
                                                         prefixWidget: null,
                                                         //Prefix Widget != null
-                                                        prefixPadding: EdgeInsets.zero,
-                                                        suffixPadding: EdgeInsets.symmetric(
+                                                        prefixPadding:
+                                                            EdgeInsets.zero,
+                                                        suffixPadding:
+                                                            EdgeInsets
+                                                                .symmetric(
                                                           horizontal: 10.w,
                                                           vertical: 16.h,
                                                         ),
-                                                        focusedIconColor: Colors.black,
-                                                        unfocusedIconColor: Colors.grey,
+                                                        focusedIconColor:
+                                                            Colors.black,
+                                                        unfocusedIconColor:
+                                                            Colors.grey,
                                                         hideText: false,
-                                                        textInputType: TextInputType.number,
+                                                        textInputType:
+                                                            TextInputType
+                                                                .number,
                                                       ),
                                                       SizedBox(
                                                         height: 20,
                                                       ),
                                                       CustomizableTextField(
-                                                        controller: yourPhoneEditingController,
+                                                        controller:
+                                                            yourPhoneEditingController,
                                                         hintText: yourPhoneText,
-                                                        focusNode: yourPhoneFocusNode,
+                                                        focusNode:
+                                                            yourPhoneFocusNode,
                                                         validator: (value) {
                                                           // if (value!.isEmpty) {
                                                           //   return cnicEmptyValidationText;
@@ -1946,23 +2483,32 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                         suffixIcon: null,
                                                         prefixWidget: null,
                                                         //Prefix Widget != null
-                                                        prefixPadding: EdgeInsets.zero,
-                                                        suffixPadding: EdgeInsets.symmetric(
+                                                        prefixPadding:
+                                                            EdgeInsets.zero,
+                                                        suffixPadding:
+                                                            EdgeInsets
+                                                                .symmetric(
                                                           horizontal: 10.w,
                                                           vertical: 16.h,
                                                         ),
-                                                        focusedIconColor: Colors.black,
-                                                        unfocusedIconColor: Colors.grey,
+                                                        focusedIconColor:
+                                                            Colors.black,
+                                                        unfocusedIconColor:
+                                                            Colors.grey,
                                                         hideText: false,
-                                                        textInputType: TextInputType.number,
+                                                        textInputType:
+                                                            TextInputType
+                                                                .number,
                                                       ),
                                                       SizedBox(
                                                         height: 20,
                                                       ),
                                                       CustomizableTextField(
-                                                        controller: yourEmailEditingController,
+                                                        controller:
+                                                            yourEmailEditingController,
                                                         hintText: yourEmailText,
-                                                        focusNode: yourEmailFocusNode,
+                                                        focusNode:
+                                                            yourEmailFocusNode,
                                                         validator: (value) {
                                                           // if (value!.isEmpty) {
                                                           //   return cnicEmptyValidationText;
@@ -1979,23 +2525,33 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                         suffixIcon: null,
                                                         prefixWidget: null,
                                                         //Prefix Widget != null
-                                                        prefixPadding: EdgeInsets.zero,
-                                                        suffixPadding: EdgeInsets.symmetric(
+                                                        prefixPadding:
+                                                            EdgeInsets.zero,
+                                                        suffixPadding:
+                                                            EdgeInsets
+                                                                .symmetric(
                                                           horizontal: 10.w,
                                                           vertical: 16.h,
                                                         ),
-                                                        focusedIconColor: Colors.black,
-                                                        unfocusedIconColor: Colors.grey,
+                                                        focusedIconColor:
+                                                            Colors.black,
+                                                        unfocusedIconColor:
+                                                            Colors.grey,
                                                         hideText: false,
-                                                        textInputType: TextInputType.number,
+                                                        textInputType:
+                                                            TextInputType
+                                                                .number,
                                                       ),
                                                       SizedBox(
                                                         height: 20,
                                                       ),
                                                       CustomizableTextField(
-                                                        controller: yourMessageEditingController,
-                                                        hintText: yourMessageText,
-                                                        focusNode: yourMessageFocusNode,
+                                                        controller:
+                                                            yourMessageEditingController,
+                                                        hintText:
+                                                            yourMessageText,
+                                                        focusNode:
+                                                            yourMessageFocusNode,
                                                         validator: (value) {
                                                           // if (value!.isEmpty) {
                                                           //   return cnicEmptyValidationText;
@@ -2012,15 +2568,22 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                         suffixIcon: null,
                                                         prefixWidget: null,
                                                         //Prefix Widget != null
-                                                        prefixPadding: EdgeInsets.zero,
-                                                        suffixPadding: EdgeInsets.symmetric(
+                                                        prefixPadding:
+                                                            EdgeInsets.zero,
+                                                        suffixPadding:
+                                                            EdgeInsets
+                                                                .symmetric(
                                                           horizontal: 10.w,
                                                           vertical: 16.h,
                                                         ),
-                                                        focusedIconColor: Colors.black,
-                                                        unfocusedIconColor: Colors.grey,
+                                                        focusedIconColor:
+                                                            Colors.black,
+                                                        unfocusedIconColor:
+                                                            Colors.grey,
                                                         hideText: false,
-                                                        textInputType: TextInputType.number,
+                                                        textInputType:
+                                                            TextInputType
+                                                                .number,
                                                         maxLines: 5,
                                                       ),
                                                       SizedBox(
@@ -2031,15 +2594,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                         suffixButtonIcon: null,
                                                         isFullWidth: false,
                                                         isOutlined: false,
-                                                        buttonTitle: "Submit Now".toUpperCase(),
+                                                        buttonTitle:
+                                                            "Submit Now"
+                                                                .toUpperCase(),
                                                         onPressed: () async {},
-                                                        buttonTitleStyle: TextStyle(
+                                                        buttonTitleStyle:
+                                                            TextStyle(
                                                           fontSize: 16,
                                                           color: Colors.white,
-                                                          fontWeight: FontWeight.w500,
+                                                          fontWeight:
+                                                              FontWeight.w500,
                                                         ),
                                                         buttonBorderRadius: 60,
-                                                        buttonColor: primaryColor,
+                                                        buttonColor:
+                                                            primaryColor,
                                                         horizontalPadding: 40,
                                                         verticalPadding: 16,
                                                       ),
@@ -2049,19 +2617,25 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                               )
                                             : Container(
                                                 width:
-                                                    (ResponsiveBreakpoints.of(context).screenWidth <
+                                                    (ResponsiveBreakpoints.of(
+                                                                    context)
+                                                                .screenWidth <
                                                             770)
                                                         ? 516
                                                         : 696,
                                                 child: Column(
-                                                  mainAxisAlignment: MainAxisAlignment.start,
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     GradientText(
-                                                      "Let's Say Hi",
-                                                      style: GoogleFonts.montserrat(
-                                                        fontSize: 16,
-                                                        fontWeight: FontWeight.w500,
+                                                      "Contact Us",
+                                                      style: GoogleFonts
+                                                          .montserrat(
+                                                        fontSize: 36,
+                                                        fontWeight:
+                                                            FontWeight.w500,
                                                       ),
                                                       colors: [
                                                         gradientColor1,
@@ -2073,123 +2647,78 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                       height: 12.h,
                                                     ),
                                                     Text(
-                                                      "Contact With Us",
+                                                      "Get in Touch",
                                                       textAlign: TextAlign.left,
-                                                      style: GoogleFonts.poppins(
-                                                        fontSize: (ResponsiveBreakpoints.of(context)
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                        fontSize: (ResponsiveBreakpoints.of(
+                                                                        context)
                                                                     .screenWidth <
                                                                 765)
                                                             ? 16
                                                             : 50,
-                                                        fontWeight: FontWeight.w600,
-                                                        color: Colors.black.withOpacity(0.75),
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        color: Colors.black
+                                                            .withOpacity(0.75),
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      height: 12.h,
+                                                    ),
+                                                    Text(
+                                                      "Let's Discuss Your Project",
+                                                      textAlign:
+                                                      TextAlign.left,
+                                                      style:
+                                                      GoogleFonts.poppins(
+                                                        fontSize: (ResponsiveBreakpoints.of(
+                                                            context)
+                                                            .screenWidth <
+                                                            765)
+                                                            ? 12
+                                                            : 38,
+                                                        fontWeight:
+                                                        FontWeight.w300,
+                                                        color: Colors.black
+                                                            .withOpacity(
+                                                            0.75),
                                                       ),
                                                     ),
                                                     SizedBox(
                                                       height: 26.h,
                                                     ),
-                                                    Row(
-                                                      children: [
-                                                        Expanded(
-                                                          child: Row(
-                                                            children: [
-                                                              Text(
-                                                                "Call us directly: ",
-                                                                textAlign: TextAlign.left,
-                                                                style: GoogleFonts.poppins(
-                                                                  fontSize:
-                                                                      (ResponsiveBreakpoints.of(
-                                                                                      context)
-                                                                                  .screenWidth <
-                                                                              765)
-                                                                          ? 16
-                                                                          : 14,
-                                                                  fontWeight: FontWeight.w300,
-                                                                  color: Colors.black
-                                                                      .withOpacity(0.75),
-                                                                ),
-                                                              ),
-                                                              SizedBox(
-                                                                width: 10,
-                                                              ),
-                                                              Expanded(
-                                                                child: Text(
-                                                                  "+111 227 228 222",
-                                                                  textAlign: TextAlign.left,
-                                                                  style: GoogleFonts.poppins(
-                                                                    fontSize:
-                                                                        (ResponsiveBreakpoints.of(
-                                                                                        context)
-                                                                                    .screenWidth <
-                                                                                765)
-                                                                            ? 14
-                                                                            : 17,
-                                                                    fontWeight: FontWeight.w700,
-                                                                    color: Colors.black,
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                        ),
-                                                      ],
+                                                    Text(
+                                                      "Ready to take your business to the next level? Contact us today to discuss your project and how we can help you achieve your goals.",
+                                                      textAlign:
+                                                      TextAlign
+                                                          .left,
+                                                      style: GoogleFonts
+                                                          .poppins(
+                                                        fontSize:
+                                                        (ResponsiveBreakpoints.of(context).screenWidth <
+                                                            765)
+                                                            ? 16
+                                                            : 14,
+                                                        fontWeight:
+                                                        FontWeight
+                                                            .w300,
+                                                        color: Colors
+                                                            .black
+                                                            .withOpacity(
+                                                            0.75),
+                                                      ),
                                                     ),
-                                                    SizedBox(
-                                                      height: 20.h,
-                                                    ),
-                                                    Row(
-                                                      children: [
-                                                        Expanded(
-                                                          child: Row(
-                                                            children: [
-                                                              Text(
-                                                                "Contact Email: ",
-                                                                textAlign: TextAlign.left,
-                                                                style: GoogleFonts.poppins(
-                                                                  fontSize:
-                                                                      (ResponsiveBreakpoints.of(
-                                                                                      context)
-                                                                                  .screenWidth <
-                                                                              765)
-                                                                          ? 16
-                                                                          : 14,
-                                                                  fontWeight: FontWeight.w300,
-                                                                  color: Colors.black
-                                                                      .withOpacity(0.75),
-                                                                ),
-                                                              ),
-                                                              SizedBox(
-                                                                width: 10,
-                                                              ),
-                                                              Expanded(
-                                                                child: Text(
-                                                                  "abdulmannanijaz99@gmail.com",
-                                                                  textAlign: TextAlign.left,
-                                                                  style: GoogleFonts.poppins(
-                                                                    fontSize:
-                                                                        (ResponsiveBreakpoints.of(
-                                                                                        context)
-                                                                                    .screenWidth <
-                                                                                765)
-                                                                            ? 14
-                                                                            : 17,
-                                                                    fontWeight: FontWeight.w700,
-                                                                    color: Colors.black,
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
+
                                                     SizedBox(
                                                       height: 50,
                                                     ),
                                                     CustomizableTextField(
-                                                      controller: yourNameEditingController,
+                                                      controller:
+                                                          yourNameEditingController,
                                                       hintText: yourNameText,
-                                                      focusNode: yourNameFocusNode,
+                                                      focusNode:
+                                                          yourNameFocusNode,
                                                       validator: (value) {
                                                         // if (value!.isEmpty) {
                                                         //   return cnicEmptyValidationText;
@@ -2206,23 +2735,30 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                       suffixIcon: null,
                                                       prefixWidget: null,
                                                       //Prefix Widget != null
-                                                      prefixPadding: EdgeInsets.zero,
-                                                      suffixPadding: EdgeInsets.symmetric(
+                                                      prefixPadding:
+                                                          EdgeInsets.zero,
+                                                      suffixPadding:
+                                                          EdgeInsets.symmetric(
                                                         horizontal: 10.w,
                                                         vertical: 16.h,
                                                       ),
-                                                      focusedIconColor: Colors.black,
-                                                      unfocusedIconColor: Colors.grey,
+                                                      focusedIconColor:
+                                                          Colors.black,
+                                                      unfocusedIconColor:
+                                                          Colors.grey,
                                                       hideText: false,
-                                                      textInputType: TextInputType.number,
+                                                      textInputType:
+                                                          TextInputType.number,
                                                     ),
                                                     SizedBox(
                                                       height: 20,
                                                     ),
                                                     CustomizableTextField(
-                                                      controller: yourPhoneEditingController,
+                                                      controller:
+                                                          yourPhoneEditingController,
                                                       hintText: yourPhoneText,
-                                                      focusNode: yourPhoneFocusNode,
+                                                      focusNode:
+                                                          yourPhoneFocusNode,
                                                       validator: (value) {
                                                         // if (value!.isEmpty) {
                                                         //   return cnicEmptyValidationText;
@@ -2239,23 +2775,30 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                       suffixIcon: null,
                                                       prefixWidget: null,
                                                       //Prefix Widget != null
-                                                      prefixPadding: EdgeInsets.zero,
-                                                      suffixPadding: EdgeInsets.symmetric(
+                                                      prefixPadding:
+                                                          EdgeInsets.zero,
+                                                      suffixPadding:
+                                                          EdgeInsets.symmetric(
                                                         horizontal: 10.w,
                                                         vertical: 16.h,
                                                       ),
-                                                      focusedIconColor: Colors.black,
-                                                      unfocusedIconColor: Colors.grey,
+                                                      focusedIconColor:
+                                                          Colors.black,
+                                                      unfocusedIconColor:
+                                                          Colors.grey,
                                                       hideText: false,
-                                                      textInputType: TextInputType.number,
+                                                      textInputType:
+                                                          TextInputType.number,
                                                     ),
                                                     SizedBox(
                                                       height: 20,
                                                     ),
                                                     CustomizableTextField(
-                                                      controller: yourEmailEditingController,
+                                                      controller:
+                                                          yourEmailEditingController,
                                                       hintText: yourEmailText,
-                                                      focusNode: yourEmailFocusNode,
+                                                      focusNode:
+                                                          yourEmailFocusNode,
                                                       validator: (value) {
                                                         // if (value!.isEmpty) {
                                                         //   return cnicEmptyValidationText;
@@ -2272,23 +2815,30 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                       suffixIcon: null,
                                                       prefixWidget: null,
                                                       //Prefix Widget != null
-                                                      prefixPadding: EdgeInsets.zero,
-                                                      suffixPadding: EdgeInsets.symmetric(
+                                                      prefixPadding:
+                                                          EdgeInsets.zero,
+                                                      suffixPadding:
+                                                          EdgeInsets.symmetric(
                                                         horizontal: 10.w,
                                                         vertical: 16.h,
                                                       ),
-                                                      focusedIconColor: Colors.black,
-                                                      unfocusedIconColor: Colors.grey,
+                                                      focusedIconColor:
+                                                          Colors.black,
+                                                      unfocusedIconColor:
+                                                          Colors.grey,
                                                       hideText: false,
-                                                      textInputType: TextInputType.number,
+                                                      textInputType:
+                                                          TextInputType.number,
                                                     ),
                                                     SizedBox(
                                                       height: 20,
                                                     ),
                                                     CustomizableTextField(
-                                                      controller: yourMessageEditingController,
+                                                      controller:
+                                                          yourMessageEditingController,
                                                       hintText: yourMessageText,
-                                                      focusNode: yourMessageFocusNode,
+                                                      focusNode:
+                                                          yourMessageFocusNode,
                                                       validator: (value) {
                                                         // if (value!.isEmpty) {
                                                         //   return cnicEmptyValidationText;
@@ -2305,15 +2855,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                       suffixIcon: null,
                                                       prefixWidget: null,
                                                       //Prefix Widget != null
-                                                      prefixPadding: EdgeInsets.zero,
-                                                      suffixPadding: EdgeInsets.symmetric(
+                                                      prefixPadding:
+                                                          EdgeInsets.zero,
+                                                      suffixPadding:
+                                                          EdgeInsets.symmetric(
                                                         horizontal: 10.w,
                                                         vertical: 16.h,
                                                       ),
-                                                      focusedIconColor: Colors.black,
-                                                      unfocusedIconColor: Colors.grey,
+                                                      focusedIconColor:
+                                                          Colors.black,
+                                                      unfocusedIconColor:
+                                                          Colors.grey,
                                                       hideText: false,
-                                                      textInputType: TextInputType.number,
+                                                      textInputType:
+                                                          TextInputType.number,
                                                       maxLines: 5,
                                                     ),
                                                     SizedBox(
@@ -2324,12 +2879,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                       suffixButtonIcon: null,
                                                       isFullWidth: false,
                                                       isOutlined: false,
-                                                      buttonTitle: "Submit Now".toUpperCase(),
+                                                      buttonTitle: "Submit Now"
+                                                          .toUpperCase(),
                                                       onPressed: () async {},
-                                                      buttonTitleStyle: TextStyle(
+                                                      buttonTitleStyle:
+                                                          TextStyle(
                                                         fontSize: 16,
                                                         color: Colors.white,
-                                                        fontWeight: FontWeight.w500,
+                                                        fontWeight:
+                                                            FontWeight.w500,
                                                       ),
                                                       buttonBorderRadius: 60,
                                                       buttonColor: primaryColor,
@@ -2342,23 +2900,30 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                       ],
                                     )
                                   : Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         Container(
                                           width:
-                                              (ResponsiveBreakpoints.of(context).screenWidth < 1280)
+                                              (ResponsiveBreakpoints.of(context)
+                                                          .screenWidth <
+                                                      1280)
                                                   ? 452
                                                   : 633,
-                                          padding: EdgeInsets.symmetric(horizontal: 15),
+                                          padding: EdgeInsets.symmetric(
+                                              horizontal: 15),
                                           child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               GradientText(
-                                                "Let's Say Hi",
+                                                "Contact Us",
                                                 style: GoogleFonts.montserrat(
-                                                  fontSize: 16,
+                                                  fontSize: 36,
                                                   fontWeight: FontWeight.w500,
                                                 ),
                                                 colors: [
@@ -2371,115 +2936,71 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                 height: 12.h,
                                               ),
                                               Text(
-                                                "Contact With Us",
+                                                "Get in Touch",
                                                 textAlign: TextAlign.left,
                                                 style: GoogleFonts.poppins(
-                                                  fontSize: (ResponsiveBreakpoints.of(context)
-                                                              .screenWidth <
-                                                          765)
-                                                      ? 16
-                                                      : 50,
+                                                  fontSize:
+                                                      (ResponsiveBreakpoints.of(
+                                                                      context)
+                                                                  .screenWidth <
+                                                              765)
+                                                          ? 16
+                                                          : 50,
                                                   fontWeight: FontWeight.w600,
-                                                  color: Colors.black.withOpacity(0.75),
+                                                  color: Colors.black
+                                                      .withOpacity(0.75),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 12.h,
+                                              ),
+                                              Text(
+                                                "Let's Discuss Your Project",
+                                                textAlign: TextAlign.left,
+                                                style: GoogleFonts.poppins(
+                                                  fontSize:
+                                                      (ResponsiveBreakpoints.of(
+                                                                      context)
+                                                                  .screenWidth <
+                                                              765)
+                                                          ? 12
+                                                          : 38,
+                                                  fontWeight: FontWeight.w300,
+                                                  color: Colors.black
+                                                      .withOpacity(0.75),
                                                 ),
                                               ),
                                               SizedBox(
                                                 height: 26.h,
                                               ),
-                                              Row(
-                                                children: [
-                                                  Expanded(
-                                                    child: Row(
-                                                      children: [
-                                                        Text(
-                                                          "Call us directly: ",
-                                                          textAlign: TextAlign.left,
-                                                          style: GoogleFonts.poppins(
-                                                            fontSize:
-                                                                (ResponsiveBreakpoints.of(context)
-                                                                            .screenWidth <
-                                                                        765)
-                                                                    ? 16
-                                                                    : 14,
-                                                            fontWeight: FontWeight.w300,
-                                                            color: Colors.black.withOpacity(0.75),
-                                                          ),
-                                                        ),
-                                                        SizedBox(
-                                                          width: 10,
-                                                        ),
-                                                        Expanded(
-                                                          child: Text(
-                                                            "+111 227 228 222",
-                                                            textAlign: TextAlign.left,
-                                                            style: GoogleFonts.poppins(
-                                                              fontSize:
-                                                                  (ResponsiveBreakpoints.of(context)
-                                                                              .screenWidth <
-                                                                          765)
-                                                                      ? 14
-                                                                      : 17,
-                                                              fontWeight: FontWeight.w700,
-                                                              color: Colors.black,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ],
+                                              Text(
+                                                "Ready to take your business to the next level? Contact us today to discuss your project and how we can help you achieve your goals.",
+                                                textAlign:
+                                                TextAlign
+                                                    .left,
+                                                style: GoogleFonts
+                                                    .poppins(
+                                                  fontSize:
+                                                  (ResponsiveBreakpoints.of(context).screenWidth <
+                                                      765)
+                                                      ? 16
+                                                      : 14,
+                                                  fontWeight:
+                                                  FontWeight
+                                                      .w300,
+                                                  color: Colors
+                                                      .black
+                                                      .withOpacity(
+                                                      0.75),
+                                                ),
                                               ),
-                                              SizedBox(
-                                                height: 20.h,
-                                              ),
-                                              Row(
-                                                children: [
-                                                  Expanded(
-                                                    child: Row(
-                                                      children: [
-                                                        Text(
-                                                          "Contact Email: ",
-                                                          textAlign: TextAlign.left,
-                                                          style: GoogleFonts.poppins(
-                                                            fontSize:
-                                                                (ResponsiveBreakpoints.of(context)
-                                                                            .screenWidth <
-                                                                        765)
-                                                                    ? 16
-                                                                    : 14,
-                                                            fontWeight: FontWeight.w300,
-                                                            color: Colors.black.withOpacity(0.75),
-                                                          ),
-                                                        ),
-                                                        SizedBox(
-                                                          width: 10,
-                                                        ),
-                                                        Expanded(
-                                                          child: Text(
-                                                            "abdulmannanijaz99@gmail.com",
-                                                            textAlign: TextAlign.left,
-                                                            style: GoogleFonts.poppins(
-                                                              fontSize:
-                                                                  (ResponsiveBreakpoints.of(context)
-                                                                              .screenWidth <
-                                                                          765)
-                                                                      ? 14
-                                                                      : 17,
-                                                              fontWeight: FontWeight.w700,
-                                                              color: Colors.black,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
+
                                               SizedBox(
                                                 height: 50,
                                               ),
                                               CustomizableTextField(
-                                                controller: yourNameEditingController,
+                                                controller:
+                                                    yourNameEditingController,
                                                 hintText: yourNameText,
                                                 focusNode: yourNameFocusNode,
                                                 validator: (value) {
@@ -2499,20 +3020,23 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                 prefixWidget: null,
                                                 //Prefix Widget != null
                                                 prefixPadding: EdgeInsets.zero,
-                                                suffixPadding: EdgeInsets.symmetric(
+                                                suffixPadding:
+                                                    EdgeInsets.symmetric(
                                                   horizontal: 10.w,
                                                   vertical: 16.h,
                                                 ),
                                                 focusedIconColor: Colors.black,
                                                 unfocusedIconColor: Colors.grey,
                                                 hideText: false,
-                                                textInputType: TextInputType.number,
+                                                textInputType:
+                                                    TextInputType.number,
                                               ),
                                               SizedBox(
                                                 height: 20,
                                               ),
                                               CustomizableTextField(
-                                                controller: yourPhoneEditingController,
+                                                controller:
+                                                    yourPhoneEditingController,
                                                 hintText: yourPhoneText,
                                                 focusNode: yourPhoneFocusNode,
                                                 validator: (value) {
@@ -2532,20 +3056,23 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                 prefixWidget: null,
                                                 //Prefix Widget != null
                                                 prefixPadding: EdgeInsets.zero,
-                                                suffixPadding: EdgeInsets.symmetric(
+                                                suffixPadding:
+                                                    EdgeInsets.symmetric(
                                                   horizontal: 10.w,
                                                   vertical: 16.h,
                                                 ),
                                                 focusedIconColor: Colors.black,
                                                 unfocusedIconColor: Colors.grey,
                                                 hideText: false,
-                                                textInputType: TextInputType.number,
+                                                textInputType:
+                                                    TextInputType.number,
                                               ),
                                               SizedBox(
                                                 height: 20,
                                               ),
                                               CustomizableTextField(
-                                                controller: yourEmailEditingController,
+                                                controller:
+                                                    yourEmailEditingController,
                                                 hintText: yourEmailText,
                                                 focusNode: yourEmailFocusNode,
                                                 validator: (value) {
@@ -2565,20 +3092,23 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                 prefixWidget: null,
                                                 //Prefix Widget != null
                                                 prefixPadding: EdgeInsets.zero,
-                                                suffixPadding: EdgeInsets.symmetric(
+                                                suffixPadding:
+                                                    EdgeInsets.symmetric(
                                                   horizontal: 10.w,
                                                   vertical: 16.h,
                                                 ),
                                                 focusedIconColor: Colors.black,
                                                 unfocusedIconColor: Colors.grey,
                                                 hideText: false,
-                                                textInputType: TextInputType.number,
+                                                textInputType:
+                                                    TextInputType.number,
                                               ),
                                               SizedBox(
                                                 height: 20,
                                               ),
                                               CustomizableTextField(
-                                                controller: yourMessageEditingController,
+                                                controller:
+                                                    yourMessageEditingController,
                                                 hintText: yourMessageText,
                                                 focusNode: yourMessageFocusNode,
                                                 validator: (value) {
@@ -2598,14 +3128,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                 prefixWidget: null,
                                                 //Prefix Widget != null
                                                 prefixPadding: EdgeInsets.zero,
-                                                suffixPadding: EdgeInsets.symmetric(
+                                                suffixPadding:
+                                                    EdgeInsets.symmetric(
                                                   horizontal: 10.w,
                                                   vertical: 16.h,
                                                 ),
                                                 focusedIconColor: Colors.black,
                                                 unfocusedIconColor: Colors.grey,
                                                 hideText: false,
-                                                textInputType: TextInputType.number,
+                                                textInputType:
+                                                    TextInputType.number,
                                                 maxLines: 5,
                                               ),
                                               SizedBox(
@@ -2616,7 +3148,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                 suffixButtonIcon: null,
                                                 isFullWidth: false,
                                                 isOutlined: false,
-                                                buttonTitle: "Submit Now".toUpperCase(),
+                                                buttonTitle:
+                                                    "Submit Now".toUpperCase(),
                                                 onPressed: () async {},
                                                 buttonTitleStyle: TextStyle(
                                                   fontSize: 16,
@@ -2636,20 +3169,26 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                         ),
                                         Container(
                                           height:
-                                              (ResponsiveBreakpoints.of(context).screenWidth < 1280)
+                                              (ResponsiveBreakpoints.of(context)
+                                                          .screenWidth <
+                                                      1280)
                                                   ? 524
                                                   : 696,
                                           width:
-                                              (ResponsiveBreakpoints.of(context).screenWidth < 1280)
+                                              (ResponsiveBreakpoints.of(context)
+                                                          .screenWidth <
+                                                      1280)
                                                   ? 452
                                                   : 633,
-                                          padding: EdgeInsets.symmetric(horizontal: 15),
+                                          padding: EdgeInsets.symmetric(
+                                              horizontal: 15),
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
                                               image: AssetImage(aboutImage),
                                               fit: BoxFit.fill,
                                             ),
-                                            borderRadius: BorderRadius.circular(10),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
                                           ),
                                         ),
                                       ],
@@ -2696,8 +3235,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                 "We worked with brands",
                                 textAlign: TextAlign.center,
                                 style: GoogleFonts.poppins(
-                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                      ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                  fontSize: (ResponsiveBreakpoints.of(context)
+                                              .screenWidth <
+                                          990)
+                                      ? (ResponsiveBreakpoints.of(context)
+                                                  .screenWidth <
+                                              575)
                                           ? 32
                                           : 40
                                       : 50,
@@ -2734,10 +3277,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         padding: EdgeInsets.symmetric(
                             vertical: 30,
                             horizontal:
-                                (ResponsiveBreakpoints.of(context).screenWidth < 575) ? 0 : 50),
+                                (ResponsiveBreakpoints.of(context).screenWidth <
+                                        575)
+                                    ? 0
+                                    : 50),
                         color: Colors.black,
-                        child: (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                            ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                        child: (ResponsiveBreakpoints.of(context).screenWidth <
+                                990)
+                            ? (ResponsiveBreakpoints.of(context).screenWidth <
+                                    575)
                                 ? Column(
                                     children: [
                                       Row(
@@ -2746,10 +3294,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                             flex: 1,
                                             child: Container(
                                               child: Row(
-                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
                                                 children: [
                                                   Image.asset(
-                                                    logoImage,
+                                                    logoImageInvertedTechnology,
                                                     height: 50,
                                                     width: 100,
                                                   ),
@@ -2768,11 +3317,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                             flex: 1,
                                             child: Container(
                                               child: Row(
-                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
                                                 children: [
                                                   CustomizableTextButton(
                                                     prefixButtonIcon: Icon(
-                                                      FontAwesomeIcons.facebookF,
+                                                      FontAwesomeIcons
+                                                          .facebookF,
                                                       color: Colors.white,
                                                       size: 14,
                                                     ),
@@ -2784,7 +3335,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                     buttonTitleStyle: TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                     buttonBorderRadius: 60,
                                                     buttonColor: primaryColor,
@@ -2796,7 +3348,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                   ),
                                                   CustomizableTextButton(
                                                     prefixButtonIcon: Icon(
-                                                      FontAwesomeIcons.linkedinIn,
+                                                      FontAwesomeIcons
+                                                          .linkedinIn,
                                                       color: Colors.white,
                                                       size: 14,
                                                     ),
@@ -2808,7 +3361,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                     buttonTitleStyle: TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                     buttonBorderRadius: 60,
                                                     buttonColor: primaryColor,
@@ -2832,7 +3386,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                     buttonTitleStyle: TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                     buttonBorderRadius: 60,
                                                     buttonColor: primaryColor,
@@ -2844,7 +3399,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                   ),
                                                   CustomizableTextButton(
                                                     prefixButtonIcon: Icon(
-                                                      FontAwesomeIcons.instagram,
+                                                      FontAwesomeIcons
+                                                          .instagram,
                                                       color: Colors.white,
                                                       size: 14,
                                                     ),
@@ -2856,7 +3412,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                     buttonTitleStyle: TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                     buttonBorderRadius: 60,
                                                     buttonColor: primaryColor,
@@ -2878,16 +3435,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                             flex: 1,
                                             child: Container(
                                               child: Column(
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.center,
                                                 children: [
                                                   Text(
                                                     "Copyright © 2024 Rainbow-Themes. All Rights Reserved",
                                                     textAlign: TextAlign.center,
                                                     style: GoogleFonts.poppins(
                                                       fontSize: 14,
-                                                      fontWeight: FontWeight.w300,
-                                                      color: Colors.white.withOpacity(0.75),
+                                                      fontWeight:
+                                                          FontWeight.w300,
+                                                      color: Colors.white
+                                                          .withOpacity(0.75),
                                                     ),
                                                   ),
                                                 ],
@@ -2906,16 +3467,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                             flex: 1,
                                             child: Container(
                                               child: Row(
-                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
                                                 children: [
                                                   Image.asset(
-                                                    logoImage,
-                                                    height: (ResponsiveBreakpoints.of(context)
+                                                    logoImageInvertedTechnology,
+                                                    height: (ResponsiveBreakpoints
+                                                                    .of(context)
                                                                 .screenWidth <
                                                             750)
                                                         ? 40
                                                         : 50,
-                                                    width: (ResponsiveBreakpoints.of(context)
+                                                    width: (ResponsiveBreakpoints
+                                                                    .of(context)
                                                                 .screenWidth <
                                                             750)
                                                         ? 68
@@ -2929,11 +3493,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                             flex: 1,
                                             child: Container(
                                               child: Row(
-                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
                                                 children: [
                                                   CustomizableTextButton(
                                                     prefixButtonIcon: Icon(
-                                                      FontAwesomeIcons.facebookF,
+                                                      FontAwesomeIcons
+                                                          .facebookF,
                                                       color: Colors.white,
                                                       size: 14,
                                                     ),
@@ -2945,7 +3511,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                     buttonTitleStyle: TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                     buttonBorderRadius: 60,
                                                     buttonColor: primaryColor,
@@ -2957,7 +3524,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                   ),
                                                   CustomizableTextButton(
                                                     prefixButtonIcon: Icon(
-                                                      FontAwesomeIcons.linkedinIn,
+                                                      FontAwesomeIcons
+                                                          .linkedinIn,
                                                       color: Colors.white,
                                                       size: 14,
                                                     ),
@@ -2969,7 +3537,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                     buttonTitleStyle: TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                     buttonBorderRadius: 60,
                                                     buttonColor: primaryColor,
@@ -2993,7 +3562,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                     buttonTitleStyle: TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                     buttonBorderRadius: 60,
                                                     buttonColor: primaryColor,
@@ -3005,7 +3575,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                   ),
                                                   CustomizableTextButton(
                                                     prefixButtonIcon: Icon(
-                                                      FontAwesomeIcons.instagram,
+                                                      FontAwesomeIcons
+                                                          .instagram,
                                                       color: Colors.white,
                                                       size: 14,
                                                     ),
@@ -3017,7 +3588,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                     buttonTitleStyle: TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                     buttonBorderRadius: 60,
                                                     buttonColor: primaryColor,
@@ -3035,22 +3607,27 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                           Expanded(
                                             flex: 1,
                                             child: Container(
-                                              height:
-                                                  (ResponsiveBreakpoints.of(context).screenWidth <
-                                                          750)
-                                                      ? 40
-                                                      : 50,
+                                              height: (ResponsiveBreakpoints.of(
+                                                              context)
+                                                          .screenWidth <
+                                                      750)
+                                                  ? 40
+                                                  : 50,
                                               child: Column(
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.center,
                                                 children: [
                                                   Text(
                                                     "Copyright © 2024 Rainbow-Themes. All Rights Reserved",
                                                     textAlign: TextAlign.center,
                                                     style: GoogleFonts.poppins(
                                                       fontSize: 14,
-                                                      fontWeight: FontWeight.w300,
-                                                      color: Colors.white.withOpacity(0.75),
+                                                      fontWeight:
+                                                          FontWeight.w300,
+                                                      color: Colors.white
+                                                          .withOpacity(0.75),
                                                     ),
                                                   ),
                                                 ],
@@ -3067,15 +3644,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                     flex: 1,
                                     child: Container(
                                       child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
                                         children: [
                                           Image.asset(
-                                            logoImage,
-                                            height: (ResponsiveBreakpoints.of(context).screenWidth <
+                                            logoImageInvertedTechnology,
+                                            height: (ResponsiveBreakpoints.of(
+                                                            context)
+                                                        .screenWidth <
                                                     750)
                                                 ? 40
                                                 : 50,
-                                            width: (ResponsiveBreakpoints.of(context).screenWidth <
+                                            width: (ResponsiveBreakpoints.of(
+                                                            context)
+                                                        .screenWidth <
                                                     750)
                                                 ? 68
                                                 : 100,
@@ -3190,12 +3772,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                   Expanded(
                                     flex: 1,
                                     child: Container(
-                                      height: (ResponsiveBreakpoints.of(context).screenWidth < 750)
+                                      height: (ResponsiveBreakpoints.of(context)
+                                                  .screenWidth <
+                                              750)
                                           ? 40
                                           : 50,
                                       child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
                                         children: [
                                           Text(
                                             "Copyright © 2024 Rainbow-Themes. All Rights Reserved",
@@ -3203,7 +3789,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                             style: GoogleFonts.poppins(
                                               fontSize: 14,
                                               fontWeight: FontWeight.w300,
-                                              color: Colors.white.withOpacity(0.75),
+                                              color: Colors.white
+                                                  .withOpacity(0.75),
                                             ),
                                           ),
                                         ],
@@ -3240,7 +3827,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  Widget companyGrowthWidget({required Widget icon, required int scores, required String title}) {
+  Widget companyGrowthWidget(
+      {required Widget image, required String scores, required String title}) {
     return (ResponsiveBreakpoints.of(context).screenWidth < 575)
         ? Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -3249,47 +3837,57 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   child: Container(
-                    height: 280,
+                    // height: 380,
                     width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
                         ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                            ? 243
-                            : 211
-                        : 286,
+                        ? 400 // Updated width for screens smaller than 755
+                        : 461 // Updated width for screens between 755 and 1250
+                        : 542, // Updated width for screens larger than 1250
+
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        icon,
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text(
-                          "$scores +",
-                          textAlign: TextAlign.left,
-                          style: GoogleFonts.poppins(
-                            fontSize:
-                                (ResponsiveBreakpoints.of(context).screenWidth < 1250) ? 44 : 54,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.black.withOpacity(0.75),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 60,vertical: 40),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          image,
+                          SizedBox(
+                            height: 20,
                           ),
-                        ),
-                        SizedBox(
-                          height: 6,
-                        ),
-                        Text(
-                          title,
-                          textAlign: TextAlign.left,
-                          style: GoogleFonts.poppins(
-                            fontSize:
-                                (ResponsiveBreakpoints.of(context).screenWidth < 765) ? 16 : 18,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.black.withOpacity(0.75),
+                          Text(
+                            scores,
+                            textAlign: TextAlign.left,
+                            style: GoogleFonts.poppins(
+                              fontSize:
+                                  (ResponsiveBreakpoints.of(context).screenWidth <
+                                          1250)
+                                      ? 24
+                                      : 30,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black.withOpacity(0.75),
+                            ),
                           ),
-                        ),
-                      ],
+                          SizedBox(
+                            height: 6,
+                          ),
+                          Text(
+                            title,
+                            textAlign: TextAlign.left,
+                            style: GoogleFonts.poppins(
+                              fontSize:
+                                  (ResponsiveBreakpoints.of(context).screenWidth <
+                                          765)
+                                      ? 12
+                                      : 14,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black.withOpacity(0.75),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -3297,47 +3895,179 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             ],
           )
         : Container(
-            height: 280,
-            width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                    ? 243
-                    : 211
-                : 286,
-            decoration: BoxDecoration(
+            // height: 380,
+      width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+          ? 400 // Updated width for screens smaller than 755
+          : 461 // Updated width for screens between 755 and 1250
+          : 542, // Updated width for screens larger than 1250
+
+      decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                icon,
-                SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  "$scores +",
-                  textAlign: TextAlign.left,
-                  style: GoogleFonts.poppins(
-                    fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 1250) ? 44 : 54,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black.withOpacity(0.75),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 60,vertical: 40),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  image,
+                  SizedBox(
+                    height: 20,
                   ),
-                ),
-                SizedBox(
-                  height: 6,
-                ),
-                Text(
-                  title,
-                  textAlign: TextAlign.left,
-                  style: GoogleFonts.poppins(
-                    fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 765) ? 16 : 18,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.black.withOpacity(0.75),
+                  Text(
+                    scores,
+                    textAlign: TextAlign.left,
+                    style: GoogleFonts.poppins(
+                      fontSize:
+                          (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                              ? 24
+                              : 30,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black.withOpacity(0.75),
+                    ),
                   ),
-                ),
-              ],
+                  SizedBox(
+                    height: 6,
+                  ),
+                  Text(
+                    title,
+                    textAlign: TextAlign.left,
+                    style: GoogleFonts.poppins(
+                      fontSize:
+                          (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                              ? 12
+                              : 14,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black.withOpacity(0.75),
+                    ),
+                  ),
+                ],
+              ),
             ),
           );
+  }
+
+
+  Widget companyGrowthFullWidthWidget(
+      {required Widget image, required String scores, required String title}) {
+    return (ResponsiveBreakpoints.of(context).screenWidth < 575)
+        ? Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Expanded(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Container(
+              // height: 380,
+              // width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+              //     ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+              //     ? 400 // Updated width for screens smaller than 755
+              //     : 461 // Updated width for screens between 755 and 1250
+              //     : 542, // Updated width for screens larger than 1250
+
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 60,vertical: 40),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    image,
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      scores,
+                      textAlign: TextAlign.left,
+                      style: GoogleFonts.poppins(
+                        fontSize:
+                        (ResponsiveBreakpoints.of(context).screenWidth <
+                            1250)
+                            ? 24
+                            : 30,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black.withOpacity(0.75),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Text(
+                      title,
+                      textAlign: TextAlign.left,
+                      style: GoogleFonts.poppins(
+                        fontSize:
+                        (ResponsiveBreakpoints.of(context).screenWidth <
+                            765)
+                            ? 12
+                            : 14,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.black.withOpacity(0.75),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    )
+        : Container(
+      // height: 380,
+      // width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+      //     ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+      //     ? 400 // Updated width for screens smaller than 755
+      //     : 461 // Updated width for screens between 755 and 1250
+      //     : 542, // Updated width for screens larger than 1250
+
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 60,vertical: 40),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            image,
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              scores,
+              textAlign: TextAlign.left,
+              style: GoogleFonts.poppins(
+                fontSize:
+                (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                    ? 24
+                    : 30,
+                fontWeight: FontWeight.w600,
+                color: Colors.black.withOpacity(0.75),
+              ),
+            ),
+            SizedBox(
+              height: 6,
+            ),
+            Text(
+              title,
+              textAlign: TextAlign.left,
+              style: GoogleFonts.poppins(
+                fontSize:
+                (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                    ? 12
+                    : 14,
+                fontWeight: FontWeight.w400,
+                color: Colors.black.withOpacity(0.75),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   Widget activeIndicator() {
@@ -3369,7 +4099,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  Widget aboutUsTitleDescription({required String title, required String description}) {
+  Widget aboutUsTitleDescription(
+      {required String title, required String description}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -3377,7 +4108,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           title,
           textAlign: TextAlign.left,
           style: GoogleFonts.poppins(
-            fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 765) ? 16 : 18,
+            fontSize:
+                (ResponsiveBreakpoints.of(context).screenWidth < 765) ? 16 : 18,
             fontWeight: FontWeight.w600,
             color: Colors.black,
           ),
@@ -3389,7 +4121,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           description,
           textAlign: TextAlign.left,
           style: GoogleFonts.poppins(
-            fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 765) ? 16 : 18,
+            fontSize:
+                (ResponsiveBreakpoints.of(context).screenWidth < 765) ? 16 : 18,
             fontWeight: FontWeight.w300,
             color: Colors.black.withOpacity(0.7),
           ),
@@ -3398,7 +4131,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  Widget drawerNavButton({required String title, required VoidCallback onPressed}) {
+  Widget drawerNavButton(
+      {required String title, required VoidCallback onPressed}) {
     return InkWell(
       onTap: onPressed,
       child: Container(
@@ -3420,7 +4154,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  Widget navButton({required String title, required VoidCallback onPressed, Color? textColor}) {
+  Widget navButton(
+      {required String title,
+      required VoidCallback onPressed,
+      Color? textColor}) {
     return InkWell(
       onTap: onPressed,
       child: Container(
@@ -3448,15 +4185,25 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       required String content,
       required Widget icon}) {
     return Container(
-      height: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-          ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
-              ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                  ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                      ? 238
-                      : 332
-                  : 264
-              : 336
-          : 286,
+      // height: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+      //     ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
+      //         ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
+      //             ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+      //                 ? 500 // Updated from 238 to 500
+      //                 : 696 // Updated from 332 to 696
+      //             : 555 // Updated from 264 to 555
+      //         : 705 // Updated from 336 to 705
+      //     : 602, // Updated from 286 to 602
+
+      // height: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+      //     ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
+      //         ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
+      //             ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+      //                 ? 238
+      //                 : 332
+      //             : 264
+      //         : 336
+      //     : 286,
       width: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
           ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
               ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
@@ -3467,8 +4214,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               : 300
           : 380,
       padding: EdgeInsets.symmetric(
-          horizontal: (ResponsiveBreakpoints.of(context).screenWidth < 575) ? 23 : 30,
-          vertical: (ResponsiveBreakpoints.of(context).screenWidth < 575) ? 32 : 40),
+          horizontal:
+              (ResponsiveBreakpoints.of(context).screenWidth < 575) ? 23 : 30,
+          vertical:
+              (ResponsiveBreakpoints.of(context).screenWidth < 575) ? 32 : 40),
       decoration: BoxDecoration(
         color: Colors.grey.withOpacity(0.05),
         borderRadius: BorderRadius.circular(6),
@@ -3504,7 +4253,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             content,
             textAlign: TextAlign.left,
             style: GoogleFonts.poppins(
-              fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 765) ? 16 : 18,
+              fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                  ? 13
+                  : 15,
               fontWeight: FontWeight.w300,
               color: Colors.grey,
               height: 1.5,

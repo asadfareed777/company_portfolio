@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             useInheritedMediaQuery: true,
-            title: "appName",
+            title: "Inverted Technology",
             localizationsDelegates: const [
               AppLocalizations.delegate, // Add this line
               GlobalMaterialLocalizations.delegate,

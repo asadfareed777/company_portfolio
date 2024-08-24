@@ -7,10 +7,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../utils/colors.dart';
+import '../details_screen.dart';
 
 class BlogSliderWidget extends StatefulWidget {
   final int itemIndex;
-  const BlogSliderWidget({super.key, required this.itemIndex});
+  final String title;
+  final String description;
+  final String image;
+  const BlogSliderWidget({super.key, required this.itemIndex, required this.title, required this.description, required this.image});
 
   @override
   State<BlogSliderWidget> createState() => _BlogSliderWidgetState();
@@ -27,7 +31,7 @@ class _BlogSliderWidgetState extends State<BlogSliderWidget> {
         setState(() {});
       },
       onTap: () {
-        Navigator.pushNamed(context, Routes.DETAILS);
+        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsScreen(widget.title,widget.description,widget.image)));
       },
       hoverColor: Colors.transparent,
       child: (ResponsiveBreakpoints.of(context).screenWidth < 575)
@@ -83,64 +87,64 @@ class _BlogSliderWidgetState extends State<BlogSliderWidget> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(5.0),
-                                  child: Text(
-                                    "Shop",
-                                    textAlign: TextAlign.left,
-                                    style: GoogleFonts.poppins(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w300,
-                                      color: Colors.white.withOpacity(0.75),
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
                                 Text(
-                                  "What is the difference between web and mobile",
+                                  widget.title,
                                   textAlign: TextAlign.left,
                                   style: GoogleFonts.poppins(
                                     fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                        ? 24
-                                        : 24,
+                                        ? 30
+                                        : 30,
                                     fontWeight: FontWeight.w600,
                                     color: Colors.white,
                                   ),
                                 ),
-                                Visibility(
-                                  visible: isHovered,
-                                  child: SizedBox(
-                                    height: (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                        ? 5
-                                        : 15,
-                                  ),
-                                ),
-                                Visibility(
-                                  visible: isHovered,
-                                  child: CustomizableTextButton(
-                                    prefixButtonIcon: null,
-                                    suffixButtonIcon: null,
-                                    isFullWidth: false,
-                                    isOutlined: true,
-                                    buttonBorderColor: Colors.white30,
-                                    buttonTitle: "Read More".toUpperCase(),
-                                    onPressed: () async {},
-                                    buttonTitleStyle: TextStyle(
-                                      fontSize:
-                                          (ResponsiveBreakpoints.of(context).screenWidth < 750)
-                                              ? 12
-                                              : 14,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                    buttonBorderRadius: 6,
-                                    buttonColor: Colors.transparent,
-                                    horizontalPadding: 30,
-                                    verticalPadding: 8,
-                                  ),
-                                ),
+                                // const SizedBox(
+                                //   height: 5,
+                                // ),
+                                // Padding(
+                                //   padding: const EdgeInsets.all(5.0),
+                                //   child: Text(
+                                //     widget.description,
+                                //     textAlign: TextAlign.left,
+                                //     style: GoogleFonts.poppins(
+                                //       fontSize: 16,
+                                //       fontWeight: FontWeight.w300,
+                                //       color: Colors.white.withOpacity(0.75),
+                                //     ),
+                                //   ),
+                                // ),
+                                // Visibility(
+                                //   visible: isHovered,
+                                //   child: SizedBox(
+                                //     height: (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                //         ? 5
+                                //         : 15,
+                                //   ),
+                                // ),
+                                // Visibility(
+                                //   visible: isHovered,
+                                //   child: CustomizableTextButton(
+                                //     prefixButtonIcon: null,
+                                //     suffixButtonIcon: null,
+                                //     isFullWidth: false,
+                                //     isOutlined: true,
+                                //     buttonBorderColor: Colors.white30,
+                                //     buttonTitle: "Read More".toUpperCase(),
+                                //     onPressed: () async {},
+                                //     buttonTitleStyle: TextStyle(
+                                //       fontSize:
+                                //           (ResponsiveBreakpoints.of(context).screenWidth < 750)
+                                //               ? 12
+                                //               : 14,
+                                //       color: Colors.white,
+                                //       fontWeight: FontWeight.w500,
+                                //     ),
+                                //     buttonBorderRadius: 6,
+                                //     buttonColor: Colors.transparent,
+                                //     horizontalPadding: 30,
+                                //     verticalPadding: 8,
+                                //   ),
+                                // ),
                               ],
                             ),
                           ),
@@ -199,60 +203,60 @@ class _BlogSliderWidgetState extends State<BlogSliderWidget> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(5.0),
-                            child: Text(
-                              "Shop",
-                              textAlign: TextAlign.left,
-                              style: GoogleFonts.poppins(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white.withOpacity(0.75),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
                           Text(
-                            "What is the difference between web and mobile",
+                            widget.title,
                             textAlign: TextAlign.left,
                             style: GoogleFonts.poppins(
                               fontSize:
-                                  (ResponsiveBreakpoints.of(context).screenWidth < 990) ? 24 : 24,
+                              (ResponsiveBreakpoints.of(context).screenWidth < 990) ? 30 : 30,
                               fontWeight: FontWeight.w600,
                               color: Colors.white,
                             ),
                           ),
-                          Visibility(
-                            visible: isHovered,
-                            child: SizedBox(
-                              height:
-                                  (ResponsiveBreakpoints.of(context).screenWidth < 990) ? 5 : 15,
-                            ),
-                          ),
-                          Visibility(
-                            visible: isHovered,
-                            child: CustomizableTextButton(
-                              prefixButtonIcon: null,
-                              suffixButtonIcon: null,
-                              isFullWidth: false,
-                              isOutlined: true,
-                              buttonBorderColor: Colors.white30,
-                              buttonTitle: "Read More".toUpperCase(),
-                              onPressed: () async {},
-                              buttonTitleStyle: TextStyle(
-                                fontSize:
-                                    (ResponsiveBreakpoints.of(context).screenWidth < 750) ? 12 : 14,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                              ),
-                              buttonBorderRadius: 6,
-                              buttonColor: Colors.transparent,
-                              horizontalPadding: 30,
-                              verticalPadding: 8,
-                            ),
-                          ),
+                          // SizedBox(
+                          //   height: 5,
+                          // ),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(5.0),
+                          //   child: Text(
+                          //     widget.description,
+                          //     textAlign: TextAlign.left,
+                          //     style: GoogleFonts.poppins(
+                          //       fontSize: 16,
+                          //       fontWeight: FontWeight.w300,
+                          //       color: Colors.white.withOpacity(0.75),
+                          //     ),
+                          //   ),
+                          // ),
+                          // Visibility(
+                          //   visible: isHovered,
+                          //   child: SizedBox(
+                          //     height:
+                          //         (ResponsiveBreakpoints.of(context).screenWidth < 990) ? 5 : 15,
+                          //   ),
+                          // ),
+                          // Visibility(
+                          //   visible: isHovered,
+                          //   child: CustomizableTextButton(
+                          //     prefixButtonIcon: null,
+                          //     suffixButtonIcon: null,
+                          //     isFullWidth: false,
+                          //     isOutlined: true,
+                          //     buttonBorderColor: Colors.white30,
+                          //     buttonTitle: "Read More".toUpperCase(),
+                          //     onPressed: () async {},
+                          //     buttonTitleStyle: TextStyle(
+                          //       fontSize:
+                          //           (ResponsiveBreakpoints.of(context).screenWidth < 750) ? 12 : 14,
+                          //       color: Colors.white,
+                          //       fontWeight: FontWeight.w500,
+                          //     ),
+                          //     buttonBorderRadius: 6,
+                          //     buttonColor: Colors.transparent,
+                          //     horizontalPadding: 30,
+                          //     verticalPadding: 8,
+                          //   ),
+                          // ),
                         ],
                       ),
                     ),
@@ -265,13 +269,13 @@ class _BlogSliderWidgetState extends State<BlogSliderWidget> {
 
   String portfolioImages(int index) {
     if (index == 0) {
-      return portfolio1Image;
+      return customizedSolution;
     } else if (index == 1) {
-      return portfolio2Image;
+      return provenTrackRecord;
     } else if (index == 2) {
-      return portfolio3Image;
+      return clientCentricSolution;
     } else if (index == 3) {
-      return portfolio4Image;
+      return secureSolution;
     } else {
       return portfolio5Image;
     }

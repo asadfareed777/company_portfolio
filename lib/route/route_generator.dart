@@ -19,8 +19,8 @@ class RouteGenerator {
       case Routes.HOME:
         return MaterialPageRoute<dynamic>(builder: (_) => const HomeScreen());
 
-      case Routes.DETAILS:
-        return MaterialPageRoute<dynamic>(builder: (_) => const DetailsScreen());
+      // case Routes.DETAILS:
+      //   return MaterialPageRoute<dynamic>(builder: (_) => const DetailsScreen());
 
       // case Routes.signUp:
       //   ScreenArguments arguments = args;

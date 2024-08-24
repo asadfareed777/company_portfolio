@@ -160,7 +160,7 @@ class SplashScreenState extends ConsumerState<SplashScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                logoImage,
+                logoImageInvertedTechnology,
                 height: 148.h,
                 width: 148.w,
               ),
