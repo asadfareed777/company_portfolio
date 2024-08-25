@@ -51,3 +51,5 @@ const String realEstate = "assets/images/real_estate.png";
 const String finance = "assets/images/finance.png";
 const String ecommerce = "assets/images/e-commerce.png";
 const String automotive = "assets/images/automotive.png";
+const String healthCare = "assets/images/health_care.png";
+const String quranApp = "assets/images/quran_app.png";

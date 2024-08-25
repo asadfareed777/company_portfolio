@@ -10,11 +10,12 @@ import '../../../utils/colors.dart';
 import '../details_screen.dart';
 
 class BlogSliderWidget extends StatefulWidget {
+  final Map<String, String> whyChooseUsItems;
   final int itemIndex;
   final String title;
   final String description;
   final String image;
-  const BlogSliderWidget({super.key, required this.itemIndex, required this.title, required this.description, required this.image});
+  const BlogSliderWidget({super.key,required this.whyChooseUsItems, required this.itemIndex, required this.title, required this.description, required this.image, });
 
   @override
   State<BlogSliderWidget> createState() => _BlogSliderWidgetState();
@@ -31,7 +32,7 @@ class _BlogSliderWidgetState extends State<BlogSliderWidget> {
         setState(() {});
       },
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsScreen(widget.title,widget.description,widget.image)));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsScreen(widget.whyChooseUsItems)));
       },
       hoverColor: Colors.transparent,
       child: (ResponsiveBreakpoints.of(context).screenWidth < 575)

@@ -80,27 +80,102 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     {
       "title": "Customized Solutions",
       "image": customizedSolution,
-      "description": "At the heart of our service philosophy is the belief that every business is unique, with its own set of challenges and goals. We don’t believe in one-size-fits-all solutions. Instead, we take the time to understand your specific needs, industry dynamics, and operational intricacies. By tailoring our strategies and solutions to align with your business objectives, we ensure that the outcomes not only meet but exceed your expectations. Our bespoke approach allows us to deliver results that drive tangible value, setting your business apart from the competition.",
+      "heading": "Overview",
+      "description": """Unique Business Needs: Every business operates in a distinct environment with specific challenges and goals. Understanding these nuances is crucial for providing effective solutions.
+Tailored Strategies: Our approach involves crafting bespoke strategies that align with the unique aspects of your business.
+Industry Dynamics: We consider the specific dynamics of your industry, ensuring that our solutions are relevant and effective in your market context.
+Operational Intricacies: We delve into the operational details of your business to create solutions that fit seamlessly into your existing processes.""",
+      "header": "Detailed Approach",
+      "heading1": "Initial Consultation:",
+      "description1": """Discovery Phase: We begin with a comprehensive discovery phase, including interviews with key stakeholders to identify core business challenges and objectives.
+Analysis: Analyzing business processes, current systems, and market position to identify gaps and opportunities for improvement.
+Goal Alignment: Aligning our strategies with your short-term and long-term goals to ensure that the solutions we develop are both relevant and impactful.""",
+      "heading2": "Customization Process:",
+      "description2": """Solution Design: Based on the insights gained, we design customized solutions that address the specific needs and challenges of your business.
+Feedback Integration: Incorporating feedback from stakeholders throughout the design and development phases to refine the solution.
+Prototype Development: Creating prototypes or pilot versions of the solution to test its effectiveness and make necessary adjustments.""",
+      "heading3": "Benefits:",
+      "description3": """Enhanced Efficiency: Custom solutions streamline processes, reducing inefficiencies and improving productivity.
+Competitive Advantage: Tailored strategies give you a competitive edge by addressing specific challenges unique to your business.
+Scalability: Custom solutions can be scaled as your business grows, ensuring continued relevance and effectiveness.""",
+      "heading4": "Case Examples:",
+      "description4": """Example 1: A retail client experienced significant improvements in inventory management and sales forecasting through a customized solution tailored to their specific needs.
+Example 2: A healthcare provider saw enhanced patient management and operational efficiency by implementing a bespoke system designed to address their unique workflow requirements.""",
     },
     {
       "title": "Proven Track Record",
       "image": provenTrackRecord,
-      "description": "Over the years, we have built a strong reputation for delivering high-quality solutions that consistently meet the demands of various industries. Our extensive portfolio showcases our ability to solve complex challenges and create innovative solutions that stand the test of time. Whether it’s in technology, finance, healthcare, or any other sector, our track record demonstrates our commitment to excellence and our capability to drive success for our clients. Each project we undertake is a testament to our expertise, creativity, and dedication to delivering exceptional results.",
-
+      "heading": "Overview",
+      "description": """Established Reputation: Over the years, we have built a strong reputation for delivering high-quality solutions that consistently meet the demands of various industries.
+Diverse Experience: Our extensive portfolio showcases our ability to solve complex challenges and create innovative solutions that stand the test of time.
+Commitment to Excellence: Our track record reflects our dedication to excellence and our capability to drive success for our clients.""",
+      "header": "Detailed Achievements",
+      "heading1": "Project Portfolio:",
+      "description1": """Technology Sector: Successfully implemented cutting-edge technologies for clients, resulting in improved operational efficiency and competitive advantage.
+Finance Sector: Developed robust financial solutions that enhanced data accuracy and compliance, leading to significant cost savings and operational improvements.
+Healthcare Sector: Delivered innovative solutions that improved patient care and streamlined administrative processes, contributing to better overall service delivery.""",
+      "heading2": "Client Testimonials:",
+      "description2": """Testimonial 1: "The solutions provided by this firm have consistently exceeded our expectations. Their expertise and commitment to quality are evident in every project." - Technology Client
+Testimonial 2: "Their ability to understand our unique challenges and deliver effective solutions has been instrumental in our success. We highly recommend their services." - Finance Client""",
+      "heading3": "Project Highlights:",
+      "description3": """Complex Problem Solving: Successfully addressed complex challenges by applying advanced problem-solving techniques and innovative approaches.
+Innovative Solutions: Developed and implemented innovative solutions that have set new benchmarks in various industries.
+Long-Term Partnerships: Built long-term relationships with clients by consistently delivering exceptional results and providing ongoing support.""",
+      "heading4": "Metrics and Impact:",
+      "description4": """Improved Efficiency: Quantifiable improvements in operational efficiency and productivity for clients across different sectors.
+Cost Savings: Significant cost savings achieved through optimized processes and effective solutions.
+Enhanced Performance: Demonstrated improvements in performance metrics, such as increased revenue, reduced operational costs, and enhanced customer satisfaction.""",
     },
     {
       "title": "Client-Centric Approach",
       "image": clientCentricSolution,
-      "description": "Our clients are at the core of everything we do. We believe that the key to a successful partnership lies in open communication, mutual respect, and a deep understanding of our clients' needs. We take a collaborative approach, working closely with you at every stage of the project to ensure that our solutions are perfectly aligned with your vision and goals. By prioritizing your success and putting your needs first, we build long-lasting relationships based on trust, transparency, and shared achievements. Your success is our success, and we are committed to going above and beyond to ensure it.",
-
+      "heading": "Overview",
+      "description": """Client Focus: Our approach places clients at the heart of our operations, ensuring that their needs and goals are prioritized.
+Open Communication: We emphasize transparent and open communication to foster a collaborative partnership.
+Long-Term Relationships: We aim to build enduring relationships based on trust, respect, and mutual success.""",
+      "header": "Detailed Approach",
+      "heading1": "Client Engagement:",
+      "description1": """Initial Meetings: Conducting detailed meetings with clients to understand their vision, goals, and expectations.
+Regular Updates: Providing regular updates and progress reports to keep clients informed and involved throughout the project.
+Feedback Mechanisms: Implementing feedback mechanisms to gather client input and make necessary adjustments to the project.""",
+      "heading2": "Collaboration:",
+      "description2": """Joint Planning: Working collaboratively with clients during the planning and design phases to ensure alignment with their objectives.
+Team Integration: Integrating client teams into the project process to facilitate knowledge sharing and ensure that solutions meet their needs.
+Problem-Solving: Addressing any issues or concerns promptly and collaboratively to ensure that solutions remain effective and aligned with client expectations.""",
+      "heading3": "Client Satisfaction:",
+      "description3": """Custom Solutions: Developing customized solutions that address the unique needs of each client, ensuring that their goals are met.
+Exceptional Service: Providing exceptional customer service and support to enhance the overall client experience.
+Continuous Improvement: Continuously seeking ways to improve our services and solutions based on client feedback and evolving needs.""",
+      "heading4": "Success Stories:",
+      "description4": """Story 1: Successfully revamped a client’s business processes by incorporating their feedback and working closely with their team, resulting in enhanced efficiency and satisfaction.
+Story 2: Built a strong, long-term relationship with a client through consistent communication, collaborative problem-solving, and a client-centric approach, leading to multiple successful projects.""",
     },
     {
       "title": "Scalable and Secure Solutions",
       "image": secureSolution,
-      "description": "In today's fast-paced and ever-changing business environment, scalability and security are more important than ever. Our solutions are designed with these principles at their core. We create systems that can grow and adapt with your business, ensuring they remain effective as your needs evolve. At the same time, we place a strong emphasis on security, protecting your data and assets with the latest technologies and best practices. This dual focus on scalability and security ensures that our solutions not only meet your current needs but also position you for long-term success in a secure and sustainable way.",
-
+      "heading": "Overview",
+      "description": """Scalability: Our solutions are designed to scale with your business, ensuring continued effectiveness as your needs evolve.
+Security: We prioritize security by implementing the latest technologies and best practices to protect your data and assets.
+Sustainability: Our focus on scalability and security ensures that solutions are not only effective but also sustainable in the long term.""",
+      "header": "Detailed Approach",
+      "heading1": "Scalable Design:",
+      "description1": """Modular Architecture: Utilizing modular design principles to ensure that solutions can be easily scaled as your business grows.
+Flexible Infrastructure: Implementing flexible infrastructure that can adapt to changing business requirements and increasing demands.
+Future-Proofing: Designing solutions with future growth in mind to minimize the need for extensive modifications or upgrades.""",
+      "heading2": "Security Measures:",
+      "description2": """Data Protection: Employing advanced encryption and data protection techniques to safeguard sensitive information.
+Access Controls: Implementing robust access controls and authentication mechanisms to prevent unauthorized access.
+Compliance: Ensuring that solutions comply with relevant regulations and standards to maintain data integrity and security.""",
+      "heading3": "Sustainable Solutions:",
+      "description3": """Efficient Resource Utilization: Designing solutions that use resources efficiently to minimize environmental impact and operational costs.
+Regular Updates: Providing regular updates and patches to address potential security vulnerabilities and ensure continued effectiveness.
+Long-Term Support: Offering long-term support and maintenance to ensure that solutions remain effective and secure over time.""",
+      "heading4": "Case Examples:",
+      "description4": """Example 1: Developed a scalable e-commerce platform that accommodated growing customer demands and increased traffic, ensuring smooth operations as the business expanded.
+Example 2: Implemented a secure data management system for a financial institution, protecting sensitive client information and meeting stringent regulatory requirements.""",
     },
   ];
+
 
 
   @override
@@ -112,7 +187,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         backgroundColor: Colors.white,
         child: SafeArea(
           child: Container(
-            padding: EdgeInsets.all(30),
+            padding: const EdgeInsets.all(30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -136,7 +211,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.close,
                           color: Colors.black,
                         ),
@@ -144,7 +219,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 drawerNavButton(
@@ -418,13 +493,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                         .screenWidth <
                                     1036,
                                 child: Padding(
-                                  padding: EdgeInsets.only(left: 20),
+                                  padding: const EdgeInsets.only(left: 20),
                                   child: InkWell(
                                     onTap: () {
                                       _scaffoldKey.currentState?.openDrawer();
                                       // Scaffold.of(context).openDrawer();
                                     },
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.menu,
                                       color: Colors.black,
                                     ),
@@ -454,7 +529,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                 : 660
                             : 720,
                         width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(homeSectionBackgroundImage),
                             fit: BoxFit.cover,
@@ -467,7 +542,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                           child: Column(
                             children: [
                               VisibilityDetector(
-                                key: Key('navbar'),
+                                key: const Key('navbar'),
                                 onVisibilityChanged: (visibilityInfo) {
                                   if (visibilityInfo.visibleFraction == 0) {
                                     showNavBar = true;
@@ -687,13 +762,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                         1036,
                                                 child: Padding(
                                                   padding:
-                                                      EdgeInsets.only(left: 20),
+                                                      const EdgeInsets.only(left: 20),
                                                   child: InkWell(
                                                     onTap: () {
                                                       _scaffoldKey.currentState
                                                           ?.openDrawer();
                                                     },
-                                                    child: Icon(
+                                                    child: const Icon(
                                                       Icons.menu,
                                                       color: Colors.white,
                                                     ),
@@ -775,7 +850,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                         ),
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 40,
                                     ),
                                     CustomizableTextButton(
@@ -793,7 +868,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                             curve:
                                                 Curves.fastEaseInToSlowEaseOut);
                                       },
-                                      buttonTitleStyle: TextStyle(
+                                      buttonTitleStyle: const TextStyle(
                                         fontSize: 16,
                                         color: Colors.white,
                                         fontWeight: FontWeight.w500,
@@ -837,14 +912,62 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                               children: [
                                 serviceWidget(
                                   onPressed: () {},
+                                  title: "Flutter",
+                                  content:
+                                  """Flutter, Google’s UI toolkit, is revolutionizing app development by enabling high-performance, visually stunning applications across mobile, web, and desktop platforms. At our company, we harness Flutter’s power to deliver cross-platform solutions efficiently, ensuring your app stands out with native-like performance.
+
+Why Choose Flutter for Your Next Project?
+Cross-Platform Development: Flutter’s single codebase supports deployment across Android, iOS, web, and desktop platforms, reducing development time and cost. This approach simplifies maintenance and accelerates time-to-market, allowing you to reach a broader audience with minimal investment.
+
+High Performance: Flutter provides near-native performance by compiling directly to native machine code. This ensures smooth animations, fast load times, and responsive UI, rivaling that of native apps.
+
+Expressive and Flexible UI: With a rich set of customizable widgets, Flutter allows for the creation of beautiful and brand-specific UIs. Its layered architecture provides complete control over every pixel, enabling intricate and complex designs.
+
+Single Codebase for Easier Maintenance and Updates: A single codebase simplifies updates and maintenance, applying changes across all platforms efficiently. This reduces errors and ensures that your app remains current with the latest trends and technologies.
+
+Our Approach to Flutter Development
+In-Depth Consultation: We start by understanding your business goals and unique requirements to create a tailored development strategy.
+
+Custom UI/UX Design: Leveraging Flutter’s capabilities, we design engaging and intuitive user interfaces, with rapid prototyping and testing to meet your vision.
+
+Agile Development Process: Our agile approach allows for flexibility and iterative progress, providing regular updates and incorporating feedback throughout development.
+
+Comprehensive Testing: Extensive testing across all platforms ensures your app is bug-free and performs optimally. We focus on functional, performance, and user acceptance testing.
+
+Post-Launch Support: We offer ongoing support and maintenance, including updates and feature enhancements based on user feedback and evolving needs.
+""",
+                                  icon: Image.asset(
+                                    flutterIcon,
+                                    // color: lightBlueColor,
+                                    height: 47,
+                                    width: 47,
+                                  ),
+                                ),
+                                serviceWidget(
+                                  onPressed: () {},
                                   title: "Android Development",
                                   content:
-                                      """Our team excels in developing robust and user-friendly Android applications that run smoothly on a wide range of devices. We ensure that our apps are optimized for performance and security, providing a seamless user experience.
-Benefits:
-Customizable: Tailored to meet specific business needs.
-Scalable: Designed to handle increasing user loads.
-High Performance: Optimized for speed and efficiency.
-Extensive Market Reach: Access to a vast user base on the Android platform.
+                                      """Our team excels in developing robust, user-friendly Android applications optimized for performance, security, and scalability. We understand the diverse Android ecosystem and craft solutions that meet your business needs and enhance user engagement.
+
+Why Choose Our Android Development Services?
+Customizable Solutions: We tailor our Android apps to meet your specific business requirements, whether for e-commerce, service delivery, or internal operations, ensuring alignment with your objectives.
+
+Scalable Architecture: Our apps are designed with scalable architecture to handle increasing user loads efficiently, maintaining performance and reliability as your user base grows.
+
+High Performance: We optimize our Android apps for speed and efficiency, ensuring smooth operation on various devices. Best practices in coding and resource management ensure quick load times and a responsive user interface.
+
+Extensive Market Reach: Android’s vast user base offers unparalleled market penetration opportunities. Our apps are compatible with a wide range of devices and Android versions, maximizing reach and engagement.
+
+Our Approach to Android Development
+Comprehensive Requirement Analysis: We analyze your business needs and target audience to determine the features and functionalities that will best serve your users.
+
+User-Centric Design: Our design focus is on creating intuitive interfaces that enhance user experience and engagement.
+
+Advanced Security Measures: We integrate robust security protocols to protect user data and prevent unauthorized access, ensuring your app’s security and compliance.
+
+Rigorous Testing and Quality Assurance: Our apps undergo extensive testing to meet high-quality standards, including performance, security, and usability assessments.
+
+Ongoing Support and Maintenance: Post-launch, we provide support and maintenance to keep your app updated and performing optimally, incorporating feedback and new features as needed.
 """,
                                   icon: Image.asset(
                                     androidIcon,
@@ -857,12 +980,25 @@ Extensive Market Reach: Access to a vast user base on the Android platform.
                                   onPressed: () {},
                                   title: "iOS Development",
                                   content:
-                                      """We specialize in creating seamless and intuitive iOS applications that provide an exceptional user experience. Our iOS apps are known for their sleek design and robust functionality, ensuring high user engagement and satisfaction.
-Benefits:
-High Security: Built with strong security protocols to protect user data.
-Excellent Performance: Smooth and responsive user interface.
-Premium User Base: Access to a high-value demographic.
-Consistency: Consistent performance across all iOS devices.
+                                      """Our iOS application development focuses on creating seamless, intuitive apps that blend aesthetics with functionality. We deliver premium experiences that resonate with users and enhance engagement across Apple’s ecosystem.
+
+Why Choose Our iOS Development Services?
+High Security: Our iOS apps are built with advanced security protocols, including encryption and secure authentication, to protect user data and ensure privacy.
+
+Excellent Performance: Optimized for speed and efficiency, our iOS apps provide a smooth and responsive interface, handling complex features and high data loads effectively.
+
+Premium User Base: iOS users, known for their higher purchasing power, offer valuable engagement opportunities. Our apps cater to this demographic, enhancing brand loyalty and driving ROI.
+
+Consistency Across Devices: Our apps deliver a consistent experience across all iOS devices, reinforcing brand trust and ensuring user satisfaction.
+
+Detailed Approach to iOS Development
+User-Centered Design: We prioritize user experience through extensive research and intuitive design, ensuring that the app meets user needs and preferences.
+
+Robust Functionality: Advanced features are integrated to enhance usability while maintaining high performance, including seamless navigation and real-time updates.
+
+Quality Assurance: Rigorous testing ensures compliance with Apple’s quality standards, including performance, security, and user experience evaluations.
+
+Post-Launch Support: We provide ongoing support and updates to keep your app running smoothly, incorporating user feedback and ensuring compatibility with the latest iOS versions.
 """,
                                   icon: Image.asset(
                                     appleIcon,
@@ -871,39 +1007,43 @@ Consistency: Consistent performance across all iOS devices.
                                     width: 47,
                                   ),
                                 ),
-                                serviceWidget(
-                                  onPressed: () {},
-                                  title: "Flutter",
-                                  content:
-                                      """Flutter is a UI toolkit developed by Google for building natively compiled applications for mobile, web, and desktop from a single codebase. We use Flutter to create high-performance apps with beautiful, expressive UIs.
-Benefits:
-Cross-Platform Development: One codebase for multiple platforms, reducing development time and cost.
-High Performance: Native performance with smooth animations.
-Expressive and Flexible UI: Customizable widgets for a unique user experience.
-Single Codebase: Easier maintenance and updates.
-""",
-                                  icon: Image.asset(
-                                    flutterIcon,
-                                    // color: lightBlueColor,
-                                    height: 47,
-                                    width: 47,
-                                  ),
-                                ),
+
                                 serviceWidget(
                                   onPressed: () {},
                                   title: "Artificial Intelligence",
                                   content:
-                                      """We integrate AI technologies into mobile applications to provide intelligent features such as predictive analytics, natural language processing, and image recognition. Our AI models are designed to enhance user experience and automate complex tasks.
-Benefits:
-Enhanced User Experience: Personalized recommendations and interactions.
-Automation: Automate repetitive tasks, improving efficiency.
-Data-Driven Insights: Leverage data for better decision-making.
-Advanced Features: Implement cutting-edge functionalities like facial recognition, document verification, and nudity checks.
-Specialized AI Models:
-Facial Recognition: Secure and accurate user authentication.
-Document Verification: Automated verification of user documents.
-Nudity Checks: Ensure content compliance and safety.
-Technologies Used: TensorFlow, PyTorch, OpenCV.
+                                      """In the fast-evolving digital landscape, artificial intelligence (AI) is transforming mobile applications into intelligent solutions that enhance user experience and automate complex tasks. At our company, we integrate cutting-edge AI technologies into mobile apps, providing features that offer personalized interactions, automate repetitive tasks, and deliver valuable insights.
+
+Why AI is Essential for Modern Mobile Apps
+Enhanced User Experience: AI algorithms analyze user behavior to offer personalized recommendations, such as suggesting content or products tailored to individual preferences. This customization improves user engagement by making the app more intuitive and responsive, whether recommending songs, products, or routes.
+
+Automation: AI automates tasks like customer support through chatbots, data entry, and image recognition. This not only boosts efficiency but also reduces operational costs, freeing up human resources for strategic activities and delivering faster, more efficient user interactions.
+
+Data-Driven Insights: AI excels at analyzing large data volumes to generate actionable insights about user behavior and trends. These insights enable better decision-making and optimization of app functionality, marketing strategies, and business operations by identifying patterns and opportunities.
+
+Advanced Features: AI enables advanced functionalities such as facial recognition, natural language processing, and predictive analytics. These features enhance user experience with secure authentication, real-time translations, and content moderation, setting your app apart in a competitive marketplace.
+
+Specialized AI Models We Implement
+Facial Recognition: Our AI facial recognition models ensure secure and reliable user authentication, ideal for high-security applications in banking, healthcare, and government services.
+
+Document Verification: Automated verification of documents like passports and IDs speeds up onboarding processes and reduces manual effort, particularly useful in finance, travel, and legal sectors.
+
+Nudity Checks: AI-powered nudity detection models help maintain content moderation standards by identifying and flagging inappropriate material, ensuring compliance with community guidelines.
+
+Technologies We Use
+TensorFlow: A flexible and scalable framework for building deep learning models for image recognition and natural language processing.
+PyTorch: A library suited for complex neural networks and deep learning tasks, excelling in both research and production.
+OpenCV: An open-source library for real-time image processing and analysis, crucial for facial recognition and object detection.
+Our Approach to AI Integration
+Consultation and Strategy Development: We understand your needs and develop a strategy for integrating AI that aligns with your business goals and enhances user experience.
+
+AI Model Development: Our specialists design custom AI models tailored to your requirements, optimizing performance and accuracy.
+
+Seamless Integration: We integrate AI features into your app smoothly, ensuring compatibility and enhanced functionality.
+
+Testing and Optimization: We conduct rigorous testing and continuous optimization to improve model performance and reliability.
+
+Ongoing Support and Maintenance: Post-launch support includes monitoring, updates, and refinements to keep AI features performing optimally.
 """,
                                   icon: Image.asset(
                                     artificialIntelligence,
@@ -944,7 +1084,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                       Container(
                         key: aboutKey,
                         width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.symmetric(vertical: 120),
+                        padding: const EdgeInsets.symmetric(vertical: 120),
                         color: Colors.grey.withOpacity(0.06),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -962,7 +1102,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                     .screenWidth <
                                                 570)
                                             ? Padding(
-                                                padding: EdgeInsets.symmetric(
+                                                padding: const EdgeInsets.symmetric(
                                                     horizontal: 15),
                                                 child: Row(
                                                   mainAxisAlignment:
@@ -985,7 +1125,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                         decoration:
                                                             BoxDecoration(
                                                           image:
-                                                              DecorationImage(
+                                                              const DecorationImage(
                                                             image: AssetImage(
                                                                 aboutImage),
                                                             fit:
@@ -1015,10 +1155,10 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                             770)
                                                         ? 516
                                                         : 696,
-                                                padding: EdgeInsets.symmetric(
+                                                padding: const EdgeInsets.symmetric(
                                                     horizontal: 15),
                                                 decoration: BoxDecoration(
-                                                  image: DecorationImage(
+                                                  image: const DecorationImage(
                                                     image:
                                                         AssetImage(aboutImage),
                                                     fit: BoxFit.fill,
@@ -1027,14 +1167,14 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                       BorderRadius.circular(10),
                                                 ),
                                               ),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 15,
                                         ),
                                         (ResponsiveBreakpoints.of(context)
                                                     .screenWidth <
                                                 570)
                                             ? Padding(
-                                                padding: EdgeInsets.symmetric(
+                                                padding: const EdgeInsets.symmetric(
                                                     horizontal: 15),
                                                 child: Container(
                                                   width:
@@ -1109,28 +1249,28 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                                   0.75),
                                                         ),
                                                       ),
-                                                      SizedBox(
+                                                      const SizedBox(
                                                         height: 50,
                                                       ),
                                                       aboutUsTitleDescription(
                                                         title: "Integrity",
                                                         description: "We adhere to the highest ethical standards, ensuring honesty and fairness in every action we take.",
                                                       ),
-                                                      SizedBox(
+                                                      const SizedBox(
                                                         height: 30,
                                                       ),
                                                       aboutUsTitleDescription(
                                                         title: "Innovation",
                                                         description: "We are committed to fostering a culture of creativity and continuous improvement.",
                                                       ),
-                                                      SizedBox(
+                                                      const SizedBox(
                                                         height: 30,
                                                       ),
                                                       aboutUsTitleDescription(
                                                         title: "Excellence",
                                                         description: "We strive for excellence in everything we do, delivering superior results that exceed expectations.",
                                                       ),
-                                                      SizedBox(
+                                                      const SizedBox(
                                                         height: 30,
                                                       ),
                                                       aboutUsTitleDescription(
@@ -1156,7 +1296,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                     ),
                                                   ],
                                                 ),*/
-                                                      SizedBox(
+                                                      const SizedBox(
                                                         height: 50,
                                                       ),
                                                       Row(
@@ -1180,14 +1320,14 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                           ),
                                                         ],
                                                       ),
-                                                      SizedBox(
+                                                      const SizedBox(
                                                         height: 4,
                                                       ),
                                                       Container(
                                                         height: 2.4,
                                                         width: 40,
                                                         decoration:
-                                                            BoxDecoration(
+                                                            const BoxDecoration(
                                                           gradient:
                                                               LinearGradient(
                                                             colors: [
@@ -1270,28 +1410,28 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                             .withOpacity(0.75),
                                                       ),
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 50,
                                                     ),
                                                     aboutUsTitleDescription(
                                                       title: "Integrity",
                                                       description: "We adhere to the highest ethical standards, ensuring honesty and fairness in every action we take.",
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 30,
                                                     ),
                                                     aboutUsTitleDescription(
                                                       title: "Innovation",
                                                       description: "We are committed to fostering a culture of creativity and continuous improvement.",
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 30,
                                                     ),
                                                     aboutUsTitleDescription(
                                                       title: "Excellence",
                                                       description: "We strive for excellence in everything we do, delivering superior results that exceed expectations.",
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 30,
                                                     ),
                                                     aboutUsTitleDescription(
@@ -1318,7 +1458,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                   ),
                                                 ],
                                               ),*/
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 50,
                                                     ),
                                                     GradientText(
@@ -1335,13 +1475,13 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                         gradientColor3,
                                                       ],
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 4,
                                                     ),
                                                     Container(
                                                       height: 2.4,
                                                       width: 40,
-                                                      decoration: BoxDecoration(
+                                                      decoration: const BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -1376,10 +1516,10 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                       1280)
                                                   ? 452
                                                   : 633,
-                                          padding: EdgeInsets.symmetric(
+                                          padding: const EdgeInsets.symmetric(
                                               horizontal: 15),
                                           decoration: BoxDecoration(
-                                            image: DecorationImage(
+                                            image: const DecorationImage(
                                               image: AssetImage(aboutImage),
                                               fit: BoxFit.fill,
                                             ),
@@ -1387,7 +1527,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                 BorderRadius.circular(10),
                                           ),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 15,
                                         ),
                                         Container(
@@ -1397,7 +1537,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                       1280)
                                                   ? 452
                                                   : 633,
-                                          padding: EdgeInsets.symmetric(
+                                          padding: const EdgeInsets.symmetric(
                                               horizontal: 15),
                                           child: Column(
                                             mainAxisAlignment:
@@ -1455,7 +1595,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                       .withOpacity(0.75),
                                                 ),
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 50,
                                               ),
                                               Row(
@@ -1466,7 +1606,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                       description: "We adhere to the highest ethical standards, ensuring honesty and fairness in every action we take.",
                                                     ),
                                                   ),
-                                                  SizedBox(
+                                                  const SizedBox(
                                                     width: 15,
                                                   ),
                                                   Expanded(
@@ -1478,7 +1618,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                   ),
                                                 ],
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 50,
                                               ),
                                               Row(
@@ -1489,7 +1629,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                       description: "We strive for excellence in everything we do, delivering superior results that exceed expectations.",
                                                     ),
                                                   ),
-                                                  SizedBox(
+                                                  const SizedBox(
                                                     width: 15,
                                                   ),
                                                   Expanded(
@@ -1500,7 +1640,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                   ),
                                                 ],
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 50,
                                               ),
                                               GradientText(
@@ -1515,13 +1655,13 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                                   gradientColor3,
                                                 ],
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 4,
                                               ),
                                               Container(
                                                 height: 2.4,
                                                 width: 40,
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   gradient: LinearGradient(
                                                     colors: [
                                                       gradientColor1,
@@ -1543,13 +1683,13 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                       Container(
                         key: portfolioKey,
                         width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.symmetric(vertical: 120),
+                        padding: const EdgeInsets.symmetric(vertical: 120),
                         color: Colors.white,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              padding: EdgeInsets.symmetric(horizontal: 15),
+                              padding: const EdgeInsets.symmetric(horizontal: 15),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -1607,7 +1747,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                       color: Colors.black.withOpacity(0.75),
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 50,
                                   ),
                                   Container(
@@ -1670,7 +1810,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                   : 1266,
                               child: Column(
                                 children: [
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 50,
                                   ),
                                   Expanded(
@@ -1733,7 +1873,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                       ],
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 50,
                                   ),
                                 ],
@@ -1746,25 +1886,25 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                 portfolioPageNumber == 0
                                     ? activeIndicator()
                                     : inActiveIndicator(),
-                                SizedBox(
+                                const SizedBox(
                                   width: 20,
                                 ),
                                 portfolioPageNumber == 1
                                     ? activeIndicator()
                                     : inActiveIndicator(),
-                                SizedBox(
+                                const SizedBox(
                                   width: 20,
                                 ),
                                 portfolioPageNumber == 2
                                     ? activeIndicator()
                                     : inActiveIndicator(),
-                                SizedBox(
+                                const SizedBox(
                                   width: 20,
                                 ),
                                 portfolioPageNumber == 3
                                     ? activeIndicator()
                                     : inActiveIndicator(),
-                                SizedBox(
+                                const SizedBox(
                                   width: 20,
                                 ),
                                 portfolioPageNumber == 4
@@ -1787,7 +1927,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                 : 966
                             : */
                             1266,
-                        padding: EdgeInsets.symmetric(vertical: 120),
+                        padding: const EdgeInsets.symmetric(vertical: 120),
                         color: Colors.grey.withOpacity(0.06),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1839,7 +1979,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             GradientText(
@@ -1855,7 +1995,7 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                               ],
                             ),
 
-                            SizedBox(
+                            const SizedBox(
                               height: 40,
                             ),
 
@@ -1871,17 +2011,11 @@ Technologies Used: TensorFlow, PyTorch, OpenCV.
                                     // color: secondaryColor,
                                   ),
                                   scores: "E-commerce",
-                                  title: """Use-Case: Online Retail Stores
+                                  title1: 'Use-Case: Online Retail Stores',
+                                  description1: 'Build sophisticated e-commerce platforms that provide a seamless shopping experience with features such as product listings, shopping carts, payment gateways, and order tracking. Utilize Flutter for creating responsive mobile and web applications, Firebase for real-time updates and user authentication, and RESTful APIs for secure payment integration.',
+                                  title2: 'Use-Case: Subscription Services',
+                                  description2: 'Develop robust subscription-based platforms that cater to various services, such as video streaming and digital content delivery. Implement Flutter for a sleek user interface, Firebase for managing user authentication and data storage, and AWS for scalable backend services to handle high user loads and subscription management.',
 
-Description: Build comprehensive e-commerce platforms with product listings, shopping carts, payment gateways, and order tracking.
-Technologies Used: Flutter for mobile and web apps, Firebase for real-time updates, RESTful APIs for payment integration.
-Relevant Image:
-
-Use-Case: Subscription Services
-
-Description: Develop subscription-based platforms for various services, including video streaming, digital content, and more.
-Technologies Used: Flutter for UI, Firebase for user authentication and data storage, AWS for scalable backend services.
-""",
                                 ),
                                 companyGrowthWidget(
                                   image: Image.asset(
@@ -1891,17 +2025,10 @@ Technologies Used: Flutter for UI, Firebase for user authentication and data sto
                                     // color: orangeColor,
                                   ),
                                   scores: "Education",
-                                  title: """Use-Case: E-learning Platforms
-
-Description: Create interactive e-learning platforms with video lessons, quizzes, progress tracking, and community forums.
-Technologies Used: Flutter for cross-platform apps, Firebase for real-time data, GraphQL for efficient data fetching.
-Relevant Image:
-
-Use-Case: School Management Systems
-
-Description: Develop systems for managing school operations, including student information, attendance, grading, and communication.
-Technologies Used: Flutter for UI, Firebase for data storage, RESTful APIs for integration with third-party services.
-""",
+                                  title1: 'Use-Case: E-learning Platforms',
+                                  description1: 'Create dynamic e-learning platforms that support interactive video lessons, quizzes, progress tracking, and community forums. Use Flutter for building cross-platform applications that work seamlessly on mobile and web, Firebase for real-time data synchronization, and GraphQL for efficient and flexible data fetching and management.',
+                                  title2: 'Use-Case: School Management Systems',
+                                  description2: 'Develop comprehensive school management systems that facilitate the management of student information, attendance records, grading, and communication between students, parents, and teachers. Leverage Flutter for a consistent user interface, Firebase for secure and scalable data storage, and RESTful APIs for integration with other educational tools and services.',
                                 ),
                                 companyGrowthWidget(
                                   image: Image.asset(
@@ -1911,16 +2038,10 @@ Technologies Used: Flutter for UI, Firebase for data storage, RESTful APIs for i
                                     // color: primaryColor,
                                   ),
                                   scores: "Finance",
-                                  title: """Use-Case: Fintech Solutions
-
-Description: Build secure and scalable fintech applications for banking, investment, and personal finance management.
-Technologies Used: Flutter for cross-platform apps, Firebase for real-time data, RESTful APIs for integration with financial services.
-Relevant Image:
-Use-Case: Investment Platforms
-
-Description: Develop platforms for managing investments, including portfolio tracking, market analysis, and trading.
-Technologies Used: Flutter for UI, Firebase for real-time data, GraphQL for efficient data querying.
-""",
+                                  title1: 'Use-Case: Fintech Solutions',
+                                  description1: 'Design secure and scalable fintech applications that handle various aspects of banking, investment, and personal finance management. Employ Flutter for developing cross-platform applications that provide a smooth user experience, Firebase for real-time data synchronization, and RESTful APIs for connecting with financial services and managing transactions.',
+                                  title2: 'Use-Case: Investment Platforms',
+                                  description2: 'Create platforms dedicated to investment management, offering features such as portfolio tracking, market analysis, and trading functionalities. Use Flutter for the user interface, Firebase for real-time updates, and GraphQL for efficient data querying to deliver up-to-date investment information and insights.',
                                 ),
                                 companyGrowthWidget(
                                   image: Image.asset(
@@ -1930,75 +2051,57 @@ Technologies Used: Flutter for UI, Firebase for real-time data, GraphQL for effi
                                     // color: primaryColor,
                                   ),
                                   scores: "Real Estate",
-                                  title: """Use-Case: Property Listing Platforms
-
-Description: Create platforms for listing and searching properties, including advanced search filters, virtual tours, and agent contact.
-Technologies Used: Flutter for cross-platform apps, Firebase for real-time updates, RESTful APIs for integration with third-party services.
-Relevant Image:
-
-Use-Case: Real Estate Management Systems
-
-Description: Develop systems for managing real estate operations, including property management, tenant communication, and maintenance tracking.
-Technologies Used: Flutter for UI, Firebase for data storage, AWS for scalable backend services.
-""",
+                                  title1: 'Use-Case: Property Listing Platforms',
+                                  description1: 'Design platforms for listing and searching real estate properties, including features like advanced search filters, virtual property tours, and agent contact functionalities. Implement Flutter for cross-platform application development, Firebase for real-time updates and notifications, and RESTful APIs for integrating with external real estate services.',
+                                  title2: 'Use-Case: Real Estate Management Systems',
+                                  description2: 'Develop management systems for real estate operations that cover property management, tenant communication, and maintenance tracking. Use Flutter for a user-friendly interface, Firebase for efficient data storage, and AWS for scalable backend services to support the diverse needs of property management.',
+                                ),
+                                companyGrowthWidget(
+                                  image: Image.asset(
+                                    automotive,
+                                    height: 44,
+                                    width: 44,
+                                    // color: primaryColor,
+                                  ),
+                                  scores: "Automotive",
+                                  title1: 'Use-Case: Dealership Management Systems',
+                                  description1: 'Streamline operations for car dealerships by creating systems that manage inventory, customer relationships, and sales tracking. Leverage Flutter for cross-platform application development, Firebase for real-time data management, and RESTful APIs for integrating with third-party services to enhance dealership operations.',
+                                  title2: 'Use-Case: Car Rental Services',
+                                  description2: 'Develop applications for managing car rentals, including features for booking, fleet management, and customer support. Use Flutter for mobile app development, Firebase for real-time data synchronization, and AWS for scalable backend services to efficiently handle rental transactions and fleet operations.',
                                 ),
 
+                                companyGrowthWidget(
+                                  image: Image.asset(
+                                    healthCare,
+                                    height: 44,
+                                    width: 44,
+                                    // color: primaryColor,
+                                  ),
+                                  scores: "Healthcare",
+                                  title1: 'Use-Case: Telemedicine Platforms',
+                                  description1: 'Enable remote consultations between patients and healthcare providers with features such as video calls, appointment scheduling, and electronic health records (EHR) management. Utilize Flutter for both mobile and web applications, Firebase for real-time data updates, and RESTful APIs for integrating with EHR systems to support telemedicine functionalities.',
+                                  title2: 'Use-Case: Patient Management Systems',
+                                  description2: 'Create systems for managing patient information, appointments, billing, and communication in a unified platform. Implement Flutter for a user-friendly interface, Firebase for secure data storage, and GraphQL for efficient data querying to provide comprehensive patient management solutions.',
+                                ),
 
 
 
                               ],
                             ),
-                            SizedBox(
-                              height: 30,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 80),
-                              child: companyGrowthFullWidthWidget(
-                                image: Image.asset(
-                                  automotive,
-                                  height: 44,
-                                  width: 44,
-                                  // color: primaryColor,
-                                ),
-                                scores: "Automotive",
-                                title: """Use-Case: Dealership Management Systems
-                              
-Description: Streamline operations for car dealerships, including inventory management, customer relationship management (CRM), and sales tracking.
-Technologies Used: Flutter for cross-platform apps, Firebase for real-time data, RESTful APIs for integration with third-party services.
-Relevant Image:
-                              
-Use-Case: Car Rental Services
-                              
-Description: Develop apps for managing car rentals, including booking, fleet management, and customer support.
-Technologies Used: Flutter for mobile apps, Firebase for real-time data, AWS for scalable backend services.
-Relevant Image:
-Healthcare
-                              
-Use-Case: Telemedicine Platforms
-                              
-Description: Enable remote consultations between patients and healthcare providers, including video calls, appointment scheduling, and electronic health records (EHR) management.
-Technologies Used: Flutter for mobile and web apps, Firebase for real-time data, RESTful APIs for EHR integration.
-Relevant Image:
-Use-Case: Patient Management Systems
-                              
-Description: Manage patient information, appointments, billing, and communication in a single platform.
-Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for efficient data querying.
-                              """,
-                              ),
-                            ),
+
                           ],
                         ),
                       ),
                       Container(
                         key: blogKey,
                         width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.symmetric(vertical: 120),
+                        padding: const EdgeInsets.symmetric(vertical: 120),
                         color: Colors.white,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              padding: EdgeInsets.symmetric(horizontal: 15),
+                              padding: const EdgeInsets.symmetric(horizontal: 15),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -2056,7 +2159,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                       color: Colors.black.withOpacity(0.75),
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 50,
                                   ),
                                   Container(
@@ -2119,7 +2222,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                   : 1266,
                               child: Column(
                                 children: [
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 50,
                                   ),
                                   Expanded(
@@ -2172,7 +2275,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                 final item = whyChooseUsItems[itemIndex];
 
                                                 return BlogSliderWidget(
-                                                    itemIndex: itemIndex, title: item['title'].toString(), description: item['description'].toString(), image: item['image'].toString(),);
+                                                  whyChooseUsItems: whyChooseUsItems[itemIndex], itemIndex: itemIndex, title: item['title'].toString(), description: item['description'].toString(), image: item['image'].toString(),);
                                               },
                                             );
                                           }),
@@ -2180,7 +2283,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                       ],
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 50,
                                   ),
                                 ],
@@ -2193,25 +2296,25 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                 portfolioPageNumber == 0
                                     ? activeIndicator()
                                     : inActiveIndicator(),
-                                SizedBox(
+                                const SizedBox(
                                   width: 20,
                                 ),
                                 portfolioPageNumber == 1
                                     ? activeIndicator()
                                     : inActiveIndicator(),
-                                SizedBox(
+                                const SizedBox(
                                   width: 20,
                                 ),
                                 portfolioPageNumber == 2
                                     ? activeIndicator()
                                     : inActiveIndicator(),
-                                SizedBox(
+                                const SizedBox(
                                   width: 20,
                                 ),
                                 portfolioPageNumber == 3
                                     ? activeIndicator()
                                     : inActiveIndicator(),
-                                SizedBox(
+                                const SizedBox(
                                   width: 20,
                                 ),
                                 portfolioPageNumber == 4
@@ -2225,7 +2328,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                       Container(
                         key: contactUsKey,
                         width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.symmetric(vertical: 120),
+                        padding: const EdgeInsets.symmetric(vertical: 120),
                         color: Colors.grey.withOpacity(0.06),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -2243,7 +2346,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     .screenWidth <
                                                 570)
                                             ? Padding(
-                                                padding: EdgeInsets.symmetric(
+                                                padding: const EdgeInsets.symmetric(
                                                     horizontal: 15),
                                                 child: Row(
                                                   mainAxisAlignment:
@@ -2266,7 +2369,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                         decoration:
                                                             BoxDecoration(
                                                           image:
-                                                              DecorationImage(
+                                                              const DecorationImage(
                                                             image: AssetImage(
                                                                 aboutImage),
                                                             fit:
@@ -2296,10 +2399,10 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                             770)
                                                         ? 516
                                                         : 696,
-                                                padding: EdgeInsets.symmetric(
+                                                padding: const EdgeInsets.symmetric(
                                                     horizontal: 15),
                                                 decoration: BoxDecoration(
-                                                  image: DecorationImage(
+                                                  image: const DecorationImage(
                                                     image:
                                                         AssetImage(aboutImage),
                                                     fit: BoxFit.fill,
@@ -2308,14 +2411,14 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                       BorderRadius.circular(10),
                                                 ),
                                               ),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 15,
                                         ),
                                         (ResponsiveBreakpoints.of(context)
                                                     .screenWidth <
                                                 570)
                                             ? Padding(
-                                                padding: EdgeInsets.symmetric(
+                                                padding: const EdgeInsets.symmetric(
                                                     horizontal: 15),
                                                 child: Container(
                                                   width:
@@ -2416,7 +2519,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                       ),
 
 
-                                                      SizedBox(
+                                                      const SizedBox(
                                                         height: 50,
                                                       ),
                                                       CustomizableTextField(
@@ -2458,7 +2561,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                             TextInputType
                                                                 .number,
                                                       ),
-                                                      SizedBox(
+                                                      const SizedBox(
                                                         height: 20,
                                                       ),
                                                       CustomizableTextField(
@@ -2500,7 +2603,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                             TextInputType
                                                                 .number,
                                                       ),
-                                                      SizedBox(
+                                                      const SizedBox(
                                                         height: 20,
                                                       ),
                                                       CustomizableTextField(
@@ -2542,7 +2645,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                             TextInputType
                                                                 .number,
                                                       ),
-                                                      SizedBox(
+                                                      const SizedBox(
                                                         height: 20,
                                                       ),
                                                       CustomizableTextField(
@@ -2586,7 +2689,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                                 .number,
                                                         maxLines: 5,
                                                       ),
-                                                      SizedBox(
+                                                      const SizedBox(
                                                         height: 20,
                                                       ),
                                                       CustomizableTextButton(
@@ -2599,7 +2702,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                                 .toUpperCase(),
                                                         onPressed: () async {},
                                                         buttonTitleStyle:
-                                                            TextStyle(
+                                                            const TextStyle(
                                                           fontSize: 16,
                                                           color: Colors.white,
                                                           fontWeight:
@@ -2710,7 +2813,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                       ),
                                                     ),
 
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 50,
                                                     ),
                                                     CustomizableTextField(
@@ -2750,7 +2853,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                       textInputType:
                                                           TextInputType.number,
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 20,
                                                     ),
                                                     CustomizableTextField(
@@ -2790,7 +2893,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                       textInputType:
                                                           TextInputType.number,
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 20,
                                                     ),
                                                     CustomizableTextField(
@@ -2830,7 +2933,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                       textInputType:
                                                           TextInputType.number,
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 20,
                                                     ),
                                                     CustomizableTextField(
@@ -2871,7 +2974,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                           TextInputType.number,
                                                       maxLines: 5,
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 20,
                                                     ),
                                                     CustomizableTextButton(
@@ -2883,7 +2986,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                           .toUpperCase(),
                                                       onPressed: () async {},
                                                       buttonTitleStyle:
-                                                          TextStyle(
+                                                          const TextStyle(
                                                         fontSize: 16,
                                                         color: Colors.white,
                                                         fontWeight:
@@ -2912,7 +3015,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                       1280)
                                                   ? 452
                                                   : 633,
-                                          padding: EdgeInsets.symmetric(
+                                          padding: const EdgeInsets.symmetric(
                                               horizontal: 15),
                                           child: Column(
                                             mainAxisAlignment:
@@ -2995,7 +3098,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                 ),
                                               ),
 
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 50,
                                               ),
                                               CustomizableTextField(
@@ -3031,7 +3134,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                 textInputType:
                                                     TextInputType.number,
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 20,
                                               ),
                                               CustomizableTextField(
@@ -3067,7 +3170,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                 textInputType:
                                                     TextInputType.number,
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 20,
                                               ),
                                               CustomizableTextField(
@@ -3103,7 +3206,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                 textInputType:
                                                     TextInputType.number,
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 20,
                                               ),
                                               CustomizableTextField(
@@ -3140,7 +3243,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     TextInputType.number,
                                                 maxLines: 5,
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 20,
                                               ),
                                               CustomizableTextButton(
@@ -3151,7 +3254,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                 buttonTitle:
                                                     "Submit Now".toUpperCase(),
                                                 onPressed: () async {},
-                                                buttonTitleStyle: TextStyle(
+                                                buttonTitleStyle: const TextStyle(
                                                   fontSize: 16,
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.w500,
@@ -3164,7 +3267,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                             ],
                                           ),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 15,
                                         ),
                                         Container(
@@ -3180,10 +3283,10 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                       1280)
                                                   ? 452
                                                   : 633,
-                                          padding: EdgeInsets.symmetric(
+                                          padding: const EdgeInsets.symmetric(
                                               horizontal: 15),
                                           decoration: BoxDecoration(
-                                            image: DecorationImage(
+                                            image: const DecorationImage(
                                               image: AssetImage(aboutImage),
                                               fit: BoxFit.fill,
                                             ),
@@ -3211,7 +3314,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                   : 966
                               : */
                               1266,
-                          padding: EdgeInsets.symmetric(vertical: 120),
+                          padding: const EdgeInsets.symmetric(vertical: 120),
                           color: Colors.white,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -3248,7 +3351,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                   color: Colors.black.withOpacity(0.75),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 60,
                               ),
                               Container(
@@ -3308,7 +3411,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                           ),
                                         ],
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 20,
                                       ),
                                       Row(
@@ -3321,7 +3424,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     MainAxisAlignment.center,
                                                 children: [
                                                   CustomizableTextButton(
-                                                    prefixButtonIcon: Icon(
+                                                    prefixButtonIcon: const Icon(
                                                       FontAwesomeIcons
                                                           .facebookF,
                                                       color: Colors.white,
@@ -3332,7 +3435,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     isOutlined: true,
                                                     buttonTitle: null,
                                                     onPressed: () async {},
-                                                    buttonTitleStyle: TextStyle(
+                                                    buttonTitleStyle: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
                                                       fontWeight:
@@ -3343,11 +3446,11 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     horizontalPadding: 40,
                                                     verticalPadding: 16,
                                                   ),
-                                                  SizedBox(
+                                                  const SizedBox(
                                                     width: 10,
                                                   ),
                                                   CustomizableTextButton(
-                                                    prefixButtonIcon: Icon(
+                                                    prefixButtonIcon: const Icon(
                                                       FontAwesomeIcons
                                                           .linkedinIn,
                                                       color: Colors.white,
@@ -3358,7 +3461,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     isOutlined: true,
                                                     buttonTitle: null,
                                                     onPressed: () async {},
-                                                    buttonTitleStyle: TextStyle(
+                                                    buttonTitleStyle: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
                                                       fontWeight:
@@ -3369,11 +3472,11 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     horizontalPadding: 40,
                                                     verticalPadding: 16,
                                                   ),
-                                                  SizedBox(
+                                                  const SizedBox(
                                                     width: 10,
                                                   ),
                                                   CustomizableTextButton(
-                                                    prefixButtonIcon: Icon(
+                                                    prefixButtonIcon: const Icon(
                                                       FontAwesomeIcons.twitter,
                                                       color: Colors.white,
                                                       size: 14,
@@ -3383,7 +3486,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     isOutlined: true,
                                                     buttonTitle: null,
                                                     onPressed: () async {},
-                                                    buttonTitleStyle: TextStyle(
+                                                    buttonTitleStyle: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
                                                       fontWeight:
@@ -3394,11 +3497,11 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     horizontalPadding: 40,
                                                     verticalPadding: 16,
                                                   ),
-                                                  SizedBox(
+                                                  const SizedBox(
                                                     width: 10,
                                                   ),
                                                   CustomizableTextButton(
-                                                    prefixButtonIcon: Icon(
+                                                    prefixButtonIcon: const Icon(
                                                       FontAwesomeIcons
                                                           .instagram,
                                                       color: Colors.white,
@@ -3409,7 +3512,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     isOutlined: true,
                                                     buttonTitle: null,
                                                     onPressed: () async {},
-                                                    buttonTitleStyle: TextStyle(
+                                                    buttonTitleStyle: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
                                                       fontWeight:
@@ -3426,7 +3529,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                           ),
                                         ],
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 20,
                                       ),
                                       Row(
@@ -3441,7 +3544,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     CrossAxisAlignment.center,
                                                 children: [
                                                   Text(
-                                                    "Copyright © 2024 Rainbow-Themes. All Rights Reserved",
+                                                    "Copyright © 2024. All Rights Reserved",
                                                     textAlign: TextAlign.center,
                                                     style: GoogleFonts.poppins(
                                                       fontSize: 14,
@@ -3497,7 +3600,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     MainAxisAlignment.center,
                                                 children: [
                                                   CustomizableTextButton(
-                                                    prefixButtonIcon: Icon(
+                                                    prefixButtonIcon: const Icon(
                                                       FontAwesomeIcons
                                                           .facebookF,
                                                       color: Colors.white,
@@ -3508,7 +3611,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     isOutlined: true,
                                                     buttonTitle: null,
                                                     onPressed: () async {},
-                                                    buttonTitleStyle: TextStyle(
+                                                    buttonTitleStyle: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
                                                       fontWeight:
@@ -3519,11 +3622,11 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     horizontalPadding: 40,
                                                     verticalPadding: 16,
                                                   ),
-                                                  SizedBox(
+                                                  const SizedBox(
                                                     width: 10,
                                                   ),
                                                   CustomizableTextButton(
-                                                    prefixButtonIcon: Icon(
+                                                    prefixButtonIcon: const Icon(
                                                       FontAwesomeIcons
                                                           .linkedinIn,
                                                       color: Colors.white,
@@ -3534,7 +3637,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     isOutlined: true,
                                                     buttonTitle: null,
                                                     onPressed: () async {},
-                                                    buttonTitleStyle: TextStyle(
+                                                    buttonTitleStyle: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
                                                       fontWeight:
@@ -3545,11 +3648,11 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     horizontalPadding: 40,
                                                     verticalPadding: 16,
                                                   ),
-                                                  SizedBox(
+                                                  const SizedBox(
                                                     width: 10,
                                                   ),
                                                   CustomizableTextButton(
-                                                    prefixButtonIcon: Icon(
+                                                    prefixButtonIcon: const Icon(
                                                       FontAwesomeIcons.twitter,
                                                       color: Colors.white,
                                                       size: 14,
@@ -3559,7 +3662,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     isOutlined: true,
                                                     buttonTitle: null,
                                                     onPressed: () async {},
-                                                    buttonTitleStyle: TextStyle(
+                                                    buttonTitleStyle: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
                                                       fontWeight:
@@ -3570,11 +3673,11 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     horizontalPadding: 40,
                                                     verticalPadding: 16,
                                                   ),
-                                                  SizedBox(
+                                                  const SizedBox(
                                                     width: 10,
                                                   ),
                                                   CustomizableTextButton(
-                                                    prefixButtonIcon: Icon(
+                                                    prefixButtonIcon: const Icon(
                                                       FontAwesomeIcons
                                                           .instagram,
                                                       color: Colors.white,
@@ -3585,7 +3688,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                                     isOutlined: true,
                                                     buttonTitle: null,
                                                     onPressed: () async {},
-                                                    buttonTitleStyle: TextStyle(
+                                                    buttonTitleStyle: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
                                                       fontWeight:
@@ -3673,7 +3776,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           CustomizableTextButton(
-                                            prefixButtonIcon: Icon(
+                                            prefixButtonIcon: const Icon(
                                               FontAwesomeIcons.facebookF,
                                               color: Colors.white,
                                               size: 14,
@@ -3683,7 +3786,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                             isOutlined: true,
                                             buttonTitle: null,
                                             onPressed: () async {},
-                                            buttonTitleStyle: TextStyle(
+                                            buttonTitleStyle: const TextStyle(
                                               fontSize: 16,
                                               color: Colors.white,
                                               fontWeight: FontWeight.w500,
@@ -3693,11 +3796,11 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                             horizontalPadding: 40,
                                             verticalPadding: 16,
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 10,
                                           ),
                                           CustomizableTextButton(
-                                            prefixButtonIcon: Icon(
+                                            prefixButtonIcon: const Icon(
                                               FontAwesomeIcons.linkedinIn,
                                               color: Colors.white,
                                               size: 14,
@@ -3707,7 +3810,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                             isOutlined: true,
                                             buttonTitle: null,
                                             onPressed: () async {},
-                                            buttonTitleStyle: TextStyle(
+                                            buttonTitleStyle: const TextStyle(
                                               fontSize: 16,
                                               color: Colors.white,
                                               fontWeight: FontWeight.w500,
@@ -3717,11 +3820,11 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                             horizontalPadding: 40,
                                             verticalPadding: 16,
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 10,
                                           ),
                                           CustomizableTextButton(
-                                            prefixButtonIcon: Icon(
+                                            prefixButtonIcon: const Icon(
                                               FontAwesomeIcons.twitter,
                                               color: Colors.white,
                                               size: 14,
@@ -3731,7 +3834,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                             isOutlined: true,
                                             buttonTitle: null,
                                             onPressed: () async {},
-                                            buttonTitleStyle: TextStyle(
+                                            buttonTitleStyle: const TextStyle(
                                               fontSize: 16,
                                               color: Colors.white,
                                               fontWeight: FontWeight.w500,
@@ -3741,11 +3844,11 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                             horizontalPadding: 40,
                                             verticalPadding: 16,
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 10,
                                           ),
                                           CustomizableTextButton(
-                                            prefixButtonIcon: Icon(
+                                            prefixButtonIcon: const Icon(
                                               FontAwesomeIcons.instagram,
                                               color: Colors.white,
                                               size: 14,
@@ -3755,7 +3858,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                                             isOutlined: true,
                                             buttonTitle: null,
                                             onPressed: () async {},
-                                            buttonTitleStyle: TextStyle(
+                                            buttonTitleStyle: const TextStyle(
                                               fontSize: 16,
                                               color: Colors.white,
                                               fontWeight: FontWeight.w500,
@@ -3813,7 +3916,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
 
   Widget clientsImageWidget({required String image}) {
     return Container(
-      padding: EdgeInsets.all(25),
+      padding: const EdgeInsets.all(25),
       child: Image.asset(
         image,
         height: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
@@ -3828,14 +3931,14 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
   }
 
   Widget companyGrowthWidget(
-      {required Widget image, required String scores, required String title}) {
+      {required Widget image, required String scores, required String title1,required String description1, required String title2,required String description2}) {
     return (ResponsiveBreakpoints.of(context).screenWidth < 575)
         ? Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Expanded(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Container(
                     // height: 380,
                     width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
@@ -3849,12 +3952,12 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 60,vertical: 40),
+                      padding: const EdgeInsets.symmetric(horizontal: 60,vertical: 40),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           image,
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           Text(
@@ -3870,22 +3973,12 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                               color: Colors.black.withOpacity(0.75),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 6,
                           ),
-                          Text(
-                            title,
-                            textAlign: TextAlign.left,
-                            style: GoogleFonts.poppins(
-                              fontSize:
-                                  (ResponsiveBreakpoints.of(context).screenWidth <
-                                          765)
-                                      ? 12
-                                      : 14,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black.withOpacity(0.75),
-                            ),
-                          ),
+                          titleDescriptionWidget(title: title1,description: description1),
+                          titleDescriptionWidget(title: title2,description: description2),
+
                         ],
                       ),
                     ),
@@ -3907,12 +4000,12 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
               borderRadius: BorderRadius.circular(10),
             ),
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 60,vertical: 40),
+              padding: const EdgeInsets.symmetric(horizontal: 60,vertical: 40),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   image,
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Text(
@@ -3927,21 +4020,11 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
                       color: Colors.black.withOpacity(0.75),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 6,
                   ),
-                  Text(
-                    title,
-                    textAlign: TextAlign.left,
-                    style: GoogleFonts.poppins(
-                      fontSize:
-                          (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                              ? 12
-                              : 14,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.black.withOpacity(0.75),
-                    ),
-                  ),
+                  titleDescriptionWidget(title: title1,description: description1),
+                  titleDescriptionWidget(title: title2,description: description2),
                 ],
               ),
             ),
@@ -3949,138 +4032,58 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
   }
 
 
-  Widget companyGrowthFullWidthWidget(
-      {required Widget image, required String scores, required String title}) {
-    return (ResponsiveBreakpoints.of(context).screenWidth < 575)
-        ? Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+  Widget titleDescriptionWidget({required String title, required String description}) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Container(
-              // height: 380,
-              // width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-              //     ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-              //     ? 400 // Updated width for screens smaller than 755
-              //     : 461 // Updated width for screens between 755 and 1250
-              //     : 542, // Updated width for screens larger than 1250
-
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 60,vertical: 40),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    image,
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      scores,
-                      textAlign: TextAlign.left,
-                      style: GoogleFonts.poppins(
-                        fontSize:
-                        (ResponsiveBreakpoints.of(context).screenWidth <
-                            1250)
-                            ? 24
-                            : 30,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black.withOpacity(0.75),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 6,
-                    ),
-                    Text(
-                      title,
-                      textAlign: TextAlign.left,
-                      style: GoogleFonts.poppins(
-                        fontSize:
-                        (ResponsiveBreakpoints.of(context).screenWidth <
-                            765)
-                            ? 12
-                            : 14,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.black.withOpacity(0.75),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+        Text(
+          title,
+          textAlign: TextAlign.left,
+          style: GoogleFonts.poppins(
+            fontSize:
+            (ResponsiveBreakpoints.of(context).screenWidth <
+                765)
+                ? 12
+                : 14,
+            fontWeight: FontWeight.w600,
+            color: Colors.black.withOpacity(0.75),
           ),
         ),
-      ],
-    )
-        : Container(
-      // height: 380,
-      // width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-      //     ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-      //     ? 400 // Updated width for screens smaller than 755
-      //     : 461 // Updated width for screens between 755 and 1250
-      //     : 542, // Updated width for screens larger than 1250
-
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 60,vertical: 40),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            image,
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              scores,
-              textAlign: TextAlign.left,
-              style: GoogleFonts.poppins(
-                fontSize:
-                (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                    ? 24
-                    : 30,
-                fontWeight: FontWeight.w600,
-                color: Colors.black.withOpacity(0.75),
-              ),
-            ),
-            SizedBox(
-              height: 6,
-            ),
-            Text(
-              title,
-              textAlign: TextAlign.left,
-              style: GoogleFonts.poppins(
-                fontSize:
-                (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                    ? 12
-                    : 14,
-                fontWeight: FontWeight.w400,
-                color: Colors.black.withOpacity(0.75),
-              ),
-            ),
-          ],
+        const SizedBox(
+          height: 10,
         ),
-      ),
+        Text(
+          description,
+          textAlign: TextAlign.justify,
+          style: GoogleFonts.poppins(
+            fontSize:
+            (ResponsiveBreakpoints.of(context).screenWidth <
+                765)
+                ? 12
+                : 14,
+            fontWeight: FontWeight.w400,
+            color: Colors.black.withOpacity(0.75),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+      ],
     );
   }
 
+
   Widget activeIndicator() {
     return Container(
-      padding: EdgeInsets.all(1.5),
-      decoration: BoxDecoration(
+      padding: const EdgeInsets.all(1.5),
+      decoration: const BoxDecoration(
         shape: BoxShape.circle,
         color: primaryColor,
       ),
       child: Container(
         height: 8,
         width: 8,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.white,
         ),
@@ -4092,7 +4095,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
     return Container(
       height: 6,
       width: 6,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         shape: BoxShape.circle,
         color: Colors.grey,
       ),
@@ -4114,7 +4117,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
             color: Colors.black,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
         Text(
@@ -4136,7 +4139,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
     return InkWell(
       onTap: onPressed,
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 12),
+        padding: const EdgeInsets.symmetric(vertical: 12),
         child: Row(
           children: [
             Text(
@@ -4161,7 +4164,7 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
     return InkWell(
       onTap: onPressed,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         height: 66.h,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -4185,15 +4188,17 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
       required String content,
       required Widget icon}) {
     return Container(
-      // height: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-      //     ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
-      //         ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
-      //             ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
-      //                 ? 500 // Updated from 238 to 500
-      //                 : 696 // Updated from 332 to 696
-      //             : 555 // Updated from 264 to 555
-      //         : 705 // Updated from 336 to 705
-      //     : 602, // Updated from 286 to 602
+      height: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+          ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
+          ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
+          ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+          ? 632 // Updated from 586
+          : 877 // Updated from 815
+          : 700 // Updated from 650
+          : 890 // Updated from 826
+          : 761, // Updated from 706
+
+
 
       // height: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
       //     ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
@@ -4206,13 +4211,14 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
       //     : 286,
       width: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
           ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
-              ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                  ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                      ? 550
-                      : 243
-                  : 333
-              : 300
-          : 380,
+          ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
+          ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+          ? 905 // 550 adjusted to 905
+          : 400 // 243 adjusted to 400
+          : 548 // 333 adjusted to 548
+          : 494 // 300 adjusted to 494
+          : 625, // 380 adjusted to 625
+
       padding: EdgeInsets.symmetric(
           horizontal:
               (ResponsiveBreakpoints.of(context).screenWidth < 575) ? 23 : 30,
@@ -4222,46 +4228,50 @@ Technologies Used: Flutter for UI, Firebase for data storage, GraphQL for effici
         color: Colors.grey.withOpacity(0.05),
         borderRadius: BorderRadius.circular(6),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          icon,
-          SizedBox(
-            height: (ResponsiveBreakpoints.of(context).screenWidth < 985)
-                ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                    ? 22
-                    : 10
-                : 22,
-          ),
-          Text(
-            title,
-            textAlign: TextAlign.left,
-            style: GoogleFonts.poppins(
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-              color: Colors.black,
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(child: icon),
+            SizedBox(
+              height: (ResponsiveBreakpoints.of(context).screenWidth < 985)
+                  ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                      ? 22
+                      : 10
+                  : 22,
             ),
-          ),
-          SizedBox(
-            height: (ResponsiveBreakpoints.of(context).screenWidth < 985)
-                ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                    ? 20
-                    : 8
-                : 20,
-          ),
-          Text(
-            content,
-            textAlign: TextAlign.left,
-            style: GoogleFonts.poppins(
-              fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                  ? 13
-                  : 15,
-              fontWeight: FontWeight.w300,
-              color: Colors.grey,
-              height: 1.5,
+            Center(
+              child: Text(
+                title,
+                textAlign: TextAlign.left,
+                style: GoogleFonts.poppins(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                ),
+              ),
             ),
-          ),
-        ],
+            SizedBox(
+              height: (ResponsiveBreakpoints.of(context).screenWidth < 985)
+                  ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                      ? 20
+                      : 8
+                  : 20,
+            ),
+            Text(
+              content,
+              textAlign: TextAlign.left,
+              style: GoogleFonts.poppins(
+                fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                    ? 13
+                    : 15,
+                fontWeight: FontWeight.w300,
+                color: Colors.grey,
+                height: 1.5,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

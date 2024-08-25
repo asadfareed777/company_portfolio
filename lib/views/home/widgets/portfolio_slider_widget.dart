@@ -121,28 +121,15 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                                 ),
                                 Visibility(
                                   visible: isHovered,
-                                  child: SizedBox(
-                                    height: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                                        ? 360.h
-                                        : 220
-                                        : 200
-                                        : 270
-                                        : 280,
-                                    child: SingleChildScrollView(
-                                      child: Text(
-                                        (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                            ? widget.explanation
-                                            : widget.explanation,
-                                        textAlign: TextAlign.left,
-                                        style: GoogleFonts.poppins(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w300,
-                                          color: Colors.white.withOpacity(0.75),
-                                        ),
-                                      ),
+                                  child: Text(
+                                    (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                        ? widget.explanation
+                                        : widget.explanation,
+                                    textAlign: TextAlign.left,
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w300,
+                                      color: Colors.white.withOpacity(0.75),
                                     ),
                                   ),
                                 ),
@@ -195,78 +182,67 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                     end: Alignment.topCenter,
                   ),
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.all(30),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(5.0),
-                            child: Text(
-                              widget.stackName,
-                              textAlign: TextAlign.left,
-                              style: GoogleFonts.poppins(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white.withOpacity(0.75),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            widget.projectName,
-                            textAlign: TextAlign.left,
-                            style: GoogleFonts.poppins(
-                              fontSize:
-                                  (ResponsiveBreakpoints.of(context).screenWidth < 990) ? 24 : 30,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white,
-                            ),
-                          ),
-                          Visibility(
-                            visible: isHovered,
-                            child: SizedBox(
-                              height:
-                                  (ResponsiveBreakpoints.of(context).screenWidth < 990) ? 5 : 15,
-                            ),
-                          ),
-                          Visibility(
-                            visible: isHovered,
-                            child: SizedBox(
-                              height: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
-                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
-                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                                  ? 360.h
-                                  : 220
-                                  : 200
-                                  : 270
-                                  : 280,
-                              child: SingleChildScrollView(
-                                child: Text(
-                                  (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                      ? widget.explanation
-                                      : widget.explanation,
-                                  textAlign: TextAlign.left,
-                                  style: GoogleFonts.poppins(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w300,
-                                    color: Colors.white.withOpacity(0.75),
-                                  ),
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        padding: EdgeInsets.all(30),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5.0),
+                              child: Text(
+                                widget.stackName,
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.poppins(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.white.withOpacity(0.75),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              widget.projectName,
+                              textAlign: TextAlign.left,
+                              style: GoogleFonts.poppins(
+                                fontSize:
+                                    (ResponsiveBreakpoints.of(context).screenWidth < 990) ? 24 : 30,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Visibility(
+                              visible: isHovered,
+                              child: SizedBox(
+                                height:
+                                    (ResponsiveBreakpoints.of(context).screenWidth < 990) ? 5 : 15,
+                              ),
+                            ),
+                            Visibility(
+                              visible: isHovered,
+                              child: Text(
+                                (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                    ? widget.explanation
+                                    : widget.explanation,
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.poppins(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.white.withOpacity(0.75),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -275,7 +251,7 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
 
   String portfolioImages(int index) {
     if (index == 0) {
-      return portfolio1Image;
+      return quranApp;
     } else if (index == 1) {
       return portfolio2Image;
     } else if (index == 2) {

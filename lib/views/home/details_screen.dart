@@ -25,11 +25,9 @@ import 'package:visibility_detector/visibility_detector.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class DetailsScreen extends ConsumerStatefulWidget {
-  final String title;
-  final String description;
-  final String image;
+  final Map<String, String> whyChooseUsItems;
 
-  const DetailsScreen(this.title, this.description, this.image, {super.key});
+  const DetailsScreen(this.whyChooseUsItems, {super.key});
 
   @override
   ConsumerState<DetailsScreen> createState() => _DetailsScreenState();
@@ -127,7 +125,7 @@ class _DetailsScreenState extends ConsumerState<DetailsScreen> {
                                 ),
                               ),
                               GradientText(
-                                widget.title.toUpperCase(),
+                                widget.whyChooseUsItems["title"]!.toUpperCase(),
                                 style: GoogleFonts.anton(
                                   fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 770)
                                       ? 30
@@ -142,7 +140,7 @@ class _DetailsScreenState extends ConsumerState<DetailsScreen> {
                               ),
                               Padding(
                                 padding: EdgeInsets.symmetric(vertical: 30),
-                                child: Image.asset(widget.image,
+                                child: Image.asset(widget.whyChooseUsItems["image"]!,
                                     fit: BoxFit.cover,
                                     height: MediaQuery.of(context).size.height,width: MediaQuery.of(context).size.width),
     ),
@@ -152,64 +150,44 @@ class _DetailsScreenState extends ConsumerState<DetailsScreen> {
                               ),
                               titleDescriptionWidget(
                                 title: "Description",
-                                description: widget.description,
+                                description: widget.whyChooseUsItems["description"].toString(),
                               ),
                               SizedBox(
-                                height: 40,
+                                height: 10,
                               ),
-                              // titleDescriptionWidget(
-                              //   title: "2. Scalability",
-                              //   description:
-                              //       "Startups are dynamic entities that grow and evolve rapidly. Custom software can be designed with scalability in mind, allowing for easy modifications and updates as the business grows. This flexibility ensures that the software remains relevant and useful throughout the startup's lifecycle.",
-                              // ),
-                              // titleDescriptionWidget(
-                              //   title: "3. Competitive Advantage",
-                              //   description:
-                              //       "In a saturated market, differentiation is key. Custom software can provide startups with unique features and capabilities that competitors might not have. This can be a significant advantage when trying to establish a foothold in the market.",
-                              // ),
-                              // titleDescriptionWidget(
-                              //   title: "4. Integration with Existing Systems",
-                              //   description:
-                              //       "Off-the-shelf software might not always integrate seamlessly with a startup's existing systems or third-party applications. Custom software can be designed to ensure smooth integration, reducing friction and inefficiencies.",
-                              // ),
-                              // titleDescriptionWidget(
-                              //   title: "5. Cost-Effective in the Long Run",
-                              //   description:
-                              //       "While the initial investment in custom software might be higher than purchasing off-the-shelf solutions, the long-term benefits often outweigh the costs. Custom software can reduce the need for multiple software licenses, eliminate the costs associated with workarounds or additional integrations, and decrease training time for employees.",
-                              // ),
-                              // titleDescriptionWidget(
-                              //   title: "6. Enhanced Security",
-                              //   description:
-                              //       "Custom software can be designed with a startup's specific security needs in mind. This can be especially important for startups dealing with sensitive data or operating in regulated industries. Custom-built solutions can offer enhanced security features tailored to the startup's requirements.",
-                              // ),
-                              // titleDescriptionWidget(
-                              //   title: "7. Improved Customer Experience",
-                              //   description:
-                              //       "By designing software that aligns with a startup's operations and goals, it's possible to offer a better experience for customers. Whether it's through faster response times, personalized interactions, or unique features, custom software can enhance the overall customer journey.",
-                              // ),
-                              // titleDescriptionWidget(
-                              //   title: "8. Ownership and Control",
-                              //   description:
-                              //       "Owning the rights to custom software gives startups full control over its features, updates, and modifications. This level of control can be crucial for startups that want to pivot, adapt, or introduce new features quickly.",
-                              // ),
-                              // titleDescriptionWidget(
-                              //   title: "9. Support and Maintenance",
-                              //   description:
-                              //       "With custom software, startups often have direct access to the developers or the development team. This can lead to faster response times, better support, and more efficient troubleshooting compared to dealing with large software vendors.",
-                              // ),
-                              // titleDescriptionWidget(
-                              //   title: "10. Future-Proofing the Business",
-                              //   description:
-                              //       "The digital landscape is constantly evolving. By investing in custom software, startups can ensure that they have a foundation that can adapt and evolve with technological advancements and market demands.",
-                              // ),
-                              // SizedBox(
-                              //   height: 34,
-                              // ),
-                              // titleDescriptionWidget(
-                              //   title: "Conclusion",
-                              //   description:
-                              //       """While the initial investment in custom software might seem daunting, the long-term benefits are undeniable. From tailored solutions and scalability to competitive advantages and enhanced security, custom software can provide startups with the tools they need to succeed in today's competitive market. As the saying goes, "You have to spend money to make money," and in the case of custom software, the investment can lead to significant returns.""",
-                              // ),
+                              Text(
+                                widget.whyChooseUsItems["header"].toString(),
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.poppins(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              titleDescriptionWidget(
+                                title: widget.whyChooseUsItems["heading1"].toString(),
+                                description: widget.whyChooseUsItems["description1"].toString()
+                              ),
+                              titleDescriptionWidget(
+                                title: widget.whyChooseUsItems["heading2"].toString(),
+                                description: widget.whyChooseUsItems["description2"].toString()
+                              ),
+                              titleDescriptionWidget(
+                                  title: widget.whyChooseUsItems["heading3"].toString(),
+                                  description: widget.whyChooseUsItems["description3"].toString()
+                              ),
+                              titleDescriptionWidget(
+                                  title: widget.whyChooseUsItems["heading4"].toString(),
+                                  description: widget.whyChooseUsItems["description4"].toString()
+                              ),
+
+                              SizedBox(
+                                height: 34,
+                              ),
+
                             ],
                           ),
                         ),
@@ -279,9 +257,11 @@ class _DetailsScreenState extends ConsumerState<DetailsScreen> {
                                           ),
                                         ),
                                         GradientText(
-                                          widget.title.toUpperCase(),
+                                          widget.whyChooseUsItems["title"]!.toUpperCase(),
                                           style: GoogleFonts.anton(
-                                            fontSize: 50,
+                                            fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 770)
+                                                ? 30
+                                                : 50,
                                             fontWeight: FontWeight.w600,
                                           ),
                                           colors: [
@@ -292,28 +272,54 @@ class _DetailsScreenState extends ConsumerState<DetailsScreen> {
                                         ),
                                         Padding(
                                           padding: EdgeInsets.symmetric(vertical: 30),
-                                          child: Image.asset(widget.image,
+                                          child: Image.asset(widget.whyChooseUsItems["image"]!,
                                               fit: BoxFit.cover,
                                               height: MediaQuery.of(context).size.height,width: MediaQuery.of(context).size.width),
                                         ),
+
                                         SizedBox(
                                           height: 20,
                                         ),
                                         titleDescriptionWidget(
                                           title: "Description",
-                                          description: widget.description,
+                                          description: widget.whyChooseUsItems["description"].toString(),
                                         ),
                                         SizedBox(
-                                          height: 40,
+                                          height: 10,
                                         ),
-                                        // SizedBox(
-                                        //   height: 34,
-                                        // ),
-                                        // titleDescriptionWidget(
-                                        //   title: "Conclusion",
-                                        //   description:
-                                        //       """While the initial investment in custom software might seem daunting, the long-term benefits are undeniable. From tailored solutions and scalability to competitive advantages and enhanced security, custom software can provide startups with the tools they need to succeed in today's competitive market. As the saying goes, "You have to spend money to make money," and in the case of custom software, the investment can lead to significant returns.""",
-                                        // ),
+                                        Text(
+                                          widget.whyChooseUsItems["header"].toString(),
+                                          textAlign: TextAlign.left,
+                                          style: GoogleFonts.poppins(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        titleDescriptionWidget(
+                                            title: widget.whyChooseUsItems["heading1"].toString(),
+                                            description: widget.whyChooseUsItems["description1"].toString()
+                                        ),
+                                        titleDescriptionWidget(
+                                            title: widget.whyChooseUsItems["heading2"].toString(),
+                                            description: widget.whyChooseUsItems["description2"].toString()
+                                        ),
+                                        titleDescriptionWidget(
+                                            title: widget.whyChooseUsItems["heading3"].toString(),
+                                            description: widget.whyChooseUsItems["description3"].toString()
+                                        ),
+                                        titleDescriptionWidget(
+                                            title: widget.whyChooseUsItems["heading4"].toString(),
+                                            description: widget.whyChooseUsItems["description4"].toString()
+                                        ),
+
+                                        SizedBox(
+                                          height: 34,
+                                        ),
+
                                       ],
                                     ),
                                   ),
