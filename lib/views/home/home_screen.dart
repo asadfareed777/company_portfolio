@@ -3723,7 +3723,7 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
                                                     CrossAxisAlignment.center,
                                                 children: [
                                                   Text(
-                                                    "Copyright © 2024 Rainbow-Themes. All Rights Reserved",
+                                                    "Copyright © 2024. All Rights Reserved",
                                                     textAlign: TextAlign.center,
                                                     style: GoogleFonts.poppins(
                                                       fontSize: 14,
@@ -3887,7 +3887,7 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
                                             CrossAxisAlignment.center,
                                         children: [
                                           Text(
-                                            "Copyright © 2024 Rainbow-Themes. All Rights Reserved",
+                                            "Copyright © 2024. All Rights Reserved",
                                             textAlign: TextAlign.center,
                                             style: GoogleFonts.poppins(
                                               fontSize: 14,
