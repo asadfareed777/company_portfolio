@@ -3,9 +3,9 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "4461b018b5e6f1bf00bcf0a402f8d6bc",
-"assets/AssetManifest.bin.json": "56b7636ce66b6b036c9fe058772de321",
-"assets/AssetManifest.json": "1b5009a941f22be2aefe0bc9583ce44b",
+const RESOURCES = {"assets/AssetManifest.bin": "baae41aa25322bbbdda5fd6c584902ac",
+"assets/AssetManifest.bin.json": "426f2812d4946eb10ec476d386aa628a",
+"assets/AssetManifest.json": "79dd083232fd9c8706a6efb49834d80d",
 "assets/assets/images/about_image.jpg": "1752f1429bed26d78f35e4c26e4266e2",
 "assets/assets/images/android_icon.png": "b495669fd9df11bfa81a64f6971f2fb0",
 "assets/assets/images/apple_icon.png": "bd3192396a5c514c83027f4abe852907",
@@ -22,6 +22,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "4461b018b5e6f1bf00bcf0a402f8d6bc
 "assets/assets/images/education.png": "25182fdf6924706b3e7b6179aae30e0c",
 "assets/assets/images/finance.png": "a67515097e6ce844d0d78290688bf021",
 "assets/assets/images/flutter_logo.png": "83e0b762778417141075bba73510d371",
+"assets/assets/images/health_care.png": "945b8e02f9c07607a59913c113031eed",
 "assets/assets/images/logo-dark.png": "89f017e56496eb54ec49de75dc998f6c",
 "assets/assets/images/logo-InvertedTechnology-white.jpg": "fc026fc6bf04c527f64e149e9283f6fa",
 "assets/assets/images/logo.png": "2dc3b4ec7ccc0d7ad37ffd7491c8a1ca",
@@ -34,6 +35,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "4461b018b5e6f1bf00bcf0a402f8d6bc
 "assets/assets/images/portfolio_two_image.jpg": "c39171e2dacaaeb9e579c1537c00a149",
 "assets/assets/images/project_image.jpg": "3ff1f98c0c45f5a077a80d942845b235",
 "assets/assets/images/proven_track_record.png": "9488a99b4a092cece2bae65503bbfbd7",
+"assets/assets/images/quran_app.png": "69998ed9880dedea2fc8aea71a01ab42",
 "assets/assets/images/real_estate.png": "42fd5be72186baa1eafa15cfb67b3358",
 "assets/assets/images/secure_solutions.jpeg": "ab4f4da16430754ab60faef5da444682",
 "assets/assets/svgs/details_page.svg": "266c58c25f17a596510382a4505286b1",
@@ -76,14 +78,14 @@ const RESOURCES = {"assets/AssetManifest.bin": "4461b018b5e6f1bf00bcf0a402f8d6bc
 "canvaskit/skwasm.worker.js": "bfb704a6c714a75da9ef320991e88b03",
 "favicon.png": "435b451423e159381eb6a9e3433d6e79",
 "flutter.js": "383e55f7f3cce5be08fcf1f3881f585c",
-"flutter_bootstrap.js": "e4c08e260e9ebac69fa9e1f01b10b3ed",
+"flutter_bootstrap.js": "f0c8086d66988736ee48806820655280",
 "icons/Icon-192.png": "17abc83ec4a5b69fc1a3bba02dc75468",
 "icons/Icon-512.png": "a9e9e74d8451ee6e9291b0a2ba1f904c",
 "icons/Icon-maskable-192.png": "17abc83ec4a5b69fc1a3bba02dc75468",
 "icons/Icon-maskable-512.png": "a9e9e74d8451ee6e9291b0a2ba1f904c",
-"index.html": "df819ff1bb2a3841371a3a86e1dd4bfc",
-"/": "df819ff1bb2a3841371a3a86e1dd4bfc",
-"main.dart.js": "c850473a37600d0a98fb63477f06d53f",
+"index.html": "be547f6f014a34e615deb37a7b4bc3d6",
+"/": "be547f6f014a34e615deb37a7b4bc3d6",
+"main.dart.js": "ff226c9df6ab916ae5ed50cd325be9de",
 "manifest.json": "b13153538eb045ad06096514372c8a0c",
 "version.json": "0c888783def902667cae90eae9e7eea6"};
 // The application shell files that are downloaded before a service worker can
