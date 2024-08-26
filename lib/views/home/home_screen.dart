@@ -905,179 +905,295 @@ Example 2: Implemented a secure data management system for a financial instituti
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Wrap(
-                              spacing: 20,
-                              runSpacing: 20,
+                            Visibility(
+                              visible: false,
+                              child: Wrap(
+                                spacing: 20,
+                                runSpacing: 20,
 
-                              children: [
-                                serviceWidget(
-                                  onPressed: () {},
-                                  title: "Flutter",
-                                  content:
-                                  """Flutter, Google’s UI toolkit, is revolutionizing app development by enabling high-performance, visually stunning applications across mobile, web, and desktop platforms. At our company, we harness Flutter’s power to deliver cross-platform solutions efficiently, ensuring your app stands out with native-like performance.
-
-Why Choose Flutter for Your Next Project?
-Cross-Platform Development: Flutter’s single codebase supports deployment across Android, iOS, web, and desktop platforms, reducing development time and cost. This approach simplifies maintenance and accelerates time-to-market, allowing you to reach a broader audience with minimal investment.
-
-High Performance: Flutter provides near-native performance by compiling directly to native machine code. This ensures smooth animations, fast load times, and responsive UI, rivaling that of native apps.
-
-Expressive and Flexible UI: With a rich set of customizable widgets, Flutter allows for the creation of beautiful and brand-specific UIs. Its layered architecture provides complete control over every pixel, enabling intricate and complex designs.
-
-Single Codebase for Easier Maintenance and Updates: A single codebase simplifies updates and maintenance, applying changes across all platforms efficiently. This reduces errors and ensures that your app remains current with the latest trends and technologies.
-
-Our Approach to Flutter Development
-In-Depth Consultation: We start by understanding your business goals and unique requirements to create a tailored development strategy.
-
-Custom UI/UX Design: Leveraging Flutter’s capabilities, we design engaging and intuitive user interfaces, with rapid prototyping and testing to meet your vision.
-
-Agile Development Process: Our agile approach allows for flexibility and iterative progress, providing regular updates and incorporating feedback throughout development.
-
-Comprehensive Testing: Extensive testing across all platforms ensures your app is bug-free and performs optimally. We focus on functional, performance, and user acceptance testing.
-
-Post-Launch Support: We offer ongoing support and maintenance, including updates and feature enhancements based on user feedback and evolving needs.
-""",
-                                  icon: Image.asset(
-                                    flutterIcon,
-                                    // color: lightBlueColor,
-                                    height: 47,
-                                    width: 47,
+                                children: [
+                                  serviceWidget(
+                                    onPressed: () {},
+                                    title: "Flutter",
+                                    content:
+                                    """Flutter, Google’s UI toolkit, is revolutionizing app development by enabling high-performance, visually stunning applications across mobile, web, and desktop platforms. At our company, we harness Flutter’s power to deliver cross-platform solutions efficiently, ensuring your app stands out with native-like performance.
+                              
+                              Why Choose Flutter for Your Next Project?
+                              Cross-Platform Development: Flutter’s single codebase supports deployment across Android, iOS, web, and desktop platforms, reducing development time and cost. This approach simplifies maintenance and accelerates time-to-market, allowing you to reach a broader audience with minimal investment.
+                              
+                              High Performance: Flutter provides near-native performance by compiling directly to native machine code. This ensures smooth animations, fast load times, and responsive UI, rivaling that of native apps.
+                              
+                              Expressive and Flexible UI: With a rich set of customizable widgets, Flutter allows for the creation of beautiful and brand-specific UIs. Its layered architecture provides complete control over every pixel, enabling intricate and complex designs.
+                              
+                              Single Codebase for Easier Maintenance and Updates: A single codebase simplifies updates and maintenance, applying changes across all platforms efficiently. This reduces errors and ensures that your app remains current with the latest trends and technologies.
+                              
+                              Our Approach to Flutter Development
+                              In-Depth Consultation: We start by understanding your business goals and unique requirements to create a tailored development strategy.
+                              
+                              Custom UI/UX Design: Leveraging Flutter’s capabilities, we design engaging and intuitive user interfaces, with rapid prototyping and testing to meet your vision.
+                              
+                              Agile Development Process: Our agile approach allows for flexibility and iterative progress, providing regular updates and incorporating feedback throughout development.
+                              
+                              Comprehensive Testing: Extensive testing across all platforms ensures your app is bug-free and performs optimally. We focus on functional, performance, and user acceptance testing.
+                              
+                              Post-Launch Support: We offer ongoing support and maintenance, including updates and feature enhancements based on user feedback and evolving needs.
+                              """,
+                                    icon: Image.asset(
+                                      flutterIcon,
+                                      // color: lightBlueColor,
+                                      height: 47,
+                                      width: 47,
+                                    ),
                                   ),
-                                ),
-                                serviceWidget(
-                                  onPressed: () {},
-                                  title: "Android Development",
-                                  content:
-                                      """Our team excels in developing robust, user-friendly Android applications optimized for performance, security, and scalability. We understand the diverse Android ecosystem and craft solutions that meet your business needs and enhance user engagement.
-
-Why Choose Our Android Development Services?
-Customizable Solutions: We tailor our Android apps to meet your specific business requirements, whether for e-commerce, service delivery, or internal operations, ensuring alignment with your objectives.
-
-Scalable Architecture: Our apps are designed with scalable architecture to handle increasing user loads efficiently, maintaining performance and reliability as your user base grows.
-
-High Performance: We optimize our Android apps for speed and efficiency, ensuring smooth operation on various devices. Best practices in coding and resource management ensure quick load times and a responsive user interface.
-
-Extensive Market Reach: Android’s vast user base offers unparalleled market penetration opportunities. Our apps are compatible with a wide range of devices and Android versions, maximizing reach and engagement.
-
-Our Approach to Android Development
-Comprehensive Requirement Analysis: We analyze your business needs and target audience to determine the features and functionalities that will best serve your users.
-
-User-Centric Design: Our design focus is on creating intuitive interfaces that enhance user experience and engagement.
-
-Advanced Security Measures: We integrate robust security protocols to protect user data and prevent unauthorized access, ensuring your app’s security and compliance.
-
-Rigorous Testing and Quality Assurance: Our apps undergo extensive testing to meet high-quality standards, including performance, security, and usability assessments.
-
-Ongoing Support and Maintenance: Post-launch, we provide support and maintenance to keep your app updated and performing optimally, incorporating feedback and new features as needed.
-""",
-                                  icon: Image.asset(
-                                    androidIcon,
-                                    // color: primaryColor,
-                                    height: 47,
-                                    width: 47,
+                                  serviceWidget(
+                                    onPressed: () {},
+                                    title: "Android Development",
+                                    content:
+                                        """Our team excels in developing robust, user-friendly Android applications optimized for performance, security, and scalability. We understand the diverse Android ecosystem and craft solutions that meet your business needs and enhance user engagement.
+                              
+                              Why Choose Our Android Development Services?
+                              Customizable Solutions: We tailor our Android apps to meet your specific business requirements, whether for e-commerce, service delivery, or internal operations, ensuring alignment with your objectives.
+                              
+                              Scalable Architecture: Our apps are designed with scalable architecture to handle increasing user loads efficiently, maintaining performance and reliability as your user base grows.
+                              
+                              High Performance: We optimize our Android apps for speed and efficiency, ensuring smooth operation on various devices. Best practices in coding and resource management ensure quick load times and a responsive user interface.
+                              
+                              Extensive Market Reach: Android’s vast user base offers unparalleled market penetration opportunities. Our apps are compatible with a wide range of devices and Android versions, maximizing reach and engagement.
+                              
+                              Our Approach to Android Development
+                              Comprehensive Requirement Analysis: We analyze your business needs and target audience to determine the features and functionalities that will best serve your users.
+                              
+                              User-Centric Design: Our design focus is on creating intuitive interfaces that enhance user experience and engagement.
+                              
+                              Advanced Security Measures: We integrate robust security protocols to protect user data and prevent unauthorized access, ensuring your app’s security and compliance.
+                              
+                              Rigorous Testing and Quality Assurance: Our apps undergo extensive testing to meet high-quality standards, including performance, security, and usability assessments.
+                              
+                              Ongoing Support and Maintenance: Post-launch, we provide support and maintenance to keep your app updated and performing optimally, incorporating feedback and new features as needed.
+                              """,
+                                    icon: Image.asset(
+                                      androidIcon,
+                                      // color: primaryColor,
+                                      height: 47,
+                                      width: 47,
+                                    ),
                                   ),
-                                ),
-                                serviceWidget(
-                                  onPressed: () {},
-                                  title: "iOS Development",
-                                  content:
-                                      """Our iOS application development focuses on creating seamless, intuitive apps that blend aesthetics with functionality. We deliver premium experiences that resonate with users and enhance engagement across Apple’s ecosystem.
-
-Why Choose Our iOS Development Services?
-High Security: Our iOS apps are built with advanced security protocols, including encryption and secure authentication, to protect user data and ensure privacy.
-
-Excellent Performance: Optimized for speed and efficiency, our iOS apps provide a smooth and responsive interface, handling complex features and high data loads effectively.
-
-Premium User Base: iOS users, known for their higher purchasing power, offer valuable engagement opportunities. Our apps cater to this demographic, enhancing brand loyalty and driving ROI.
-
-Consistency Across Devices: Our apps deliver a consistent experience across all iOS devices, reinforcing brand trust and ensuring user satisfaction.
-
-Detailed Approach to iOS Development
-User-Centered Design: We prioritize user experience through extensive research and intuitive design, ensuring that the app meets user needs and preferences.
-
-Robust Functionality: Advanced features are integrated to enhance usability while maintaining high performance, including seamless navigation and real-time updates.
-
-Quality Assurance: Rigorous testing ensures compliance with Apple’s quality standards, including performance, security, and user experience evaluations.
-
-Post-Launch Support: We provide ongoing support and updates to keep your app running smoothly, incorporating user feedback and ensuring compatibility with the latest iOS versions.
-""",
-                                  icon: Image.asset(
-                                    appleIcon,
-                                    // color: secondaryColor,
-                                    height: 47,
-                                    width: 47,
+                                  serviceWidget(
+                                    onPressed: () {},
+                                    title: "iOS Development",
+                                    content:
+                                        """Our iOS application development focuses on creating seamless, intuitive apps that blend aesthetics with functionality. We deliver premium experiences that resonate with users and enhance engagement across Apple’s ecosystem.
+                              
+                              Why Choose Our iOS Development Services?
+                              High Security: Our iOS apps are built with advanced security protocols, including encryption and secure authentication, to protect user data and ensure privacy.
+                              
+                              Excellent Performance: Optimized for speed and efficiency, our iOS apps provide a smooth and responsive interface, handling complex features and high data loads effectively.
+                              
+                              Premium User Base: iOS users, known for their higher purchasing power, offer valuable engagement opportunities. Our apps cater to this demographic, enhancing brand loyalty and driving ROI.
+                              
+                              Consistency Across Devices: Our apps deliver a consistent experience across all iOS devices, reinforcing brand trust and ensuring user satisfaction.
+                              
+                              Detailed Approach to iOS Development
+                              User-Centered Design: We prioritize user experience through extensive research and intuitive design, ensuring that the app meets user needs and preferences.
+                              
+                              Robust Functionality: Advanced features are integrated to enhance usability while maintaining high performance, including seamless navigation and real-time updates.
+                              
+                              Quality Assurance: Rigorous testing ensures compliance with Apple’s quality standards, including performance, security, and user experience evaluations.
+                              
+                              Post-Launch Support: We provide ongoing support and updates to keep your app running smoothly, incorporating user feedback and ensuring compatibility with the latest iOS versions.
+                              """,
+                                    icon: Image.asset(
+                                      appleIcon,
+                                      // color: secondaryColor,
+                                      height: 47,
+                                      width: 47,
+                                    ),
                                   ),
-                                ),
 
-                                serviceWidget(
-                                  onPressed: () {},
-                                  title: "Artificial Intelligence",
-                                  content:
-                                      """In the fast-evolving digital landscape, artificial intelligence (AI) is transforming mobile applications into intelligent solutions that enhance user experience and automate complex tasks. At our company, we integrate cutting-edge AI technologies into mobile apps, providing features that offer personalized interactions, automate repetitive tasks, and deliver valuable insights.
-
-Why AI is Essential for Modern Mobile Apps
-Enhanced User Experience: AI algorithms analyze user behavior to offer personalized recommendations, such as suggesting content or products tailored to individual preferences. This customization improves user engagement by making the app more intuitive and responsive, whether recommending songs, products, or routes.
-
-Automation: AI automates tasks like customer support through chatbots, data entry, and image recognition. This not only boosts efficiency but also reduces operational costs, freeing up human resources for strategic activities and delivering faster, more efficient user interactions.
-
-Data-Driven Insights: AI excels at analyzing large data volumes to generate actionable insights about user behavior and trends. These insights enable better decision-making and optimization of app functionality, marketing strategies, and business operations by identifying patterns and opportunities.
-
-Advanced Features: AI enables advanced functionalities such as facial recognition, natural language processing, and predictive analytics. These features enhance user experience with secure authentication, real-time translations, and content moderation, setting your app apart in a competitive marketplace.
-
-Specialized AI Models We Implement
-Facial Recognition: Our AI facial recognition models ensure secure and reliable user authentication, ideal for high-security applications in banking, healthcare, and government services.
-
-Document Verification: Automated verification of documents like passports and IDs speeds up onboarding processes and reduces manual effort, particularly useful in finance, travel, and legal sectors.
-
-Nudity Checks: AI-powered nudity detection models help maintain content moderation standards by identifying and flagging inappropriate material, ensuring compliance with community guidelines.
-
-Technologies We Use
-TensorFlow: A flexible and scalable framework for building deep learning models for image recognition and natural language processing.
-PyTorch: A library suited for complex neural networks and deep learning tasks, excelling in both research and production.
-OpenCV: An open-source library for real-time image processing and analysis, crucial for facial recognition and object detection.
-Our Approach to AI Integration
-Consultation and Strategy Development: We understand your needs and develop a strategy for integrating AI that aligns with your business goals and enhances user experience.
-
-AI Model Development: Our specialists design custom AI models tailored to your requirements, optimizing performance and accuracy.
-
-Seamless Integration: We integrate AI features into your app smoothly, ensuring compatibility and enhanced functionality.
-
-Testing and Optimization: We conduct rigorous testing and continuous optimization to improve model performance and reliability.
-
-Ongoing Support and Maintenance: Post-launch support includes monitoring, updates, and refinements to keep AI features performing optimally.
-""",
-                                  icon: Image.asset(
-                                    artificialIntelligence,
-                                    // color: Colors.green,
-                                    height: 47,
-                                    width: 47,
+                                  serviceWidget(
+                                    onPressed: () {},
+                                    title: "Artificial Intelligence",
+                                    content:
+                                        """In the fast-evolving digital landscape, artificial intelligence (AI) is transforming mobile applications into intelligent solutions that enhance user experience and automate complex tasks. At our company, we integrate cutting-edge AI technologies into mobile apps, providing features that offer personalized interactions, automate repetitive tasks, and deliver valuable insights.
+                              
+                              Why AI is Essential for Modern Mobile Apps
+                              Enhanced User Experience: AI algorithms analyze user behavior to offer personalized recommendations, such as suggesting content or products tailored to individual preferences. This customization improves user engagement by making the app more intuitive and responsive, whether recommending songs, products, or routes.
+                              
+                              Automation: AI automates tasks like customer support through chatbots, data entry, and image recognition. This not only boosts efficiency but also reduces operational costs, freeing up human resources for strategic activities and delivering faster, more efficient user interactions.
+                              
+                              Data-Driven Insights: AI excels at analyzing large data volumes to generate actionable insights about user behavior and trends. These insights enable better decision-making and optimization of app functionality, marketing strategies, and business operations by identifying patterns and opportunities.
+                              
+                              Advanced Features: AI enables advanced functionalities such as facial recognition, natural language processing, and predictive analytics. These features enhance user experience with secure authentication, real-time translations, and content moderation, setting your app apart in a competitive marketplace.
+                              
+                              Specialized AI Models We Implement
+                              Facial Recognition: Our AI facial recognition models ensure secure and reliable user authentication, ideal for high-security applications in banking, healthcare, and government services.
+                              
+                              Document Verification: Automated verification of documents like passports and IDs speeds up onboarding processes and reduces manual effort, particularly useful in finance, travel, and legal sectors.
+                              
+                              Nudity Checks: AI-powered nudity detection models help maintain content moderation standards by identifying and flagging inappropriate material, ensuring compliance with community guidelines.
+                              
+                              Technologies We Use
+                              TensorFlow: A flexible and scalable framework for building deep learning models for image recognition and natural language processing.
+                              PyTorch: A library suited for complex neural networks and deep learning tasks, excelling in both research and production.
+                              OpenCV: An open-source library for real-time image processing and analysis, crucial for facial recognition and object detection.
+                              Our Approach to AI Integration
+                              Consultation and Strategy Development: We understand your needs and develop a strategy for integrating AI that aligns with your business goals and enhances user experience.
+                              
+                              AI Model Development: Our specialists design custom AI models tailored to your requirements, optimizing performance and accuracy.
+                              
+                              Seamless Integration: We integrate AI features into your app smoothly, ensuring compatibility and enhanced functionality.
+                              
+                              Testing and Optimization: We conduct rigorous testing and continuous optimization to improve model performance and reliability.
+                              
+                              Ongoing Support and Maintenance: Post-launch support includes monitoring, updates, and refinements to keep AI features performing optimally.
+                              """,
+                                    icon: Image.asset(
+                                      artificialIntelligence,
+                                      // color: Colors.green,
+                                      height: 47,
+                                      width: 47,
+                                    ),
                                   ),
-                                ),
-                                // serviceWidget(
-                                //   onPressed: () {},
-                                //   title: "Marketing & Reporting",
-                                //   content:
-                                //       "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                //   icon: SvgPicture.asset(
-                                //     marketingReportingIcon,
-                                //     color: purpleColor,
-                                //     height: 47,
-                                //     width: 47,
-                                //   ),
-                                // ),
-                                // serviceWidget(
-                                //   onPressed: () {},
-                                //   title: "Mobile App Development",
-                                //   content:
-                                //       "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                //   icon: SvgPicture.asset(
-                                //     mobileAppDevelopmentIcon,
-                                //     color: secondaryColor,
-                                //     height: 47,
-                                //     width: 47,
-                                //   ),
-                                // ),
+                                  // serviceWidget(
+                                  //   onPressed: () {},
+                                  //   title: "Marketing & Reporting",
+                                  //   content:
+                                  //       "I throw myself down among the tall grass by the stream as I lie close to the earth.",
+                                  //   icon: SvgPicture.asset(
+                                  //     marketingReportingIcon,
+                                  //     color: purpleColor,
+                                  //     height: 47,
+                                  //     width: 47,
+                                  //   ),
+                                  // ),
+                                  // serviceWidget(
+                                  //   onPressed: () {},
+                                  //   title: "Mobile App Development",
+                                  //   content:
+                                  //       "I throw myself down among the tall grass by the stream as I lie close to the earth.",
+                                  //   icon: SvgPicture.asset(
+                                  //     mobileAppDevelopmentIcon,
+                                  //     color: secondaryColor,
+                                  //     height: 47,
+                                  //     width: 47,
+                                  //   ),
+                                  // ),
+                                ],
+                              ),
+                            ),
+                            GradientText(
+                              "Technologies",
+                              style: GoogleFonts
+                                  .montserrat(
+                                fontSize: 36,
+                                fontWeight:
+                                FontWeight.w900,
+                              ),
+                              colors: [
+                                gradientColor1,
+                                gradientColor2,
+                                gradientColor3,
                               ],
-                            )
+                            ),
+                            const SizedBox(height: 30),
+                            Wrap(
+                                spacing: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                    ? 40  // Width for screens smaller than 550px
+                                    : 60  // Width for screens between 550px and 755px
+                                    : 90   // Width for screens between 755px and 1250px
+                                    : 120,
+                              runSpacing: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                          ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                          ? 40  // Width for screens smaller than 550px
+                          : 60  // Width for screens between 550px and 755px
+                          : 90   // Width for screens between 755px and 1250px
+                          : 120,
+                              children: [
+                                companyStacksWidget(
+                                    image: Image.asset(
+                                      flutterIcon,
+                                      // color: lightBlueColor,
+                                        height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                            ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                            ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                            ? 40  // Height for screens smaller than 550px
+                                            : 50  // Height for screens between 550px and 755px
+                                            : 75      // Height for screens between 755px and 1250px
+                                            : 100,       // Height for screens larger than 1250px
+                                        width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                            ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                            ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                            ? 40  // Width for screens smaller than 550px
+                                            : 50  // Width for screens between 550px and 755px
+                                            : 75      // Width for screens between 755px and 1250px
+                                            : 100,  // Width for screens larger than 1250px
+                                    ),
+                                ),
+                                companyStacksWidget(
+                                  image: Image.asset(
+                                    appleIcon,
+                                    // color: lightBlueColor,
+                                      height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                          ? 40  // Height for screens smaller than 550px
+                                          : 50  // Height for screens between 550px and 755px
+                                          : 75      // Height for screens between 755px and 1250px
+                                          : 100,       // Height for screens larger than 1250px
+                                      width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                          ? 40  // Width for screens smaller than 550px
+                                          : 50  // Width for screens between 550px and 755px
+                                          : 75      // Width for screens between 755px and 1250px
+                                          : 100,  // Width for screens larger than 1250px
+                                  ),
+                                ),
+                                companyStacksWidget(
+                                  image: Image.asset(
+                                    androidIcon,
+                                    // color: lightBlueColor,
+                                    height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                        ? 40  // Height for screens smaller than 550px
+                                        : 50  // Height for screens between 550px and 755px
+                                        : 75      // Height for screens between 755px and 1250px
+                                        : 100,       // Height for screens larger than 1250px
+                                    width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                        ? 40  // Width for screens smaller than 550px
+                                        : 50  // Width for screens between 550px and 755px
+                                        : 75      // Width for screens between 755px and 1250px
+                                        : 100,  // Width for screens larger than 1250px
+                                  ),
+                                ),
+                                companyStacksWidget(
+                                  image: Image.asset(
+                                    artificialIntelligence,
+                                    // color: lightBlueColor,
+                                      height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                          ? 40  // Height for screens smaller than 550px
+                                          : 50  // Height for screens between 550px and 755px
+                                          : 75      // Height for screens between 755px and 1250px
+                                          : 100,       // Height for screens larger than 1250px
+                                      width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                          ? 40  // Width for screens smaller than 550px
+                                          : 50  // Width for screens between 550px and 755px
+                                          : 75      // Width for screens between 755px and 1250px
+                                          : 100,  // Width for screens larger than 1250px
+                                  ),
+                                ),
+                              ],
+                            ),
                           ],
                         ),
                       ),
@@ -1160,7 +1276,7 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
                                                 decoration: BoxDecoration(
                                                   image: const DecorationImage(
                                                     image:
-                                                        AssetImage(aboutImage),
+                                                        AssetImage(aboutImage1),
                                                     fit: BoxFit.fill,
                                                   ),
                                                   borderRadius:
@@ -1195,9 +1311,9 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
                                                         "Read About Us",
                                                         style: GoogleFonts
                                                             .montserrat(
-                                                          fontSize: 16,
+                                                          fontSize: 36,
                                                           fontWeight:
-                                                              FontWeight.w500,
+                                                              FontWeight.w600,
                                                         ),
                                                         colors: [
                                                           gradientColor1,
@@ -1360,9 +1476,9 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
                                                       "Read About Us",
                                                       style: GoogleFonts
                                                           .montserrat(
-                                                        fontSize: 16,
+                                                        fontSize: 36,
                                                         fontWeight:
-                                                            FontWeight.w500,
+                                                        FontWeight.w600,
                                                       ),
                                                       colors: [
                                                         gradientColor1,
@@ -1520,7 +1636,7 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
                                               horizontal: 15),
                                           decoration: BoxDecoration(
                                             image: const DecorationImage(
-                                              image: AssetImage(aboutImage),
+                                              image: AssetImage(aboutImage1),
                                               fit: BoxFit.fill,
                                             ),
                                             borderRadius:
@@ -1548,8 +1664,9 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
                                               GradientText(
                                                 "Read About Us",
                                                 style: GoogleFonts.montserrat(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.w500,
+                                                  fontSize: 36,
+                                                  fontWeight:
+                                                  FontWeight.w600,
                                                 ),
                                                 colors: [
                                                   gradientColor1,
@@ -2371,7 +2488,7 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
                                                           image:
                                                               const DecorationImage(
                                                             image: AssetImage(
-                                                                aboutImage),
+                                                                contactUs),
                                                             fit:
                                                                 BoxFit.fitWidth,
                                                           ),
@@ -2404,7 +2521,7 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
                                                 decoration: BoxDecoration(
                                                   image: const DecorationImage(
                                                     image:
-                                                        AssetImage(aboutImage),
+                                                        AssetImage(contactUs),
                                                     fit: BoxFit.fill,
                                                   ),
                                                   borderRadius:
@@ -2441,7 +2558,7 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
                                                             .montserrat(
                                                           fontSize: 36,
                                                           fontWeight:
-                                                              FontWeight.w500,
+                                                              FontWeight.w600,
                                                         ),
                                                         colors: [
                                                           gradientColor1,
@@ -2738,7 +2855,7 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
                                                           .montserrat(
                                                         fontSize: 36,
                                                         fontWeight:
-                                                            FontWeight.w500,
+                                                            FontWeight.w600,
                                                       ),
                                                       colors: [
                                                         gradientColor1,
@@ -3027,7 +3144,7 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
                                                 "Contact Us",
                                                 style: GoogleFonts.montserrat(
                                                   fontSize: 36,
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                 ),
                                                 colors: [
                                                   gradientColor1,
@@ -3287,7 +3404,7 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
                                               horizontal: 15),
                                           decoration: BoxDecoration(
                                             image: const DecorationImage(
-                                              image: AssetImage(aboutImage),
+                                              image: AssetImage(contactUs),
                                               fit: BoxFit.fill,
                                             ),
                                             borderRadius:
@@ -4029,6 +4146,15 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
               ),
             ),
           );
+  }
+
+
+
+  Widget companyStacksWidget(
+      {required Widget image}) {
+    return (ResponsiveBreakpoints.of(context).screenWidth < 575)
+        ? image
+        : image;
   }
 
 
