@@ -531,7 +531,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                         width: MediaQuery.of(context).size.width,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage(homeSectionBackgroundImage),
+                            image: AssetImage(homeSectionBackgroundImage1),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -1857,7 +1857,7 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
                                               controller:
                                                   _portfolioScroll1Controller,
                                               axisDirection: Axis.horizontal,
-                                              loop: false,
+                                              loop: true,
                                               itemBuilder: (context, itemIndex,
                                                   realIndex) {
                                                 final item = portfolioItems[itemIndex];
@@ -2269,13 +2269,13 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
                                               controller:
                                                   _portfolioScroll1Controller,
                                               axisDirection: Axis.horizontal,
-                                              loop: false,
+                                              loop: true,
                                               itemBuilder: (context, itemIndex,
                                                   realIndex) {
                                                 final item = whyChooseUsItems[itemIndex];
 
                                                 return BlogSliderWidget(
-                                                  whyChooseUsItems: whyChooseUsItems[itemIndex], itemIndex: itemIndex, title: item['title'].toString(), description: item['description'].toString(), image: item['image'].toString(),);
+                                                  whyChooseUsItems: item, itemIndex: itemIndex, title: item['title'].toString(), description: item['description'].toString(), image: item['image'].toString(),);
                                               },
                                             );
                                           }),
@@ -4188,7 +4188,7 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
       required String content,
       required Widget icon}) {
     return Container(
-      height: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+      height: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
           ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
           ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
           ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
@@ -4196,7 +4196,7 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
           : 877 // Updated from 815
           : 700 // Updated from 650
           : 890 // Updated from 826
-          : 761, // Updated from 706
+          : 741, // Updated from 706
 
 
 
@@ -4209,7 +4209,7 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
       //             : 264
       //         : 336
       //     : 286,
-      width: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+      width: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
           ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
           ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
           ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
@@ -4217,7 +4217,7 @@ Ongoing Support and Maintenance: Post-launch support includes monitoring, update
           : 400 // 243 adjusted to 400
           : 548 // 333 adjusted to 548
           : 494 // 300 adjusted to 494
-          : 625, // 380 adjusted to 625
+          : 605, // 380 adjusted to 625
 
       padding: EdgeInsets.symmetric(
           horizontal:
