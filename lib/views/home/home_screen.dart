@@ -21,6 +21,7 @@ import 'package:infinite_carousel/infinite_carousel.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -66,14 +67,28 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     {
       "stackName": "Flutter",
       "projectName": "Kuwait Mushaf - Quranic Android App",
+      "image": quranApp,
       "explanation":
-      "Developed using Flutter, Kuwait Mushaf is a comprehensive Quran app designed for an enriching and personalized experience. The app offers full Quran text with audio recitations from various renowned reciters. Users can explore translations in multiple languages, access detailed Tafseer from different scholars, and study the 10 readings of Quranic verses with highlighted wordings and pronunciation guides. Additionally, the app allows users to download complete recitations and customize the app's language and appearance through a robust settings screen."
+      "Kuwait Mushaf, developed with Flutter, is a user-friendly Quran app offering a complete Quran text with audio from renowned reciters. Explore translations, detailed Tafseer, and study the 10 readings with highlighted words. Customize your experience with downloadable recitations and personalized settings for language and appearance."
     },
     {
       "stackName": "Java & Kotlin",
       "projectName": "Urbie - IoT-Based Home Automation App",
+      "image": portfolio2Image,
       "explanation":
-      "Developed using Java and Kotlin, Urbie is a sophisticated IoT-based Android app designed for seamless home automation. The app enables users to control various home appliances, including fans, LEDs, and water tank levels. Leveraging AWS MQTT services for real-time cloud control and robust databases for storing current device statuses, Urbie provides a reliable and user-friendly solution for modern smart home management."
+      "Urbie, built with Java and Kotlin, is an IoT-based Android app for smart home automation. It lets users control home appliances like fans, LEDs, and water tanks, using AWS MQTT for real-time cloud control and secure databases for device status management."
+    },
+    {
+      "stackName": "Java & Kotlin",
+      "image": portfolioTwo,
+      "projectName": "Salama",
+      "explanation": "Salama is an application which is developed for UAE states. It's enforce that the companies operating in UAE are taking appropriate safety measures for their employees.",
+    },
+    {
+      "stackName": "Java & Kotlin",
+      "image": portfolioThree,
+      "projectName": "Yo Promos",
+      "explanation": "Discover the best promotions and deals from top brands with our promotional app, showcasing exclusive offers and discounts tailored just for you.",
     },
   ];
   final List<Map<String, String>> whyChooseUsItems = [
@@ -177,6 +192,31 @@ Example 2: Implemented a secure data management system for a financial instituti
   ];
 
 
+  void _sendEmail() async {
+    final String yourName = yourNameEditingController.text;
+    final String yourPhone = yourPhoneEditingController.text;
+    final String yourEmail = yourEmailEditingController.text;
+    final String yourMessage = yourMessageEditingController.text;
+
+    final Uri emailUri = Uri(
+      scheme: 'mailto',
+      path: 'invertedtec@gmail.com',
+      query: Uri.encodeFull(
+          'subject=Contact Form Submission&'
+              'body=Name: $yourName\n'
+              'Phone: $yourPhone\n'
+              'Email: $yourEmail\n'
+              'Message: $yourMessage'
+      ),
+    );
+
+    if (await canLaunchUrl(emailUri)) {
+      await launchUrl(emailUri);
+    } else {
+      throw 'Could not launch $emailUri';
+    }
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -197,7 +237,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Image.asset(
-                        logoImageInvertedTechnology,
+                        logoImageInvertedTechnologyWhite,
                         height: (ResponsiveBreakpoints.of(context).screenWidth <
                                 750)
                             ? 50
@@ -521,13 +561,13 @@ Example 2: Implemented a secure data management system for a financial instituti
                     children: [
                       Container(
                         key: homeKey,
-                        height: (ResponsiveBreakpoints.of(context).screenWidth <
-                                1000)
-                            ? (ResponsiveBreakpoints.of(context).screenWidth <
-                                    760)
-                                ? 496
-                                : 660
-                            : 720,
+                        height: (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                            ? (ResponsiveBreakpoints.of(context).screenWidth < 760)
+                            ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                            ? 600  // Height for screens smaller than 550px
+                            : 660  // Height for screens between 550px and 760px
+                            : 720  // Height for screens between 760px and 1000px
+                            : 720, // Height for screens larger than 1000px
                         width: MediaQuery.of(context).size.width,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
@@ -571,7 +611,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Image.asset(
-                                        logoImageInvertedTechnology,
+                                        logoImageInvertedTechnologyWhite,
                                         height:
                                             (ResponsiveBreakpoints.of(context)
                                                         .screenWidth <
@@ -818,7 +858,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 106.w),
                                       child: Text(
-                                        "Innovating the Future of Technology.",
+                                        "Honor Our Commitments With Integrity And Quality.",
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.poppins(
                                           fontSize:
@@ -832,11 +872,12 @@ Example 2: Implemented a secure data management system for a financial instituti
                                         ),
                                       ),
                                     ),
+                                    const SizedBox(height: 10,),
                                     Padding(
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 80.w),
                                       child: Text(
-                                        "At InvertedTech, our vision is to revolutionize the software industry by creating innovative, user-centric solutions that empower businesses to achieve their full potential. As a dynamic software startup, we are committed to leveraging the latest technologies to deliver high-quality, scalable, and secure applications that meet the unique needs of our clients. Our mission is to drive digital transformation across various industries, ensuring our clients stay ahead in a competitive market.",
+                                        "At Inverted Technology, we are committed to empowering businesses through innovative, high-impact software solutions. With a foundation rooted in integrity and driven by quality, we specialize in cutting-edge technologies like Flutter, Android, iOS, AI/ML, and web development. Our mission is to translate ideas into transformative digital experiences that not only exceed expectations but also drive lasting success for our clients. We foster transparent communication and build trust through our multidisciplinary tech team, ensuring that every partnership is grounded in mutual respect and exceptional results.",
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.poppins(
                                           fontSize:
@@ -845,7 +886,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                       765)
                                                   ? 13
                                                   : 21,
-                                          fontWeight: FontWeight.w300,
+                                          fontWeight: FontWeight.w100,
                                           color: Colors.white.withOpacity(0.75),
                                         ),
                                       ),
@@ -905,187 +946,19 @@ Example 2: Implemented a secure data management system for a financial instituti
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Visibility(
-                              visible: false,
-                              child: Wrap(
-                                spacing: 20,
-                                runSpacing: 20,
-
-                                children: [
-                                  serviceWidget(
-                                    onPressed: () {},
-                                    title: "Flutter",
-                                    content:
-                                    """Flutter, Google’s UI toolkit, is revolutionizing app development by enabling high-performance, visually stunning applications across mobile, web, and desktop platforms. At our company, we harness Flutter’s power to deliver cross-platform solutions efficiently, ensuring your app stands out with native-like performance.
-                              
-                              Why Choose Flutter for Your Next Project?
-                              Cross-Platform Development: Flutter’s single codebase supports deployment across Android, iOS, web, and desktop platforms, reducing development time and cost. This approach simplifies maintenance and accelerates time-to-market, allowing you to reach a broader audience with minimal investment.
-                              
-                              High Performance: Flutter provides near-native performance by compiling directly to native machine code. This ensures smooth animations, fast load times, and responsive UI, rivaling that of native apps.
-                              
-                              Expressive and Flexible UI: With a rich set of customizable widgets, Flutter allows for the creation of beautiful and brand-specific UIs. Its layered architecture provides complete control over every pixel, enabling intricate and complex designs.
-                              
-                              Single Codebase for Easier Maintenance and Updates: A single codebase simplifies updates and maintenance, applying changes across all platforms efficiently. This reduces errors and ensures that your app remains current with the latest trends and technologies.
-                              
-                              Our Approach to Flutter Development
-                              In-Depth Consultation: We start by understanding your business goals and unique requirements to create a tailored development strategy.
-                              
-                              Custom UI/UX Design: Leveraging Flutter’s capabilities, we design engaging and intuitive user interfaces, with rapid prototyping and testing to meet your vision.
-                              
-                              Agile Development Process: Our agile approach allows for flexibility and iterative progress, providing regular updates and incorporating feedback throughout development.
-                              
-                              Comprehensive Testing: Extensive testing across all platforms ensures your app is bug-free and performs optimally. We focus on functional, performance, and user acceptance testing.
-                              
-                              Post-Launch Support: We offer ongoing support and maintenance, including updates and feature enhancements based on user feedback and evolving needs.
-                              """,
-                                    icon: Image.asset(
-                                      flutterIcon,
-                                      // color: lightBlueColor,
-                                      height: 47,
-                                      width: 47,
-                                    ),
-                                  ),
-                                  serviceWidget(
-                                    onPressed: () {},
-                                    title: "Android Development",
-                                    content:
-                                        """Our team excels in developing robust, user-friendly Android applications optimized for performance, security, and scalability. We understand the diverse Android ecosystem and craft solutions that meet your business needs and enhance user engagement.
-                              
-                              Why Choose Our Android Development Services?
-                              Customizable Solutions: We tailor our Android apps to meet your specific business requirements, whether for e-commerce, service delivery, or internal operations, ensuring alignment with your objectives.
-                              
-                              Scalable Architecture: Our apps are designed with scalable architecture to handle increasing user loads efficiently, maintaining performance and reliability as your user base grows.
-                              
-                              High Performance: We optimize our Android apps for speed and efficiency, ensuring smooth operation on various devices. Best practices in coding and resource management ensure quick load times and a responsive user interface.
-                              
-                              Extensive Market Reach: Android’s vast user base offers unparalleled market penetration opportunities. Our apps are compatible with a wide range of devices and Android versions, maximizing reach and engagement.
-                              
-                              Our Approach to Android Development
-                              Comprehensive Requirement Analysis: We analyze your business needs and target audience to determine the features and functionalities that will best serve your users.
-                              
-                              User-Centric Design: Our design focus is on creating intuitive interfaces that enhance user experience and engagement.
-                              
-                              Advanced Security Measures: We integrate robust security protocols to protect user data and prevent unauthorized access, ensuring your app’s security and compliance.
-                              
-                              Rigorous Testing and Quality Assurance: Our apps undergo extensive testing to meet high-quality standards, including performance, security, and usability assessments.
-                              
-                              Ongoing Support and Maintenance: Post-launch, we provide support and maintenance to keep your app updated and performing optimally, incorporating feedback and new features as needed.
-                              """,
-                                    icon: Image.asset(
-                                      androidIcon,
-                                      // color: primaryColor,
-                                      height: 47,
-                                      width: 47,
-                                    ),
-                                  ),
-                                  serviceWidget(
-                                    onPressed: () {},
-                                    title: "iOS Development",
-                                    content:
-                                        """Our iOS application development focuses on creating seamless, intuitive apps that blend aesthetics with functionality. We deliver premium experiences that resonate with users and enhance engagement across Apple’s ecosystem.
-                              
-                              Why Choose Our iOS Development Services?
-                              High Security: Our iOS apps are built with advanced security protocols, including encryption and secure authentication, to protect user data and ensure privacy.
-                              
-                              Excellent Performance: Optimized for speed and efficiency, our iOS apps provide a smooth and responsive interface, handling complex features and high data loads effectively.
-                              
-                              Premium User Base: iOS users, known for their higher purchasing power, offer valuable engagement opportunities. Our apps cater to this demographic, enhancing brand loyalty and driving ROI.
-                              
-                              Consistency Across Devices: Our apps deliver a consistent experience across all iOS devices, reinforcing brand trust and ensuring user satisfaction.
-                              
-                              Detailed Approach to iOS Development
-                              User-Centered Design: We prioritize user experience through extensive research and intuitive design, ensuring that the app meets user needs and preferences.
-                              
-                              Robust Functionality: Advanced features are integrated to enhance usability while maintaining high performance, including seamless navigation and real-time updates.
-                              
-                              Quality Assurance: Rigorous testing ensures compliance with Apple’s quality standards, including performance, security, and user experience evaluations.
-                              
-                              Post-Launch Support: We provide ongoing support and updates to keep your app running smoothly, incorporating user feedback and ensuring compatibility with the latest iOS versions.
-                              """,
-                                    icon: Image.asset(
-                                      appleIcon,
-                                      // color: secondaryColor,
-                                      height: 47,
-                                      width: 47,
-                                    ),
-                                  ),
-
-                                  serviceWidget(
-                                    onPressed: () {},
-                                    title: "Artificial Intelligence",
-                                    content:
-                                        """In the fast-evolving digital landscape, artificial intelligence (AI) is transforming mobile applications into intelligent solutions that enhance user experience and automate complex tasks. At our company, we integrate cutting-edge AI technologies into mobile apps, providing features that offer personalized interactions, automate repetitive tasks, and deliver valuable insights.
-                              
-                              Why AI is Essential for Modern Mobile Apps
-                              Enhanced User Experience: AI algorithms analyze user behavior to offer personalized recommendations, such as suggesting content or products tailored to individual preferences. This customization improves user engagement by making the app more intuitive and responsive, whether recommending songs, products, or routes.
-                              
-                              Automation: AI automates tasks like customer support through chatbots, data entry, and image recognition. This not only boosts efficiency but also reduces operational costs, freeing up human resources for strategic activities and delivering faster, more efficient user interactions.
-                              
-                              Data-Driven Insights: AI excels at analyzing large data volumes to generate actionable insights about user behavior and trends. These insights enable better decision-making and optimization of app functionality, marketing strategies, and business operations by identifying patterns and opportunities.
-                              
-                              Advanced Features: AI enables advanced functionalities such as facial recognition, natural language processing, and predictive analytics. These features enhance user experience with secure authentication, real-time translations, and content moderation, setting your app apart in a competitive marketplace.
-                              
-                              Specialized AI Models We Implement
-                              Facial Recognition: Our AI facial recognition models ensure secure and reliable user authentication, ideal for high-security applications in banking, healthcare, and government services.
-                              
-                              Document Verification: Automated verification of documents like passports and IDs speeds up onboarding processes and reduces manual effort, particularly useful in finance, travel, and legal sectors.
-                              
-                              Nudity Checks: AI-powered nudity detection models help maintain content moderation standards by identifying and flagging inappropriate material, ensuring compliance with community guidelines.
-                              
-                              Technologies We Use
-                              TensorFlow: A flexible and scalable framework for building deep learning models for image recognition and natural language processing.
-                              PyTorch: A library suited for complex neural networks and deep learning tasks, excelling in both research and production.
-                              OpenCV: An open-source library for real-time image processing and analysis, crucial for facial recognition and object detection.
-                              Our Approach to AI Integration
-                              Consultation and Strategy Development: We understand your needs and develop a strategy for integrating AI that aligns with your business goals and enhances user experience.
-                              
-                              AI Model Development: Our specialists design custom AI models tailored to your requirements, optimizing performance and accuracy.
-                              
-                              Seamless Integration: We integrate AI features into your app smoothly, ensuring compatibility and enhanced functionality.
-                              
-                              Testing and Optimization: We conduct rigorous testing and continuous optimization to improve model performance and reliability.
-                              
-                              Ongoing Support and Maintenance: Post-launch support includes monitoring, updates, and refinements to keep AI features performing optimally.
-                              """,
-                                    icon: Image.asset(
-                                      artificialIntelligence,
-                                      // color: Colors.green,
-                                      height: 47,
-                                      width: 47,
-                                    ),
-                                  ),
-                                  // serviceWidget(
-                                  //   onPressed: () {},
-                                  //   title: "Marketing & Reporting",
-                                  //   content:
-                                  //       "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                  //   icon: SvgPicture.asset(
-                                  //     marketingReportingIcon,
-                                  //     color: purpleColor,
-                                  //     height: 47,
-                                  //     width: 47,
-                                  //   ),
-                                  // ),
-                                  // serviceWidget(
-                                  //   onPressed: () {},
-                                  //   title: "Mobile App Development",
-                                  //   content:
-                                  //       "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-                                  //   icon: SvgPicture.asset(
-                                  //     mobileAppDevelopmentIcon,
-                                  //     color: secondaryColor,
-                                  //     height: 47,
-                                  //     width: 47,
-                                  //   ),
-                                  // ),
-                                ],
-                              ),
-                            ),
                             GradientText(
-                              "Technologies",
+                              textAlign: TextAlign.center,
+                              "Empowering Innovation Through Cutting-Edge Technology",
                               style: GoogleFonts
                                   .montserrat(
-                                fontSize: 36,
+                                fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                    ? 18  // Font size for screens smaller than 550px
+                                    : 23  // Font size for screens between 550px and 755px
+                                    : 34  // Font size for screens between 755px and 1250px
+                                    : 45, // Font size for screens larger than 1250px
+
                                 fontWeight:
                                 FontWeight.w900,
                               ),
@@ -1095,22 +968,24 @@ Example 2: Implemented a secure data management system for a financial instituti
                                 gradientColor3,
                               ],
                             ),
-                            const SizedBox(height: 30),
+                            const SizedBox(height: 50),
                             Wrap(
-                                spacing: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                    ? 40  // Width for screens smaller than 550px
-                                    : 60  // Width for screens between 550px and 755px
-                                    : 90   // Width for screens between 755px and 1250px
-                                    : 120,
-                              runSpacing: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                          ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                          ? 40  // Width for screens smaller than 550px
-                          : 60  // Width for screens between 550px and 755px
-                          : 90   // Width for screens between 755px and 1250px
-                          : 120,
+                          //       spacing: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                          //           ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                          //           ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                          //           ? 40  // Width for screens smaller than 550px
+                          //           : 60  // Width for screens between 550px and 755px
+                          //           : 90   // Width for screens between 755px and 1250px
+                          //           : 120,
+                          //     runSpacing: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                          // ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                          // ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                          // ? 40  // Width for screens smaller than 550px
+                          // : 60  // Width for screens between 550px and 755px
+                          // : 90   // Width for screens between 755px and 1250px
+                          // : 120,
+                              spacing: 30,
+                              runSpacing: 30,
                               children: [
                                 companyStacksWidget(
                                     image: Image.asset(
@@ -1131,6 +1006,8 @@ Example 2: Implemented a secure data management system for a financial instituti
                                             : 75      // Width for screens between 755px and 1250px
                                             : 100,  // Width for screens larger than 1250px
                                     ),
+                                  title: 'Flutter Development',
+                                  description: 'Experience the power of cross-platform development with Flutter. We craft stunning, high-performance mobile applications that deliver a consistent and seamless experience across both Android and iOS, ensuring your brand shines on every device.',
                                 ),
                                 companyStacksWidget(
                                   image: Image.asset(
@@ -1151,6 +1028,8 @@ Example 2: Implemented a secure data management system for a financial instituti
                                           : 75      // Width for screens between 755px and 1250px
                                           : 100,  // Width for screens larger than 1250px
                                   ),
+                                  title: 'iOS Development',
+                                  description: 'Elevate your business in the Apple ecosystem with sophisticated iOS applications. Our expert developers use the latest in Swift technology to deliver elegant, secure, and intuitive apps that resonate with users and enhance your brand\'s digital presence.',
                                 ),
                                 companyStacksWidget(
                                   image: Image.asset(
@@ -1171,6 +1050,8 @@ Example 2: Implemented a secure data management system for a financial instituti
                                         : 75      // Width for screens between 755px and 1250px
                                         : 100,  // Width for screens larger than 1250px
                                   ),
+                                  title: 'Android Development',
+                                  description: 'Unlock the full potential of the Android ecosystem with custom-built applications. Our Android development team combines cutting-edge technology with innovative design to create robust, user-friendly apps that engage your audience and drive business success.',
                                 ),
                                 companyStacksWidget(
                                   image: Image.asset(
@@ -1191,6 +1072,30 @@ Example 2: Implemented a secure data management system for a financial instituti
                                           : 75      // Width for screens between 755px and 1250px
                                           : 100,  // Width for screens larger than 1250px
                                   ),
+                                  title: 'Artificial Intelligence & Machine Learning',
+                                  description: 'Transform your business with the power of AI and Machine Learning. Our advanced AI/ML solutions unlock new opportunities for innovation, from predictive analytics to intelligent automation, driving smarter decisions and creating a competitive edge.',
+                                ),
+                                companyStacksWidget(
+                                  image: Image.asset(
+                                    webIcon,
+                                    // color: lightBlueColor,
+                                    height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                        ? 40  // Height for screens smaller than 550px
+                                        : 50  // Height for screens between 550px and 755px
+                                        : 75      // Height for screens between 755px and 1250px
+                                        : 100,       // Height for screens larger than 1250px
+                                    width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                        ? 40  // Width for screens smaller than 550px
+                                        : 50  // Width for screens between 550px and 755px
+                                        : 75      // Width for screens between 755px and 1250px
+                                        : 100,  // Width for screens larger than 1250px
+                                  ),
+                                  title: 'Web Development',
+                                  description: 'Unlock the full potential of the Android ecosystem with custom-built applications. Our Android development team combines cutting-edge technology with innovative design to create robust, user-friendly apps that engage your audience and drive business success.',
                                 ),
                               ],
                             ),
@@ -1311,7 +1216,12 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                         "Read About Us",
                                                         style: GoogleFonts
                                                             .montserrat(
-                                                          fontSize: 36,
+                                                          fontSize: (ResponsiveBreakpoints.of(
+                                                              context)
+                                                              .screenWidth <
+                                                              765)
+                                                              ? 16
+                                                              : 50,
                                                           fontWeight:
                                                               FontWeight.w600,
                                                         ),
@@ -1321,77 +1231,91 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                           gradientColor3,
                                                         ],
                                                       ),
-                                                      SizedBox(
-                                                        height: 12.h,
-                                                      ),
-                                                      Text(
-                                                        "Read Company Values",
-                                                        textAlign:
-                                                            TextAlign.left,
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                          fontSize: (ResponsiveBreakpoints.of(
-                                                                          context)
-                                                                      .screenWidth <
-                                                                  765)
-                                                              ? 16
-                                                              : 50,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                          color: Colors.black
-                                                              .withOpacity(
-                                                                  0.75),
+                                                      // SizedBox(
+                                                      //   height: 12.h,
+                                                      // ),
+                                                      Visibility(
+                                                        visible: false,
+                                                        child: Text(
+                                                          "Read Company Values",
+                                                          textAlign:
+                                                              TextAlign.left,
+                                                          style:
+                                                              GoogleFonts.poppins(
+                                                            fontSize: (ResponsiveBreakpoints.of(
+                                                                            context)
+                                                                        .screenWidth <
+                                                                    765)
+                                                                ? 16
+                                                                : 50,
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            color: Colors.black
+                                                                .withOpacity(
+                                                                    0.75),
+                                                          ),
                                                         ),
                                                       ),
                                                       SizedBox(
-                                                        height: 26.h,
+                                                        height: 16.h,
                                                       ),
                                                       Text(
                                                         "Our values are the guiding principles that define who we are as a company and how we conduct our business.",
-                                                        textAlign:
-                                                            TextAlign.left,
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                          fontSize: (ResponsiveBreakpoints.of(
-                                                                          context)
-                                                                      .screenWidth <
-                                                                  765)
+                                                        textAlign: TextAlign.left,
+                                                        style: GoogleFonts.poppins(
+                                                          fontSize:
+                                                          (ResponsiveBreakpoints.of(
+                                                              context)
+                                                              .screenWidth <
+                                                              765)
                                                               ? 16
                                                               : 18,
-                                                          fontWeight:
-                                                              FontWeight.w300,
+                                                          fontWeight: FontWeight.w300,
                                                           color: Colors.black
-                                                              .withOpacity(
-                                                                  0.75),
+                                                              .withOpacity(0.75),
                                                         ),
                                                       ),
                                                       const SizedBox(
-                                                        height: 50,
+                                                        height: 40,
                                                       ),
                                                       aboutUsTitleDescription(
                                                         title: "Integrity",
-                                                        description: "We adhere to the highest ethical standards, ensuring honesty and fairness in every action we take.",
+                                                        description: "We uphold the highest standards of integrity, building trust through transparency and ethical practices.",
                                                       ),
                                                       const SizedBox(
                                                         height: 30,
                                                       ),
                                                       aboutUsTitleDescription(
                                                         title: "Innovation",
-                                                        description: "We are committed to fostering a culture of creativity and continuous improvement.",
+                                                        description: "We drive innovation in everything we do, leveraging cutting-edge technology to keep our clients ahead.",
                                                       ),
                                                       const SizedBox(
                                                         height: 30,
                                                       ),
                                                       aboutUsTitleDescription(
                                                         title: "Excellence",
-                                                        description: "We strive for excellence in everything we do, delivering superior results that exceed expectations.",
+                                                        description: "WWe pursue excellence in every project, delivering superior quality through meticulous attention to detail.",
                                                       ),
                                                       const SizedBox(
                                                         height: 30,
                                                       ),
                                                       aboutUsTitleDescription(
-                                                        title: "Customer Focus",
-                                                        description: "Our customers are at the heart of our business, and their success is our top priority.",
+                                                        title: "Collaboration",
+                                                        description: "We believe in the power of collaboration, working closely with clients to co-create tailored solutions.",
+                                                      ),
+                                                      const SizedBox(
+                                                        height: 30,
+                                                      ),
+                                                      aboutUsTitleDescription(
+                                                        title: "Reliability",
+                                                        description: "We are committed to being a reliable partner, ensuring consistent and timely delivery of results.",
+                                                      ),
+                                                      const SizedBox(
+                                                        height: 30,
+                                                      ),
+                                                      aboutUsTitleDescription(
+                                                        title: "Client Focus",
+                                                        description: "Our clients are at the center of our work, prioritizing their needs to deliver tailored, impactful solutions.",
                                                       ),
                                                       /*Row(
                                                   children: [
@@ -1476,7 +1400,12 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                       "Read About Us",
                                                       style: GoogleFonts
                                                           .montserrat(
-                                                        fontSize: 36,
+                                                        fontSize: (ResponsiveBreakpoints.of(
+                                                            context)
+                                                            .screenWidth <
+                                                            765)
+                                                            ? 16
+                                                            : 50,
                                                         fontWeight:
                                                         FontWeight.w600,
                                                       ),
@@ -1486,73 +1415,91 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                         gradientColor3,
                                                       ],
                                                     ),
-                                                    SizedBox(
-                                                      height: 12.h,
-                                                    ),
-                                                    Text(
-                                                      "Read Company Values",
-                                                      textAlign: TextAlign.left,
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                        fontSize: (ResponsiveBreakpoints.of(
-                                                                        context)
-                                                                    .screenWidth <
-                                                                765)
-                                                            ? 16
-                                                            : 50,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                        color: Colors.black
-                                                            .withOpacity(0.75),
+                                                    // SizedBox(
+                                                    //   height: 12.h,
+                                                    // ),
+                                                    Visibility(
+                                                      visible: false,
+                                                      child: Text(
+                                                        "Read Company Values",
+                                                        textAlign:
+                                                        TextAlign.left,
+                                                        style:
+                                                        GoogleFonts.poppins(
+                                                          fontSize: (ResponsiveBreakpoints.of(
+                                                              context)
+                                                              .screenWidth <
+                                                              765)
+                                                              ? 16
+                                                              : 50,
+                                                          fontWeight:
+                                                          FontWeight.w600,
+                                                          color: Colors.black
+                                                              .withOpacity(
+                                                              0.75),
+                                                        ),
                                                       ),
                                                     ),
                                                     SizedBox(
-                                                      height: 26.h,
+                                                      height: 16.h,
                                                     ),
                                                     Text(
                                                       "Our values are the guiding principles that define who we are as a company and how we conduct our business.",
                                                       textAlign: TextAlign.left,
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                        fontSize: (ResponsiveBreakpoints.of(
-                                                                        context)
-                                                                    .screenWidth <
-                                                                765)
+                                                      style: GoogleFonts.poppins(
+                                                        fontSize:
+                                                        (ResponsiveBreakpoints.of(
+                                                            context)
+                                                            .screenWidth <
+                                                            765)
                                                             ? 16
                                                             : 18,
-                                                        fontWeight:
-                                                            FontWeight.w300,
+                                                        fontWeight: FontWeight.w300,
                                                         color: Colors.black
                                                             .withOpacity(0.75),
                                                       ),
                                                     ),
                                                     const SizedBox(
-                                                      height: 50,
+                                                      height: 40,
                                                     ),
                                                     aboutUsTitleDescription(
                                                       title: "Integrity",
-                                                      description: "We adhere to the highest ethical standards, ensuring honesty and fairness in every action we take.",
+                                                      description: "We uphold the highest standards of integrity, building trust through transparency and ethical practices.",
                                                     ),
                                                     const SizedBox(
                                                       height: 30,
                                                     ),
                                                     aboutUsTitleDescription(
                                                       title: "Innovation",
-                                                      description: "We are committed to fostering a culture of creativity and continuous improvement.",
+                                                      description: "We drive innovation in everything we do, leveraging cutting-edge technology to keep our clients ahead.",
                                                     ),
                                                     const SizedBox(
                                                       height: 30,
                                                     ),
                                                     aboutUsTitleDescription(
                                                       title: "Excellence",
-                                                      description: "We strive for excellence in everything we do, delivering superior results that exceed expectations.",
+                                                      description: "WWe pursue excellence in every project, delivering superior quality through meticulous attention to detail.",
                                                     ),
                                                     const SizedBox(
                                                       height: 30,
                                                     ),
                                                     aboutUsTitleDescription(
-                                                      title: "Customer Focus",
-                                                      description: "Our customers are at the heart of our business, and their success is our top priority.",
+                                                      title: "Collaboration",
+                                                      description: "We believe in the power of collaboration, working closely with clients to co-create tailored solutions.",
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 30,
+                                                    ),
+                                                    aboutUsTitleDescription(
+                                                      title: "Reliability",
+                                                      description: "We are committed to being a reliable partner, ensuring consistent and timely delivery of results.",
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 30,
+                                                    ),
+                                                    aboutUsTitleDescription(
+                                                      title: "Client Focus",
+                                                      description: "Our clients are at the center of our work, prioritizing their needs to deliver tailored, impactful solutions.",
                                                     ),
 
                                                     /*Row(
@@ -1663,8 +1610,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                             children: [
                                               GradientText(
                                                 "Read About Us",
-                                                style: GoogleFonts.montserrat(
-                                                  fontSize: 36,
+                                                style: GoogleFonts
+                                                    .montserrat(
+                                                  fontSize: (ResponsiveBreakpoints.of(
+                                                      context)
+                                                      .screenWidth <
+                                                      765)
+                                                      ? 16
+                                                      : 50,
                                                   fontWeight:
                                                   FontWeight.w600,
                                                 ),
@@ -1674,27 +1627,33 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                   gradientColor3,
                                                 ],
                                               ),
-                                              SizedBox(
-                                                height: 12.h,
-                                              ),
-                                              Text(
-                                                "Read Company Values",
-                                                textAlign: TextAlign.left,
-                                                style: GoogleFonts.poppins(
-                                                  fontSize:
-                                                      (ResponsiveBreakpoints.of(
-                                                                      context)
-                                                                  .screenWidth <
-                                                              765)
-                                                          ? 16
-                                                          : 50,
-                                                  fontWeight: FontWeight.w600,
-                                                  color: Colors.black
-                                                      .withOpacity(0.75),
+                                              // SizedBox(
+                                              //   height: 12.h,
+                                              // ),
+                                              Visibility(
+                                                visible: false,
+                                                child: Text(
+                                                  "Read Company Values",
+                                                  textAlign:
+                                                  TextAlign.left,
+                                                  style:
+                                                  GoogleFonts.poppins(
+                                                    fontSize: (ResponsiveBreakpoints.of(
+                                                        context)
+                                                        .screenWidth <
+                                                        765)
+                                                        ? 16
+                                                        : 50,
+                                                    fontWeight:
+                                                    FontWeight.w600,
+                                                    color: Colors.black
+                                                        .withOpacity(
+                                                        0.75),
+                                                  ),
                                                 ),
                                               ),
                                               SizedBox(
-                                                height: 26.h,
+                                                height: 16.h,
                                               ),
                                               Text(
                                                 "Our values are the guiding principles that define who we are as a company and how we conduct our business.",
@@ -1713,46 +1672,67 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                 ),
                                               ),
                                               const SizedBox(
-                                                height: 50,
+                                                height: 40,
                                               ),
                                               Row(
                                                 children: [
                                                   Expanded(
                                                     child: aboutUsTitleDescription(
                                                       title: "Integrity",
-                                                      description: "We adhere to the highest ethical standards, ensuring honesty and fairness in every action we take.",
+                                                      description: "We uphold the highest standards of integrity, building trust through transparency and ethical practices.",
                                                     ),
                                                   ),
                                                   const SizedBox(
                                                     width: 15,
                                                   ),
                                                   Expanded(
-                                                    child:   aboutUsTitleDescription(
+                                                    child: aboutUsTitleDescription(
                                                       title: "Innovation",
-                                                      description: "We are committed to fostering a culture of creativity and continuous improvement.",
-
+                                                      description: "We drive innovation in everything we do, leveraging cutting-edge technology to keep our clients ahead.",
                                                     ),
                                                   ),
                                                 ],
                                               ),
                                               const SizedBox(
-                                                height: 50,
+                                                height: 30,
                                               ),
                                               Row(
                                                 children: [
                                                   Expanded(
-                                                    child: aboutUsTitleDescription(
+                                                    child:  aboutUsTitleDescription(
                                                       title: "Excellence",
-                                                      description: "We strive for excellence in everything we do, delivering superior results that exceed expectations.",
+                                                      description: "We pursue excellence in every project, delivering superior quality through meticulous attention to detail.",
                                                     ),
                                                   ),
                                                   const SizedBox(
                                                     width: 15,
                                                   ),
                                                   Expanded(
-                                                    child:   aboutUsTitleDescription(
-                                                      title: "Customer Focus",
-                                                      description: "Our customers are at the heart of our business, and their success is our top priority.",
+                                                    child:aboutUsTitleDescription(
+                                                      title: "Collaboration",
+                                                      description: "We believe in the power of collaboration, working closely with clients to co-create tailored solutions.",
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              const SizedBox(
+                                                height: 30,
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Expanded(
+                                                    child: aboutUsTitleDescription(
+                                                      title: "Reliability",
+                                                      description: "We are committed to being a reliable partner, ensuring consistent and timely delivery of results.",
+                                                    ),
+                                                  ),
+                                                  const SizedBox(
+                                                    width: 15,
+                                                  ),
+                                                  Expanded(
+                                                    child:aboutUsTitleDescription(
+                                                      title: "Client Focus",
+                                                      description: "Our clients are at the center of our work, prioritizing their needs to deliver tailored, impactful solutions.",
                                                     ),
                                                   ),
                                                 ],
@@ -1891,23 +1871,16 @@ Example 2: Implemented a secure data management system for a financial instituti
                               ),
                             ),
                             Container(
-                              height: (ResponsiveBreakpoints.of(context)
-                                          .screenWidth <
-                                      1270)
-                                  ? (ResponsiveBreakpoints.of(context)
-                                              .screenWidth <
-                                          990)
-                                      ? (ResponsiveBreakpoints.of(context)
-                                                  .screenWidth <
-                                              770)
-                                          ? (ResponsiveBreakpoints.of(context)
-                                                      .screenWidth <
-                                                  575)
-                                              ? 713.h
-                                              : 431
-                                          : 389
-                                      : 498
-                                  : 634,
+                              height: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
+                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
+                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                  ? 600.h   // Adjusted height for screens smaller than 575px
+                                  : 363     // Adjusted height for screens between 575px and 770px
+                                  : 328         // Adjusted height for screens between 770px and 990px
+                                  : 419             // Adjusted height for screens between 990px and 1270px
+                                  : 534,                // Adjusted height for screens larger than 1270px
+
                               width: (ResponsiveBreakpoints.of(context)
                                           .screenWidth <
                                       1270)
@@ -1982,7 +1955,8 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                     itemIndex: itemIndex,
                                                   stackName: item['stackName']!,
                                                   projectName: item['projectName']!,
-                                                  explanation: item['explanation']!,);
+                                                  explanation: item['explanation']!,
+                                                  image: item['image']!,);
                                               },
                                             );
                                           }),
@@ -2121,12 +2095,6 @@ Example 2: Implemented a secure data management system for a financial instituti
                               runSpacing: 30,
                               children: [
                                 companyGrowthWidget(
-                                  image: Image.asset(
-                                    ecommerce,
-                                    height: 44,
-                                    width: 44,
-                                    // color: secondaryColor,
-                                  ),
                                   scores: "E-commerce",
                                   title1: 'Use-Case: Online Retail Stores',
                                   description1: 'Build sophisticated e-commerce platforms that provide a seamless shopping experience with features such as product listings, shopping carts, payment gateways, and order tracking. Utilize Flutter for creating responsive mobile and web applications, Firebase for real-time updates and user authentication, and RESTful APIs for secure payment integration.',
@@ -2135,12 +2103,6 @@ Example 2: Implemented a secure data management system for a financial instituti
 
                                 ),
                                 companyGrowthWidget(
-                                  image: Image.asset(
-                                    education,
-                                    height: 44,
-                                    width: 44,
-                                    // color: orangeColor,
-                                  ),
                                   scores: "Education",
                                   title1: 'Use-Case: E-learning Platforms',
                                   description1: 'Create dynamic e-learning platforms that support interactive video lessons, quizzes, progress tracking, and community forums. Use Flutter for building cross-platform applications that work seamlessly on mobile and web, Firebase for real-time data synchronization, and GraphQL for efficient and flexible data fetching and management.',
@@ -2148,12 +2110,6 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   description2: 'Develop comprehensive school management systems that facilitate the management of student information, attendance records, grading, and communication between students, parents, and teachers. Leverage Flutter for a consistent user interface, Firebase for secure and scalable data storage, and RESTful APIs for integration with other educational tools and services.',
                                 ),
                                 companyGrowthWidget(
-                                  image: Image.asset(
-                                    finance,
-                                    height: 44,
-                                    width: 44,
-                                    // color: primaryColor,
-                                  ),
                                   scores: "Finance",
                                   title1: 'Use-Case: Fintech Solutions',
                                   description1: 'Design secure and scalable fintech applications that handle various aspects of banking, investment, and personal finance management. Employ Flutter for developing cross-platform applications that provide a smooth user experience, Firebase for real-time data synchronization, and RESTful APIs for connecting with financial services and managing transactions.',
@@ -2161,12 +2117,6 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   description2: 'Create platforms dedicated to investment management, offering features such as portfolio tracking, market analysis, and trading functionalities. Use Flutter for the user interface, Firebase for real-time updates, and GraphQL for efficient data querying to deliver up-to-date investment information and insights.',
                                 ),
                                 companyGrowthWidget(
-                                  image: Image.asset(
-                                    realEstate,
-                                    height: 44,
-                                    width: 44,
-                                    // color: primaryColor,
-                                  ),
                                   scores: "Real Estate",
                                   title1: 'Use-Case: Property Listing Platforms',
                                   description1: 'Design platforms for listing and searching real estate properties, including features like advanced search filters, virtual property tours, and agent contact functionalities. Implement Flutter for cross-platform application development, Firebase for real-time updates and notifications, and RESTful APIs for integrating with external real estate services.',
@@ -2174,12 +2124,6 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   description2: 'Develop management systems for real estate operations that cover property management, tenant communication, and maintenance tracking. Use Flutter for a user-friendly interface, Firebase for efficient data storage, and AWS for scalable backend services to support the diverse needs of property management.',
                                 ),
                                 companyGrowthWidget(
-                                  image: Image.asset(
-                                    automotive,
-                                    height: 44,
-                                    width: 44,
-                                    // color: primaryColor,
-                                  ),
                                   scores: "Automotive",
                                   title1: 'Use-Case: Dealership Management Systems',
                                   description1: 'Streamline operations for car dealerships by creating systems that manage inventory, customer relationships, and sales tracking. Leverage Flutter for cross-platform application development, Firebase for real-time data management, and RESTful APIs for integrating with third-party services to enhance dealership operations.',
@@ -2188,21 +2132,13 @@ Example 2: Implemented a secure data management system for a financial instituti
                                 ),
 
                                 companyGrowthWidget(
-                                  image: Image.asset(
-                                    healthCare,
-                                    height: 44,
-                                    width: 44,
-                                    // color: primaryColor,
-                                  ),
+
                                   scores: "Healthcare",
                                   title1: 'Use-Case: Telemedicine Platforms',
                                   description1: 'Enable remote consultations between patients and healthcare providers with features such as video calls, appointment scheduling, and electronic health records (EHR) management. Utilize Flutter for both mobile and web applications, Firebase for real-time data updates, and RESTful APIs for integrating with EHR systems to support telemedicine functionalities.',
                                   title2: 'Use-Case: Patient Management Systems',
                                   description2: 'Create systems for managing patient information, appointments, billing, and communication in a unified platform. Implement Flutter for a user-friendly interface, Firebase for secure data storage, and GraphQL for efficient data querying to provide comprehensive patient management solutions.',
                                 ),
-
-
-
                               ],
                             ),
 
@@ -2302,24 +2238,17 @@ Example 2: Implemented a secure data management system for a financial instituti
                                 ],
                               ),
                             ),
-                            Container(
-                              height: (ResponsiveBreakpoints.of(context)
-                                          .screenWidth <
-                                      1270)
-                                  ? (ResponsiveBreakpoints.of(context)
-                                              .screenWidth <
-                                          990)
-                                      ? (ResponsiveBreakpoints.of(context)
-                                                  .screenWidth <
-                                              770)
-                                          ? (ResponsiveBreakpoints.of(context)
-                                                      .screenWidth <
-                                                  575)
-                                              ? 713.h
-                                              : 431
-                                          : 389
-                                      : 498
-                                  : 634,
+                            SizedBox(
+                              height: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
+                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
+                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                  ? 600.h   // Adjusted height for screens smaller than 575px
+                                  : 363     // Adjusted height for screens between 575px and 770px
+                                  : 328         // Adjusted height for screens between 770px and 990px
+                                  : 419             // Adjusted height for screens between 990px and 1270px
+                                  : 534,                // Adjusted height for screens larger than 1270px
+
                               width: (ResponsiveBreakpoints.of(context)
                                           .screenWidth <
                                       1270)
@@ -2386,7 +2315,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                               controller:
                                                   _portfolioScroll1Controller,
                                               axisDirection: Axis.horizontal,
-                                              loop: true,
+                                              loop: false,
                                               itemBuilder: (context, itemIndex,
                                                   realIndex) {
                                                 final item = whyChooseUsItems[itemIndex];
@@ -2817,7 +2746,9 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                         buttonTitle:
                                                             "Submit Now"
                                                                 .toUpperCase(),
-                                                        onPressed: () async {},
+                                                        onPressed: () async {
+                                                          _sendEmail();
+                                                        },
                                                         buttonTitleStyle:
                                                             const TextStyle(
                                                           fontSize: 16,
@@ -3101,7 +3032,9 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                       isOutlined: false,
                                                       buttonTitle: "Submit Now"
                                                           .toUpperCase(),
-                                                      onPressed: () async {},
+                                                      onPressed: () async {
+                                                        _sendEmail();
+                                                      },
                                                       buttonTitleStyle:
                                                           const TextStyle(
                                                         fontSize: 16,
@@ -3370,7 +3303,9 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                 isOutlined: false,
                                                 buttonTitle:
                                                     "Submit Now".toUpperCase(),
-                                                onPressed: () async {},
+                                                onPressed: () async {
+                                                  _sendEmail();
+                                                },
                                                 buttonTitleStyle: const TextStyle(
                                                   fontSize: 16,
                                                   color: Colors.white,
@@ -3417,78 +3352,81 @@ Example 2: Implemented a secure data management system for a financial instituti
                           ],
                         ),
                       ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        color: Colors.white,
+                      Visibility(
+                          visible: false,
                         child: Container(
-                          width: /*(ResponsiveBreakpoints.of(context).screenWidth < 1270)
-                              ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
-                                      ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                                          ? 479
-                                          : 546
-                                      : 726
-                                  : 966
-                              : */
-                              1266,
-                          padding: const EdgeInsets.symmetric(vertical: 120),
+                          width: MediaQuery.of(context).size.width,
                           color: Colors.white,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              GradientText(
-                                "Top Clients",
-                                style: GoogleFonts.montserrat(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                                colors: [
-                                  gradientColor1,
-                                  gradientColor2,
-                                  gradientColor3,
-                                ],
-                              ),
-                              SizedBox(
-                                height: 12.h,
-                              ),
-                              Text(
-                                "We worked with brands",
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.poppins(
-                                  fontSize: (ResponsiveBreakpoints.of(context)
-                                              .screenWidth <
-                                          990)
-                                      ? (ResponsiveBreakpoints.of(context)
-                                                  .screenWidth <
-                                              575)
-                                          ? 32
-                                          : 40
-                                      : 50,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.black.withOpacity(0.75),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 60,
-                              ),
-                              Container(
-                                child: Wrap(
-                                  spacing: 30,
-                                  runSpacing: 30,
-                                  crossAxisAlignment: WrapCrossAlignment.center,
-                                  alignment: WrapAlignment.center,
-                                  children: [
-                                    clientsImageWidget(image: brand1Image),
-                                    clientsImageWidget(image: brand2Image),
-                                    clientsImageWidget(image: brand3Image),
-                                    clientsImageWidget(image: brand1Image),
-                                    clientsImageWidget(image: brand2Image),
-                                    clientsImageWidget(image: brand3Image),
-                                    clientsImageWidget(image: brand1Image),
+                          child: Container(
+                            width: /*(ResponsiveBreakpoints.of(context).screenWidth < 1270)
+                                ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                            ? 479
+                                            : 546
+                                        : 726
+                                    : 966
+                                : */
+                                1266,
+                            padding: const EdgeInsets.symmetric(vertical: 120),
+                            color: Colors.white,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                GradientText(
+                                  "Top Clients",
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                  colors: [
+                                    gradientColor1,
+                                    gradientColor2,
+                                    gradientColor3,
                                   ],
                                 ),
-                              )
-                            ],
+                                SizedBox(
+                                  height: 12.h,
+                                ),
+                                Text(
+                                  "We worked with brands",
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.poppins(
+                                    fontSize: (ResponsiveBreakpoints.of(context)
+                                                .screenWidth <
+                                            990)
+                                        ? (ResponsiveBreakpoints.of(context)
+                                                    .screenWidth <
+                                                575)
+                                            ? 32
+                                            : 40
+                                        : 50,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.black.withOpacity(0.75),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 60,
+                                ),
+                                Container(
+                                  child: Wrap(
+                                    spacing: 30,
+                                    runSpacing: 30,
+                                    crossAxisAlignment: WrapCrossAlignment.center,
+                                    alignment: WrapAlignment.center,
+                                    children: [
+                                      clientsImageWidget(image: brand1Image),
+                                      clientsImageWidget(image: brand2Image),
+                                      clientsImageWidget(image: brand3Image),
+                                      clientsImageWidget(image: brand1Image),
+                                      clientsImageWidget(image: brand2Image),
+                                      clientsImageWidget(image: brand3Image),
+                                      clientsImageWidget(image: brand1Image),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -3518,7 +3456,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                     MainAxisAlignment.center,
                                                 children: [
                                                   Image.asset(
-                                                    logoImageInvertedTechnology,
+                                                    logoImageInvertedTechnologyWhite,
                                                     height: 50,
                                                     width: 100,
                                                   ),
@@ -3691,7 +3629,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                     MainAxisAlignment.center,
                                                 children: [
                                                   Image.asset(
-                                                    logoImageInvertedTechnology,
+                                                    logoImageInvertedTechnologyWhite,
                                                     height: (ResponsiveBreakpoints
                                                                     .of(context)
                                                                 .screenWidth <
@@ -3727,7 +3665,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                     isFullWidth: false,
                                                     isOutlined: true,
                                                     buttonTitle: null,
-                                                    onPressed: () async {},
+                                                    onPressed: () async {
+                                                      const url = 'https://www.facebook.com/invertedtec';
+                                                      if (await canLaunch(url)) {
+                                                        await launch(url);
+                                                      } else {
+                                                        throw 'Could not launch $url';
+                                                      }
+                                                    },
                                                     buttonTitleStyle: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
@@ -3753,7 +3698,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                     isFullWidth: false,
                                                     isOutlined: true,
                                                     buttonTitle: null,
-                                                    onPressed: () async {},
+                                                    onPressed: () async {
+                                                      const url = 'https://www.linkedin.com/in/inverted-technology-240029258/';
+                                                      if (await canLaunch(url)) {
+                                                        await launch(url);
+                                                      } else {
+                                                        throw 'Could not launch $url';
+                                                      }
+                                                    },
                                                     buttonTitleStyle: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
@@ -3778,7 +3730,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                     isFullWidth: false,
                                                     isOutlined: true,
                                                     buttonTitle: null,
-                                                    onPressed: () async {},
+                                                    onPressed: () async {
+                                                      const url = 'https://x.com/invertedtec';
+                                                      if (await canLaunch(url)) {
+                                                        await launch(url);
+                                                      } else {
+                                                        throw 'Could not launch $url';
+                                                      }
+                                                    },
                                                     buttonTitleStyle: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
@@ -3804,7 +3763,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                     isFullWidth: false,
                                                     isOutlined: true,
                                                     buttonTitle: null,
-                                                    onPressed: () async {},
+                                                    onPressed: () async {
+                                                      const url = 'https://www.instagram.com/invertedtechnology/';
+                                                      if (await canLaunch(url)) {
+                                                        await launch(url);
+                                                      } else {
+                                                        throw 'Could not launch $url';
+                                                      }
+                                                    },
                                                     buttonTitleStyle: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.white,
@@ -3868,7 +3834,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                             MainAxisAlignment.center,
                                         children: [
                                           Image.asset(
-                                            logoImageInvertedTechnology,
+                                            logoImageInvertedTechnologyWhite,
                                             height: (ResponsiveBreakpoints.of(
                                                             context)
                                                         .screenWidth <
@@ -3902,7 +3868,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                             isFullWidth: false,
                                             isOutlined: true,
                                             buttonTitle: null,
-                                            onPressed: () async {},
+                                            onPressed: () async {
+                                              const url = 'https://www.facebook.com/invertedtec';
+                                              if (await canLaunch(url)) {
+                                                await launch(url);
+                                              } else {
+                                                throw 'Could not launch $url';
+                                              }
+                                            },
                                             buttonTitleStyle: const TextStyle(
                                               fontSize: 16,
                                               color: Colors.white,
@@ -3926,7 +3899,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                             isFullWidth: false,
                                             isOutlined: true,
                                             buttonTitle: null,
-                                            onPressed: () async {},
+                                            onPressed: () async {
+                                              const url = 'https://www.linkedin.com/in/inverted-technology-240029258/';
+                                              if (await canLaunch(url)) {
+                                                await launch(url);
+                                              } else {
+                                                throw 'Could not launch $url';
+                                              }
+                                            },
                                             buttonTitleStyle: const TextStyle(
                                               fontSize: 16,
                                               color: Colors.white,
@@ -3950,7 +3930,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                             isFullWidth: false,
                                             isOutlined: true,
                                             buttonTitle: null,
-                                            onPressed: () async {},
+                                            onPressed: () async {
+                                              const url = 'https://x.com/invertedtec';
+                                              if (await canLaunch(url)) {
+                                                await launch(url);
+                                              } else {
+                                                throw 'Could not launch $url';
+                                              }
+                                            },
                                             buttonTitleStyle: const TextStyle(
                                               fontSize: 16,
                                               color: Colors.white,
@@ -3974,7 +3961,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                             isFullWidth: false,
                                             isOutlined: true,
                                             buttonTitle: null,
-                                            onPressed: () async {},
+                                            onPressed: () async {
+                                              const url = 'https://www.instagram.com/invertedtechnology/';
+                                              if (await canLaunch(url)) {
+                                                await launch(url);
+                                              } else {
+                                                throw 'Could not launch $url';
+                                              }
+                                            },
                                             buttonTitleStyle: const TextStyle(
                                               fontSize: 16,
                                               color: Colors.white,
@@ -4048,7 +4042,9 @@ Example 2: Implemented a secure data management system for a financial instituti
   }
 
   Widget companyGrowthWidget(
-      {required Widget image, required String scores, required String title1,required String description1, required String title2,required String description2}) {
+      {
+        // required Widget image,
+        required String scores, required String title1,required String description1, required String title2,required String description2}) {
     return (ResponsiveBreakpoints.of(context).screenWidth < 575)
         ? Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -4073,10 +4069,10 @@ Example 2: Implemented a secure data management system for a financial instituti
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          image,
-                          const SizedBox(
-                            height: 20,
-                          ),
+                          // image,
+                          // const SizedBox(
+                          //   height: 20,
+                          // ),
                           Text(
                             scores,
                             textAlign: TextAlign.left,
@@ -4121,10 +4117,10 @@ Example 2: Implemented a secure data management system for a financial instituti
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  image,
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  // image,
+                  // const SizedBox(
+                  //   height: 20,
+                  // ),
                   Text(
                     scores,
                     textAlign: TextAlign.left,
@@ -4151,11 +4147,171 @@ Example 2: Implemented a secure data management system for a financial instituti
 
 
   Widget companyStacksWidget(
-      {required Widget image}) {
+      {required Widget image,required String title,required String description}) {
     return (ResponsiveBreakpoints.of(context).screenWidth < 575)
-        ? image
-        : image;
+        ? Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+            Expanded(
+              child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Container(
+                    width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                        ? 185 // Updated width for screens smaller than 755px
+                        : 213 // Updated width for screens between 755px and 1250px
+                        : 250,   // Updated width for screens larger than 1250px
+                    decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      image,
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Text(
+                        title,
+                        textAlign: TextAlign.left,
+                        style: GoogleFonts.poppins(
+                          fontSize:
+                          (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                              ?  13
+                          : 16,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black.withOpacity(0.75),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      Text(
+                        description,
+                        textAlign: TextAlign.left,
+                        style: GoogleFonts.poppins(
+                          fontSize:
+                          (ResponsiveBreakpoints.of(context).screenWidth <
+                              1250)
+                              ? 12
+                              : 14,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black.withOpacity(0.75),
+                        ),
+                      ),
+                    ],
+                  ),
+                )),
+              ),
+            ),
+          ],
+        )
+        : Container(
+        width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+            ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+            ? 185 // Updated width for screens smaller than 755px
+            : 213 // Updated width for screens between 755px and 1250px
+            : 250,   // Updated width for screens larger than 1250px
+
+
+
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10),
+        ),
+
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              image,
+              const SizedBox(
+                height: 20,
+              ),
+              Text(
+                title,
+                textAlign: TextAlign.center,
+                style: GoogleFonts.poppins(
+                  fontSize:
+                  (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                      ? 13
+                      : 16,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black.withOpacity(0.75),
+                ),
+              ),
+              const SizedBox(
+                height: 6,
+              ),
+              Text(
+                description,
+                textAlign: TextAlign.justify,
+                style: GoogleFonts.poppins(
+                  fontSize:
+                  (ResponsiveBreakpoints.of(context).screenWidth <
+                      1250)
+                      ? 12
+                      : 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black.withOpacity(0.75),
+                ),
+              ),
+
+            ],
+          ),
+        ));
   }
+
+
+  // Widget companyStacksWidget(
+  //     {required Widget image,}) {
+  //   return (ResponsiveBreakpoints.of(context).screenWidth < 575)
+  //       ? Row(
+  //     mainAxisAlignment: MainAxisAlignment.center,
+  //     children: [
+  //       Expanded(
+  //         child: Padding(
+  //           padding: const EdgeInsets.symmetric(horizontal: 20),
+  //           child: Container(
+  //               width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+  //                   ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+  //                   ? 148 // Updated width for screens smaller than 755px
+  //                   : 170 // Updated width for screens between 755px and 1250px
+  //                   : 200,  // Updated width for screens larger than 1250px
+  //
+  //               decoration: BoxDecoration(
+  //                 color: Colors.white,
+  //                 borderRadius: BorderRadius.circular(10),
+  //               ),
+  //               child: Padding(
+  //                 padding: const EdgeInsets.symmetric(horizontal: 60,vertical: 40),
+  //                 child: image,
+  //               )),
+  //         ),
+  //       ),
+  //     ],
+  //   )
+  //       : Container(
+  //       width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+  //           ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+  //           ? 148 // Updated width for screens smaller than 755px
+  //           : 170 // Updated width for screens between 755px and 1250px
+  //           : 200,  // Updated width for screens larger than 1250px
+  //
+  //       decoration: BoxDecoration(
+  //         color: Colors.white,
+  //         borderRadius: BorderRadius.circular(10),
+  //       ),
+  //
+  //       child: Padding(
+  //         padding: const EdgeInsets.symmetric(horizontal: 60,vertical: 40),
+  //         child: image,
+  //       ));
+  // }
 
 
   Widget titleDescriptionWidget({required String title, required String description}) {

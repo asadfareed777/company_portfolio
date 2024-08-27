@@ -11,7 +11,8 @@ class PortfolioSliderWidget extends StatefulWidget {
   final String stackName;
   final String projectName;
   final String explanation;
-  const PortfolioSliderWidget({super.key, required this.itemIndex, required this.stackName, required this.projectName, required this.explanation});
+  final String image;
+  const PortfolioSliderWidget({super.key, required this.itemIndex, required this.stackName, required this.projectName, required this.explanation, required this.image});
 
   @override
   State<PortfolioSliderWidget> createState() => _PortfolioSliderWidgetState();
@@ -60,7 +61,7 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
-                          portfolioImages(widget.itemIndex),
+                            widget.image
                         ),
                         fit: BoxFit.fill,
                       ),
@@ -74,7 +75,10 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                               : [Colors.black54, Colors.transparent],
                           begin: Alignment.bottomCenter,
                           end: Alignment.topCenter,
+
                         ),
+                        borderRadius: BorderRadius.circular(10),
+
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -82,6 +86,9 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                           Container(
                             width: MediaQuery.of(context).size.width,
                             padding: EdgeInsets.all(30),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -166,7 +173,7 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                    portfolioImages(widget.itemIndex),
+                    widget.image,
                   ),
                   fit: BoxFit.fill,
                 ),
@@ -181,6 +188,8 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
                   ),
+                  borderRadius: BorderRadius.circular(10),
+
                 ),
                 child: SingleChildScrollView(
                   child: Column(
@@ -189,6 +198,9 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                       Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(30),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [

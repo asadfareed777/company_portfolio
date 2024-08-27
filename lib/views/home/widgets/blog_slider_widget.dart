@@ -78,6 +78,7 @@ class _BlogSliderWidgetState extends State<BlogSliderWidget> {
                           begin: Alignment.bottomCenter,
                           end: Alignment.topCenter,
                         ),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -85,6 +86,9 @@ class _BlogSliderWidgetState extends State<BlogSliderWidget> {
                           Container(
                             width: MediaQuery.of(context).size.width,
                             padding: EdgeInsets.all(30),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -194,6 +198,7 @@ class _BlogSliderWidgetState extends State<BlogSliderWidget> {
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
                   ),
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -201,6 +206,9 @@ class _BlogSliderWidgetState extends State<BlogSliderWidget> {
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(30),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
