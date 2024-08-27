@@ -327,15 +327,15 @@ Example 2: Implemented a secure data management system for a financial instituti
                   height: 1,
                   color: Colors.grey.withOpacity(0.20),
                 ),
-                drawerNavButton(
-                  title: "Blog",
-                  onPressed: () async {
-                    Navigator.pop(context);
-                    await Scrollable.ensureVisible(blogKey.currentContext!,
-                        duration: const Duration(milliseconds: 1000),
-                        curve: Curves.fastEaseInToSlowEaseOut);
-                  },
-                ),
+                // drawerNavButton(
+                //   title: "Blog",
+                //   onPressed: () async {
+                //     Navigator.pop(context);
+                //     await Scrollable.ensureVisible(blogKey.currentContext!,
+                //         duration: const Duration(milliseconds: 1000),
+                //         curve: Curves.fastEaseInToSlowEaseOut);
+                //   },
+                // ),
                 Divider(
                   height: 1,
                   color: Colors.grey.withOpacity(0.20),
@@ -455,18 +455,18 @@ Example 2: Implemented a secure data management system for a financial instituti
                                           Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
-                                  navButton(
-                                    title: "Blog",
-                                    textColor: Colors.black,
-                                    onPressed: () async {
-                                      await Scrollable.ensureVisible(
-                                          blogKey.currentContext!,
-                                          duration: const Duration(
-                                              milliseconds: 1000),
-                                          curve:
-                                              Curves.fastEaseInToSlowEaseOut);
-                                    },
-                                  ),
+                                  // navButton(
+                                  //   title: "Blog",
+                                  //   textColor: Colors.black,
+                                  //   onPressed: () async {
+                                  //     await Scrollable.ensureVisible(
+                                  //         blogKey.currentContext!,
+                                  //         duration: const Duration(
+                                  //             milliseconds: 1000),
+                                  //         curve:
+                                  //             Curves.fastEaseInToSlowEaseOut);
+                                  //   },
+                                  // ),
                                   navButton(
                                     title: "Contact",
                                     textColor: Colors.black,
@@ -708,20 +708,20 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                     },
                                                   ),
 
-                                                  navButton(
-                                                    title: "Blog",
-                                                    onPressed: () async {
-                                                      await Scrollable.ensureVisible(
-                                                          blogKey
-                                                              .currentContext!,
-                                                          duration:
-                                                              const Duration(
-                                                                  milliseconds:
-                                                                      1000),
-                                                          curve: Curves
-                                                              .fastEaseInToSlowEaseOut);
-                                                    },
-                                                  ),
+                                                  // navButton(
+                                                  //   title: "Blog",
+                                                  //   onPressed: () async {
+                                                  //     await Scrollable.ensureVisible(
+                                                  //         blogKey
+                                                  //             .currentContext!,
+                                                  //         duration:
+                                                  //             const Duration(
+                                                  //                 milliseconds:
+                                                  //                     1000),
+                                                  //         curve: Curves
+                                                  //             .fastEaseInToSlowEaseOut);
+                                                  //   },
+                                                  // ),
                                                   navButton(
                                                     title: "Contact",
                                                     onPressed: () async {
@@ -948,7 +948,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                           children: [
                             GradientText(
                               textAlign: TextAlign.center,
-                              "Empowering Innovation Through Cutting-Edge Technology",
+                              "Cutting-Edge Technology",
                               style: GoogleFonts
                                   .montserrat(
                                 fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
@@ -1095,7 +1095,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                         : 100,  // Width for screens larger than 1250px
                                   ),
                                   title: 'Web Development',
-                                  description: 'Unlock the full potential of the Android ecosystem with custom-built applications. Our Android development team combines cutting-edge technology with innovative design to create robust, user-friendly apps that engage your audience and drive business success.',
+                                  description: 'Captivate and convert with a website that stands out. Our web development services blend cutting-edge technologies like Laravel, ReactJS, and WordPress to create responsive, secure, and visually compelling websites that make a lasting impact.',
                                 ),
                               ],
                             ),
@@ -2096,48 +2096,28 @@ Example 2: Implemented a secure data management system for a financial instituti
                               children: [
                                 companyGrowthWidget(
                                   scores: "E-commerce",
-                                  title1: 'Use-Case: Online Retail Stores',
-                                  description1: 'Build sophisticated e-commerce platforms that provide a seamless shopping experience with features such as product listings, shopping carts, payment gateways, and order tracking. Utilize Flutter for creating responsive mobile and web applications, Firebase for real-time updates and user authentication, and RESTful APIs for secure payment integration.',
-                                  title2: 'Use-Case: Subscription Services',
-                                  description2: 'Develop robust subscription-based platforms that cater to various services, such as video streaming and digital content delivery. Implement Flutter for a sleek user interface, Firebase for managing user authentication and data storage, and AWS for scalable backend services to handle high user loads and subscription management.',
-
+                                  description: 'Transform your online business with scalable, high-performance e-commerce solutions. Our platforms enhance user experience, streamline operations, and seamlessly integrate with the latest payment systems and analytics tools, driving your digital growth.',
                                 ),
                                 companyGrowthWidget(
-                                  scores: "Education",
-                                  title1: 'Use-Case: E-learning Platforms',
-                                  description1: 'Create dynamic e-learning platforms that support interactive video lessons, quizzes, progress tracking, and community forums. Use Flutter for building cross-platform applications that work seamlessly on mobile and web, Firebase for real-time data synchronization, and GraphQL for efficient and flexible data fetching and management.',
-                                  title2: 'Use-Case: School Management Systems',
-                                  description2: 'Develop comprehensive school management systems that facilitate the management of student information, attendance records, grading, and communication between students, parents, and teachers. Leverage Flutter for a consistent user interface, Firebase for secure and scalable data storage, and RESTful APIs for integration with other educational tools and services.',
+                                  scores: "Innovative Education",
+                                  description: 'Revolutionize the education sector with cutting-edge digital solutions. We develop intuitive platforms that support educators and students, improving engagement, facilitating remote learning, and optimizing administrative efficiency.',
                                 ),
                                 companyGrowthWidget(
-                                  scores: "Finance",
-                                  title1: 'Use-Case: Fintech Solutions',
-                                  description1: 'Design secure and scalable fintech applications that handle various aspects of banking, investment, and personal finance management. Employ Flutter for developing cross-platform applications that provide a smooth user experience, Firebase for real-time data synchronization, and RESTful APIs for connecting with financial services and managing transactions.',
-                                  title2: 'Use-Case: Investment Platforms',
-                                  description2: 'Create platforms dedicated to investment management, offering features such as portfolio tracking, market analysis, and trading functionalities. Use Flutter for the user interface, Firebase for real-time updates, and GraphQL for efficient data querying to deliver up-to-date investment information and insights.',
+                                  scores: "Financial Empowerment",
+                                  description: 'Elevate your financial services with secure, compliant software solutions. Our expertise in mobile banking, investment management, and financial analytics empowers institutions to deliver advanced, efficient, and innovative services.',
                                 ),
                                 companyGrowthWidget(
-                                  scores: "Real Estate",
-                                  title1: 'Use-Case: Property Listing Platforms',
-                                  description1: 'Design platforms for listing and searching real estate properties, including features like advanced search filters, virtual property tours, and agent contact functionalities. Implement Flutter for cross-platform application development, Firebase for real-time updates and notifications, and RESTful APIs for integrating with external real estate services.',
-                                  title2: 'Use-Case: Real Estate Management Systems',
-                                  description2: 'Develop management systems for real estate operations that cover property management, tenant communication, and maintenance tracking. Use Flutter for a user-friendly interface, Firebase for efficient data storage, and AWS for scalable backend services to support the diverse needs of property management.',
+                                  scores: "Real Estate Optimization",
+                                  description: 'Unlock new opportunities in real estate with digital tools designed to streamline property management, enhance client engagement, and drive sales. Our solutions are tailored to the unique needs of agents, brokers, and firms.',
                                 ),
                                 companyGrowthWidget(
-                                  scores: "Automotive",
-                                  title1: 'Use-Case: Dealership Management Systems',
-                                  description1: 'Streamline operations for car dealerships by creating systems that manage inventory, customer relationships, and sales tracking. Leverage Flutter for cross-platform application development, Firebase for real-time data management, and RESTful APIs for integrating with third-party services to enhance dealership operations.',
-                                  title2: 'Use-Case: Car Rental Services',
-                                  description2: 'Develop applications for managing car rentals, including features for booking, fleet management, and customer support. Use Flutter for mobile app development, Firebase for real-time data synchronization, and AWS for scalable backend services to efficiently handle rental transactions and fleet operations.',
+                                  scores: "Automotive Innovation",
+                                  description: 'Drive the future of the automotive industry with advanced software that enhances vehicle connectivity, streamlines dealership operations, and improves customer experience. Our technology supports innovation in vehicle management and sales..',
                                 ),
 
                                 companyGrowthWidget(
-
-                                  scores: "Healthcare",
-                                  title1: 'Use-Case: Telemedicine Platforms',
-                                  description1: 'Enable remote consultations between patients and healthcare providers with features such as video calls, appointment scheduling, and electronic health records (EHR) management. Utilize Flutter for both mobile and web applications, Firebase for real-time data updates, and RESTful APIs for integrating with EHR systems to support telemedicine functionalities.',
-                                  title2: 'Use-Case: Patient Management Systems',
-                                  description2: 'Create systems for managing patient information, appointments, billing, and communication in a unified platform. Implement Flutter for a user-friendly interface, Firebase for secure data storage, and GraphQL for efficient data querying to provide comprehensive patient management solutions.',
+                                  scores: "Healthcare Advancement",
+                                  description: 'Advance patient care and operational efficiency with secure, compliant healthcare solutions. We specialize in developing applications for patient management, telemedicine, and health monitoring, ensuring improved outcomes for all.',
                                 ),
                               ],
                             ),
@@ -2145,230 +2125,233 @@ Example 2: Implemented a secure data management system for a financial instituti
                           ],
                         ),
                       ),
-                      Container(
-                        key: blogKey,
-                        width: MediaQuery.of(context).size.width,
-                        padding: const EdgeInsets.symmetric(vertical: 120),
-                        color: Colors.white,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 15),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  GradientText(
-                                    "Why Choose Us",
-                                    style: GoogleFonts.montserrat(
-                                      fontSize: 36,
-                                      fontWeight: FontWeight.w600,
+                      Visibility(
+                        visible: false,
+                        child: Container(
+                          key: blogKey,
+                          width: MediaQuery.of(context).size.width,
+                          padding: const EdgeInsets.symmetric(vertical: 120),
+                          color: Colors.white,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 15),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    GradientText(
+                                      "Why Choose Us",
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 36,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                      colors: [
+                                        gradientColor1,
+                                        gradientColor2,
+                                        gradientColor3,
+                                      ],
                                     ),
-                                    colors: [
-                                      gradientColor1,
-                                      gradientColor2,
-                                      gradientColor3,
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: 12.h,
-                                  ),
-                                  Text(
-                                    "Expertise in Cutting-Edge Technologies",
-                                    textAlign: TextAlign.left,
-                                    style: GoogleFonts.poppins(
-                                      fontSize: (ResponsiveBreakpoints.of(
-                                                      context)
-                                                  .screenWidth <
-                                              990)
-                                          ? (ResponsiveBreakpoints.of(context)
-                                                      .screenWidth <
-                                                  575)
-                                              ? 32
-                                              : 40
-                                          : 50,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black.withOpacity(0.75),
+                                    SizedBox(
+                                      height: 12.h,
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 26.h,
-                                  ),
-                                  Text(
-                                    "We stay ahead of the curve by leveraging the latest technologies to deliver innovative solutions.",
-                                    textAlign: TextAlign.left,
-                                    style: GoogleFonts.poppins(
-                                      fontSize: (ResponsiveBreakpoints.of(
-                                                      context)
-                                                  .screenWidth <
-                                              765)
-                                          ? (ResponsiveBreakpoints.of(context)
-                                                      .screenWidth <
-                                                  575)
-                                              ? 14
-                                              : 16
-                                          : 18,
-                                      fontWeight: FontWeight.w300,
-                                      color: Colors.black.withOpacity(0.75),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 50,
-                                  ),
-                                  Container(
-                                    width: (ResponsiveBreakpoints.of(context)
-                                                .screenWidth <
-                                            1270)
-                                        ? (ResponsiveBreakpoints.of(context)
+                                    Text(
+                                      "Expertise in Cutting-Edge Technologies",
+                                      textAlign: TextAlign.left,
+                                      style: GoogleFonts.poppins(
+                                        fontSize: (ResponsiveBreakpoints.of(
+                                                        context)
                                                     .screenWidth <
                                                 990)
                                             ? (ResponsiveBreakpoints.of(context)
                                                         .screenWidth <
-                                                    770)
-                                                ? (ResponsiveBreakpoints.of(
-                                                                context)
-                                                            .screenWidth <
-                                                        575)
-                                                    ? 479
-                                                    : 546
-                                                : 726
-                                            : 966
-                                        : 1266,
-                                  )
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              height: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
-                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
-                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                                  ? 600.h   // Adjusted height for screens smaller than 575px
-                                  : 363     // Adjusted height for screens between 575px and 770px
-                                  : 328         // Adjusted height for screens between 770px and 990px
-                                  : 419             // Adjusted height for screens between 990px and 1270px
-                                  : 534,                // Adjusted height for screens larger than 1270px
-
-                              width: (ResponsiveBreakpoints.of(context)
-                                          .screenWidth <
-                                      1270)
-                                  ? (ResponsiveBreakpoints.of(context)
-                                              .screenWidth <
-                                          990)
-                                      ? (ResponsiveBreakpoints.of(context)
+                                                    575)
+                                                ? 32
+                                                : 40
+                                            : 50,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black.withOpacity(0.75),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 26.h,
+                                    ),
+                                    Text(
+                                      "We stay ahead of the curve by leveraging the latest technologies to deliver innovative solutions.",
+                                      textAlign: TextAlign.left,
+                                      style: GoogleFonts.poppins(
+                                        fontSize: (ResponsiveBreakpoints.of(
+                                                        context)
+                                                    .screenWidth <
+                                                765)
+                                            ? (ResponsiveBreakpoints.of(context)
+                                                        .screenWidth <
+                                                    575)
+                                                ? 14
+                                                : 16
+                                            : 18,
+                                        fontWeight: FontWeight.w300,
+                                        color: Colors.black.withOpacity(0.75),
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 50,
+                                    ),
+                                    Container(
+                                      width: (ResponsiveBreakpoints.of(context)
                                                   .screenWidth <
-                                              770)
+                                              1270)
                                           ? (ResponsiveBreakpoints.of(context)
                                                       .screenWidth <
-                                                  575)
-                                              ? 479
-                                              : 546
-                                          : 726
-                                      : 966
-                                  : 1266,
-                              child: Column(
-                                children: [
-                                  const SizedBox(
-                                    height: 50,
-                                  ),
-                                  Expanded(
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Expanded(
-                                          child: LayoutBuilder(
-                                              builder: (context, constraints) {
-                                            return InfiniteCarousel.builder(
-                                              itemCount: whyChooseUsItems.length,
-                                              itemExtent: (ResponsiveBreakpoints
-                                                              .of(context)
+                                                  990)
+                                              ? (ResponsiveBreakpoints.of(context)
                                                           .screenWidth <
-                                                      1270)
+                                                      770)
                                                   ? (ResponsiveBreakpoints.of(
                                                                   context)
                                                               .screenWidth <
-                                                          990)
-                                                      ? (ResponsiveBreakpoints.of(
-                                                                      context)
-                                                                  .screenWidth <
-                                                              770)
-                                                          ? (ResponsiveBreakpoints.of(
-                                                                          context)
-                                                                      .screenWidth <
-                                                                  575)
-                                                              ? constraints
-                                                                  .maxWidth
-                                                              : 273
-                                                          : 242
-                                                      : 322
-                                                  : 425,
-                                              center: false,
-                                              anchor: 0.0,
-                                              velocityFactor: 0.8,
-                                              onIndexChanged: (index) {
-                                                ref
-                                                    .read(pageNumberProvider
-                                                        .notifier)
-                                                    .state = index;
-                                              },
-                                              controller:
-                                                  _portfolioScroll1Controller,
-                                              axisDirection: Axis.horizontal,
-                                              loop: false,
-                                              itemBuilder: (context, itemIndex,
-                                                  realIndex) {
-                                                final item = whyChooseUsItems[itemIndex];
+                                                          575)
+                                                      ? 479
+                                                      : 546
+                                                  : 726
+                                              : 966
+                                          : 1266,
+                                    )
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
+                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
+                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                    ? 600.h   // Adjusted height for screens smaller than 575px
+                                    : 363     // Adjusted height for screens between 575px and 770px
+                                    : 328         // Adjusted height for screens between 770px and 990px
+                                    : 419             // Adjusted height for screens between 990px and 1270px
+                                    : 534,                // Adjusted height for screens larger than 1270px
 
-                                                return BlogSliderWidget(
-                                                  whyChooseUsItems: item, itemIndex: itemIndex, title: item['title'].toString(), description: item['description'].toString(), image: item['image'].toString(),);
-                                              },
-                                            );
-                                          }),
-                                        ),
-                                      ],
+                                width: (ResponsiveBreakpoints.of(context)
+                                            .screenWidth <
+                                        1270)
+                                    ? (ResponsiveBreakpoints.of(context)
+                                                .screenWidth <
+                                            990)
+                                        ? (ResponsiveBreakpoints.of(context)
+                                                    .screenWidth <
+                                                770)
+                                            ? (ResponsiveBreakpoints.of(context)
+                                                        .screenWidth <
+                                                    575)
+                                                ? 479
+                                                : 546
+                                            : 726
+                                        : 966
+                                    : 1266,
+                                child: Column(
+                                  children: [
+                                    const SizedBox(
+                                      height: 50,
                                     ),
-                                  ),
+                                    Expanded(
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Expanded(
+                                            child: LayoutBuilder(
+                                                builder: (context, constraints) {
+                                              return InfiniteCarousel.builder(
+                                                itemCount: whyChooseUsItems.length,
+                                                itemExtent: (ResponsiveBreakpoints
+                                                                .of(context)
+                                                            .screenWidth <
+                                                        1270)
+                                                    ? (ResponsiveBreakpoints.of(
+                                                                    context)
+                                                                .screenWidth <
+                                                            990)
+                                                        ? (ResponsiveBreakpoints.of(
+                                                                        context)
+                                                                    .screenWidth <
+                                                                770)
+                                                            ? (ResponsiveBreakpoints.of(
+                                                                            context)
+                                                                        .screenWidth <
+                                                                    575)
+                                                                ? constraints
+                                                                    .maxWidth
+                                                                : 273
+                                                            : 242
+                                                        : 322
+                                                    : 425,
+                                                center: false,
+                                                anchor: 0.0,
+                                                velocityFactor: 0.8,
+                                                onIndexChanged: (index) {
+                                                  ref
+                                                      .read(pageNumberProvider
+                                                          .notifier)
+                                                      .state = index;
+                                                },
+                                                controller:
+                                                    _portfolioScroll1Controller,
+                                                axisDirection: Axis.horizontal,
+                                                loop: false,
+                                                itemBuilder: (context, itemIndex,
+                                                    realIndex) {
+                                                  final item = whyChooseUsItems[itemIndex];
+
+                                                  return BlogSliderWidget(
+                                                    whyChooseUsItems: item, itemIndex: itemIndex, title: item['title'].toString(), description: item['description'].toString(), image: item['image'].toString(),);
+                                                },
+                                              );
+                                            }),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 50,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  portfolioPageNumber == 0
+                                      ? activeIndicator()
+                                      : inActiveIndicator(),
                                   const SizedBox(
-                                    height: 50,
+                                    width: 20,
                                   ),
+                                  portfolioPageNumber == 1
+                                      ? activeIndicator()
+                                      : inActiveIndicator(),
+                                  const SizedBox(
+                                    width: 20,
+                                  ),
+                                  portfolioPageNumber == 2
+                                      ? activeIndicator()
+                                      : inActiveIndicator(),
+                                  const SizedBox(
+                                    width: 20,
+                                  ),
+                                  portfolioPageNumber == 3
+                                      ? activeIndicator()
+                                      : inActiveIndicator(),
+                                  const SizedBox(
+                                    width: 20,
+                                  ),
+                                  portfolioPageNumber == 4
+                                      ? activeIndicator()
+                                      : inActiveIndicator(),
                                 ],
                               ),
-                            ),
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                portfolioPageNumber == 0
-                                    ? activeIndicator()
-                                    : inActiveIndicator(),
-                                const SizedBox(
-                                  width: 20,
-                                ),
-                                portfolioPageNumber == 1
-                                    ? activeIndicator()
-                                    : inActiveIndicator(),
-                                const SizedBox(
-                                  width: 20,
-                                ),
-                                portfolioPageNumber == 2
-                                    ? activeIndicator()
-                                    : inActiveIndicator(),
-                                const SizedBox(
-                                  width: 20,
-                                ),
-                                portfolioPageNumber == 3
-                                    ? activeIndicator()
-                                    : inActiveIndicator(),
-                                const SizedBox(
-                                  width: 20,
-                                ),
-                                portfolioPageNumber == 4
-                                    ? activeIndicator()
-                                    : inActiveIndicator(),
-                              ],
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                       Container(
@@ -2419,7 +2402,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                             image: AssetImage(
                                                                 contactUs),
                                                             fit:
-                                                                BoxFit.fitWidth,
+                                                                BoxFit.cover,
                                                           ),
                                                           borderRadius:
                                                               BorderRadius
@@ -4044,7 +4027,7 @@ Example 2: Implemented a secure data management system for a financial instituti
   Widget companyGrowthWidget(
       {
         // required Widget image,
-        required String scores, required String title1,required String description1, required String title2,required String description2}) {
+        required String scores, required String description,}) {
     return (ResponsiveBreakpoints.of(context).screenWidth < 575)
         ? Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -4089,8 +4072,19 @@ Example 2: Implemented a secure data management system for a financial instituti
                           const SizedBox(
                             height: 6,
                           ),
-                          titleDescriptionWidget(title: title1,description: description1),
-                          titleDescriptionWidget(title: title2,description: description2),
+                          Text(
+                            description,
+                            textAlign: TextAlign.justify,
+                            style: GoogleFonts.poppins(
+                              fontSize:
+                              (ResponsiveBreakpoints.of(context).screenWidth <
+                                  765)
+                                  ? 12
+                                  : 14,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black.withOpacity(0.75),
+                            ),
+                          ),
 
                         ],
                       ),
@@ -4136,8 +4130,19 @@ Example 2: Implemented a secure data management system for a financial instituti
                   const SizedBox(
                     height: 6,
                   ),
-                  titleDescriptionWidget(title: title1,description: description1),
-                  titleDescriptionWidget(title: title2,description: description2),
+                  Text(
+                    description,
+                    textAlign: TextAlign.justify,
+                    style: GoogleFonts.poppins(
+                      fontSize:
+                      (ResponsiveBreakpoints.of(context).screenWidth <
+                          765)
+                          ? 12
+                          : 14,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black.withOpacity(0.75),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -4249,7 +4254,7 @@ Example 2: Implemented a secure data management system for a financial instituti
               ),
               Text(
                 description,
-                textAlign: TextAlign.justify,
+                textAlign: TextAlign.left,
                 style: GoogleFonts.poppins(
                   fontSize:
                   (ResponsiveBreakpoints.of(context).screenWidth <
