@@ -2358,7 +2358,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                         key: contactUsKey,
                         width: MediaQuery.of(context).size.width,
                         padding: const EdgeInsets.symmetric(vertical: 120),
-                        color: Colors.grey.withOpacity(0.06),
+                        color: Colors.white,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
