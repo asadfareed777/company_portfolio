@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_base/utils/image_assets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -238,15 +239,19 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                             ),
                             Visibility(
                               visible: isHovered,
-                              child: Text(
-                                (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                    ? widget.explanation
-                                    : widget.explanation,
-                                textAlign: TextAlign.left,
-                                style: GoogleFonts.poppins(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w300,
-                                  color: Colors.white.withOpacity(0.75),
+                              child: FadeInDown(
+                                from: 10,
+                                duration: Duration(milliseconds: 500),
+                                child: Text(
+                                  (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                      ? widget.explanation
+                                      : widget.explanation,
+                                  textAlign: TextAlign.left,
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.white.withOpacity(0.75),
+                                  ),
                                 ),
                               ),
                             ),

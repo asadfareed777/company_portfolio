@@ -561,13 +561,22 @@ Example 2: Implemented a secure data management system for a financial instituti
                     children: [
                       Container(
                         key: homeKey,
-                        height: (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                            ? (ResponsiveBreakpoints.of(context).screenWidth < 760)
-                            ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                        height: (ResponsiveBreakpoints.of(context).screenWidth < 550)
                             ? 600  // Height for screens smaller than 550px
-                            : 660  // Height for screens between 550px and 760px
-                            : 720  // Height for screens between 760px and 1000px
-                            : 720, // Height for screens larger than 1000px
+                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                            ? 630  // Height for screens between 550px and 600px
+                            : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                            ? 660  // Height for screens between 600px and 700px
+                            : (ResponsiveBreakpoints.of(context).screenWidth < 760)
+                            ? 690  // Height for screens between 700px and 760px
+                            : (ResponsiveBreakpoints.of(context).screenWidth < 850)
+                            ? 720  // Height for screens between 760px and 850px
+                            : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                            ? 750  // Height for screens between 850px and 1000px
+                            : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                            ? 790  // Height for screens between 1000px and 1200px
+                            : 780,  // Height for screens larger than 1200px
+                        // Height for screens larger than 1200px/
                         width: MediaQuery.of(context).size.width,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
@@ -829,23 +838,25 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   children: [
                                     SizedBox(height: 60.h),
                                     GradientText(
-                                      "Welcome to InvertedTech",
+                                      "Welcome to Inverted Technology",
+                                      textAlign: TextAlign.center,
                                       style: GoogleFonts.montserrat(
-                                        fontSize: (ResponsiveBreakpoints.of(
-                                                        context)
-                                                    .screenWidth <
-                                                1200)
-                                            ? (ResponsiveBreakpoints.of(context)
-                                                        .screenWidth <
-                                                    1000)
-                                                ? (ResponsiveBreakpoints.of(
-                                                                context)
-                                                            .screenWidth <
-                                                        765)
-                                                    ? 20
-                                                    : 40
-                                                : 54
-                                            : 74,
+                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                            ? 18  // Font size for screens smaller than 550px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                            ? 22  // Font size for screens between 550px and 600px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                            ? 26  // Font size for screens between 600px and 700px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                            ? 30  // Font size for screens between 700px and 765px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 850)
+                                            ? 34  // Font size for screens between 765px and 850px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                            ? 40  // Font size for screens between 850px and 1000px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                            ? 54  // Font size for screens between 1000px and 1200px
+                                            : 70,  // Font size for screens larger than 1200px
+
                                         fontWeight: FontWeight.w900,
                                       ),
                                       colors: [
@@ -854,19 +865,30 @@ Example 2: Implemented a secure data management system for a financial instituti
                                         gradientColor3,
                                       ],
                                     ),
+
                                     Padding(
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 106.w),
                                       child: Text(
-                                        "Honor Our Commitments With Integrity And Quality.",
+                                        "We Honor Our Commitments With Integrity And Quality",
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.poppins(
-                                          fontSize:
-                                              (ResponsiveBreakpoints.of(context)
-                                                          .screenWidth <
-                                                      765)
-                                                  ? 18
-                                                  : 26,
+                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                              ? 14  // Font size for screens smaller than 550px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                              ? 16  // Font size for screens between 550px and 600px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                              ? 18  // Font size for screens between 600px and 700px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                              ? 20  // Font size for screens between 700px and 765px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 850)
+                                              ? 22  // Font size for screens between 765px and 850px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                              ? 24  // Font size for screens between 850px and 1000px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                              ? 26  // Font size for screens between 1000px and 1200px
+                                              : 28,  // Font size for screens larger than 1200px
+
                                           fontWeight: FontWeight.w500,
                                           color: Colors.white.withOpacity(0.75),
                                         ),
@@ -877,15 +899,25 @@ Example 2: Implemented a secure data management system for a financial instituti
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 80.w),
                                       child: Text(
-                                        "At Inverted Technology, we are committed to empowering businesses through innovative, high-impact software solutions. With a foundation rooted in integrity and driven by quality, we specialize in cutting-edge technologies like Flutter, Android, iOS, AI/ML, and web development. Our mission is to translate ideas into transformative digital experiences that not only exceed expectations but also drive lasting success for our clients. We foster transparent communication and build trust through our multidisciplinary tech team, ensuring that every partnership is grounded in mutual respect and exceptional results.",
+                                        "At Inverted Technology, we are dedicated to empowering our clients with innovative, high-impact software solutions. Rooted in integrity and driven by quality, we specialize in cutting-edge technologies like Flutter, Android, iOS, AI/ML, and web development. Our mission is to transform ideas into exceptional digital experiences that not only exceed expectations but also drive lasting success for our customers. We believe that our team is an extension of yours, committed to serving your needs with unwavering dedication. Your satisfaction is our top priority, and we build trust through transparent communication, mutual respect, and a relentless pursuit of excellence.",
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.poppins(
-                                          fontSize:
-                                              (ResponsiveBreakpoints.of(context)
-                                                          .screenWidth <
-                                                      765)
-                                                  ? 13
-                                                  : 21,
+                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                              ? 13  // Font size for screens smaller than 550px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                              ? 14  // Font size for screens between 550px and 600px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                              ? 15  // Font size for screens between 600px and 700px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 760)
+                                              ? 16  // Font size for screens between 700px and 760px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 850)
+                                              ? 17  // Font size for screens between 760px and 850px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                              ? 19  // Font size for screens between 850px and 1000px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                              ? 21  // Font size for screens between 1000px and 1200px
+                                              : 21,  // Font size for screens larger than 1200px
+
                                           fontWeight: FontWeight.w100,
                                           color: Colors.white.withOpacity(0.75),
                                         ),
@@ -948,7 +980,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                           children: [
                             GradientText(
                               textAlign: TextAlign.center,
-                              "Cutting-Edge Technology",
+                              "Cutting-Edge Technologies",
                               style: GoogleFonts
                                   .montserrat(
                                 fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
@@ -957,8 +989,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                     ? 18  // Font size for screens smaller than 550px
                                     : 23  // Font size for screens between 550px and 755px
                                     : 34  // Font size for screens between 755px and 1250px
-                                    : 45, // Font size for screens larger than 1250px
-
+                                    : 45,
                                 fontWeight:
                                 FontWeight.w900,
                               ),
@@ -991,20 +1022,20 @@ Example 2: Implemented a secure data management system for a financial instituti
                                     image: Image.asset(
                                       flutterIcon,
                                       // color: lightBlueColor,
-                                        height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                            ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                            ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                            ? 40  // Height for screens smaller than 550px
-                                            : 50  // Height for screens between 550px and 755px
-                                            : 75      // Height for screens between 755px and 1250px
-                                            : 100,       // Height for screens larger than 1250px
-                                        width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                            ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                            ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                            ? 40  // Width for screens smaller than 550px
-                                            : 50  // Width for screens between 550px and 755px
-                                            : 75      // Width for screens between 755px and 1250px
-                                            : 100,  // Width for screens larger than 1250px
+                                      height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                          ? 40  // Height for screens smaller than 550px
+                                          : 50  // Height for screens between 550px and 755px
+                                          : 75  // Height for screens between 755px and 1250px
+                                          : 100,  // Height for screens larger than 1250px
+                                      width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                          ? 40  // Width for screens smaller than 550px
+                                          : 50  // Width for screens between 550px and 755px
+                                          : 75  // Width for screens between 755px and 1250px
+                                          : 100,  // Width for screens larger than 1250px
                                     ),
                                   title: 'Flutter Development',
                                   description: 'Experience the power of cross-platform development with Flutter. We craft stunning, high-performance mobile applications that deliver a consistent and seamless experience across both Android and iOS, ensuring your brand shines on every device.',
@@ -1013,20 +1044,20 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   image: Image.asset(
                                     appleIcon,
                                     // color: lightBlueColor,
-                                      height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                          ? 40  // Height for screens smaller than 550px
-                                          : 50  // Height for screens between 550px and 755px
-                                          : 75      // Height for screens between 755px and 1250px
-                                          : 100,       // Height for screens larger than 1250px
-                                      width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                          ? 40  // Width for screens smaller than 550px
-                                          : 50  // Width for screens between 550px and 755px
-                                          : 75      // Width for screens between 755px and 1250px
-                                          : 100,  // Width for screens larger than 1250px
+                                    height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                        ? 40  // Height for screens smaller than 550px
+                                        : 50  // Height for screens between 550px and 755px
+                                        : 75  // Height for screens between 755px and 1250px
+                                        : 100,  // Height for screens larger than 1250px
+                                    width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                        ? 40  // Width for screens smaller than 550px
+                                        : 50  // Width for screens between 550px and 755px
+                                        : 75  // Width for screens between 755px and 1250px
+                                        : 100,  // Width for screens larger than 1250px
                                   ),
                                   title: 'iOS Development',
                                   description: 'Elevate your business in the Apple ecosystem with sophisticated iOS applications. Our expert developers use the latest in Swift technology to deliver elegant, secure, and intuitive apps that resonate with users and enhance your brand\'s digital presence.',
@@ -1040,14 +1071,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                         ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
                                         ? 40  // Height for screens smaller than 550px
                                         : 50  // Height for screens between 550px and 755px
-                                        : 75      // Height for screens between 755px and 1250px
-                                        : 100,       // Height for screens larger than 1250px
+                                        : 75  // Height for screens between 755px and 1250px
+                                        : 100,  // Height for screens larger than 1250px
                                     width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
                                         ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
                                         ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
                                         ? 40  // Width for screens smaller than 550px
                                         : 50  // Width for screens between 550px and 755px
-                                        : 75      // Width for screens between 755px and 1250px
+                                        : 75  // Width for screens between 755px and 1250px
                                         : 100,  // Width for screens larger than 1250px
                                   ),
                                   title: 'Android Development',
@@ -1057,20 +1088,20 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   image: Image.asset(
                                     artificialIntelligence,
                                     // color: lightBlueColor,
-                                      height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                          ? 40  // Height for screens smaller than 550px
-                                          : 50  // Height for screens between 550px and 755px
-                                          : 75      // Height for screens between 755px and 1250px
-                                          : 100,       // Height for screens larger than 1250px
-                                      width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                          ? 40  // Width for screens smaller than 550px
-                                          : 50  // Width for screens between 550px and 755px
-                                          : 75      // Width for screens between 755px and 1250px
-                                          : 100,  // Width for screens larger than 1250px
+                                    height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                        ? 40  // Height for screens smaller than 550px
+                                        : 50  // Height for screens between 550px and 755px
+                                        : 75  // Height for screens between 755px and 1250px
+                                        : 100,  // Height for screens larger than 1250px
+                                    width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                        ? 40  // Width for screens smaller than 550px
+                                        : 50  // Width for screens between 550px and 755px
+                                        : 75  // Width for screens between 755px and 1250px
+                                        : 100,  // Width for screens larger than 1250px
                                   ),
                                   title: 'Artificial Intelligence & Machine Learning',
                                   description: 'Transform your business with the power of AI and Machine Learning. Our advanced AI/ML solutions unlock new opportunities for innovation, from predictive analytics to intelligent automation, driving smarter decisions and creating a competitive edge.',
@@ -1084,18 +1115,18 @@ Example 2: Implemented a secure data management system for a financial instituti
                                         ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
                                         ? 40  // Height for screens smaller than 550px
                                         : 50  // Height for screens between 550px and 755px
-                                        : 75      // Height for screens between 755px and 1250px
-                                        : 100,       // Height for screens larger than 1250px
+                                        : 75  // Height for screens between 755px and 1250px
+                                        : 100,  // Height for screens larger than 1250px
                                     width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
                                         ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
                                         ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
                                         ? 40  // Width for screens smaller than 550px
                                         : 50  // Width for screens between 550px and 755px
-                                        : 75      // Width for screens between 755px and 1250px
+                                        : 75  // Width for screens between 755px and 1250px
                                         : 100,  // Width for screens larger than 1250px
                                   ),
                                   title: 'Web Development',
-                                  description: 'Captivate and convert with a website that stands out. Our web development services blend cutting-edge technologies like Laravel, ReactJS, and WordPress to create responsive, secure, and visually compelling websites that make a lasting impact.',
+                                  description: 'Captivate and convert with a website that stands out. Our web development services blend cutting-edge technologies like Laravel, Flutter Web, and WordPress to create responsive, secure, and visually compelling websites that make a lasting impact.',
                                 ),
                               ],
                             ),
@@ -1214,15 +1245,22 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                     children: [
                                                       GradientText(
                                                         "Read About Us",
-                                                        style: GoogleFonts
-                                                            .montserrat(
-                                                          fontSize: (ResponsiveBreakpoints.of(
-                                                              context)
-                                                              .screenWidth <
-                                                              765)
-                                                              ? 16
-                                                              : 50,
-                                                          fontWeight:
+                                                    style: GoogleFonts.montserrat(
+                                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                                          ? 16  // Font size for screens smaller than 550px
+                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                          ? 18  // Font size for screens between 550px and 600px
+                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                                          ? 22  // Font size for screens between 600px and 700px
+                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                                          ? 28  // Font size for screens between 700px and 765px
+                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                                          ? 32  // Font size for screens between 765px and 1000px
+                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                                          ? 36  // Font size for screens between 1000px and 1250px
+                                                          : 40,  // Font size for screens larger than 1250px
+
+                                                    fontWeight:
                                                               FontWeight.w600,
                                                         ),
                                                         colors: [
@@ -1400,12 +1438,19 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                       "Read About Us",
                                                       style: GoogleFonts
                                                           .montserrat(
-                                                        fontSize: (ResponsiveBreakpoints.of(
-                                                            context)
-                                                            .screenWidth <
-                                                            765)
-                                                            ? 16
-                                                            : 50,
+                                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                                            ? 16  // Font size for screens smaller than 550px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                            ? 18  // Font size for screens between 550px and 600px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                                            ? 22  // Font size for screens between 600px and 700px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                                            ? 28  // Font size for screens between 700px and 765px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                                            ? 32  // Font size for screens between 765px and 1000px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                                            ? 36  // Font size for screens between 1000px and 1250px
+                                                            : 40,
                                                         fontWeight:
                                                         FontWeight.w600,
                                                       ),
@@ -1612,12 +1657,19 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                 "Read About Us",
                                                 style: GoogleFonts
                                                     .montserrat(
-                                                  fontSize: (ResponsiveBreakpoints.of(
-                                                      context)
-                                                      .screenWidth <
-                                                      765)
-                                                      ? 16
-                                                      : 50,
+                                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                                      ? 16  // Font size for screens smaller than 550px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                      ? 18  // Font size for screens between 550px and 600px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                                      ? 22  // Font size for screens between 600px and 700px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                                      ? 28  // Font size for screens between 700px and 765px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                                      ? 32  // Font size for screens between 765px and 1000px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                                      ? 36  // Font size for screens between 1000px and 1250px
+                                                      : 40,
                                                   fontWeight:
                                                   FontWeight.w600,
                                                 ),
@@ -2114,10 +2166,19 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   scores: "Automotive Innovation",
                                   description: 'Drive the future of the automotive industry with advanced software that enhances vehicle connectivity, streamlines dealership operations, and improves customer experience. Our technology supports innovation in vehicle management and sales..',
                                 ),
-
                                 companyGrowthWidget(
                                   scores: "Healthcare Advancement",
                                   description: 'Advance patient care and operational efficiency with secure, compliant healthcare solutions. We specialize in developing applications for patient management, telemedicine, and health monitoring, ensuring improved outcomes for all.',
+                                ),
+
+                                companyGrowthWidget(
+                                  scores: "Retail Transformation",
+                                  description: 'Reimagine the retail experience with dynamic solutions that integrate inventory management, point-of-sale systems, and customer engagement tools. Our technology optimizes operations and enhances the shopping experience, driving growth.',
+                                ),
+
+                                companyGrowthWidget(
+                                  scores: "AI/ML Excellence",
+                                  description: 'Unlock the power of data with AI and Machine Learning solutions tailored to your business needs. Our expertise in predictive analytics, automation, and intelligent decision-making drives innovation and operational efficiency across industries.',
                                 ),
                               ],
                             ),
@@ -4241,10 +4302,20 @@ Example 2: Implemented a secure data management system for a financial instituti
                 title,
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
-                  fontSize:
-                  (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                      ? 13
-                      : 16,
+                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                      ? 10  // Font size for screens smaller than 550px
+                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                      ? 11  // Font size for screens between 550px and 600px
+                      : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                      ? 12  // Font size for screens between 600px and 700px
+                      : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                      ? 13  // Font size for screens between 700px and 800px
+                      : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                      ? 14  // Font size for screens between 800px and 1000px
+                      : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                      ? 15  // Font size for screens between 1000px and 1250px
+                      : 16,  // Font size for screens larger than 1250px
+
                   fontWeight: FontWeight.w600,
                   color: Colors.black.withOpacity(0.75),
                 ),
@@ -4256,11 +4327,20 @@ Example 2: Implemented a secure data management system for a financial instituti
                 description,
                 textAlign: TextAlign.left,
                 style: GoogleFonts.poppins(
-                  fontSize:
-                  (ResponsiveBreakpoints.of(context).screenWidth <
-                      1250)
-                      ? 12
-                      : 14,
+                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                      ? 10  // Font size for screens smaller than 550px
+                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                      ? 11  // Font size for screens between 550px and 600px
+                      : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                      ? 12  // Font size for screens between 600px and 700px
+                      : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                      ? 13  // Font size for screens between 700px and 800px
+                      : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                      ? 14  // Font size for screens between 800px and 1000px
+                      : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                      ? 14  // Font size for screens between 1000px and 1250px
+                      : 14, // Font size for screens larger than 1250px
+
                   fontWeight: FontWeight.w400,
                   color: Colors.black.withOpacity(0.75),
                 ),
