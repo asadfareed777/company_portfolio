@@ -561,8 +561,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                     children: [
                       Container(
                         key: homeKey,
-                        height: (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                            ? 600  // Height for screens smaller than 550px
+                        height: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                            ? 500  // Height for screens smaller than 300px
+                            : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                            ? 530  // Height for screens between 300px and 400px
+                            : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                            ? 570  // Height for screens between 400px and 500px
+                            : (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                            ? 600  // Height for screens between 500px and 550px
                             : (ResponsiveBreakpoints.of(context).screenWidth < 600)
                             ? 630  // Height for screens between 550px and 600px
                             : (ResponsiveBreakpoints.of(context).screenWidth < 700)
@@ -575,7 +581,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                             ? 750  // Height for screens between 850px and 1000px
                             : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
                             ? 790  // Height for screens between 1000px and 1200px
-                            : 780,  // Height for screens larger than 1200px
+                            : 790, // Height for screens 1600px and above
                         // Height for screens larger than 1200px/
                         width: MediaQuery.of(context).size.width,
                         decoration: const BoxDecoration(
@@ -836,13 +842,45 @@ Example 2: Implemented a secure data management system for a financial instituti
                                 padding: EdgeInsets.symmetric(horizontal: 80.w),
                                 child: Column(
                                   children: [
-                                    SizedBox(height: 60.h),
+                                    SizedBox(
+                                      height: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                          ? 30.h  // Height for screens smaller than 300px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                          ? 35.h  // Height for screens between 300px and 400px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                          ? 40.h  // Height for screens between 400px and 500px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                          ? 45.h  // Height for screens between 500px and 550px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                          ? 50.h  // Height for screens between 550px and 600px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                          ? 55.h  // Height for screens between 600px and 700px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 760)
+                                          ? 60.h  // Height for screens between 700px and 760px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 850)
+                                          ? 65.h  // Height for screens between 760px and 850px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                          ? 70.h  // Height for screens between 850px and 1000px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                          ? 75.h  // Height for screens between 1000px and 1200px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1400)
+                                          ? 80.h  // Height for screens between 1200px and 1400px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1600)
+                                          ? 85.h  // Height for screens between 1400px and 1600px
+                                          : 60.h,  // Height for screens 1600px and above
+                                    ),
                                     GradientText(
                                       "Welcome to Inverted Technology",
                                       textAlign: TextAlign.center,
                                       style: GoogleFonts.montserrat(
-                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                            ? 18  // Font size for screens smaller than 550px
+                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                            ? 12  // Font size for screens smaller than 300px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                            ? 14  // Font size for screens between 300px and 400px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                            ? 16  // Font size for screens between 400px and 500px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                            ? 18  // Font size for screens between 500px and 550px
                                             : (ResponsiveBreakpoints.of(context).screenWidth < 600)
                                             ? 22  // Font size for screens between 550px and 600px
                                             : (ResponsiveBreakpoints.of(context).screenWidth < 700)
@@ -855,7 +893,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                             ? 40  // Font size for screens between 850px and 1000px
                                             : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
                                             ? 54  // Font size for screens between 1000px and 1200px
-                                            : 70,  // Font size for screens larger than 1200px
+                                            : 70,  // Font size for screens 1600px and above
 
                                         fontWeight: FontWeight.w900,
                                       ),
@@ -873,8 +911,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                         "We Honor Our Commitments With Integrity And Quality",
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.poppins(
-                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                              ? 14  // Font size for screens smaller than 550px
+                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                              ? 10  // Font size for screens smaller than 300px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                              ? 12  // Font size for screens between 300px and 400px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                              ? 13  // Font size for screens between 400px and 500px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                              ? 14  // Font size for screens between 500px and 550px
                                               : (ResponsiveBreakpoints.of(context).screenWidth < 600)
                                               ? 16  // Font size for screens between 550px and 600px
                                               : (ResponsiveBreakpoints.of(context).screenWidth < 700)
@@ -887,9 +931,13 @@ Example 2: Implemented a secure data management system for a financial instituti
                                               ? 24  // Font size for screens between 850px and 1000px
                                               : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
                                               ? 26  // Font size for screens between 1000px and 1200px
-                                              : 28,  // Font size for screens larger than 1200px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1400)
+                                              ? 27  // Font size for screens between 1200px and 1400px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1600)
+                                              ? 28  // Font size for screens between 1400px and 1600px
+                                              : 30,  // Font size for screens 1600px and above
 
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w400,
                                           color: Colors.white.withOpacity(0.75),
                                         ),
                                       ),
@@ -902,8 +950,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                         "At Inverted Technology, we are dedicated to empowering our clients with innovative, high-impact software solutions. Rooted in integrity and driven by quality, we specialize in cutting-edge technologies like Flutter, Android, iOS, AI/ML, and web development. Our mission is to transform ideas into exceptional digital experiences that not only exceed expectations but also drive lasting success for our customers. We believe that our team is an extension of yours, committed to serving your needs with unwavering dedication. Your satisfaction is our top priority, and we build trust through transparent communication, mutual respect, and a relentless pursuit of excellence.",
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.poppins(
-                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                              ? 13  // Font size for screens smaller than 550px
+                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                              ? 10  // Font size for screens smaller than 300px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                              ? 11  // Font size for screens between 300px and 400px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                              ? 12  // Font size for screens between 400px and 500px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                                              ? 13  // Font size for screens between 500px and 550px
                                               : (ResponsiveBreakpoints.of(context).screenWidth < 600)
                                               ? 14  // Font size for screens between 550px and 600px
                                               : (ResponsiveBreakpoints.of(context).screenWidth < 700)
@@ -916,7 +970,11 @@ Example 2: Implemented a secure data management system for a financial instituti
                                               ? 19  // Font size for screens between 850px and 1000px
                                               : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
                                               ? 21  // Font size for screens between 1000px and 1200px
-                                              : 21,  // Font size for screens larger than 1200px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1400)
+                                              ? 22  // Font size for screens between 1200px and 1400px
+                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1600)
+                                              ? 23  // Font size for screens between 1400px and 1600px
+                                              : 24,  // Font size for screens 1600px and above
 
                                           fontWeight: FontWeight.w100,
                                           color: Colors.white.withOpacity(0.75),
@@ -941,25 +999,66 @@ Example 2: Implemented a secure data management system for a financial instituti
                                             curve:
                                                 Curves.fastEaseInToSlowEaseOut);
                                       },
-                                      buttonTitleStyle: const TextStyle(
-                                        fontSize: 16,
+                                      buttonTitleStyle: TextStyle(
+                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                            ? 12  // Font size for screens smaller than 300px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                            ? 13  // Font size for screens between 300px and 400px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                            ? 14  // Font size for screens between 400px and 500px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                            ? 15  // Font size for screens between 500px and 600px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                            ? 16  // Font size for screens between 600px and 700px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                            ? 17  // Font size for screens between 700px and 800px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                            ? 18  // Font size for screens between 800px and 900px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                            ? 16  // Font size for screens between 900px and 1000px
+                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                            ? 16  // Font size for screens between 1000px and 1200px
+                                            : 16,  // Font size for screens larger than 1200px
+
                                         color: Colors.white,
                                         fontWeight: FontWeight.w500,
                                       ),
                                       buttonBorderRadius: 60,
                                       buttonColor: primaryColor,
-                                      horizontalPadding:
-                                          (ResponsiveBreakpoints.of(context)
-                                                      .screenWidth <
-                                                  1000)
-                                              ? 40
-                                              : 60,
-                                      verticalPadding:
-                                          (ResponsiveBreakpoints.of(context)
-                                                      .screenWidth <
-                                                  1000)
-                                              ? 16
-                                              : 24,
+                                      horizontalPadding: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                          ? 10
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                          ? 15
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                          ? 20
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                          ? 25
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                          ? 30
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                          ? 35
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                          ? 40
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                          ? 60
+                                          : 60, // for screens larger than 1000px
+                                      verticalPadding: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                          ? 8
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                          ? 10
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                          ? 12
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                          ? 14
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                          ? 16
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                          ? 18
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                          ? 20
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                          ? 24
+                                          : 24, // for screens larger than 1000px
                                     ),
                                   ],
                                 ),
@@ -1246,19 +1345,21 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                       GradientText(
                                                         "Read About Us",
                                                     style: GoogleFonts.montserrat(
-                                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                                          ? 16  // Font size for screens smaller than 550px
+                                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                          ? 18  // Font size for screens between 400px and 500px
                                                           : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                          ? 18  // Font size for screens between 550px and 600px
+                                                          ? 19  // Font size for screens between 500px and 600px
                                                           : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                                          ? 22  // Font size for screens between 600px and 700px
-                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                          ? 28  // Font size for screens between 700px and 765px
+                                                          ? 21  // Font size for screens between 600px and 700px
+                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                                          ? 22  // Font size for screens between 700px and 800px
+                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                                          ? 24  // Font size for screens between 800px and 900px
                                                           : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                          ? 32  // Font size for screens between 765px and 1000px
-                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                                          ? 36  // Font size for screens between 1000px and 1250px
-                                                          : 40,  // Font size for screens larger than 1250px
+                                                          ? 28  // Font size for screens between 900px and 1000px
+                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                                          ? 36  // Font size for screens between 1000px and 1200px
+                                                          : 36,
 
                                                     fontWeight:
                                                               FontWeight.w600,
@@ -1301,13 +1402,16 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                         "Our values are the guiding principles that define who we are as a company and how we conduct our business.",
                                                         textAlign: TextAlign.left,
                                                         style: GoogleFonts.poppins(
-                                                          fontSize:
-                                                          (ResponsiveBreakpoints.of(
-                                                              context)
-                                                              .screenWidth <
-                                                              765)
-                                                              ? 16
-                                                              : 18,
+                                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                                              ? 11  // Font size for screens smaller than 300px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                                              ? 13  // Font size for screens between 300px and 400px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                                              ? 15  // Font size for screens between 400px and 575px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                                              ? 16  // Font size for screens between 575px and 765px
+                                                              : 18,  // Font size for screens larger than 765px
+
                                                           fontWeight: FontWeight.w300,
                                                           color: Colors.black
                                                               .withOpacity(0.75),
@@ -1384,7 +1488,16 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                               "WHY WE'RE DIFFERENT VALUES",
                                                               style: GoogleFonts
                                                                   .montserrat(
-                                                                fontSize: 14,
+                                                                fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                                                    ? 10  // Font size for screens smaller than 300px
+                                                                    : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                                                    ? 11  // Font size for screens between 300px and 400px
+                                                                    : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                                    ? 12  // Font size for screens between 400px and 500px
+                                                                    : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                                    ? 13  // Font size for screens between 500px and 600px
+                                                                    : 14,  // Font size for screens larger than 600px
+
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w600,
@@ -1438,19 +1551,21 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                       "Read About Us",
                                                       style: GoogleFonts
                                                           .montserrat(
-                                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                                            ? 16  // Font size for screens smaller than 550px
+                                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                            ? 18  // Font size for screens between 400px and 500px
                                                             : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                            ? 18  // Font size for screens between 550px and 600px
+                                                            ? 19  // Font size for screens between 500px and 600px
                                                             : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                                            ? 22  // Font size for screens between 600px and 700px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                            ? 28  // Font size for screens between 700px and 765px
+                                                            ? 21  // Font size for screens between 600px and 700px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                                            ? 22  // Font size for screens between 700px and 800px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                                            ? 24  // Font size for screens between 800px and 900px
                                                             : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                            ? 32  // Font size for screens between 765px and 1000px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                                            ? 36  // Font size for screens between 1000px and 1250px
-                                                            : 40,
+                                                            ? 28  // Font size for screens between 900px and 1000px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                                            ? 36  // Font size for screens between 1000px and 1200px
+                                                            : 36,
                                                         fontWeight:
                                                         FontWeight.w600,
                                                       ),
@@ -1492,13 +1607,15 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                       "Our values are the guiding principles that define who we are as a company and how we conduct our business.",
                                                       textAlign: TextAlign.left,
                                                       style: GoogleFonts.poppins(
-                                                        fontSize:
-                                                        (ResponsiveBreakpoints.of(
-                                                            context)
-                                                            .screenWidth <
-                                                            765)
-                                                            ? 16
-                                                            : 18,
+                                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                                              ? 11  // Font size for screens smaller than 300px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                                              ? 13  // Font size for screens between 300px and 400px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                                              ? 15  // Font size for screens between 400px and 575px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                                              ? 16  // Font size for screens between 575px and 765px
+                                                              : 18,
                                                         fontWeight: FontWeight.w300,
                                                         color: Colors.black
                                                             .withOpacity(0.75),
@@ -1573,7 +1690,16 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                       "WHY WE'RE DIFFERENT VALUES",
                                                       style: GoogleFonts
                                                           .montserrat(
-                                                        fontSize: 14,
+                                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                                            ? 10  // Font size for screens smaller than 300px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                                            ? 11  // Font size for screens between 300px and 400px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                            ? 12  // Font size for screens between 400px and 500px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                            ? 13  // Font size for screens between 500px and 600px
+                                                            : 14,  // Font size for screens larger than 600px
+
                                                         fontWeight:
                                                             FontWeight.w600,
                                                       ),
@@ -1657,19 +1783,21 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                 "Read About Us",
                                                 style: GoogleFonts
                                                     .montserrat(
-                                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                                      ? 16  // Font size for screens smaller than 550px
+                                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                      ? 18  // Font size for screens between 400px and 500px
                                                       : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                      ? 18  // Font size for screens between 550px and 600px
+                                                      ? 19  // Font size for screens between 500px and 600px
                                                       : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                                      ? 22  // Font size for screens between 600px and 700px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                      ? 28  // Font size for screens between 700px and 765px
+                                                      ? 21  // Font size for screens between 600px and 700px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                                      ? 22  // Font size for screens between 700px and 800px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                                      ? 24  // Font size for screens between 800px and 900px
                                                       : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                      ? 32  // Font size for screens between 765px and 1000px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                                      ? 36  // Font size for screens between 1000px and 1250px
-                                                      : 40,
+                                                      ? 28  // Font size for screens between 900px and 1000px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                                      ? 36  // Font size for screens between 1000px and 1200px
+                                                      : 36,
                                                   fontWeight:
                                                   FontWeight.w600,
                                                 ),
@@ -1711,13 +1839,15 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                 "Our values are the guiding principles that define who we are as a company and how we conduct our business.",
                                                 textAlign: TextAlign.left,
                                                 style: GoogleFonts.poppins(
-                                                  fontSize:
-                                                      (ResponsiveBreakpoints.of(
-                                                                      context)
-                                                                  .screenWidth <
-                                                              765)
-                                                          ? 16
-                                                          : 18,
+                                                    fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                                        ? 11  // Font size for screens smaller than 300px
+                                                        : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                                        ? 13  // Font size for screens between 300px and 400px
+                                                        : (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                                        ? 15  // Font size for screens between 400px and 575px
+                                                        : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                                        ? 16  // Font size for screens between 575px and 765px
+                                                        : 18,
                                                   fontWeight: FontWeight.w300,
                                                   color: Colors.black
                                                       .withOpacity(0.75),
@@ -1795,7 +1925,16 @@ Example 2: Implemented a secure data management system for a financial instituti
                                               GradientText(
                                                 "WHY WE'RE DIFFERENT VALUES",
                                                 style: GoogleFonts.montserrat(
-                                                  fontSize: 14,
+                                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                                      ? 10  // Font size for screens smaller than 300px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                                      ? 11  // Font size for screens between 300px and 400px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                      ? 12  // Font size for screens between 400px and 500px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                      ? 13  // Font size for screens between 500px and 600px
+                                                      : 14,  // Font size for screens larger than 600px
+
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                                 colors: [
@@ -1845,7 +1984,21 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   GradientText(
                                     "Our Portfolio",
                                     style: GoogleFonts.montserrat(
-                                      fontSize: 36,
+                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                          ? 18  // Font size for screens between 400px and 500px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                          ? 19  // Font size for screens between 500px and 600px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                          ? 21  // Font size for screens between 600px and 700px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                          ? 22  // Font size for screens between 700px and 800px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                          ? 24  // Font size for screens between 800px and 900px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                          ? 28  // Font size for screens between 900px and 1000px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                          ? 36  // Font size for screens between 1000px and 1200px
+                                          : 36,
                                       fontWeight: FontWeight.w600,
                                     ),
                                     colors: [
@@ -1861,16 +2014,18 @@ Example 2: Implemented a secure data management system for a financial instituti
                                     "Showcasing Our Expertise Through Successful Projects",
                                     textAlign: TextAlign.left,
                                     style: GoogleFonts.poppins(
-                                      fontSize: (ResponsiveBreakpoints.of(
-                                                      context)
-                                                  .screenWidth <
-                                              990)
-                                          ? (ResponsiveBreakpoints.of(context)
-                                                      .screenWidth <
-                                                  575)
-                                              ? 24
-                                              : 32
-                                          : 40,
+                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                          ? 12   // Font size for screens smaller than 300px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                          ? 14  // Font size for screens between 300px and 400px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                          ? 24  // Font size for screens between 400px and 575px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                          ? 32  // Font size for screens between 575px and 765px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 990)
+                                          ? 32  // Font size for screens between 765px and 990px
+                                          : 40,  // Font size for screens larger than 990px
+
                                       fontWeight: FontWeight.w600,
                                       color: Colors.black.withOpacity(0.75),
                                     ),
@@ -1882,16 +2037,15 @@ Example 2: Implemented a secure data management system for a financial instituti
                                     "We take pride in our diverse portfolio, which showcases our ability to deliver high-quality solutions across various industries.\nOne of our standout projects is the PakWheels app, a comprehensive platform for car enthusiasts.",
                                     textAlign: TextAlign.left,
                                     style: GoogleFonts.poppins(
-                                      fontSize: (ResponsiveBreakpoints.of(
-                                                      context)
-                                                  .screenWidth <
-                                              765)
-                                          ? (ResponsiveBreakpoints.of(context)
-                                                      .screenWidth <
-                                                  575)
-                                              ? 14
-                                              : 16
-                                          : 18,
+                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                          ? 11   // Font size for screens smaller than 300px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                          ? 12  // Font size for screens between 300px and 400px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                                          ? 13  // Font size for screens between 400px and 575px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                          ? 16  // Font size for screens between 575px and 765px
+                                          : 18,  // Font size for screens larger than 765px
                                       fontWeight: FontWeight.w300,
                                       color: Colors.black.withOpacity(0.75),
                                     ),
@@ -2078,7 +2232,21 @@ Example 2: Implemented a secure data management system for a financial instituti
                             GradientText(
                               "Our Target Market",
                               style: GoogleFonts.montserrat(
-                                fontSize: 36,
+                                fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                    ? 18  // Font size for screens between 400px and 500px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                    ? 19  // Font size for screens between 500px and 600px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                    ? 21  // Font size for screens between 600px and 700px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                    ? 22  // Font size for screens between 700px and 800px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                    ? 24  // Font size for screens between 800px and 900px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                    ? 28  // Font size for screens between 900px and 1000px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                    ? 36  // Font size for screens between 1000px and 1200px
+                                    : 36,  // Font size for screens larger than 1200px
                                 fontWeight: FontWeight.w600,
                               ),
                               colors: [
@@ -2094,11 +2262,24 @@ Example 2: Implemented a secure data management system for a financial instituti
                               "Tailored Solutions for Diverse Industries",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                fontSize: (ResponsiveBreakpoints.of(context)
-                                            .screenWidth <
-                                        765)
-                                    ? 16
-                                    : 40,
+                                fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                    ? 12  // Font size for screens smaller than 300px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                    ? 14  // Font size for screens between 300px and 400px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                    ? 16  // Font size for screens between 400px and 500px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                    ? 20  // Font size for screens between 500px and 600px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                    ? 24  // Font size for screens between 600px and 700px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                    ? 28  // Font size for screens between 700px and 800px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                    ? 32  // Font size for screens between 800px and 900px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                    ? 36  // Font size for screens between 900px and 1000px
+                                    : 40,  // Font size for screens larger than 1000px
+
                                 fontWeight: FontWeight.w500,
                                 color: Colors.black.withOpacity(0.75),
                               ),
@@ -2112,11 +2293,25 @@ Example 2: Implemented a secure data management system for a financial instituti
                                 "Our services are designed to meet the needs of a diverse range of industries. We understand that each industry has unique requirements, and we tailor our solutions to ensure maximum impact and efficiency.",
                                 textAlign: TextAlign.left,
                                 style: GoogleFonts.poppins(
-                                  fontSize: (ResponsiveBreakpoints.of(context)
-                                              .screenWidth <
-                                          765)
-                                      ? 16
-                                      : 18,
+                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                      ? 11  // Font size for screens smaller than 300px
+                                      : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                      ? 12  // Font size for screens between 300px and 400px
+                                      : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                      ? 13  // Font size for screens between 400px and 500px
+                                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                      ? 14  // Font size for screens between 500px and 600px
+                                      : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                      ? 15  // Font size for screens between 600px and 700px
+                                      : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                      ? 16  // Font size for screens between 700px and 765px
+                                      : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                      ? 17  // Font size for screens between 765px and 800px
+                                      : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                      ? 18  // Font size for screens between 800px and 900px
+                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                      ? 19  // Font size for screens between 900px and 1000px
+                                      : 18,  // Font size for screens larger than 1000px
                                   fontWeight: FontWeight.w300,
                                   color: Colors.black.withOpacity(0.75),
                                 ),
@@ -2128,7 +2323,26 @@ Example 2: Implemented a secure data management system for a financial instituti
                             GradientText(
                               "Industries We Serve:",
                               style: GoogleFonts.montserrat(
-                                fontSize: 16,
+                                fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                    ? 12  // Font size for screens smaller than 300px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                    ? 13  // Font size for screens between 300px and 400px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                    ? 14  // Font size for screens between 400px and 500px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                    ? 15  // Font size for screens between 500px and 600px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                    ? 16  // Font size for screens between 600px and 700px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                    ? 16  // Font size for screens between 700px and 765px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                    ? 16  // Font size for screens between 765px and 800px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                    ? 16  // Font size for screens between 800px and 900px
+                                    : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                    ? 16  // Font size for screens between 900px and 1000px
+                                    : 16,  // Font size for screens larger than 1000px
+
                                 fontWeight: FontWeight.w600,
                               ),
                               colors: [
@@ -2529,7 +2743,21 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                         "Contact Us",
                                                         style: GoogleFonts
                                                             .montserrat(
-                                                          fontSize: 36,
+                                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                              ? 18  // Font size for screens between 400px and 500px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                              ? 19  // Font size for screens between 500px and 600px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                                              ? 21  // Font size for screens between 600px and 700px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                                              ? 22  // Font size for screens between 700px and 800px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                                              ? 24  // Font size for screens between 800px and 900px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                                              ? 28  // Font size for screens between 900px and 1000px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                                              ? 36  // Font size for screens between 1000px and 1200px
+                                                              : 36,
                                                           fontWeight:
                                                               FontWeight.w600,
                                                         ),
@@ -2548,13 +2776,27 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                             TextAlign.left,
                                                         style:
                                                             GoogleFonts.poppins(
-                                                          fontSize: (ResponsiveBreakpoints.of(
-                                                                          context)
-                                                                      .screenWidth <
-                                                                  765)
-                                                              ? 16
-                                                              : 50,
-                                                          fontWeight:
+                                                              fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                                                  ? 12  // Font size for screens smaller than 300px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                                                  ? 13  // Font size for screens between 300px and 400px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                                  ? 14  // Font size for screens between 400px and 500px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                                  ? 15  // Font size for screens between 500px and 600px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                                                  ? 16  // Font size for screens between 600px and 700px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                                                  ? 17  // Font size for screens between 700px and 765px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                                                  ? 18  // Font size for screens between 765px and 800px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                                                  ? 25  // Font size for screens between 800px and 900px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                                                  ? 30  // Font size for screens between 900px and 1000px
+                                                                  : 50,  // Font size for screens larger than 1000px
+
+                                                              fontWeight:
                                                               FontWeight.w600,
                                                           color: Colors.black
                                                               .withOpacity(
@@ -2570,13 +2812,27 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                             TextAlign.left,
                                                         style:
                                                             GoogleFonts.poppins(
-                                                          fontSize: (ResponsiveBreakpoints.of(
-                                                                          context)
-                                                                      .screenWidth <
-                                                                  765)
-                                                              ? 12
-                                                              : 38,
-                                                          fontWeight:
+                                                              fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                                                  ? 8   // Font size for screens smaller than 300px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                                                  ? 10  // Font size for screens between 300px and 400px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                                  ? 11  // Font size for screens between 400px and 500px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                                  ? 12  // Font size for screens between 500px and 600px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                                                  ? 14  // Font size for screens between 600px and 700px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                                                  ? 16  // Font size for screens between 700px and 765px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                                                  ? 22  // Font size for screens between 765px and 800px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                                                  ? 28  // Font size for screens between 800px and 900px
+                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                                                  ? 32  // Font size for screens between 900px and 1000px
+                                                                  : 38,  // Font size for screens larger than 1000px
+
+                                                              fontWeight:
                                                               FontWeight.w300,
                                                           color: Colors.black
                                                               .withOpacity(
@@ -2593,11 +2849,17 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                             .left,
                                                         style: GoogleFonts
                                                             .poppins(
-                                                          fontSize:
-                                                          (ResponsiveBreakpoints.of(context).screenWidth <
-                                                              765)
-                                                              ? 16
-                                                              : 14,
+                                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                                              ? 8   // Font size for screens smaller than 300px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                                              ? 10  // Font size for screens between 300px and 400px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                              ? 12  // Font size for screens between 400px and 500px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                              ? 14  // Font size for screens between 500px and 600px
+                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                                              ? 16  // Font size for screens between 600px and 765px
+                                                              : 14,  // Font size for screens larger than 765px
                                                           fontWeight:
                                                           FontWeight
                                                               .w300,
@@ -2828,7 +3090,21 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                       "Contact Us",
                                                       style: GoogleFonts
                                                           .montserrat(
-                                                        fontSize: 36,
+                                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                            ? 18  // Font size for screens between 400px and 500px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                            ? 19  // Font size for screens between 500px and 600px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                                            ? 21  // Font size for screens between 600px and 700px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                                            ? 22  // Font size for screens between 700px and 800px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                                            ? 24  // Font size for screens between 800px and 900px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                                            ? 28  // Font size for screens between 900px and 1000px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                                            ? 36  // Font size for screens between 1000px and 1200px
+                                                            : 36,
                                                         fontWeight:
                                                             FontWeight.w600,
                                                       ),
@@ -2846,12 +3122,25 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                       textAlign: TextAlign.left,
                                                       style:
                                                           GoogleFonts.poppins(
-                                                        fontSize: (ResponsiveBreakpoints.of(
-                                                                        context)
-                                                                    .screenWidth <
-                                                                765)
-                                                            ? 16
-                                                            : 50,
+                                                            fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                                                ? 12  // Font size for screens smaller than 300px
+                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                                                ? 13  // Font size for screens between 300px and 400px
+                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                                ? 14  // Font size for screens between 400px and 500px
+                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                                ? 15  // Font size for screens between 500px and 600px
+                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                                                ? 16  // Font size for screens between 600px and 700px
+                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                                                ? 17  // Font size for screens between 700px and 765px
+                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                                                ? 18  // Font size for screens between 765px and 800px
+                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                                                ? 25  // Font size for screens between 800px and 900px
+                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                                                ? 30  // Font size for screens between 900px and 1000px
+                                                                : 50,  // Font size for screens larger than 1000px
                                                         fontWeight:
                                                             FontWeight.w600,
                                                         color: Colors.black
@@ -2867,12 +3156,25 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                       TextAlign.left,
                                                       style:
                                                       GoogleFonts.poppins(
-                                                        fontSize: (ResponsiveBreakpoints.of(
-                                                            context)
-                                                            .screenWidth <
-                                                            765)
-                                                            ? 12
-                                                            : 38,
+                                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                                            ? 8   // Font size for screens smaller than 300px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                                            ? 10  // Font size for screens between 300px and 400px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                            ? 11  // Font size for screens between 400px and 500px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                            ? 12  // Font size for screens between 500px and 600px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                                            ? 14  // Font size for screens between 600px and 700px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                                            ? 16  // Font size for screens between 700px and 765px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                                            ? 22  // Font size for screens between 765px and 800px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                                            ? 28  // Font size for screens between 800px and 900px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                                            ? 32  // Font size for screens between 900px and 1000px
+                                                            : 38,  // Font size for screens larger than 1000px
                                                         fontWeight:
                                                         FontWeight.w300,
                                                         color: Colors.black
@@ -2890,11 +3192,18 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                           .left,
                                                       style: GoogleFonts
                                                           .poppins(
-                                                        fontSize:
-                                                        (ResponsiveBreakpoints.of(context).screenWidth <
-                                                            765)
-                                                            ? 16
-                                                            : 14,
+                                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                                            ? 8   // Font size for screens smaller than 300px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                                            ? 10  // Font size for screens between 300px and 400px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                            ? 12  // Font size for screens between 400px and 500px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                            ? 14  // Font size for screens between 500px and 600px
+                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                                            ? 16  // Font size for screens between 600px and 765px
+                                                            : 18,  // Font size for screens larger than 765px
+
                                                         fontWeight:
                                                         FontWeight
                                                             .w300,
@@ -3120,7 +3429,21 @@ Example 2: Implemented a secure data management system for a financial instituti
                                               GradientText(
                                                 "Contact Us",
                                                 style: GoogleFonts.montserrat(
-                                                  fontSize: 36,
+                                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                      ? 18  // Font size for screens between 400px and 500px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                      ? 19  // Font size for screens between 500px and 600px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                                      ? 21  // Font size for screens between 600px and 700px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                                      ? 22  // Font size for screens between 700px and 800px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                                      ? 24  // Font size for screens between 800px and 900px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                                      ? 28  // Font size for screens between 900px and 1000px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                                      ? 36  // Font size for screens between 1000px and 1200px
+                                                      : 36,
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                                 colors: [
@@ -3136,13 +3459,25 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                 "Get in Touch",
                                                 textAlign: TextAlign.left,
                                                 style: GoogleFonts.poppins(
-                                                  fontSize:
-                                                      (ResponsiveBreakpoints.of(
-                                                                      context)
-                                                                  .screenWidth <
-                                                              765)
-                                                          ? 16
-                                                          : 50,
+                                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                                      ? 12  // Font size for screens smaller than 300px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                                      ? 13  // Font size for screens between 300px and 400px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                      ? 14  // Font size for screens between 400px and 500px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                      ? 15  // Font size for screens between 500px and 600px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                                      ? 16  // Font size for screens between 600px and 700px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                                      ? 17  // Font size for screens between 700px and 765px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                                      ? 18  // Font size for screens between 765px and 800px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                                      ? 25  // Font size for screens between 800px and 900px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                                      ? 30  // Font size for screens between 900px and 1000px
+                                                      : 50,  // Font size for screens larger than 1000px
                                                   fontWeight: FontWeight.w600,
                                                   color: Colors.black
                                                       .withOpacity(0.75),
@@ -3155,13 +3490,25 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                 "Let's Discuss Your Project",
                                                 textAlign: TextAlign.left,
                                                 style: GoogleFonts.poppins(
-                                                  fontSize:
-                                                      (ResponsiveBreakpoints.of(
-                                                                      context)
-                                                                  .screenWidth <
-                                                              765)
-                                                          ? 12
-                                                          : 38,
+                                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                                      ? 8   // Font size for screens smaller than 300px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                                      ? 10  // Font size for screens between 300px and 400px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                      ? 11  // Font size for screens between 400px and 500px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                      ? 12  // Font size for screens between 500px and 600px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                                      ? 14  // Font size for screens between 600px and 700px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                                      ? 16  // Font size for screens between 700px and 765px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                                      ? 22  // Font size for screens between 765px and 800px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                                      ? 28  // Font size for screens between 800px and 900px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                                      ? 32  // Font size for screens between 900px and 1000px
+                                                      : 38,  // Font size for screens larger than 1000px
                                                   fontWeight: FontWeight.w300,
                                                   color: Colors.black
                                                       .withOpacity(0.75),
@@ -3177,11 +3524,18 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                     .left,
                                                 style: GoogleFonts
                                                     .poppins(
-                                                  fontSize:
-                                                  (ResponsiveBreakpoints.of(context).screenWidth <
-                                                      765)
-                                                      ? 16
-                                                      : 14,
+                                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                                      ? 8   // Font size for screens smaller than 300px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                                      ? 10  // Font size for screens between 300px and 400px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                                      ? 12  // Font size for screens between 400px and 500px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                                      ? 14  // Font size for screens between 500px and 600px
+                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                                                      ? 16  // Font size for screens between 600px and 765px
+                                                      : 18,  // Font size for screens larger than 765px
+
                                                   fontWeight:
                                                   FontWeight
                                                       .w300,
@@ -4109,7 +4463,13 @@ Example 2: Implemented a secure data management system for a financial instituti
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 60,vertical: 40),
+                      padding: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                          ? const EdgeInsets.symmetric(horizontal: 20, vertical: 20) // Padding for screens smaller than 500px
+                          : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                          ? const EdgeInsets.symmetric(horizontal: 30, vertical: 30) // Padding for screens between 500px and 800px
+                          : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                          ? const EdgeInsets.symmetric(horizontal: 45, vertical: 35) // Padding for screens between 800px and 1250px
+                          : const EdgeInsets.symmetric(horizontal: 60, vertical: 40),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -4119,29 +4479,39 @@ Example 2: Implemented a secure data management system for a financial instituti
                           // ),
                           Text(
                             scores,
-                            textAlign: TextAlign.left,
+                            textAlign: TextAlign.center,
                             style: GoogleFonts.poppins(
-                              fontSize:
-                                  (ResponsiveBreakpoints.of(context).screenWidth <
-                                          1250)
-                                      ? 24
-                                      : 30,
+                              fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                  ? 18 // Font size for screens smaller than 500px
+                                  : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                  ? 24 // Font size for screens between 500px and 800px
+                                  : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                  ? 24 // Font size for screens between 800px and 1250px
+                                  : 30, // Font size for screens larger than 1250px
                               fontWeight: FontWeight.w600,
                               color: Colors.black.withOpacity(0.75),
                             ),
                           ),
-                          const SizedBox(
-                            height: 6,
+                          SizedBox(
+                            height: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                ? 4 // Height for screens smaller than 500px
+                                : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                ? 5 // Height for screens between 500px and 800px
+                                : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                ? 6 // Height for screens between 800px and 1250px
+                                : 6, // Height for screens larger than 1250px
                           ),
                           Text(
                             description,
                             textAlign: TextAlign.justify,
                             style: GoogleFonts.poppins(
-                              fontSize:
-                              (ResponsiveBreakpoints.of(context).screenWidth <
-                                  765)
-                                  ? 12
-                                  : 14,
+                              fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                  ? 10 // Font size for screens smaller than 500px
+                                  : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                  ? 12 // Font size for screens between 500px and 800px
+                                  : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                                  ? 13 // Font size for screens between 800px and 1250px
+                                  : 16, // Font size for screens larger than 1250px
                               fontWeight: FontWeight.w400,
                               color: Colors.black.withOpacity(0.75),
                             ),
@@ -4168,7 +4538,13 @@ Example 2: Implemented a secure data management system for a financial instituti
               borderRadius: BorderRadius.circular(10),
             ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 60,vertical: 40),
+              padding: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                  ? const EdgeInsets.symmetric(horizontal: 20, vertical: 20) // Padding for screens smaller than 500px
+                  : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                  ? const EdgeInsets.symmetric(horizontal: 30, vertical: 30) // Padding for screens between 500px and 800px
+                  : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                  ? const EdgeInsets.symmetric(horizontal: 45, vertical: 35) // Padding for screens between 800px and 1250px
+                  : const EdgeInsets.symmetric(horizontal: 60, vertical: 40),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -4180,26 +4556,39 @@ Example 2: Implemented a secure data management system for a financial instituti
                     scores,
                     textAlign: TextAlign.left,
                     style: GoogleFonts.poppins(
-                      fontSize:
-                          (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                              ? 24
-                              : 30,
+                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                          ? 18 // Font size for screens smaller than 500px
+                          : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                          ? 24 // Font size for screens between 500px and 800px
+                          : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                          ? 24 // Font size for screens between 800px and 1250px
+                          : 30, // Font size for screens larger than 1250px
                       fontWeight: FontWeight.w600,
                       color: Colors.black.withOpacity(0.75),
                     ),
                   ),
-                  const SizedBox(
-                    height: 6,
+                  SizedBox(
+                    height: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                        ? 4 // Height for screens smaller than 500px
+                        : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                        ? 5 // Height for screens between 500px and 800px
+                        : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                        ? 6 // Height for screens between 800px and 1250px
+                        : 6, // Height for screens larger than 1250px
                   ),
                   Text(
                     description,
                     textAlign: TextAlign.justify,
                     style: GoogleFonts.poppins(
-                      fontSize:
-                      (ResponsiveBreakpoints.of(context).screenWidth <
-                          765)
-                          ? 12
-                          : 14,
+                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                          ? 10  // Font size for screens smaller than 500px
+                          : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                          ? 12  // Font size for screens between 500px and 600px
+                          : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                          ? 14  // Font size for screens between 600px and 765px
+                          : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                          ? 14  // Font size for screens between 765px and 1000px
+                          : 14,  // Font size for screens larger than 1000px
                       fontWeight: FontWeight.w400,
                       color: Colors.black.withOpacity(0.75),
                     ),
@@ -4478,8 +4867,15 @@ Example 2: Implemented a secure data management system for a financial instituti
           title,
           textAlign: TextAlign.left,
           style: GoogleFonts.poppins(
-            fontSize:
-                (ResponsiveBreakpoints.of(context).screenWidth < 765) ? 16 : 18,
+            fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                ? 12  // Font size for screens smaller than 300px
+                : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                ? 14  // Font size for screens between 300px and 400px
+                : (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                ? 16  // Font size for screens between 400px and 575px
+                : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                ? 16  // Font size for screens between 575px and 765px
+                : 18,  // Font size for screens larger than 765px
             fontWeight: FontWeight.w600,
             color: Colors.black,
           ),
@@ -4491,8 +4887,17 @@ Example 2: Implemented a secure data management system for a financial instituti
           description,
           textAlign: TextAlign.left,
           style: GoogleFonts.poppins(
-            fontSize:
-                (ResponsiveBreakpoints.of(context).screenWidth < 765) ? 16 : 18,
+            fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                ? 12  // Font size for screens smaller than 300px
+                : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                ? 13  // Font size for screens between 300px and 400px
+                : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                ? 14  // Font size for screens between 400px and 500px
+                : (ResponsiveBreakpoints.of(context).screenWidth < 575)
+                ? 15  // Font size for screens between 500px and 575px
+                : (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                ? 16  // Font size for screens between 575px and 765px
+                : 18,  // Font size for screens larger than 765px
             fontWeight: FontWeight.w300,
             color: Colors.black.withOpacity(0.7),
           ),

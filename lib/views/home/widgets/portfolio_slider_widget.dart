@@ -99,7 +99,21 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                                     widget.stackName,
                                     textAlign: TextAlign.left,
                                     style: GoogleFonts.poppins(
-                                      fontSize: 16,
+                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                          ? 12  // Font size for screens smaller than 500px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                          ? 13  // Font size for screens between 500px and 600px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                          ? 14  // Font size for screens between 600px and 700px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                          ? 15  // Font size for screens between 700px and 800px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                          ? 16  // Font size for screens between 800px and 900px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                          ? 16  // Font size for screens between 900px and 1000px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                          ? 16  // Font size for screens between 1000px and 1200px
+                                          : 16,  // Font size for screens larger than 1200px
                                       fontWeight: FontWeight.w300,
                                       color: Colors.white.withOpacity(0.75),
                                     ),
@@ -135,7 +149,21 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                                         : widget.explanation,
                                     textAlign: TextAlign.left,
                                     style: GoogleFonts.poppins(
-                                      fontSize: 16,
+                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                          ? 12  // Font size for screens smaller than 500px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                          ? 13  // Font size for screens between 500px and 600px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                          ? 14  // Font size for screens between 600px and 700px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                          ? 15  // Font size for screens between 700px and 800px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                          ? 16  // Font size for screens between 800px and 900px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                          ? 16  // Font size for screens between 900px and 1000px
+                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                          ? 16  // Font size for screens between 1000px and 1200px
+                                          : 16,  // Font size for screens larger than 1200px
                                       fontWeight: FontWeight.w300,
                                       color: Colors.white.withOpacity(0.75),
                                     ),
@@ -211,7 +239,21 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                                 widget.stackName,
                                 textAlign: TextAlign.left,
                                 style: GoogleFonts.poppins(
-                                  fontSize: 16,
+                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                      ? 12  // Font size for screens smaller than 500px
+                                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                      ? 13  // Font size for screens between 500px and 600px
+                                      : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                      ? 14  // Font size for screens between 600px and 700px
+                                      : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                      ? 15  // Font size for screens between 700px and 800px
+                                      : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                      ? 16  // Font size for screens between 800px and 900px
+                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                      ? 16  // Font size for screens between 900px and 1000px
+                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                      ? 16  // Font size for screens between 1000px and 1200px
+                                      : 16,  // Font size for screens larger than 1200px
                                   fontWeight: FontWeight.w300,
                                   color: Colors.white.withOpacity(0.75),
                                 ),
@@ -248,7 +290,21 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
                                       : widget.explanation,
                                   textAlign: TextAlign.left,
                                   style: GoogleFonts.poppins(
-                                    fontSize: 16,
+                                    fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                        ? 12  // Font size for screens smaller than 500px
+                                        : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                        ? 13  // Font size for screens between 500px and 600px
+                                        : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                        ? 14  // Font size for screens between 600px and 700px
+                                        : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                        ? 15  // Font size for screens between 700px and 800px
+                                        : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                        ? 16  // Font size for screens between 800px and 900px
+                                        : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                        ? 16  // Font size for screens between 900px and 1000px
+                                        : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
+                                        ? 16  // Font size for screens between 1000px and 1200px
+                                        : 16,  // Font size for screens larger than 1200px
                                     fontWeight: FontWeight.w300,
                                     color: Colors.white.withOpacity(0.75),
                                   ),
