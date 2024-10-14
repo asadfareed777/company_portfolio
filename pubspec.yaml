@@ -96,6 +96,8 @@ dependencies:
   infinite_carousel: ^1.1.1
   smooth_page_indicator: ^1.2.0+3
   animate_do: ^3.3.4
+  get: ^4.6.5
+  photo_view: ^0.14.0
 
 dev_dependencies:
   flutter_test:
@@ -126,6 +128,7 @@ flutter:
   generate: true
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/
     - assets/images/
     - assets/svgs/
 

@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../utils/colors.dart';
+import '../../artificialintelligence/home/home.dart';
 
 class PortfolioSliderWidget extends StatefulWidget {
   final int itemIndex;
@@ -32,6 +33,16 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
       onTap: () {
         isHovered = !isHovered;
         setState(() {});
+
+        if (widget.itemIndex == 0) {
+        // Navigate to NewHomePage when the first item is clicked
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const HomePageAIModule(),
+          ),
+        );
+        }
       },
       hoverColor: Colors.transparent,
       child: (ResponsiveBreakpoints.of(context).screenWidth < 575)

@@ -65,6 +65,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   final List<Map<String, String>> portfolioItems = [
     {
+      "stackName": "Artificial Intelligence",
+      "projectName": "Facial Recognition System",
+      "image": customizedSolution,
+      "explanation":
+      ""
+    },
+    {
       "stackName": "Flutter",
       "projectName": "Kuwait Mushaf - Quranic Android App",
       "image": quranApp,
