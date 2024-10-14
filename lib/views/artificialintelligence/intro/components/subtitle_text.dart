@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AnimatedSubtitleText extends StatelessWidget {
   final double start;
@@ -15,7 +16,7 @@ class AnimatedSubtitleText extends StatelessWidget {
       builder: (context, value, child) {
         return Text(
           text,
-          style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+          style: GoogleFonts.montserrat(
               color: Colors.white,
               fontWeight: FontWeight.w900,
               shadows: gradient? [

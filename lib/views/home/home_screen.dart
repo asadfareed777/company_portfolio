@@ -69,7 +69,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       "projectName": "Facial Recognition System",
       "image": customizedSolution,
       "explanation":
-      ""
+      "Developed an Android native mobile application featuring advanced facial recognition capabilities using AI. This implementation enhances user experience by providing secure and seamless authentication, enabling features such as user identification and personalized interactions. Leveraging cutting-edge machine learning algorithms, the application accurately detects and recognizes faces in real time, ensuring robust performance across various lighting conditions and angles. This project showcases my ability to integrate AI technologies into mobile solutions, enhancing functionality and user engagement."
     },
     {
       "stackName": "Flutter",

@@ -9,6 +9,7 @@ class HomePageAIModule extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  const MainView(pages: [
+
       Introduction(),
      /* ProjectsView(),
       Certifications(),*/

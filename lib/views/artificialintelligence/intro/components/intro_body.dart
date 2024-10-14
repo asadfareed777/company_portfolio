@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 import '../../../../utils/colors.dart';
+import '../../../../utils/image_assets.dart';
 import '../../../../view model/responsive.dart';
 import 'animated_texts_componenets.dart';
 import 'combine_subtitle.dart';
@@ -14,6 +16,7 @@ class IntroBody extends StatelessWidget {
     var size = MediaQuery.sizeOf(context);
     return Row(
       children: [
+
         SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

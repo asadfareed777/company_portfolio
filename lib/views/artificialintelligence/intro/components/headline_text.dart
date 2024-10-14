@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyPortfolioText extends StatelessWidget {
   const MyPortfolioText({super.key, required this.start, required this.end});
@@ -12,8 +13,8 @@ class MyPortfolioText extends StatelessWidget {
         duration: const Duration(milliseconds: 200),
         builder: (context, value, child) {
           return Text('InvertedTech',
-              style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                  color: Colors.black,
+              style: GoogleFonts.montserrat(
+                  color: Colors.white,
                   fontWeight: FontWeight.w900,
                   height: 0,
                   fontSize: value));

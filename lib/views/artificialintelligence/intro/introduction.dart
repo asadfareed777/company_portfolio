@@ -9,23 +9,27 @@ class Introduction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        children: [
-          SizedBox(
-            width: MediaQuery.sizeOf(context).width * 0.01,
-          ),
-          if (!Responsive.isLargeMobile(context))  Visibility(visible:false,child: MenuButton(onTap: () => Scaffold.of(context).openDrawer(),)),
-          SizedBox(
-            width: MediaQuery.sizeOf(context).width * 0.02,
-          ),
-          if (!Responsive.isLargeMobile(context)) const Visibility(visible:true,child: SocialMediaIconList()),
-          SizedBox(
-            width: MediaQuery.sizeOf(context).width * 0.07,
-          ),
-          const Expanded(
-            child: IntroBody(),
-          ),
-        ],
+      backgroundColor: Colors.transparent,
+      body: Padding(
+        padding: EdgeInsets.only(top: MediaQuery.sizeOf(context).height * 0.1),
+        child: Row(
+          children: [
+            SizedBox(
+              width: MediaQuery.sizeOf(context).width * 0.01,
+            ),
+            if (!Responsive.isLargeMobile(context))  Visibility(visible:false,child: MenuButton(onTap: () => Scaffold.of(context).openDrawer(),)),
+            SizedBox(
+              width: MediaQuery.sizeOf(context).width * 0.02,
+            ),
+            if (!Responsive.isLargeMobile(context)) const Visibility(visible:false,child: SocialMediaIconList()),
+            SizedBox(
+              width: MediaQuery.sizeOf(context).width * 0.1,
+            ),
+            const Expanded(
+              child: IntroBody(),
+            ),
+          ],
+        ),
       ),
     );
   }
