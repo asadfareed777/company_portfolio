@@ -4,6 +4,7 @@ import 'package:flutter_base/utils/image_assets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../utils/colors.dart';
 import '../../artificialintelligence/home/home.dart';
@@ -36,12 +37,14 @@ class _PortfolioSliderWidgetState extends State<PortfolioSliderWidget> {
 
         if (widget.itemIndex == 0) {
         // Navigate to NewHomePage when the first item is clicked
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const HomePageAIModule(),
-          ),
-        );
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(
+        //     builder: (context) => const HomePageAIModule(),
+        //   ),
+        // );
+        // Navigate to NewHomePage when the first item is clicked
+        launch('https://www.invertedtechnology.com/facial');
         }
       },
       hoverColor: Colors.transparent,
