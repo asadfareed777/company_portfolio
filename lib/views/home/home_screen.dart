@@ -69,7 +69,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       "projectName": "Facial Recognition System",
       "image": customizedSolution,
       "explanation":
-      "Developed an Android native mobile application featuring advanced facial recognition capabilities using AI. This implementation enhances user experience by providing secure and seamless authentication, enabling features such as user identification and personalized interactions. Leveraging cutting-edge machine learning algorithms, the application accurately detects and recognizes faces in real time, ensuring robust performance across various lighting conditions and angles. This project showcases my ability to integrate AI technologies into mobile solutions, enhancing functionality and user engagement."
+      "Developed an Android app with AI-powered facial recognition for secure, seamless user authentication. Using advanced machine learning algorithms, the app accurately detects and recognizes faces in real-time, ensuring reliable performance across different conditions"
     },
     {
       "stackName": "Flutter",
@@ -245,12 +245,16 @@ Example 2: Implemented a secure data management system for a financial instituti
                     children: [
                       Image.asset(
                         logoImageInvertedTechnologyWhite,
-                        height: (ResponsiveBreakpoints.of(context).screenWidth <
-                                750)
+                        height: (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth <
+                            750)
                             ? 50
                             : 56,
-                        width: (ResponsiveBreakpoints.of(context).screenWidth <
-                                750)
+                        width: (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth <
+                            750)
                             ? 50
                             : 56,
                       ),
@@ -363,8 +367,14 @@ Example 2: Implemented a secure data management system for a financial instituti
       ),
       body: SafeArea(
         child: Container(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
+          height: MediaQuery
+              .of(context)
+              .size
+              .height,
+          width: MediaQuery
+              .of(context)
+              .size
+              .width,
           child: Column(
             children: [
               Visibility(
@@ -373,7 +383,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                   color: Colors.white,
                   padding: EdgeInsets.symmetric(
                       horizontal: ResponsiveBreakpoints.of(context)
-                              .largerOrEqualTo(DESKTOP)
+                          .largerOrEqualTo(DESKTOP)
                           ? 50
                           : 15,
                       vertical: 10),
@@ -383,20 +393,25 @@ Example 2: Implemented a secure data management system for a financial instituti
                     children: [
                       Image.asset(
                         logoImageInvertedTechnology,
-                        height: (ResponsiveBreakpoints.of(context).screenWidth <
-                                750)
+                        height: (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth <
+                            750)
                             ? 50
                             : 60,
-                        width: (ResponsiveBreakpoints.of(context).screenWidth <
-                                750)
+                        width: (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth <
+                            750)
                             ? 100
                             : 132,
                       ),
                       Row(
                         children: [
                           Visibility(
-                            visible: !(ResponsiveBreakpoints.of(context)
-                                    .screenWidth <
+                            visible: !(ResponsiveBreakpoints
+                                .of(context)
+                                .screenWidth <
                                 1036),
                             child: Container(
                               child: Row(
@@ -411,7 +426,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                           duration: const Duration(
                                               milliseconds: 1000),
                                           curve:
-                                              Curves.fastEaseInToSlowEaseOut);
+                                          Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
                                   navButton(
@@ -423,7 +438,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                           duration: const Duration(
                                               milliseconds: 1000),
                                           curve:
-                                              Curves.fastEaseInToSlowEaseOut);
+                                          Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
                                   navButton(
@@ -435,7 +450,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                           duration: const Duration(
                                               milliseconds: 1000),
                                           curve:
-                                              Curves.fastEaseInToSlowEaseOut);
+                                          Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
                                   navButton(
@@ -447,7 +462,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                           duration: const Duration(
                                               milliseconds: 1000),
                                           curve:
-                                              Curves.fastEaseInToSlowEaseOut);
+                                          Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
                                   navButton(
@@ -483,7 +498,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                           duration: const Duration(
                                               milliseconds: 1000),
                                           curve:
-                                              Curves.fastEaseInToSlowEaseOut);
+                                          Curves.fastEaseInToSlowEaseOut);
                                     },
                                   ),
                                   // CustomizableTextButton(
@@ -509,7 +524,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                             children: [
                               SizedBox(
                                 width: ResponsiveBreakpoints.of(context)
-                                        .largerOrEqualTo(DESKTOP)
+                                    .largerOrEqualTo(DESKTOP)
                                     ? 50
                                     : 30,
                               ),
@@ -536,8 +551,9 @@ Example 2: Implemented a secure data management system for a financial instituti
                               //       (ResponsiveBreakpoints.of(context).screenWidth < 765) ? 8 : 16,
                               // ),
                               Visibility(
-                                visible: ResponsiveBreakpoints.of(context)
-                                        .screenWidth <
+                                visible: ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth <
                                     1036,
                                 child: Padding(
                                   padding: const EdgeInsets.only(left: 20),
@@ -568,29 +584,53 @@ Example 2: Implemented a secure data management system for a financial instituti
                     children: [
                       Container(
                         key: homeKey,
-                        height: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                            ? 500  // Height for screens smaller than 300px
-                            : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                            ? 530  // Height for screens between 300px and 400px
-                            : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                            ? 570  // Height for screens between 400px and 500px
-                            : (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                            ? 600  // Height for screens between 500px and 550px
-                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                            ? 630  // Height for screens between 550px and 600px
-                            : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                            ? 660  // Height for screens between 600px and 700px
-                            : (ResponsiveBreakpoints.of(context).screenWidth < 760)
-                            ? 690  // Height for screens between 700px and 760px
-                            : (ResponsiveBreakpoints.of(context).screenWidth < 850)
-                            ? 720  // Height for screens between 760px and 850px
-                            : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                            ? 750  // Height for screens between 850px and 1000px
-                            : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-                            ? 790  // Height for screens between 1000px and 1200px
-                            : 790, // Height for screens 1600px and above
+                        height: (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 300)
+                            ? 500 // Height for screens smaller than 300px
+                            : (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 400)
+                            ? 530 // Height for screens between 300px and 400px
+                            : (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 500)
+                            ? 570 // Height for screens between 400px and 500px
+                            : (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 550)
+                            ? 600 // Height for screens between 500px and 550px
+                            : (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 600)
+                            ? 630 // Height for screens between 550px and 600px
+                            : (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 700)
+                            ? 660 // Height for screens between 600px and 700px
+                            : (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 760)
+                            ? 690 // Height for screens between 700px and 760px
+                            : (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 850)
+                            ? 720 // Height for screens between 760px and 850px
+                            : (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 1000)
+                            ? 750 // Height for screens between 850px and 1000px
+                            : (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 1200)
+                            ? 790 // Height for screens between 1000px and 1200px
+                            : 790,
+                        // Height for screens 1600px and above
                         // Height for screens larger than 1200px/
-                        width: MediaQuery.of(context).size.width,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(homeSectionBackgroundImage1),
@@ -598,8 +638,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                           ),
                         ),
                         child: Container(
-                          height: MediaQuery.of(context).size.height,
-                          width: MediaQuery.of(context).size.width,
+                          height: MediaQuery
+                              .of(context)
+                              .size
+                              .height,
+                          width: MediaQuery
+                              .of(context)
+                              .size
+                              .width,
                           color: Colors.black54,
                           child: Column(
                             children: [
@@ -616,59 +662,64 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   var visiblePercentage =
                                       visibilityInfo.visibleFraction * 100;
                                   debugPrint(
-                                      'Widget ${visibilityInfo.key} is ${visiblePercentage}% visible');
+                                      'Widget ${visibilityInfo
+                                          .key} is ${visiblePercentage}% visible');
                                 },
                                 child: Container(
                                   padding: EdgeInsets.symmetric(
                                       horizontal:
-                                          ResponsiveBreakpoints.of(context)
-                                                  .largerOrEqualTo(DESKTOP)
-                                              ? 50
-                                              : 15,
+                                      ResponsiveBreakpoints.of(context)
+                                          .largerOrEqualTo(DESKTOP)
+                                          ? 50
+                                          : 15,
                                       vertical: 20),
                                   child: Row(
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.center,
+                                    CrossAxisAlignment.center,
                                     mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                     children: [
                                       Image.asset(
                                         logoImageInvertedTechnologyWhite,
                                         height:
-                                            (ResponsiveBreakpoints.of(context)
-                                                        .screenWidth <
-                                                    750)
-                                                ? 50
-                                                : 60,
+                                        (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth <
+                                            750)
+                                            ? 50
+                                            : 60,
                                         width:
-                                            (ResponsiveBreakpoints.of(context)
-                                                        .screenWidth <
-                                                    750)
-                                                ? 100
-                                                : 132,
+                                        (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth <
+                                            750)
+                                            ? 100
+                                            : 132,
                                       ),
                                       Row(
                                         children: [
                                           Visibility(
-                                            visible: !(ResponsiveBreakpoints.of(
-                                                        context)
-                                                    .screenWidth <
+                                            visible: !(ResponsiveBreakpoints
+                                                .of(
+                                                context)
+                                                .screenWidth <
                                                 1036),
                                             child: Container(
                                               child: Row(
                                                 crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
+                                                CrossAxisAlignment.center,
                                                 children: [
                                                   navButton(
                                                     title: "Home",
                                                     onPressed: () async {
-                                                      await Scrollable.ensureVisible(
+                                                      await Scrollable
+                                                          .ensureVisible(
                                                           homeKey
                                                               .currentContext!,
                                                           duration:
-                                                              const Duration(
-                                                                  milliseconds:
-                                                                      1000),
+                                                          const Duration(
+                                                              milliseconds:
+                                                              1000),
                                                           curve: Curves
                                                               .fastEaseInToSlowEaseOut);
                                                     },
@@ -676,13 +727,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                   navButton(
                                                     title: "Service",
                                                     onPressed: () async {
-                                                      await Scrollable.ensureVisible(
+                                                      await Scrollable
+                                                          .ensureVisible(
                                                           servicesKey
                                                               .currentContext!,
                                                           duration:
-                                                              const Duration(
-                                                                  milliseconds:
-                                                                      1000),
+                                                          const Duration(
+                                                              milliseconds:
+                                                              1000),
                                                           curve: Curves
                                                               .fastEaseInToSlowEaseOut);
                                                     },
@@ -690,13 +742,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                   navButton(
                                                     title: "About",
                                                     onPressed: () async {
-                                                      await Scrollable.ensureVisible(
+                                                      await Scrollable
+                                                          .ensureVisible(
                                                           aboutKey
                                                               .currentContext!,
                                                           duration:
-                                                              const Duration(
-                                                                  milliseconds:
-                                                                      1000),
+                                                          const Duration(
+                                                              milliseconds:
+                                                              1000),
                                                           curve: Curves
                                                               .fastEaseInToSlowEaseOut);
                                                     },
@@ -704,13 +757,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                   navButton(
                                                     title: "Portfolio",
                                                     onPressed: () async {
-                                                      await Scrollable.ensureVisible(
+                                                      await Scrollable
+                                                          .ensureVisible(
                                                           portfolioKey
                                                               .currentContext!,
                                                           duration:
-                                                              const Duration(
-                                                                  milliseconds:
-                                                                      1000),
+                                                          const Duration(
+                                                              milliseconds:
+                                                              1000),
                                                           curve: Curves
                                                               .fastEaseInToSlowEaseOut);
                                                     },
@@ -718,7 +772,8 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                   navButton(
                                                     title: "Target",
                                                     onPressed: () async {
-                                                      await Scrollable.ensureVisible(
+                                                      await Scrollable
+                                                          .ensureVisible(
                                                           targetKey
                                                               .currentContext!,
                                                           duration:
@@ -747,13 +802,14 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                   navButton(
                                                     title: "Contact",
                                                     onPressed: () async {
-                                                      await Scrollable.ensureVisible(
+                                                      await Scrollable
+                                                          .ensureVisible(
                                                           contactUsKey
                                                               .currentContext!,
                                                           duration:
-                                                              const Duration(
-                                                                  milliseconds:
-                                                                      1000),
+                                                          const Duration(
+                                                              milliseconds:
+                                                              1000),
                                                           curve: Curves
                                                               .fastEaseInToSlowEaseOut);
                                                     },
@@ -781,9 +837,9 @@ Example 2: Implemented a secure data management system for a financial instituti
                                             children: [
                                               SizedBox(
                                                 width: ResponsiveBreakpoints.of(
-                                                            context)
-                                                        .largerOrEqualTo(
-                                                            DESKTOP)
+                                                    context)
+                                                    .largerOrEqualTo(
+                                                    DESKTOP)
                                                     ? 50
                                                     : 30,
                                               ),
@@ -818,13 +874,15 @@ Example 2: Implemented a secure data management system for a financial instituti
                                               ),*/
                                               Visibility(
                                                 visible:
-                                                    ResponsiveBreakpoints.of(
-                                                                context)
-                                                            .screenWidth <
-                                                        1036,
+                                                ResponsiveBreakpoints
+                                                    .of(
+                                                    context)
+                                                    .screenWidth <
+                                                    1036,
                                                 child: Padding(
                                                   padding:
-                                                      const EdgeInsets.only(left: 20),
+                                                  const EdgeInsets.only(
+                                                      left: 20),
                                                   child: InkWell(
                                                     onTap: () {
                                                       _scaffoldKey.currentState
@@ -850,57 +908,115 @@ Example 2: Implemented a secure data management system for a financial instituti
                                 child: Column(
                                   children: [
                                     SizedBox(
-                                      height: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                          ? 30.h  // Height for screens smaller than 300px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                          ? 35.h  // Height for screens between 300px and 400px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                          ? 40.h  // Height for screens between 400px and 500px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                          ? 45.h  // Height for screens between 500px and 550px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                          ? 50.h  // Height for screens between 550px and 600px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                          ? 55.h  // Height for screens between 600px and 700px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 760)
-                                          ? 60.h  // Height for screens between 700px and 760px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 850)
-                                          ? 65.h  // Height for screens between 760px and 850px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                          ? 70.h  // Height for screens between 850px and 1000px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-                                          ? 75.h  // Height for screens between 1000px and 1200px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1400)
-                                          ? 80.h  // Height for screens between 1200px and 1400px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1600)
-                                          ? 85.h  // Height for screens between 1400px and 1600px
-                                          : 60.h,  // Height for screens 1600px and above
+                                      height: (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 300)
+                                          ? 30
+                                          .h // Height for screens smaller than 300px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 400)
+                                          ? 35
+                                          .h // Height for screens between 300px and 400px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 500)
+                                          ? 40
+                                          .h // Height for screens between 400px and 500px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 550)
+                                          ? 45
+                                          .h // Height for screens between 500px and 550px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 600)
+                                          ? 50
+                                          .h // Height for screens between 550px and 600px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 700)
+                                          ? 55
+                                          .h // Height for screens between 600px and 700px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 760)
+                                          ? 60
+                                          .h // Height for screens between 700px and 760px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 850)
+                                          ? 65
+                                          .h // Height for screens between 760px and 850px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 1000)
+                                          ? 70
+                                          .h // Height for screens between 850px and 1000px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 1200)
+                                          ? 75
+                                          .h // Height for screens between 1000px and 1200px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 1400)
+                                          ? 80
+                                          .h // Height for screens between 1200px and 1400px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 1600)
+                                          ? 85
+                                          .h // Height for screens between 1400px and 1600px
+                                          : 60
+                                          .h, // Height for screens 1600px and above
                                     ),
                                     GradientText(
                                       "Welcome to Inverted Technology",
                                       textAlign: TextAlign.center,
                                       style: GoogleFonts.montserrat(
-                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                            ? 12  // Font size for screens smaller than 300px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                            ? 14  // Font size for screens between 300px and 400px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                            ? 16  // Font size for screens between 400px and 500px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                            ? 18  // Font size for screens between 500px and 550px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                            ? 22  // Font size for screens between 550px and 600px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                            ? 26  // Font size for screens between 600px and 700px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                            ? 30  // Font size for screens between 700px and 765px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 850)
-                                            ? 34  // Font size for screens between 765px and 850px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                            ? 40  // Font size for screens between 850px and 1000px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-                                            ? 54  // Font size for screens between 1000px and 1200px
-                                            : 70,  // Font size for screens 1600px and above
+                                        fontSize: (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 300)
+                                            ? 12 // Font size for screens smaller than 300px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 400)
+                                            ? 14 // Font size for screens between 300px and 400px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 500)
+                                            ? 16 // Font size for screens between 400px and 500px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 550)
+                                            ? 18 // Font size for screens between 500px and 550px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 600)
+                                            ? 22 // Font size for screens between 550px and 600px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 700)
+                                            ? 26 // Font size for screens between 600px and 700px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 765)
+                                            ? 30 // Font size for screens between 700px and 765px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 850)
+                                            ? 34 // Font size for screens between 765px and 850px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 1000)
+                                            ? 40 // Font size for screens between 850px and 1000px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 1200)
+                                            ? 54 // Font size for screens between 1000px and 1200px
+                                            : 70,
+                                        // Font size for screens 1600px and above
 
                                         fontWeight: FontWeight.w900,
                                       ),
@@ -918,31 +1034,56 @@ Example 2: Implemented a secure data management system for a financial instituti
                                         "We Honor Our Commitments With Integrity And Quality",
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.poppins(
-                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                              ? 10  // Font size for screens smaller than 300px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                              ? 12  // Font size for screens between 300px and 400px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                              ? 13  // Font size for screens between 400px and 500px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                              ? 14  // Font size for screens between 500px and 550px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                              ? 16  // Font size for screens between 550px and 600px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                              ? 18  // Font size for screens between 600px and 700px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                              ? 20  // Font size for screens between 700px and 765px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 850)
-                                              ? 22  // Font size for screens between 765px and 850px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                              ? 24  // Font size for screens between 850px and 1000px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-                                              ? 26  // Font size for screens between 1000px and 1200px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1400)
-                                              ? 27  // Font size for screens between 1200px and 1400px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1600)
-                                              ? 28  // Font size for screens between 1400px and 1600px
-                                              : 30,  // Font size for screens 1600px and above
+                                          fontSize: (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 300)
+                                              ? 10 // Font size for screens smaller than 300px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 400)
+                                              ? 12 // Font size for screens between 300px and 400px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 500)
+                                              ? 13 // Font size for screens between 400px and 500px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 550)
+                                              ? 14 // Font size for screens between 500px and 550px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 600)
+                                              ? 16 // Font size for screens between 550px and 600px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 700)
+                                              ? 18 // Font size for screens between 600px and 700px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 765)
+                                              ? 20 // Font size for screens between 700px and 765px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 850)
+                                              ? 22 // Font size for screens between 765px and 850px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 1000)
+                                              ? 24 // Font size for screens between 850px and 1000px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 1200)
+                                              ? 26 // Font size for screens between 1000px and 1200px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 1400)
+                                              ? 27 // Font size for screens between 1200px and 1400px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 1600)
+                                              ? 28 // Font size for screens between 1400px and 1600px
+                                              : 30,
+                                          // Font size for screens 1600px and above
 
                                           fontWeight: FontWeight.w400,
                                           color: Colors.white.withOpacity(0.75),
@@ -957,31 +1098,56 @@ Example 2: Implemented a secure data management system for a financial instituti
                                         "At Inverted Technology, we are dedicated to empowering our clients with innovative, high-impact software solutions. Rooted in integrity and driven by quality, we specialize in cutting-edge technologies like Flutter, Android, iOS, AI/ML, and web development. Our mission is to transform ideas into exceptional digital experiences that not only exceed expectations but also drive lasting success for our customers. We believe that our team is an extension of yours, committed to serving your needs with unwavering dedication. Your satisfaction is our top priority, and we build trust through transparent communication, mutual respect, and a relentless pursuit of excellence.",
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.poppins(
-                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                              ? 10  // Font size for screens smaller than 300px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                              ? 11  // Font size for screens between 300px and 400px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                              ? 12  // Font size for screens between 400px and 500px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                              ? 13  // Font size for screens between 500px and 550px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                              ? 14  // Font size for screens between 550px and 600px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                              ? 15  // Font size for screens between 600px and 700px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 760)
-                                              ? 16  // Font size for screens between 700px and 760px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 850)
-                                              ? 17  // Font size for screens between 760px and 850px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                              ? 19  // Font size for screens between 850px and 1000px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-                                              ? 21  // Font size for screens between 1000px and 1200px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1400)
-                                              ? 22  // Font size for screens between 1200px and 1400px
-                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1600)
-                                              ? 23  // Font size for screens between 1400px and 1600px
-                                              : 24,  // Font size for screens 1600px and above
+                                          fontSize: (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 300)
+                                              ? 10 // Font size for screens smaller than 300px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 400)
+                                              ? 11 // Font size for screens between 300px and 400px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 500)
+                                              ? 12 // Font size for screens between 400px and 500px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 550)
+                                              ? 13 // Font size for screens between 500px and 550px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 600)
+                                              ? 14 // Font size for screens between 550px and 600px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 700)
+                                              ? 15 // Font size for screens between 600px and 700px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 760)
+                                              ? 16 // Font size for screens between 700px and 760px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 850)
+                                              ? 17 // Font size for screens between 760px and 850px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 1000)
+                                              ? 19 // Font size for screens between 850px and 1000px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 1200)
+                                              ? 21 // Font size for screens between 1000px and 1200px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 1400)
+                                              ? 22 // Font size for screens between 1200px and 1400px
+                                              : (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth < 1600)
+                                              ? 23 // Font size for screens between 1400px and 1600px
+                                              : 24,
+                                          // Font size for screens 1600px and above
 
                                           fontWeight: FontWeight.w100,
                                           color: Colors.white.withOpacity(0.75),
@@ -997,73 +1163,125 @@ Example 2: Implemented a secure data management system for a financial instituti
                                       isFullWidth: false,
                                       isOutlined: false,
                                       buttonTitle:
-                                          Constants.contactUs.toUpperCase(),
+                                      Constants.contactUs.toUpperCase(),
                                       onPressed: () async {
                                         await Scrollable.ensureVisible(
                                             contactUsKey.currentContext!,
                                             duration: const Duration(
                                                 milliseconds: 1000),
                                             curve:
-                                                Curves.fastEaseInToSlowEaseOut);
+                                            Curves.fastEaseInToSlowEaseOut);
                                       },
                                       buttonTitleStyle: TextStyle(
-                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                            ? 12  // Font size for screens smaller than 300px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                            ? 13  // Font size for screens between 300px and 400px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                            ? 14  // Font size for screens between 400px and 500px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                            ? 15  // Font size for screens between 500px and 600px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                            ? 16  // Font size for screens between 600px and 700px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                            ? 17  // Font size for screens between 700px and 800px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                            ? 18  // Font size for screens between 800px and 900px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                            ? 16  // Font size for screens between 900px and 1000px
-                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-                                            ? 16  // Font size for screens between 1000px and 1200px
-                                            : 16,  // Font size for screens larger than 1200px
+                                        fontSize: (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 300)
+                                            ? 12 // Font size for screens smaller than 300px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 400)
+                                            ? 13 // Font size for screens between 300px and 400px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 500)
+                                            ? 14 // Font size for screens between 400px and 500px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 600)
+                                            ? 15 // Font size for screens between 500px and 600px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 700)
+                                            ? 16 // Font size for screens between 600px and 700px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 800)
+                                            ? 17 // Font size for screens between 700px and 800px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 900)
+                                            ? 18 // Font size for screens between 800px and 900px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 1000)
+                                            ? 16 // Font size for screens between 900px and 1000px
+                                            : (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth < 1200)
+                                            ? 16 // Font size for screens between 1000px and 1200px
+                                            : 16,
+                                        // Font size for screens larger than 1200px
 
                                         color: Colors.white,
                                         fontWeight: FontWeight.w500,
                                       ),
                                       buttonBorderRadius: 60,
                                       buttonColor: primaryColor,
-                                      horizontalPadding: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                      horizontalPadding: (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 300)
                                           ? 10
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 400)
                                           ? 15
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 500)
                                           ? 20
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 600)
                                           ? 25
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 700)
                                           ? 30
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 800)
                                           ? 35
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 900)
                                           ? 40
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 1000)
                                           ? 60
-                                          : 60, // for screens larger than 1000px
-                                      verticalPadding: (ResponsiveBreakpoints.of(context).screenWidth < 300)
+                                          : 60,
+                                      // for screens larger than 1000px
+                                      verticalPadding: (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 300)
                                           ? 8
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 400)
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 400)
                                           ? 10
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 500)
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 500)
                                           ? 12
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 600)
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 600)
                                           ? 14
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 700)
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 700)
                                           ? 16
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 800)
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 800)
                                           ? 18
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 900)
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 900)
                                           ? 20
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 1000)
                                           ? 24
                                           : 24, // for screens larger than 1000px
                                     ),
@@ -1079,7 +1297,10 @@ Example 2: Implemented a secure data management system for a financial instituti
                       ),
                       Container(
                         key: servicesKey,
-                        width: MediaQuery.of(context).size.width,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width,
                         padding: const EdgeInsets.symmetric(vertical: 120),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1089,12 +1310,18 @@ Example 2: Implemented a secure data management system for a financial instituti
                               "Cutting-Edge Technologies",
                               style: GoogleFonts
                                   .montserrat(
-                                fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                    ? 18  // Font size for screens smaller than 550px
-                                    : 23  // Font size for screens between 550px and 755px
-                                    : 34  // Font size for screens between 755px and 1250px
+                                fontSize: (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 1250)
+                                    ? (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 755)
+                                    ? (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 550)
+                                    ? 18 // Font size for screens smaller than 550px
+                                    : 23 // Font size for screens between 550px and 755px
+                                    : 34 // Font size for screens between 755px and 1250px
                                     : 45,
                                 fontWeight:
                                 FontWeight.w900,
@@ -1107,42 +1334,55 @@ Example 2: Implemented a secure data management system for a financial instituti
                             ),
                             const SizedBox(height: 50),
                             Wrap(
-                          //       spacing: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                          //           ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                          //           ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                          //           ? 40  // Width for screens smaller than 550px
-                          //           : 60  // Width for screens between 550px and 755px
-                          //           : 90   // Width for screens between 755px and 1250px
-                          //           : 120,
-                          //     runSpacing: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                          // ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                          // ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                          // ? 40  // Width for screens smaller than 550px
-                          // : 60  // Width for screens between 550px and 755px
-                          // : 90   // Width for screens between 755px and 1250px
-                          // : 120,
+                              //       spacing: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                              //           ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                              //           ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                              //           ? 40  // Width for screens smaller than 550px
+                              //           : 60  // Width for screens between 550px and 755px
+                              //           : 90   // Width for screens between 755px and 1250px
+                              //           : 120,
+                              //     runSpacing: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
+                              // ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+                              // ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
+                              // ? 40  // Width for screens smaller than 550px
+                              // : 60  // Width for screens between 550px and 755px
+                              // : 90   // Width for screens between 755px and 1250px
+                              // : 120,
                               spacing: 30,
                               runSpacing: 30,
                               children: [
                                 companyStacksWidget(
-                                    image: Image.asset(
-                                      flutterIcon,
-                                      // color: lightBlueColor,
-                                      height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                          ? 40  // Height for screens smaller than 550px
-                                          : 50  // Height for screens between 550px and 755px
-                                          : 75  // Height for screens between 755px and 1250px
-                                          : 100,  // Height for screens larger than 1250px
-                                      width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                          ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                          ? 40  // Width for screens smaller than 550px
-                                          : 50  // Width for screens between 550px and 755px
-                                          : 75  // Width for screens between 755px and 1250px
-                                          : 100,  // Width for screens larger than 1250px
-                                    ),
+                                  image: Image.asset(
+                                    flutterIcon,
+                                    // color: lightBlueColor,
+                                    height: (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 755)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 550)
+                                        ? 40 // Height for screens smaller than 550px
+                                        : 50 // Height for screens between 550px and 755px
+                                        : 75 // Height for screens between 755px and 1250px
+                                        : 100,
+                                    // Height for screens larger than 1250px
+                                    width: (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 755)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 550)
+                                        ? 40 // Width for screens smaller than 550px
+                                        : 50 // Width for screens between 550px and 755px
+                                        : 75 // Width for screens between 755px and 1250px
+                                        : 100, // Width for screens larger than 1250px
+                                  ),
                                   title: 'Flutter Development',
                                   description: 'Experience the power of cross-platform development with Flutter. We craft stunning, high-performance mobile applications that deliver a consistent and seamless experience across both Android and iOS, ensuring your brand shines on every device.',
                                 ),
@@ -1150,20 +1390,33 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   image: Image.asset(
                                     appleIcon,
                                     // color: lightBlueColor,
-                                    height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                        ? 40  // Height for screens smaller than 550px
-                                        : 50  // Height for screens between 550px and 755px
-                                        : 75  // Height for screens between 755px and 1250px
-                                        : 100,  // Height for screens larger than 1250px
-                                    width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                        ? 40  // Width for screens smaller than 550px
-                                        : 50  // Width for screens between 550px and 755px
-                                        : 75  // Width for screens between 755px and 1250px
-                                        : 100,  // Width for screens larger than 1250px
+                                    height: (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 755)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 550)
+                                        ? 40 // Height for screens smaller than 550px
+                                        : 50 // Height for screens between 550px and 755px
+                                        : 75 // Height for screens between 755px and 1250px
+                                        : 100,
+                                    // Height for screens larger than 1250px
+                                    width: (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 755)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 550)
+                                        ? 40 // Width for screens smaller than 550px
+                                        : 50 // Width for screens between 550px and 755px
+                                        : 75 // Width for screens between 755px and 1250px
+                                        : 100, // Width for screens larger than 1250px
                                   ),
                                   title: 'iOS Development',
                                   description: 'Elevate your business in the Apple ecosystem with sophisticated iOS applications. Our expert developers use the latest in Swift technology to deliver elegant, secure, and intuitive apps that resonate with users and enhance your brand\'s digital presence.',
@@ -1172,20 +1425,33 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   image: Image.asset(
                                     androidIcon,
                                     // color: lightBlueColor,
-                                    height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                        ? 40  // Height for screens smaller than 550px
-                                        : 50  // Height for screens between 550px and 755px
-                                        : 75  // Height for screens between 755px and 1250px
-                                        : 100,  // Height for screens larger than 1250px
-                                    width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                        ? 40  // Width for screens smaller than 550px
-                                        : 50  // Width for screens between 550px and 755px
-                                        : 75  // Width for screens between 755px and 1250px
-                                        : 100,  // Width for screens larger than 1250px
+                                    height: (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 755)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 550)
+                                        ? 40 // Height for screens smaller than 550px
+                                        : 50 // Height for screens between 550px and 755px
+                                        : 75 // Height for screens between 755px and 1250px
+                                        : 100,
+                                    // Height for screens larger than 1250px
+                                    width: (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 755)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 550)
+                                        ? 40 // Width for screens smaller than 550px
+                                        : 50 // Width for screens between 550px and 755px
+                                        : 75 // Width for screens between 755px and 1250px
+                                        : 100, // Width for screens larger than 1250px
                                   ),
                                   title: 'Android Development',
                                   description: 'Unlock the full potential of the Android ecosystem with custom-built applications. Our Android development team combines cutting-edge technology with innovative design to create robust, user-friendly apps that engage your audience and drive business success.',
@@ -1194,20 +1460,33 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   image: Image.asset(
                                     artificialIntelligence,
                                     // color: lightBlueColor,
-                                    height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                        ? 40  // Height for screens smaller than 550px
-                                        : 50  // Height for screens between 550px and 755px
-                                        : 75  // Height for screens between 755px and 1250px
-                                        : 100,  // Height for screens larger than 1250px
-                                    width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                        ? 40  // Width for screens smaller than 550px
-                                        : 50  // Width for screens between 550px and 755px
-                                        : 75  // Width for screens between 755px and 1250px
-                                        : 100,  // Width for screens larger than 1250px
+                                    height: (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 755)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 550)
+                                        ? 40 // Height for screens smaller than 550px
+                                        : 50 // Height for screens between 550px and 755px
+                                        : 75 // Height for screens between 755px and 1250px
+                                        : 100,
+                                    // Height for screens larger than 1250px
+                                    width: (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 755)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 550)
+                                        ? 40 // Width for screens smaller than 550px
+                                        : 50 // Width for screens between 550px and 755px
+                                        : 75 // Width for screens between 755px and 1250px
+                                        : 100, // Width for screens larger than 1250px
                                   ),
                                   title: 'Artificial Intelligence & Machine Learning',
                                   description: 'Transform your business with the power of AI and Machine Learning. Our advanced AI/ML solutions unlock new opportunities for innovation, from predictive analytics to intelligent automation, driving smarter decisions and creating a competitive edge.',
@@ -1216,20 +1495,33 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   image: Image.asset(
                                     webIcon,
                                     // color: lightBlueColor,
-                                    height: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                        ? 40  // Height for screens smaller than 550px
-                                        : 50  // Height for screens between 550px and 755px
-                                        : 75  // Height for screens between 755px and 1250px
-                                        : 100,  // Height for screens larger than 1250px
-                                    width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                                        ? (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                                        ? 40  // Width for screens smaller than 550px
-                                        : 50  // Width for screens between 550px and 755px
-                                        : 75  // Width for screens between 755px and 1250px
-                                        : 100,  // Width for screens larger than 1250px
+                                    height: (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 755)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 550)
+                                        ? 40 // Height for screens smaller than 550px
+                                        : 50 // Height for screens between 550px and 755px
+                                        : 75 // Height for screens between 755px and 1250px
+                                        : 100,
+                                    // Height for screens larger than 1250px
+                                    width: (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 1250)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 755)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth < 550)
+                                        ? 40 // Width for screens smaller than 550px
+                                        : 50 // Width for screens between 550px and 755px
+                                        : 75 // Width for screens between 755px and 1250px
+                                        : 100, // Width for screens larger than 1250px
                                   ),
                                   title: 'Web Development',
                                   description: 'Captivate and convert with a website that stands out. Our web development services blend cutting-edge technologies like Laravel, Flutter Web, and WordPress to create responsive, secure, and visually compelling websites that make a lasting impact.',
@@ -1241,232 +1533,270 @@ Example 2: Implemented a secure data management system for a financial instituti
                       ),
                       Container(
                         key: aboutKey,
-                        width: MediaQuery.of(context).size.width,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width,
                         padding: const EdgeInsets.symmetric(vertical: 120),
                         color: Colors.grey.withOpacity(0.06),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              width: MediaQuery.of(context).size.width,
-                              child: (ResponsiveBreakpoints.of(context)
-                                          .screenWidth <
-                                      990)
+                              width: MediaQuery
+                                  .of(context)
+                                  .size
+                                  .width,
+                              child: (ResponsiveBreakpoints
+                                  .of(context)
+                                  .screenWidth <
+                                  990)
                                   ? Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
+                                crossAxisAlignment:
+                                CrossAxisAlignment.center,
+                                children: [
+                                  (ResponsiveBreakpoints
+                                      .of(context)
+                                      .screenWidth <
+                                      570)
+                                      ? Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 15),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.center,
                                       children: [
-                                        (ResponsiveBreakpoints.of(context)
-                                                    .screenWidth <
-                                                570)
-                                            ? Padding(
-                                                padding: const EdgeInsets.symmetric(
-                                                    horizontal: 15),
-                                                child: Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  children: [
-                                                    Expanded(
-                                                      child: Container(
-                                                        height: (ResponsiveBreakpoints.of(
-                                                                        context)
-                                                                    .screenWidth <
-                                                                770)
-                                                            ? 596.h
-                                                            : 804,
-                                                        width: (ResponsiveBreakpoints.of(
-                                                                        context)
-                                                                    .screenWidth <
-                                                                770)
-                                                            ? 516.w
-                                                            : 696,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          image:
-                                                              const DecorationImage(
-                                                            image: AssetImage(
-                                                                aboutImage),
-                                                            fit:
-                                                                BoxFit.fitWidth,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(10),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              )
-                                            : Container(
-                                                height:
-                                                    (ResponsiveBreakpoints.of(
-                                                                    context)
-                                                                .screenWidth <
-                                                            770)
-                                                        ? 596
-                                                        : 804,
-                                                width:
-                                                    (ResponsiveBreakpoints.of(
-                                                                    context)
-                                                                .screenWidth <
-                                                            770)
-                                                        ? 516
-                                                        : 696,
-                                                padding: const EdgeInsets.symmetric(
-                                                    horizontal: 15),
-                                                decoration: BoxDecoration(
-                                                  image: const DecorationImage(
-                                                    image:
-                                                        AssetImage(aboutImage1),
-                                                    fit: BoxFit.fill,
-                                                  ),
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
-                                                ),
+                                        Expanded(
+                                          child: Container(
+                                            height: (ResponsiveBreakpoints
+                                                .of(
+                                                context)
+                                                .screenWidth <
+                                                770)
+                                                ? 596.h
+                                                : 804,
+                                            width: (ResponsiveBreakpoints
+                                                .of(
+                                                context)
+                                                .screenWidth <
+                                                770)
+                                                ? 516.w
+                                                : 696,
+                                            decoration:
+                                            BoxDecoration(
+                                              image:
+                                              const DecorationImage(
+                                                image: AssetImage(
+                                                    aboutImage),
+                                                fit:
+                                                BoxFit.fitWidth,
                                               ),
-                                        const SizedBox(
-                                          height: 15,
+                                              borderRadius:
+                                              BorderRadius
+                                                  .circular(10),
+                                            ),
+                                          ),
                                         ),
-                                        (ResponsiveBreakpoints.of(context)
+                                      ],
+                                    ),
+                                  )
+                                      : Container(
+                                    height:
+                                    (ResponsiveBreakpoints
+                                        .of(
+                                        context)
+                                        .screenWidth <
+                                        770)
+                                        ? 596
+                                        : 804,
+                                    width:
+                                    (ResponsiveBreakpoints
+                                        .of(
+                                        context)
+                                        .screenWidth <
+                                        770)
+                                        ? 516
+                                        : 696,
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 15),
+                                    decoration: BoxDecoration(
+                                      image: const DecorationImage(
+                                        image:
+                                        AssetImage(aboutImage1),
+                                        fit: BoxFit.fill,
+                                      ),
+                                      borderRadius:
+                                      BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 15,
+                                  ),
+                                  (ResponsiveBreakpoints
+                                      .of(context)
+                                      .screenWidth <
+                                      570)
+                                      ? Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 15),
+                                    child: Container(
+                                      width:
+                                      (ResponsiveBreakpoints
+                                          .of(
+                                          context)
+                                          .screenWidth <
+                                          770)
+                                          ? 516
+                                          : 696,
+                                      child: Column(
+                                        mainAxisAlignment:
+                                        MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment
+                                            .start,
+                                        children: [
+                                          GradientText(
+                                            "Read About Us",
+                                            style: GoogleFonts.montserrat(
+                                              fontSize: (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 500)
+                                                  ? 18 // Font size for screens between 400px and 500px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 600)
+                                                  ? 19 // Font size for screens between 500px and 600px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 700)
+                                                  ? 21 // Font size for screens between 600px and 700px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 800)
+                                                  ? 22 // Font size for screens between 700px and 800px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 900)
+                                                  ? 24 // Font size for screens between 800px and 900px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 1000)
+                                                  ? 28 // Font size for screens between 900px and 1000px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 1200)
+                                                  ? 36 // Font size for screens between 1000px and 1200px
+                                                  : 36,
+
+                                              fontWeight:
+                                              FontWeight.w600,
+                                            ),
+                                            colors: [
+                                              gradientColor1,
+                                              gradientColor2,
+                                              gradientColor3,
+                                            ],
+                                          ),
+                                          // SizedBox(
+                                          //   height: 12.h,
+                                          // ),
+                                          Visibility(
+                                            visible: false,
+                                            child: Text(
+                                              "Read Company Values",
+                                              textAlign:
+                                              TextAlign.left,
+                                              style:
+                                              GoogleFonts.poppins(
+                                                fontSize: (ResponsiveBreakpoints
+                                                    .of(
+                                                    context)
                                                     .screenWidth <
-                                                570)
-                                            ? Padding(
-                                                padding: const EdgeInsets.symmetric(
-                                                    horizontal: 15),
-                                                child: Container(
-                                                  width:
-                                                      (ResponsiveBreakpoints.of(
-                                                                      context)
-                                                                  .screenWidth <
-                                                              770)
-                                                          ? 516
-                                                          : 696,
-                                                  child: Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      GradientText(
-                                                        "Read About Us",
-                                                    style: GoogleFonts.montserrat(
-                                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                          ? 18  // Font size for screens between 400px and 500px
-                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                          ? 19  // Font size for screens between 500px and 600px
-                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                                          ? 21  // Font size for screens between 600px and 700px
-                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                                          ? 22  // Font size for screens between 700px and 800px
-                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                                          ? 24  // Font size for screens between 800px and 900px
-                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                          ? 28  // Font size for screens between 900px and 1000px
-                                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-                                                          ? 36  // Font size for screens between 1000px and 1200px
-                                                          : 36,
+                                                    765)
+                                                    ? 16
+                                                    : 50,
+                                                fontWeight:
+                                                FontWeight.w600,
+                                                color: Colors.black
+                                                    .withOpacity(
+                                                    0.75),
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 16.h,
+                                          ),
+                                          Text(
+                                            "Our values are the guiding principles that define who we are as a company and how we conduct our business.",
+                                            textAlign: TextAlign.left,
+                                            style: GoogleFonts.poppins(
+                                              fontSize: (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 300)
+                                                  ? 11 // Font size for screens smaller than 300px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 400)
+                                                  ? 13 // Font size for screens between 300px and 400px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 575)
+                                                  ? 15 // Font size for screens between 400px and 575px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 765)
+                                                  ? 16 // Font size for screens between 575px and 765px
+                                                  : 18,
+                                              // Font size for screens larger than 765px
 
-                                                    fontWeight:
-                                                              FontWeight.w600,
-                                                        ),
-                                                        colors: [
-                                                          gradientColor1,
-                                                          gradientColor2,
-                                                          gradientColor3,
-                                                        ],
-                                                      ),
-                                                      // SizedBox(
-                                                      //   height: 12.h,
-                                                      // ),
-                                                      Visibility(
-                                                        visible: false,
-                                                        child: Text(
-                                                          "Read Company Values",
-                                                          textAlign:
-                                                              TextAlign.left,
-                                                          style:
-                                                              GoogleFonts.poppins(
-                                                            fontSize: (ResponsiveBreakpoints.of(
-                                                                            context)
-                                                                        .screenWidth <
-                                                                    765)
-                                                                ? 16
-                                                                : 50,
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            color: Colors.black
-                                                                .withOpacity(
-                                                                    0.75),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      SizedBox(
-                                                        height: 16.h,
-                                                      ),
-                                                      Text(
-                                                        "Our values are the guiding principles that define who we are as a company and how we conduct our business.",
-                                                        textAlign: TextAlign.left,
-                                                        style: GoogleFonts.poppins(
-                                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                                              ? 11  // Font size for screens smaller than 300px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                                              ? 13  // Font size for screens between 300px and 400px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                                                              ? 15  // Font size for screens between 400px and 575px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                              ? 16  // Font size for screens between 575px and 765px
-                                                              : 18,  // Font size for screens larger than 765px
-
-                                                          fontWeight: FontWeight.w300,
-                                                          color: Colors.black
-                                                              .withOpacity(0.75),
-                                                        ),
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 40,
-                                                      ),
-                                                      aboutUsTitleDescription(
-                                                        title: "Integrity",
-                                                        description: "We uphold the highest standards of integrity, building trust through transparency and ethical practices.",
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 30,
-                                                      ),
-                                                      aboutUsTitleDescription(
-                                                        title: "Innovation",
-                                                        description: "We drive innovation in everything we do, leveraging cutting-edge technology to keep our clients ahead.",
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 30,
-                                                      ),
-                                                      aboutUsTitleDescription(
-                                                        title: "Excellence",
-                                                        description: "WWe pursue excellence in every project, delivering superior quality through meticulous attention to detail.",
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 30,
-                                                      ),
-                                                      aboutUsTitleDescription(
-                                                        title: "Collaboration",
-                                                        description: "We believe in the power of collaboration, working closely with clients to co-create tailored solutions.",
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 30,
-                                                      ),
-                                                      aboutUsTitleDescription(
-                                                        title: "Reliability",
-                                                        description: "We are committed to being a reliable partner, ensuring consistent and timely delivery of results.",
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 30,
-                                                      ),
-                                                      aboutUsTitleDescription(
-                                                        title: "Client Focus",
-                                                        description: "Our clients are at the center of our work, prioritizing their needs to deliver tailored, impactful solutions.",
-                                                      ),
-                                                      /*Row(
+                                              fontWeight: FontWeight.w300,
+                                              color: Colors.black
+                                                  .withOpacity(0.75),
+                                            ),
+                                          ),
+                                          const SizedBox(
+                                            height: 40,
+                                          ),
+                                          aboutUsTitleDescription(
+                                            title: "Integrity",
+                                            description: "We uphold the highest standards of integrity, building trust through transparency and ethical practices.",
+                                          ),
+                                          const SizedBox(
+                                            height: 30,
+                                          ),
+                                          aboutUsTitleDescription(
+                                            title: "Innovation",
+                                            description: "We drive innovation in everything we do, leveraging cutting-edge technology to keep our clients ahead.",
+                                          ),
+                                          const SizedBox(
+                                            height: 30,
+                                          ),
+                                          aboutUsTitleDescription(
+                                            title: "Excellence",
+                                            description: "WWe pursue excellence in every project, delivering superior quality through meticulous attention to detail.",
+                                          ),
+                                          const SizedBox(
+                                            height: 30,
+                                          ),
+                                          aboutUsTitleDescription(
+                                            title: "Collaboration",
+                                            description: "We believe in the power of collaboration, working closely with clients to co-create tailored solutions.",
+                                          ),
+                                          const SizedBox(
+                                            height: 30,
+                                          ),
+                                          aboutUsTitleDescription(
+                                            title: "Reliability",
+                                            description: "We are committed to being a reliable partner, ensuring consistent and timely delivery of results.",
+                                          ),
+                                          const SizedBox(
+                                            height: 30,
+                                          ),
+                                          aboutUsTitleDescription(
+                                            title: "Client Focus",
+                                            description: "Our clients are at the center of our work, prioritizing their needs to deliver tailored, impactful solutions.",
+                                          ),
+                                          /*Row(
                                                   children: [
                                                     Expanded(
                                                       child: aboutUsTitleDescription(
@@ -1485,193 +1815,226 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                     ),
                                                   ],
                                                 ),*/
-                                                      const SizedBox(
-                                                        height: 50,
-                                                      ),
-                                                      Row(
-                                                        children: [
-                                                          Expanded(
-                                                            child: GradientText(
-                                                              "WHY WE'RE DIFFERENT VALUES",
-                                                              style: GoogleFonts
-                                                                  .montserrat(
-                                                                fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                                                    ? 10  // Font size for screens smaller than 300px
-                                                                    : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                                                    ? 11  // Font size for screens between 300px and 400px
-                                                                    : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                                    ? 12  // Font size for screens between 400px and 500px
-                                                                    : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                                    ? 13  // Font size for screens between 500px and 600px
-                                                                    : 14,  // Font size for screens larger than 600px
+                                          const SizedBox(
+                                            height: 50,
+                                          ),
+                                          Row(
+                                            children: [
+                                              Expanded(
+                                                child: GradientText(
+                                                  "WHY WE'RE DIFFERENT VALUES",
+                                                  style: GoogleFonts
+                                                      .montserrat(
+                                                    fontSize: (ResponsiveBreakpoints
+                                                        .of(context)
+                                                        .screenWidth < 300)
+                                                        ? 10 // Font size for screens smaller than 300px
+                                                        : (ResponsiveBreakpoints
+                                                        .of(context)
+                                                        .screenWidth < 400)
+                                                        ? 11 // Font size for screens between 300px and 400px
+                                                        : (ResponsiveBreakpoints
+                                                        .of(context)
+                                                        .screenWidth < 500)
+                                                        ? 12 // Font size for screens between 400px and 500px
+                                                        : (ResponsiveBreakpoints
+                                                        .of(context)
+                                                        .screenWidth < 600)
+                                                        ? 13 // Font size for screens between 500px and 600px
+                                                        : 14,
+                                                    // Font size for screens larger than 600px
 
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w600,
-                                                              ),
-                                                              colors: [
-                                                                gradientColor1,
-                                                                gradientColor2,
-                                                                gradientColor3,
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 4,
-                                                      ),
-                                                      Container(
-                                                        height: 2.4,
-                                                        width: 40,
-                                                        decoration:
-                                                            const BoxDecoration(
-                                                          gradient:
-                                                              LinearGradient(
-                                                            colors: [
-                                                              gradientColor1,
-                                                              gradientColor2,
-                                                              gradientColor3,
-                                                            ],
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
+                                                    fontWeight:
+                                                    FontWeight
+                                                        .w600,
                                                   ),
+                                                  colors: [
+                                                    gradientColor1,
+                                                    gradientColor2,
+                                                    gradientColor3,
+                                                  ],
                                                 ),
-                                              )
-                                            : Container(
-                                                width:
-                                                    (ResponsiveBreakpoints.of(
-                                                                    context)
-                                                                .screenWidth <
-                                                            770)
-                                                        ? 516
-                                                        : 696,
-                                                child: Column(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.start,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    GradientText(
-                                                      "Read About Us",
-                                                      style: GoogleFonts
-                                                          .montserrat(
-                                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                            ? 18  // Font size for screens between 400px and 500px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                            ? 19  // Font size for screens between 500px and 600px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                                            ? 21  // Font size for screens between 600px and 700px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                                            ? 22  // Font size for screens between 700px and 800px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                                            ? 24  // Font size for screens between 800px and 900px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                            ? 28  // Font size for screens between 900px and 1000px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-                                                            ? 36  // Font size for screens between 1000px and 1200px
-                                                            : 36,
-                                                        fontWeight:
-                                                        FontWeight.w600,
-                                                      ),
-                                                      colors: [
-                                                        gradientColor1,
-                                                        gradientColor2,
-                                                        gradientColor3,
-                                                      ],
-                                                    ),
-                                                    // SizedBox(
-                                                    //   height: 12.h,
-                                                    // ),
-                                                    Visibility(
-                                                      visible: false,
-                                                      child: Text(
-                                                        "Read Company Values",
-                                                        textAlign:
-                                                        TextAlign.left,
-                                                        style:
-                                                        GoogleFonts.poppins(
-                                                          fontSize: (ResponsiveBreakpoints.of(
-                                                              context)
-                                                              .screenWidth <
-                                                              765)
-                                                              ? 16
-                                                              : 50,
-                                                          fontWeight:
-                                                          FontWeight.w600,
-                                                          color: Colors.black
-                                                              .withOpacity(
-                                                              0.75),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      height: 16.h,
-                                                    ),
-                                                    Text(
-                                                      "Our values are the guiding principles that define who we are as a company and how we conduct our business.",
-                                                      textAlign: TextAlign.left,
-                                                      style: GoogleFonts.poppins(
-                                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                                              ? 11  // Font size for screens smaller than 300px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                                              ? 13  // Font size for screens between 300px and 400px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                                                              ? 15  // Font size for screens between 400px and 575px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                              ? 16  // Font size for screens between 575px and 765px
-                                                              : 18,
-                                                        fontWeight: FontWeight.w300,
-                                                        color: Colors.black
-                                                            .withOpacity(0.75),
-                                                      ),
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 40,
-                                                    ),
-                                                    aboutUsTitleDescription(
-                                                      title: "Integrity",
-                                                      description: "We uphold the highest standards of integrity, building trust through transparency and ethical practices.",
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 30,
-                                                    ),
-                                                    aboutUsTitleDescription(
-                                                      title: "Innovation",
-                                                      description: "We drive innovation in everything we do, leveraging cutting-edge technology to keep our clients ahead.",
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 30,
-                                                    ),
-                                                    aboutUsTitleDescription(
-                                                      title: "Excellence",
-                                                      description: "WWe pursue excellence in every project, delivering superior quality through meticulous attention to detail.",
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 30,
-                                                    ),
-                                                    aboutUsTitleDescription(
-                                                      title: "Collaboration",
-                                                      description: "We believe in the power of collaboration, working closely with clients to co-create tailored solutions.",
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 30,
-                                                    ),
-                                                    aboutUsTitleDescription(
-                                                      title: "Reliability",
-                                                      description: "We are committed to being a reliable partner, ensuring consistent and timely delivery of results.",
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 30,
-                                                    ),
-                                                    aboutUsTitleDescription(
-                                                      title: "Client Focus",
-                                                      description: "Our clients are at the center of our work, prioritizing their needs to deliver tailored, impactful solutions.",
-                                                    ),
+                                              ),
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 4,
+                                          ),
+                                          Container(
+                                            height: 2.4,
+                                            width: 40,
+                                            decoration:
+                                            const BoxDecoration(
+                                              gradient:
+                                              LinearGradient(
+                                                colors: [
+                                                  gradientColor1,
+                                                  gradientColor2,
+                                                  gradientColor3,
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  )
+                                      : Container(
+                                    width:
+                                    (ResponsiveBreakpoints
+                                        .of(
+                                        context)
+                                        .screenWidth <
+                                        770)
+                                        ? 516
+                                        : 696,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        GradientText(
+                                          "Read About Us",
+                                          style: GoogleFonts
+                                              .montserrat(
+                                            fontSize: (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 500)
+                                                ? 18 // Font size for screens between 400px and 500px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 600)
+                                                ? 19 // Font size for screens between 500px and 600px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 700)
+                                                ? 21 // Font size for screens between 600px and 700px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 800)
+                                                ? 22 // Font size for screens between 700px and 800px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 900)
+                                                ? 24 // Font size for screens between 800px and 900px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 1000)
+                                                ? 28 // Font size for screens between 900px and 1000px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 1200)
+                                                ? 36 // Font size for screens between 1000px and 1200px
+                                                : 36,
+                                            fontWeight:
+                                            FontWeight.w600,
+                                          ),
+                                          colors: [
+                                            gradientColor1,
+                                            gradientColor2,
+                                            gradientColor3,
+                                          ],
+                                        ),
+                                        // SizedBox(
+                                        //   height: 12.h,
+                                        // ),
+                                        Visibility(
+                                          visible: false,
+                                          child: Text(
+                                            "Read Company Values",
+                                            textAlign:
+                                            TextAlign.left,
+                                            style:
+                                            GoogleFonts.poppins(
+                                              fontSize: (ResponsiveBreakpoints
+                                                  .of(
+                                                  context)
+                                                  .screenWidth <
+                                                  765)
+                                                  ? 16
+                                                  : 50,
+                                              fontWeight:
+                                              FontWeight.w600,
+                                              color: Colors.black
+                                                  .withOpacity(
+                                                  0.75),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 16.h,
+                                        ),
+                                        Text(
+                                          "Our values are the guiding principles that define who we are as a company and how we conduct our business.",
+                                          textAlign: TextAlign.left,
+                                          style: GoogleFonts.poppins(
+                                            fontSize: (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 300)
+                                                ? 11 // Font size for screens smaller than 300px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 400)
+                                                ? 13 // Font size for screens between 300px and 400px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 575)
+                                                ? 15 // Font size for screens between 400px and 575px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 765)
+                                                ? 16 // Font size for screens between 575px and 765px
+                                                : 18,
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black
+                                                .withOpacity(0.75),
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 40,
+                                        ),
+                                        aboutUsTitleDescription(
+                                          title: "Integrity",
+                                          description: "We uphold the highest standards of integrity, building trust through transparency and ethical practices.",
+                                        ),
+                                        const SizedBox(
+                                          height: 30,
+                                        ),
+                                        aboutUsTitleDescription(
+                                          title: "Innovation",
+                                          description: "We drive innovation in everything we do, leveraging cutting-edge technology to keep our clients ahead.",
+                                        ),
+                                        const SizedBox(
+                                          height: 30,
+                                        ),
+                                        aboutUsTitleDescription(
+                                          title: "Excellence",
+                                          description: "WWe pursue excellence in every project, delivering superior quality through meticulous attention to detail.",
+                                        ),
+                                        const SizedBox(
+                                          height: 30,
+                                        ),
+                                        aboutUsTitleDescription(
+                                          title: "Collaboration",
+                                          description: "We believe in the power of collaboration, working closely with clients to co-create tailored solutions.",
+                                        ),
+                                        const SizedBox(
+                                          height: 30,
+                                        ),
+                                        aboutUsTitleDescription(
+                                          title: "Reliability",
+                                          description: "We are committed to being a reliable partner, ensuring consistent and timely delivery of results.",
+                                        ),
+                                        const SizedBox(
+                                          height: 30,
+                                        ),
+                                        aboutUsTitleDescription(
+                                          title: "Client Focus",
+                                          description: "Our clients are at the center of our work, prioritizing their needs to deliver tailored, impactful solutions.",
+                                        ),
 
-                                                    /*Row(
+                                        /*Row(
                                                 children: [
                                                   Expanded(
                                                     child: aboutUsTitleDescription(
@@ -1690,321 +2053,383 @@ Example 2: Implemented a secure data management system for a financial instituti
                                                   ),
                                                 ],
                                               ),*/
-                                                    const SizedBox(
-                                                      height: 50,
-                                                    ),
-                                                    GradientText(
-                                                      "WHY WE'RE DIFFERENT VALUES",
-                                                      style: GoogleFonts
-                                                          .montserrat(
-                                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                                            ? 10  // Font size for screens smaller than 300px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                                            ? 11  // Font size for screens between 300px and 400px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                            ? 12  // Font size for screens between 400px and 500px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                            ? 13  // Font size for screens between 500px and 600px
-                                                            : 14,  // Font size for screens larger than 600px
+                                        const SizedBox(
+                                          height: 50,
+                                        ),
+                                        GradientText(
+                                          "WHY WE'RE DIFFERENT VALUES",
+                                          style: GoogleFonts
+                                              .montserrat(
+                                            fontSize: (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 300)
+                                                ? 10 // Font size for screens smaller than 300px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 400)
+                                                ? 11 // Font size for screens between 300px and 400px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 500)
+                                                ? 12 // Font size for screens between 400px and 500px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 600)
+                                                ? 13 // Font size for screens between 500px and 600px
+                                                : 14,
+                                            // Font size for screens larger than 600px
 
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                      ),
-                                                      colors: [
-                                                        gradientColor1,
-                                                        gradientColor2,
-                                                        gradientColor3,
-                                                      ],
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 4,
-                                                    ),
-                                                    Container(
-                                                      height: 2.4,
-                                                      width: 40,
-                                                      decoration: const BoxDecoration(
-                                                        gradient:
-                                                            LinearGradient(
-                                                          colors: [
-                                                            gradientColor1,
-                                                            gradientColor2,
-                                                            gradientColor3,
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                      ],
-                                    )
-                                  : Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        Container(
-                                          height:
-                                              (ResponsiveBreakpoints.of(context)
-                                                          .screenWidth <
-                                                      1280)
-                                                  ? 524
-                                                  : 696,
-                                          width:
-                                              (ResponsiveBreakpoints.of(context)
-                                                          .screenWidth <
-                                                      1280)
-                                                  ? 452
-                                                  : 633,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 15),
-                                          decoration: BoxDecoration(
-                                            image: const DecorationImage(
-                                              image: AssetImage(aboutImage1),
-                                              fit: BoxFit.fill,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(10),
+                                            fontWeight:
+                                            FontWeight.w600,
                                           ),
+                                          colors: [
+                                            gradientColor1,
+                                            gradientColor2,
+                                            gradientColor3,
+                                          ],
                                         ),
                                         const SizedBox(
-                                          width: 15,
+                                          height: 4,
                                         ),
                                         Container(
-                                          width:
-                                              (ResponsiveBreakpoints.of(context)
-                                                          .screenWidth <
-                                                      1280)
-                                                  ? 452
-                                                  : 633,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 15),
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              GradientText(
-                                                "Read About Us",
-                                                style: GoogleFonts
-                                                    .montserrat(
-                                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                      ? 18  // Font size for screens between 400px and 500px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                      ? 19  // Font size for screens between 500px and 600px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                                      ? 21  // Font size for screens between 600px and 700px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                                      ? 22  // Font size for screens between 700px and 800px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                                      ? 24  // Font size for screens between 800px and 900px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                      ? 28  // Font size for screens between 900px and 1000px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-                                                      ? 36  // Font size for screens between 1000px and 1200px
-                                                      : 36,
-                                                  fontWeight:
-                                                  FontWeight.w600,
-                                                ),
-                                                colors: [
-                                                  gradientColor1,
-                                                  gradientColor2,
-                                                  gradientColor3,
-                                                ],
-                                              ),
-                                              // SizedBox(
-                                              //   height: 12.h,
-                                              // ),
-                                              Visibility(
-                                                visible: false,
-                                                child: Text(
-                                                  "Read Company Values",
-                                                  textAlign:
-                                                  TextAlign.left,
-                                                  style:
-                                                  GoogleFonts.poppins(
-                                                    fontSize: (ResponsiveBreakpoints.of(
-                                                        context)
-                                                        .screenWidth <
-                                                        765)
-                                                        ? 16
-                                                        : 50,
-                                                    fontWeight:
-                                                    FontWeight.w600,
-                                                    color: Colors.black
-                                                        .withOpacity(
-                                                        0.75),
-                                                  ),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                height: 16.h,
-                                              ),
-                                              Text(
-                                                "Our values are the guiding principles that define who we are as a company and how we conduct our business.",
-                                                textAlign: TextAlign.left,
-                                                style: GoogleFonts.poppins(
-                                                    fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                                        ? 11  // Font size for screens smaller than 300px
-                                                        : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                                        ? 13  // Font size for screens between 300px and 400px
-                                                        : (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                                                        ? 15  // Font size for screens between 400px and 575px
-                                                        : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                        ? 16  // Font size for screens between 575px and 765px
-                                                        : 18,
-                                                  fontWeight: FontWeight.w300,
-                                                  color: Colors.black
-                                                      .withOpacity(0.75),
-                                                ),
-                                              ),
-                                              const SizedBox(
-                                                height: 40,
-                                              ),
-                                              Row(
-                                                children: [
-                                                  Expanded(
-                                                    child: aboutUsTitleDescription(
-                                                      title: "Integrity",
-                                                      description: "We uphold the highest standards of integrity, building trust through transparency and ethical practices.",
-                                                    ),
-                                                  ),
-                                                  const SizedBox(
-                                                    width: 15,
-                                                  ),
-                                                  Expanded(
-                                                    child: aboutUsTitleDescription(
-                                                      title: "Innovation",
-                                                      description: "We drive innovation in everything we do, leveraging cutting-edge technology to keep our clients ahead.",
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                              const SizedBox(
-                                                height: 30,
-                                              ),
-                                              Row(
-                                                children: [
-                                                  Expanded(
-                                                    child:  aboutUsTitleDescription(
-                                                      title: "Excellence",
-                                                      description: "We pursue excellence in every project, delivering superior quality through meticulous attention to detail.",
-                                                    ),
-                                                  ),
-                                                  const SizedBox(
-                                                    width: 15,
-                                                  ),
-                                                  Expanded(
-                                                    child:aboutUsTitleDescription(
-                                                      title: "Collaboration",
-                                                      description: "We believe in the power of collaboration, working closely with clients to co-create tailored solutions.",
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                              const SizedBox(
-                                                height: 30,
-                                              ),
-                                              Row(
-                                                children: [
-                                                  Expanded(
-                                                    child: aboutUsTitleDescription(
-                                                      title: "Reliability",
-                                                      description: "We are committed to being a reliable partner, ensuring consistent and timely delivery of results.",
-                                                    ),
-                                                  ),
-                                                  const SizedBox(
-                                                    width: 15,
-                                                  ),
-                                                  Expanded(
-                                                    child:aboutUsTitleDescription(
-                                                      title: "Client Focus",
-                                                      description: "Our clients are at the center of our work, prioritizing their needs to deliver tailored, impactful solutions.",
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                              const SizedBox(
-                                                height: 50,
-                                              ),
-                                              GradientText(
-                                                "WHY WE'RE DIFFERENT VALUES",
-                                                style: GoogleFonts.montserrat(
-                                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                                      ? 10  // Font size for screens smaller than 300px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                                      ? 11  // Font size for screens between 300px and 400px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                      ? 12  // Font size for screens between 400px and 500px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                      ? 13  // Font size for screens between 500px and 600px
-                                                      : 14,  // Font size for screens larger than 600px
-
-                                                  fontWeight: FontWeight.w600,
-                                                ),
-                                                colors: [
-                                                  gradientColor1,
-                                                  gradientColor2,
-                                                  gradientColor3,
-                                                ],
-                                              ),
-                                              const SizedBox(
-                                                height: 4,
-                                              ),
-                                              Container(
-                                                height: 2.4,
-                                                width: 40,
-                                                decoration: const BoxDecoration(
-                                                  gradient: LinearGradient(
-                                                    colors: [
-                                                      gradientColor1,
-                                                      gradientColor2,
-                                                      gradientColor3,
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
+                                          height: 2.4,
+                                          width: 40,
+                                          decoration: const BoxDecoration(
+                                            gradient:
+                                            LinearGradient(
+                                              colors: [
+                                                gradientColor1,
+                                                gradientColor2,
+                                                gradientColor3,
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       ],
                                     ),
+                                  ),
+                                ],
+                              )
+                                  : Row(
+                                mainAxisAlignment:
+                                MainAxisAlignment.center,
+                                crossAxisAlignment:
+                                CrossAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    height:
+                                    (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth <
+                                        1280)
+                                        ? 524
+                                        : 696,
+                                    width:
+                                    (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth <
+                                        1280)
+                                        ? 452
+                                        : 633,
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 15),
+                                    decoration: BoxDecoration(
+                                      image: const DecorationImage(
+                                        image: AssetImage(aboutImage1),
+                                        fit: BoxFit.fill,
+                                      ),
+                                      borderRadius:
+                                      BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 15,
+                                  ),
+                                  Container(
+                                    width:
+                                    (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth <
+                                        1280)
+                                        ? 452
+                                        : 633,
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 15),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        GradientText(
+                                          "Read About Us",
+                                          style: GoogleFonts
+                                              .montserrat(
+                                            fontSize: (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 500)
+                                                ? 18 // Font size for screens between 400px and 500px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 600)
+                                                ? 19 // Font size for screens between 500px and 600px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 700)
+                                                ? 21 // Font size for screens between 600px and 700px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 800)
+                                                ? 22 // Font size for screens between 700px and 800px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 900)
+                                                ? 24 // Font size for screens between 800px and 900px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 1000)
+                                                ? 28 // Font size for screens between 900px and 1000px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 1200)
+                                                ? 36 // Font size for screens between 1000px and 1200px
+                                                : 36,
+                                            fontWeight:
+                                            FontWeight.w600,
+                                          ),
+                                          colors: [
+                                            gradientColor1,
+                                            gradientColor2,
+                                            gradientColor3,
+                                          ],
+                                        ),
+                                        // SizedBox(
+                                        //   height: 12.h,
+                                        // ),
+                                        Visibility(
+                                          visible: false,
+                                          child: Text(
+                                            "Read Company Values",
+                                            textAlign:
+                                            TextAlign.left,
+                                            style:
+                                            GoogleFonts.poppins(
+                                              fontSize: (ResponsiveBreakpoints
+                                                  .of(
+                                                  context)
+                                                  .screenWidth <
+                                                  765)
+                                                  ? 16
+                                                  : 50,
+                                              fontWeight:
+                                              FontWeight.w600,
+                                              color: Colors.black
+                                                  .withOpacity(
+                                                  0.75),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 16.h,
+                                        ),
+                                        Text(
+                                          "Our values are the guiding principles that define who we are as a company and how we conduct our business.",
+                                          textAlign: TextAlign.left,
+                                          style: GoogleFonts.poppins(
+                                            fontSize: (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 300)
+                                                ? 11 // Font size for screens smaller than 300px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 400)
+                                                ? 13 // Font size for screens between 300px and 400px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 575)
+                                                ? 15 // Font size for screens between 400px and 575px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 765)
+                                                ? 16 // Font size for screens between 575px and 765px
+                                                : 18,
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black
+                                                .withOpacity(0.75),
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 40,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                              child: aboutUsTitleDescription(
+                                                title: "Integrity",
+                                                description: "We uphold the highest standards of integrity, building trust through transparency and ethical practices.",
+                                              ),
+                                            ),
+                                            const SizedBox(
+                                              width: 15,
+                                            ),
+                                            Expanded(
+                                              child: aboutUsTitleDescription(
+                                                title: "Innovation",
+                                                description: "We drive innovation in everything we do, leveraging cutting-edge technology to keep our clients ahead.",
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 30,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                              child: aboutUsTitleDescription(
+                                                title: "Excellence",
+                                                description: "We pursue excellence in every project, delivering superior quality through meticulous attention to detail.",
+                                              ),
+                                            ),
+                                            const SizedBox(
+                                              width: 15,
+                                            ),
+                                            Expanded(
+                                              child: aboutUsTitleDescription(
+                                                title: "Collaboration",
+                                                description: "We believe in the power of collaboration, working closely with clients to co-create tailored solutions.",
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 30,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                              child: aboutUsTitleDescription(
+                                                title: "Reliability",
+                                                description: "We are committed to being a reliable partner, ensuring consistent and timely delivery of results.",
+                                              ),
+                                            ),
+                                            const SizedBox(
+                                              width: 15,
+                                            ),
+                                            Expanded(
+                                              child: aboutUsTitleDescription(
+                                                title: "Client Focus",
+                                                description: "Our clients are at the center of our work, prioritizing their needs to deliver tailored, impactful solutions.",
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 50,
+                                        ),
+                                        GradientText(
+                                          "WHY WE'RE DIFFERENT VALUES",
+                                          style: GoogleFonts.montserrat(
+                                            fontSize: (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 300)
+                                                ? 10 // Font size for screens smaller than 300px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 400)
+                                                ? 11 // Font size for screens between 300px and 400px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 500)
+                                                ? 12 // Font size for screens between 400px and 500px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 600)
+                                                ? 13 // Font size for screens between 500px and 600px
+                                                : 14,
+                                            // Font size for screens larger than 600px
+
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                          colors: [
+                                            gradientColor1,
+                                            gradientColor2,
+                                            gradientColor3,
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 4,
+                                        ),
+                                        Container(
+                                          height: 2.4,
+                                          width: 40,
+                                          decoration: const BoxDecoration(
+                                            gradient: LinearGradient(
+                                              colors: [
+                                                gradientColor1,
+                                                gradientColor2,
+                                                gradientColor3,
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
                             )
                           ],
                         ),
                       ),
                       Container(
                         key: portfolioKey,
-                        width: MediaQuery.of(context).size.width,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width,
                         padding: const EdgeInsets.symmetric(vertical: 120),
                         color: Colors.white,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 15),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 15),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   GradientText(
                                     "Our Portfolio",
                                     style: GoogleFonts.montserrat(
-                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                          ? 18  // Font size for screens between 400px and 500px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                          ? 19  // Font size for screens between 500px and 600px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                          ? 21  // Font size for screens between 600px and 700px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                          ? 22  // Font size for screens between 700px and 800px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                          ? 24  // Font size for screens between 800px and 900px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                          ? 28  // Font size for screens between 900px and 1000px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-                                          ? 36  // Font size for screens between 1000px and 1200px
+                                      fontSize: (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 500)
+                                          ? 18 // Font size for screens between 400px and 500px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 600)
+                                          ? 19 // Font size for screens between 500px and 600px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 700)
+                                          ? 21 // Font size for screens between 600px and 700px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 800)
+                                          ? 22 // Font size for screens between 700px and 800px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 900)
+                                          ? 24 // Font size for screens between 800px and 900px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 1000)
+                                          ? 28 // Font size for screens between 900px and 1000px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 1200)
+                                          ? 36 // Font size for screens between 1000px and 1200px
                                           : 36,
                                       fontWeight: FontWeight.w600,
                                     ),
@@ -2021,17 +2446,28 @@ Example 2: Implemented a secure data management system for a financial instituti
                                     "Showcasing Our Expertise Through Successful Projects",
                                     textAlign: TextAlign.left,
                                     style: GoogleFonts.poppins(
-                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                          ? 12   // Font size for screens smaller than 300px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                          ? 14  // Font size for screens between 300px and 400px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                                          ? 24  // Font size for screens between 400px and 575px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                          ? 32  // Font size for screens between 575px and 765px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                          ? 32  // Font size for screens between 765px and 990px
-                                          : 40,  // Font size for screens larger than 990px
+                                      fontSize: (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 300)
+                                          ? 12 // Font size for screens smaller than 300px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 400)
+                                          ? 14 // Font size for screens between 300px and 400px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 575)
+                                          ? 24 // Font size for screens between 400px and 575px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 765)
+                                          ? 32 // Font size for screens between 575px and 765px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 990)
+                                          ? 32 // Font size for screens between 765px and 990px
+                                          : 40,
+                                      // Font size for screens larger than 990px
 
                                       fontWeight: FontWeight.w600,
                                       color: Colors.black.withOpacity(0.75),
@@ -2044,15 +2480,24 @@ Example 2: Implemented a secure data management system for a financial instituti
                                     "We take pride in our diverse portfolio, which showcases our ability to deliver high-quality solutions across various industries.\nOne of our standout projects is the PakWheels app, a comprehensive platform for car enthusiasts.",
                                     textAlign: TextAlign.left,
                                     style: GoogleFonts.poppins(
-                                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                          ? 11   // Font size for screens smaller than 300px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                          ? 12  // Font size for screens between 300px and 400px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                                          ? 13  // Font size for screens between 400px and 575px
-                                          : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                          ? 16  // Font size for screens between 575px and 765px
-                                          : 18,  // Font size for screens larger than 765px
+                                      fontSize: (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 300)
+                                          ? 11 // Font size for screens smaller than 300px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 400)
+                                          ? 12 // Font size for screens between 300px and 400px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 575)
+                                          ? 13 // Font size for screens between 400px and 575px
+                                          : (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth < 765)
+                                          ? 16 // Font size for screens between 575px and 765px
+                                          : 18,
+                                      // Font size for screens larger than 765px
                                       fontWeight: FontWeight.w300,
                                       color: Colors.black.withOpacity(0.75),
                                     ),
@@ -2061,55 +2506,73 @@ Example 2: Implemented a secure data management system for a financial instituti
                                     height: 50,
                                   ),
                                   Container(
-                                    width: (ResponsiveBreakpoints.of(context)
-                                                .screenWidth <
-                                            1270)
-                                        ? (ResponsiveBreakpoints.of(context)
-                                                    .screenWidth <
-                                                990)
-                                            ? (ResponsiveBreakpoints.of(context)
-                                                        .screenWidth <
-                                                    770)
-                                                ? (ResponsiveBreakpoints.of(
-                                                                context)
-                                                            .screenWidth <
-                                                        575)
-                                                    ? 479
-                                                    : 546
-                                                : 726
-                                            : 966
+                                    width: (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth <
+                                        1270)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth <
+                                        990)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth <
+                                        770)
+                                        ? (ResponsiveBreakpoints
+                                        .of(
+                                        context)
+                                        .screenWidth <
+                                        575)
+                                        ? 479
+                                        : 546
+                                        : 726
+                                        : 966
                                         : 1266,
                                   )
                                 ],
                               ),
                             ),
                             Container(
-                              height: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
-                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
-                                  ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                                  ? 600.h   // Adjusted height for screens smaller than 575px
-                                  : 363     // Adjusted height for screens between 575px and 770px
-                                  : 328         // Adjusted height for screens between 770px and 990px
-                                  : 419             // Adjusted height for screens between 990px and 1270px
-                                  : 534,                // Adjusted height for screens larger than 1270px
+                              height: (ResponsiveBreakpoints
+                                  .of(context)
+                                  .screenWidth < 1270)
+                                  ? (ResponsiveBreakpoints
+                                  .of(context)
+                                  .screenWidth < 990)
+                                  ? (ResponsiveBreakpoints
+                                  .of(context)
+                                  .screenWidth < 770)
+                                  ? (ResponsiveBreakpoints
+                                  .of(context)
+                                  .screenWidth < 575)
+                                  ? 600
+                                  .h // Adjusted height for screens smaller than 575px
+                                  : 363 // Adjusted height for screens between 575px and 770px
+                                  : 328 // Adjusted height for screens between 770px and 990px
+                                  : 419 // Adjusted height for screens between 990px and 1270px
+                                  : 534,
+                              // Adjusted height for screens larger than 1270px
 
-                              width: (ResponsiveBreakpoints.of(context)
-                                          .screenWidth <
-                                      1270)
-                                  ? (ResponsiveBreakpoints.of(context)
-                                              .screenWidth <
-                                          990)
-                                      ? (ResponsiveBreakpoints.of(context)
-                                                  .screenWidth <
-                                              770)
-                                          ? (ResponsiveBreakpoints.of(context)
-                                                      .screenWidth <
-                                                  575)
-                                              ? 479
-                                              : 546
-                                          : 726
-                                      : 966
+                              width: (ResponsiveBreakpoints
+                                  .of(context)
+                                  .screenWidth <
+                                  1270)
+                                  ? (ResponsiveBreakpoints
+                                  .of(context)
+                                  .screenWidth <
+                                  990)
+                                  ? (ResponsiveBreakpoints
+                                  .of(context)
+                                  .screenWidth <
+                                  770)
+                                  ? (ResponsiveBreakpoints
+                                  .of(context)
+                                  .screenWidth <
+                                  575)
+                                  ? 479
+                                  : 546
+                                  : 726
+                                  : 966
                                   : 1266,
                               child: Column(
                                 children: [
@@ -2119,60 +2582,66 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   Expanded(
                                     child: Row(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.center,
+                                      MainAxisAlignment.center,
                                       children: [
                                         Expanded(
                                           child: LayoutBuilder(
                                               builder: (context, constraints) {
-                                            return InfiniteCarousel.builder(
-                                              itemCount: portfolioItems.length,
-                                              itemExtent: (ResponsiveBreakpoints
-                                                              .of(context)
-                                                          .screenWidth <
+                                                return InfiniteCarousel.builder(
+                                                  itemCount: portfolioItems
+                                                      .length,
+                                                  itemExtent: (ResponsiveBreakpoints
+                                                      .of(context)
+                                                      .screenWidth <
                                                       1270)
-                                                  ? (ResponsiveBreakpoints.of(
-                                                                  context)
-                                                              .screenWidth <
-                                                          990)
-                                                      ? (ResponsiveBreakpoints.of(
-                                                                      context)
-                                                                  .screenWidth <
-                                                              770)
-                                                          ? (ResponsiveBreakpoints.of(
-                                                                          context)
-                                                                      .screenWidth <
-                                                                  575)
-                                                              ? constraints
-                                                                  .maxWidth
-                                                              : 273
-                                                          : 242
+                                                      ? (ResponsiveBreakpoints
+                                                      .of(
+                                                      context)
+                                                      .screenWidth <
+                                                      990)
+                                                      ? (ResponsiveBreakpoints
+                                                      .of(
+                                                      context)
+                                                      .screenWidth <
+                                                      770)
+                                                      ? (ResponsiveBreakpoints
+                                                      .of(
+                                                      context)
+                                                      .screenWidth <
+                                                      575)
+                                                      ? constraints
+                                                      .maxWidth
+                                                      : 273
+                                                      : 242
                                                       : 322
-                                                  : 425,
-                                              center: false,
-                                              anchor: 0.0,
-                                              velocityFactor: 0.8,
-                                              onIndexChanged: (index) {
-                                                ref
-                                                    .read(pageNumberProvider
+                                                      : 425,
+                                                  center: false,
+                                                  anchor: 0.0,
+                                                  velocityFactor: 0.8,
+                                                  onIndexChanged: (index) {
+                                                    ref
+                                                        .read(pageNumberProvider
                                                         .notifier)
-                                                    .state = index;
-                                              },
-                                              controller:
+                                                        .state = index;
+                                                  },
+                                                  controller:
                                                   _portfolioScroll1Controller,
-                                              axisDirection: Axis.horizontal,
-                                              loop: true,
-                                              itemBuilder: (context, itemIndex,
-                                                  realIndex) {
-                                                final item = portfolioItems[itemIndex];
-                                                return PortfolioSliderWidget(
-                                                    itemIndex: itemIndex,
-                                                  stackName: item['stackName']!,
-                                                  projectName: item['projectName']!,
-                                                  explanation: item['explanation']!,
-                                                  image: item['image']!,);
-                                              },
-                                            );
-                                          }),
+                                                  axisDirection: Axis
+                                                      .horizontal,
+                                                  loop: true,
+                                                  itemBuilder: (context,
+                                                      itemIndex,
+                                                      realIndex) {
+                                                    final item = portfolioItems[itemIndex];
+                                                    return PortfolioSliderWidget(
+                                                      itemIndex: itemIndex,
+                                                      stackName: item['stackName']!,
+                                                      projectName: item['projectName']!,
+                                                      explanation: item['explanation']!,
+                                                      image: item['image']!,);
+                                                  },
+                                                );
+                                              }),
                                         ),
                                       ],
                                     ),
@@ -2230,7 +2699,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                     : 726
                                 : 966
                             : */
-                            1266,
+                        1266,
                         padding: const EdgeInsets.symmetric(vertical: 120),
                         color: Colors.grey.withOpacity(0.06),
                         child: Column(
@@ -2239,21 +2708,36 @@ Example 2: Implemented a secure data management system for a financial instituti
                             GradientText(
                               "Our Target Market",
                               style: GoogleFonts.montserrat(
-                                fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                    ? 18  // Font size for screens between 400px and 500px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                    ? 19  // Font size for screens between 500px and 600px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                    ? 21  // Font size for screens between 600px and 700px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                    ? 22  // Font size for screens between 700px and 800px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                    ? 24  // Font size for screens between 800px and 900px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                    ? 28  // Font size for screens between 900px and 1000px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-                                    ? 36  // Font size for screens between 1000px and 1200px
-                                    : 36,  // Font size for screens larger than 1200px
+                                fontSize: (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 500)
+                                    ? 18 // Font size for screens between 400px and 500px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 600)
+                                    ? 19 // Font size for screens between 500px and 600px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 700)
+                                    ? 21 // Font size for screens between 600px and 700px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 800)
+                                    ? 22 // Font size for screens between 700px and 800px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 900)
+                                    ? 24 // Font size for screens between 800px and 900px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 1000)
+                                    ? 28 // Font size for screens between 900px and 1000px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 1200)
+                                    ? 36 // Font size for screens between 1000px and 1200px
+                                    : 36,
+                                // Font size for screens larger than 1200px
                                 fontWeight: FontWeight.w600,
                               ),
                               colors: [
@@ -2269,23 +2753,40 @@ Example 2: Implemented a secure data management system for a financial instituti
                               "Tailored Solutions for Diverse Industries",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                    ? 12  // Font size for screens smaller than 300px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                    ? 14  // Font size for screens between 300px and 400px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                    ? 16  // Font size for screens between 400px and 500px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                    ? 20  // Font size for screens between 500px and 600px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                    ? 24  // Font size for screens between 600px and 700px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                    ? 28  // Font size for screens between 700px and 800px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                    ? 32  // Font size for screens between 800px and 900px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                    ? 36  // Font size for screens between 900px and 1000px
-                                    : 40,  // Font size for screens larger than 1000px
+                                fontSize: (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 300)
+                                    ? 12 // Font size for screens smaller than 300px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 400)
+                                    ? 14 // Font size for screens between 300px and 400px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 500)
+                                    ? 16 // Font size for screens between 400px and 500px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 600)
+                                    ? 20 // Font size for screens between 500px and 600px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 700)
+                                    ? 24 // Font size for screens between 600px and 700px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 800)
+                                    ? 28 // Font size for screens between 700px and 800px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 900)
+                                    ? 32 // Font size for screens between 800px and 900px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 1000)
+                                    ? 36 // Font size for screens between 900px and 1000px
+                                    : 40,
+                                // Font size for screens larger than 1000px
 
                                 fontWeight: FontWeight.w500,
                                 color: Colors.black.withOpacity(0.75),
@@ -2300,25 +2801,44 @@ Example 2: Implemented a secure data management system for a financial instituti
                                 "Our services are designed to meet the needs of a diverse range of industries. We understand that each industry has unique requirements, and we tailor our solutions to ensure maximum impact and efficiency.",
                                 textAlign: TextAlign.left,
                                 style: GoogleFonts.poppins(
-                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                      ? 11  // Font size for screens smaller than 300px
-                                      : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                      ? 12  // Font size for screens between 300px and 400px
-                                      : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                      ? 13  // Font size for screens between 400px and 500px
-                                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                      ? 14  // Font size for screens between 500px and 600px
-                                      : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                      ? 15  // Font size for screens between 600px and 700px
-                                      : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                      ? 16  // Font size for screens between 700px and 765px
-                                      : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                      ? 17  // Font size for screens between 765px and 800px
-                                      : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                      ? 18  // Font size for screens between 800px and 900px
-                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                      ? 19  // Font size for screens between 900px and 1000px
-                                      : 18,  // Font size for screens larger than 1000px
+                                  fontSize: (ResponsiveBreakpoints
+                                      .of(context)
+                                      .screenWidth < 300)
+                                      ? 11 // Font size for screens smaller than 300px
+                                      : (ResponsiveBreakpoints
+                                      .of(context)
+                                      .screenWidth < 400)
+                                      ? 12 // Font size for screens between 300px and 400px
+                                      : (ResponsiveBreakpoints
+                                      .of(context)
+                                      .screenWidth < 500)
+                                      ? 13 // Font size for screens between 400px and 500px
+                                      : (ResponsiveBreakpoints
+                                      .of(context)
+                                      .screenWidth < 600)
+                                      ? 14 // Font size for screens between 500px and 600px
+                                      : (ResponsiveBreakpoints
+                                      .of(context)
+                                      .screenWidth < 700)
+                                      ? 15 // Font size for screens between 600px and 700px
+                                      : (ResponsiveBreakpoints
+                                      .of(context)
+                                      .screenWidth < 765)
+                                      ? 16 // Font size for screens between 700px and 765px
+                                      : (ResponsiveBreakpoints
+                                      .of(context)
+                                      .screenWidth < 800)
+                                      ? 17 // Font size for screens between 765px and 800px
+                                      : (ResponsiveBreakpoints
+                                      .of(context)
+                                      .screenWidth < 900)
+                                      ? 18 // Font size for screens between 800px and 900px
+                                      : (ResponsiveBreakpoints
+                                      .of(context)
+                                      .screenWidth < 1000)
+                                      ? 19 // Font size for screens between 900px and 1000px
+                                      : 18,
+                                  // Font size for screens larger than 1000px
                                   fontWeight: FontWeight.w300,
                                   color: Colors.black.withOpacity(0.75),
                                 ),
@@ -2330,25 +2850,44 @@ Example 2: Implemented a secure data management system for a financial instituti
                             GradientText(
                               "Industries We Serve:",
                               style: GoogleFonts.montserrat(
-                                fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                    ? 12  // Font size for screens smaller than 300px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                    ? 13  // Font size for screens between 300px and 400px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                    ? 14  // Font size for screens between 400px and 500px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                    ? 15  // Font size for screens between 500px and 600px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                    ? 16  // Font size for screens between 600px and 700px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                    ? 16  // Font size for screens between 700px and 765px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                    ? 16  // Font size for screens between 765px and 800px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                    ? 16  // Font size for screens between 800px and 900px
-                                    : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                    ? 16  // Font size for screens between 900px and 1000px
-                                    : 16,  // Font size for screens larger than 1000px
+                                fontSize: (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 300)
+                                    ? 12 // Font size for screens smaller than 300px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 400)
+                                    ? 13 // Font size for screens between 300px and 400px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 500)
+                                    ? 14 // Font size for screens between 400px and 500px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 600)
+                                    ? 15 // Font size for screens between 500px and 600px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 700)
+                                    ? 16 // Font size for screens between 600px and 700px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 765)
+                                    ? 16 // Font size for screens between 700px and 765px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 800)
+                                    ? 16 // Font size for screens between 765px and 800px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 900)
+                                    ? 16 // Font size for screens between 800px and 900px
+                                    : (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 1000)
+                                    ? 16 // Font size for screens between 900px and 1000px
+                                    : 16,
+                                // Font size for screens larger than 1000px
 
                                 fontWeight: FontWeight.w600,
                               ),
@@ -2411,14 +2950,18 @@ Example 2: Implemented a secure data management system for a financial instituti
                         visible: false,
                         child: Container(
                           key: blogKey,
-                          width: MediaQuery.of(context).size.width,
+                          width: MediaQuery
+                              .of(context)
+                              .size
+                              .width,
                           padding: const EdgeInsets.symmetric(vertical: 120),
                           color: Colors.white,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 15),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 15),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -2441,15 +2984,17 @@ Example 2: Implemented a secure data management system for a financial instituti
                                       "Expertise in Cutting-Edge Technologies",
                                       textAlign: TextAlign.left,
                                       style: GoogleFonts.poppins(
-                                        fontSize: (ResponsiveBreakpoints.of(
-                                                        context)
-                                                    .screenWidth <
-                                                990)
-                                            ? (ResponsiveBreakpoints.of(context)
-                                                        .screenWidth <
-                                                    575)
-                                                ? 32
-                                                : 40
+                                        fontSize: (ResponsiveBreakpoints
+                                            .of(
+                                            context)
+                                            .screenWidth <
+                                            990)
+                                            ? (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth <
+                                            575)
+                                            ? 32
+                                            : 40
                                             : 50,
                                         fontWeight: FontWeight.w500,
                                         color: Colors.black.withOpacity(0.75),
@@ -2462,15 +3007,17 @@ Example 2: Implemented a secure data management system for a financial instituti
                                       "We stay ahead of the curve by leveraging the latest technologies to deliver innovative solutions.",
                                       textAlign: TextAlign.left,
                                       style: GoogleFonts.poppins(
-                                        fontSize: (ResponsiveBreakpoints.of(
-                                                        context)
-                                                    .screenWidth <
-                                                765)
-                                            ? (ResponsiveBreakpoints.of(context)
-                                                        .screenWidth <
-                                                    575)
-                                                ? 14
-                                                : 16
+                                        fontSize: (ResponsiveBreakpoints
+                                            .of(
+                                            context)
+                                            .screenWidth <
+                                            765)
+                                            ? (ResponsiveBreakpoints
+                                            .of(context)
+                                            .screenWidth <
+                                            575)
+                                            ? 14
+                                            : 16
                                             : 18,
                                         fontWeight: FontWeight.w300,
                                         color: Colors.black.withOpacity(0.75),
@@ -2480,55 +3027,73 @@ Example 2: Implemented a secure data management system for a financial instituti
                                       height: 50,
                                     ),
                                     Container(
-                                      width: (ResponsiveBreakpoints.of(context)
-                                                  .screenWidth <
-                                              1270)
-                                          ? (ResponsiveBreakpoints.of(context)
-                                                      .screenWidth <
-                                                  990)
-                                              ? (ResponsiveBreakpoints.of(context)
-                                                          .screenWidth <
-                                                      770)
-                                                  ? (ResponsiveBreakpoints.of(
-                                                                  context)
-                                                              .screenWidth <
-                                                          575)
-                                                      ? 479
-                                                      : 546
-                                                  : 726
-                                              : 966
+                                      width: (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth <
+                                          1270)
+                                          ? (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth <
+                                          990)
+                                          ? (ResponsiveBreakpoints
+                                          .of(context)
+                                          .screenWidth <
+                                          770)
+                                          ? (ResponsiveBreakpoints
+                                          .of(
+                                          context)
+                                          .screenWidth <
+                                          575)
+                                          ? 479
+                                          : 546
+                                          : 726
+                                          : 966
                                           : 1266,
                                     )
                                   ],
                                 ),
                               ),
                               SizedBox(
-                                height: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
-                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 990)
-                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 770)
-                                    ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                                    ? 600.h   // Adjusted height for screens smaller than 575px
-                                    : 363     // Adjusted height for screens between 575px and 770px
-                                    : 328         // Adjusted height for screens between 770px and 990px
-                                    : 419             // Adjusted height for screens between 990px and 1270px
-                                    : 534,                // Adjusted height for screens larger than 1270px
+                                height: (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 1270)
+                                    ? (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 990)
+                                    ? (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 770)
+                                    ? (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth < 575)
+                                    ? 600
+                                    .h // Adjusted height for screens smaller than 575px
+                                    : 363 // Adjusted height for screens between 575px and 770px
+                                    : 328 // Adjusted height for screens between 770px and 990px
+                                    : 419 // Adjusted height for screens between 990px and 1270px
+                                    : 534,
+                                // Adjusted height for screens larger than 1270px
 
-                                width: (ResponsiveBreakpoints.of(context)
-                                            .screenWidth <
-                                        1270)
-                                    ? (ResponsiveBreakpoints.of(context)
-                                                .screenWidth <
-                                            990)
-                                        ? (ResponsiveBreakpoints.of(context)
-                                                    .screenWidth <
-                                                770)
-                                            ? (ResponsiveBreakpoints.of(context)
-                                                        .screenWidth <
-                                                    575)
-                                                ? 479
-                                                : 546
-                                            : 726
-                                        : 966
+                                width: (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth <
+                                    1270)
+                                    ? (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth <
+                                    990)
+                                    ? (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth <
+                                    770)
+                                    ? (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth <
+                                    575)
+                                    ? 479
+                                    : 546
+                                    : 726
+                                    : 966
                                     : 1266,
                                 child: Column(
                                   children: [
@@ -2538,57 +3103,73 @@ Example 2: Implemented a secure data management system for a financial instituti
                                     Expanded(
                                       child: Row(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                        MainAxisAlignment.center,
                                         children: [
                                           Expanded(
                                             child: LayoutBuilder(
-                                                builder: (context, constraints) {
-                                              return InfiniteCarousel.builder(
-                                                itemCount: whyChooseUsItems.length,
-                                                itemExtent: (ResponsiveBreakpoints
-                                                                .of(context)
-                                                            .screenWidth <
+                                                builder: (context,
+                                                    constraints) {
+                                                  return InfiniteCarousel
+                                                      .builder(
+                                                    itemCount: whyChooseUsItems
+                                                        .length,
+                                                    itemExtent: (ResponsiveBreakpoints
+                                                        .of(context)
+                                                        .screenWidth <
                                                         1270)
-                                                    ? (ResponsiveBreakpoints.of(
-                                                                    context)
-                                                                .screenWidth <
-                                                            990)
-                                                        ? (ResponsiveBreakpoints.of(
-                                                                        context)
-                                                                    .screenWidth <
-                                                                770)
-                                                            ? (ResponsiveBreakpoints.of(
-                                                                            context)
-                                                                        .screenWidth <
-                                                                    575)
-                                                                ? constraints
-                                                                    .maxWidth
-                                                                : 273
-                                                            : 242
+                                                        ? (ResponsiveBreakpoints
+                                                        .of(
+                                                        context)
+                                                        .screenWidth <
+                                                        990)
+                                                        ? (ResponsiveBreakpoints
+                                                        .of(
+                                                        context)
+                                                        .screenWidth <
+                                                        770)
+                                                        ? (ResponsiveBreakpoints
+                                                        .of(
+                                                        context)
+                                                        .screenWidth <
+                                                        575)
+                                                        ? constraints
+                                                        .maxWidth
+                                                        : 273
+                                                        : 242
                                                         : 322
-                                                    : 425,
-                                                center: false,
-                                                anchor: 0.0,
-                                                velocityFactor: 0.8,
-                                                onIndexChanged: (index) {
-                                                  ref
-                                                      .read(pageNumberProvider
-                                                          .notifier)
-                                                      .state = index;
-                                                },
-                                                controller:
+                                                        : 425,
+                                                    center: false,
+                                                    anchor: 0.0,
+                                                    velocityFactor: 0.8,
+                                                    onIndexChanged: (index) {
+                                                      ref
+                                                          .read(
+                                                          pageNumberProvider
+                                                              .notifier)
+                                                          .state = index;
+                                                    },
+                                                    controller:
                                                     _portfolioScroll1Controller,
-                                                axisDirection: Axis.horizontal,
-                                                loop: false,
-                                                itemBuilder: (context, itemIndex,
-                                                    realIndex) {
-                                                  final item = whyChooseUsItems[itemIndex];
+                                                    axisDirection: Axis
+                                                        .horizontal,
+                                                    loop: false,
+                                                    itemBuilder: (context,
+                                                        itemIndex,
+                                                        realIndex) {
+                                                      final item = whyChooseUsItems[itemIndex];
 
-                                                  return BlogSliderWidget(
-                                                    whyChooseUsItems: item, itemIndex: itemIndex, title: item['title'].toString(), description: item['description'].toString(), image: item['image'].toString(),);
-                                                },
-                                              );
-                                            }),
+                                                      return BlogSliderWidget(
+                                                        whyChooseUsItems: item,
+                                                        itemIndex: itemIndex,
+                                                        title: item['title']
+                                                            .toString(),
+                                                        description: item['description']
+                                                            .toString(),
+                                                        image: item['image']
+                                                            .toString(),);
+                                                    },
+                                                  );
+                                                }),
                                           ),
                                         ],
                                       ),
@@ -2638,1129 +3219,1339 @@ Example 2: Implemented a secure data management system for a financial instituti
                       ),
                       Container(
                         key: contactUsKey,
-                        width: MediaQuery.of(context).size.width,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width,
                         padding: const EdgeInsets.symmetric(vertical: 120),
                         color: Colors.white,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              width: MediaQuery.of(context).size.width,
-                              child: (ResponsiveBreakpoints.of(context)
-                                          .screenWidth <
-                                      990)
+                              width: MediaQuery
+                                  .of(context)
+                                  .size
+                                  .width,
+                              child: (ResponsiveBreakpoints
+                                  .of(context)
+                                  .screenWidth <
+                                  990)
                                   ? Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        (ResponsiveBreakpoints.of(context)
-                                                    .screenWidth <
-                                                570)
-                                            ? Padding(
-                                                padding: const EdgeInsets.symmetric(
-                                                    horizontal: 15),
-                                                child: Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  children: [
-                                                    Expanded(
-                                                      child: Container(
-                                                        height: (ResponsiveBreakpoints.of(
-                                                                        context)
-                                                                    .screenWidth <
-                                                                770)
-                                                            ? 596.h
-                                                            : 804,
-                                                        width: (ResponsiveBreakpoints.of(
-                                                                        context)
-                                                                    .screenWidth <
-                                                                770)
-                                                            ? 516.w
-                                                            : 696,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          image:
-                                                              const DecorationImage(
-                                                            image: AssetImage(
-                                                                contactUs),
-                                                            fit:
-                                                                BoxFit.cover,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(10),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              )
-                                            : Container(
-                                                height:
-                                                    (ResponsiveBreakpoints.of(
-                                                                    context)
-                                                                .screenWidth <
-                                                            770)
-                                                        ? 596
-                                                        : 804,
-                                                width:
-                                                    (ResponsiveBreakpoints.of(
-                                                                    context)
-                                                                .screenWidth <
-                                                            770)
-                                                        ? 516
-                                                        : 696,
-                                                padding: const EdgeInsets.symmetric(
-                                                    horizontal: 15),
-                                                decoration: BoxDecoration(
-                                                  image: const DecorationImage(
-                                                    image:
-                                                        AssetImage(contactUs),
-                                                    fit: BoxFit.fill,
-                                                  ),
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
-                                                ),
-                                              ),
-                                        const SizedBox(
-                                          height: 15,
-                                        ),
-                                        (ResponsiveBreakpoints.of(context)
-                                                    .screenWidth <
-                                                570)
-                                            ? Padding(
-                                                padding: const EdgeInsets.symmetric(
-                                                    horizontal: 15),
-                                                child: Container(
-                                                  width:
-                                                      (ResponsiveBreakpoints.of(
-                                                                      context)
-                                                                  .screenWidth <
-                                                              770)
-                                                          ? 516
-                                                          : 696,
-                                                  child: Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      GradientText(
-                                                        "Contact Us",
-                                                        style: GoogleFonts
-                                                            .montserrat(
-                                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                              ? 18  // Font size for screens between 400px and 500px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                              ? 19  // Font size for screens between 500px and 600px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                                              ? 21  // Font size for screens between 600px and 700px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                                              ? 22  // Font size for screens between 700px and 800px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                                              ? 24  // Font size for screens between 800px and 900px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                              ? 28  // Font size for screens between 900px and 1000px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-                                                              ? 36  // Font size for screens between 1000px and 1200px
-                                                              : 36,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                        ),
-                                                        colors: [
-                                                          gradientColor1,
-                                                          gradientColor2,
-                                                          gradientColor3,
-                                                        ],
-                                                      ),
-                                                      SizedBox(
-                                                        height: 12.h,
-                                                      ),
-                                                      Text(
-                                                        "Get in Touch",
-                                                        textAlign:
-                                                            TextAlign.left,
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                              fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                                                  ? 12  // Font size for screens smaller than 300px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                                                  ? 13  // Font size for screens between 300px and 400px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                                  ? 14  // Font size for screens between 400px and 500px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                                  ? 15  // Font size for screens between 500px and 600px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                                                  ? 16  // Font size for screens between 600px and 700px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                                  ? 17  // Font size for screens between 700px and 765px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                                                  ? 18  // Font size for screens between 765px and 800px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                                                  ? 25  // Font size for screens between 800px and 900px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                                  ? 30  // Font size for screens between 900px and 1000px
-                                                                  : 50,  // Font size for screens larger than 1000px
-
-                                                              fontWeight:
-                                                              FontWeight.w600,
-                                                          color: Colors.black
-                                                              .withOpacity(
-                                                                  0.75),
-                                                        ),
-                                                      ),
-                                                      SizedBox(
-                                                        height: 12.h,
-                                                      ),
-                                                      Text(
-                                                        "Let's Discuss Your Project",
-                                                        textAlign:
-                                                            TextAlign.left,
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                              fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                                                  ? 8   // Font size for screens smaller than 300px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                                                  ? 10  // Font size for screens between 300px and 400px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                                  ? 11  // Font size for screens between 400px and 500px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                                  ? 12  // Font size for screens between 500px and 600px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                                                  ? 14  // Font size for screens between 600px and 700px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                                  ? 16  // Font size for screens between 700px and 765px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                                                  ? 22  // Font size for screens between 765px and 800px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                                                  ? 28  // Font size for screens between 800px and 900px
-                                                                  : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                                  ? 32  // Font size for screens between 900px and 1000px
-                                                                  : 38,  // Font size for screens larger than 1000px
-
-                                                              fontWeight:
-                                                              FontWeight.w300,
-                                                          color: Colors.black
-                                                              .withOpacity(
-                                                                  0.75),
-                                                        ),
-                                                      ),
-                                                      SizedBox(
-                                                        height: 26.h,
-                                                      ),
-                                                      Text(
-                                                        "Ready to take your business to the next level? Contact us today to discuss your project and how we can help you achieve your goals.",
-                                                        textAlign:
-                                                        TextAlign
-                                                            .left,
-                                                        style: GoogleFonts
-                                                            .poppins(
-                                                          fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                                              ? 8   // Font size for screens smaller than 300px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                                              ? 10  // Font size for screens between 300px and 400px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                              ? 12  // Font size for screens between 400px and 500px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                              ? 14  // Font size for screens between 500px and 600px
-                                                              : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                              ? 16  // Font size for screens between 600px and 765px
-                                                              : 14,  // Font size for screens larger than 765px
-                                                          fontWeight:
-                                                          FontWeight
-                                                              .w300,
-                                                          color: Colors
-                                                              .black
-                                                              .withOpacity(
-                                                              0.75),
-                                                        ),
-                                                      ),
-
-
-                                                      const SizedBox(
-                                                        height: 50,
-                                                      ),
-                                                      CustomizableTextField(
-                                                        controller:
-                                                            yourNameEditingController,
-                                                        hintText: yourNameText,
-                                                        focusNode:
-                                                            yourNameFocusNode,
-                                                        validator: (value) {
-                                                          // if (value!.isEmpty) {
-                                                          //   return cnicEmptyValidationText;
-                                                          // } else if (value!.length < 15) {
-                                                          //   return cnicValidationText;
-                                                          // } else {
-                                                          return null;
-                                                          // }
-                                                        },
-                                                        onChanged: (value) {
-                                                          // ref.read(cnicLoginProvider.notifier).state = value;
-                                                        },
-                                                        prefixIcon: null,
-                                                        suffixIcon: null,
-                                                        prefixWidget: null,
-                                                        //Prefix Widget != null
-                                                        prefixPadding:
-                                                            EdgeInsets.zero,
-                                                        suffixPadding:
-                                                            EdgeInsets
-                                                                .symmetric(
-                                                          horizontal: 10.w,
-                                                          vertical: 16.h,
-                                                        ),
-                                                        focusedIconColor:
-                                                            Colors.black,
-                                                        unfocusedIconColor:
-                                                            Colors.grey,
-                                                        hideText: false,
-                                                        textInputType:
-                                                            TextInputType
-                                                                .number,
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 20,
-                                                      ),
-                                                      CustomizableTextField(
-                                                        controller:
-                                                            yourPhoneEditingController,
-                                                        hintText: yourPhoneText,
-                                                        focusNode:
-                                                            yourPhoneFocusNode,
-                                                        validator: (value) {
-                                                          // if (value!.isEmpty) {
-                                                          //   return cnicEmptyValidationText;
-                                                          // } else if (value!.length < 15) {
-                                                          //   return cnicValidationText;
-                                                          // } else {
-                                                          return null;
-                                                          // }
-                                                        },
-                                                        onChanged: (value) {
-                                                          // ref.read(cnicLoginProvider.notifier).state = value;
-                                                        },
-                                                        prefixIcon: null,
-                                                        suffixIcon: null,
-                                                        prefixWidget: null,
-                                                        //Prefix Widget != null
-                                                        prefixPadding:
-                                                            EdgeInsets.zero,
-                                                        suffixPadding:
-                                                            EdgeInsets
-                                                                .symmetric(
-                                                          horizontal: 10.w,
-                                                          vertical: 16.h,
-                                                        ),
-                                                        focusedIconColor:
-                                                            Colors.black,
-                                                        unfocusedIconColor:
-                                                            Colors.grey,
-                                                        hideText: false,
-                                                        textInputType:
-                                                            TextInputType
-                                                                .number,
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 20,
-                                                      ),
-                                                      CustomizableTextField(
-                                                        controller:
-                                                            yourEmailEditingController,
-                                                        hintText: yourEmailText,
-                                                        focusNode:
-                                                            yourEmailFocusNode,
-                                                        validator: (value) {
-                                                          // if (value!.isEmpty) {
-                                                          //   return cnicEmptyValidationText;
-                                                          // } else if (value!.length < 15) {
-                                                          //   return cnicValidationText;
-                                                          // } else {
-                                                          return null;
-                                                          // }
-                                                        },
-                                                        onChanged: (value) {
-                                                          // ref.read(cnicLoginProvider.notifier).state = value;
-                                                        },
-                                                        prefixIcon: null,
-                                                        suffixIcon: null,
-                                                        prefixWidget: null,
-                                                        //Prefix Widget != null
-                                                        prefixPadding:
-                                                            EdgeInsets.zero,
-                                                        suffixPadding:
-                                                            EdgeInsets
-                                                                .symmetric(
-                                                          horizontal: 10.w,
-                                                          vertical: 16.h,
-                                                        ),
-                                                        focusedIconColor:
-                                                            Colors.black,
-                                                        unfocusedIconColor:
-                                                            Colors.grey,
-                                                        hideText: false,
-                                                        textInputType:
-                                                            TextInputType
-                                                                .number,
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 20,
-                                                      ),
-                                                      CustomizableTextField(
-                                                        controller:
-                                                            yourMessageEditingController,
-                                                        hintText:
-                                                            yourMessageText,
-                                                        focusNode:
-                                                            yourMessageFocusNode,
-                                                        validator: (value) {
-                                                          // if (value!.isEmpty) {
-                                                          //   return cnicEmptyValidationText;
-                                                          // } else if (value!.length < 15) {
-                                                          //   return cnicValidationText;
-                                                          // } else {
-                                                          return null;
-                                                          // }
-                                                        },
-                                                        onChanged: (value) {
-                                                          // ref.read(cnicLoginProvider.notifier).state = value;
-                                                        },
-                                                        prefixIcon: null,
-                                                        suffixIcon: null,
-                                                        prefixWidget: null,
-                                                        //Prefix Widget != null
-                                                        prefixPadding:
-                                                            EdgeInsets.zero,
-                                                        suffixPadding:
-                                                            EdgeInsets
-                                                                .symmetric(
-                                                          horizontal: 10.w,
-                                                          vertical: 16.h,
-                                                        ),
-                                                        focusedIconColor:
-                                                            Colors.black,
-                                                        unfocusedIconColor:
-                                                            Colors.grey,
-                                                        hideText: false,
-                                                        textInputType:
-                                                            TextInputType
-                                                                .number,
-                                                        maxLines: 5,
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 20,
-                                                      ),
-                                                      CustomizableTextButton(
-                                                        prefixButtonIcon: null,
-                                                        suffixButtonIcon: null,
-                                                        isFullWidth: false,
-                                                        isOutlined: false,
-                                                        buttonTitle:
-                                                            "Submit Now"
-                                                                .toUpperCase(),
-                                                        onPressed: () async {
-                                                          _sendEmail();
-                                                        },
-                                                        buttonTitleStyle:
-                                                            const TextStyle(
-                                                          fontSize: 16,
-                                                          color: Colors.white,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                        ),
-                                                        buttonBorderRadius: 60,
-                                                        buttonColor:
-                                                            primaryColor,
-                                                        horizontalPadding: 40,
-                                                        verticalPadding: 16,
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              )
-                                            : Container(
-                                                width:
-                                                    (ResponsiveBreakpoints.of(
-                                                                    context)
-                                                                .screenWidth <
-                                                            770)
-                                                        ? 516
-                                                        : 696,
-                                                child: Column(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.start,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    GradientText(
-                                                      "Contact Us",
-                                                      style: GoogleFonts
-                                                          .montserrat(
-                                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                            ? 18  // Font size for screens between 400px and 500px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                            ? 19  // Font size for screens between 500px and 600px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                                            ? 21  // Font size for screens between 600px and 700px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                                            ? 22  // Font size for screens between 700px and 800px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                                            ? 24  // Font size for screens between 800px and 900px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                            ? 28  // Font size for screens between 900px and 1000px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-                                                            ? 36  // Font size for screens between 1000px and 1200px
-                                                            : 36,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                      ),
-                                                      colors: [
-                                                        gradientColor1,
-                                                        gradientColor2,
-                                                        gradientColor3,
-                                                      ],
-                                                    ),
-                                                    SizedBox(
-                                                      height: 12.h,
-                                                    ),
-                                                    Text(
-                                                      "Get in Touch",
-                                                      textAlign: TextAlign.left,
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                            fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                                                ? 12  // Font size for screens smaller than 300px
-                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                                                ? 13  // Font size for screens between 300px and 400px
-                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                                ? 14  // Font size for screens between 400px and 500px
-                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                                ? 15  // Font size for screens between 500px and 600px
-                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                                                ? 16  // Font size for screens between 600px and 700px
-                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                                ? 17  // Font size for screens between 700px and 765px
-                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                                                ? 18  // Font size for screens between 765px and 800px
-                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                                                ? 25  // Font size for screens between 800px and 900px
-                                                                : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                                ? 30  // Font size for screens between 900px and 1000px
-                                                                : 50,  // Font size for screens larger than 1000px
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                        color: Colors.black
-                                                            .withOpacity(0.75),
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      height: 12.h,
-                                                    ),
-                                                    Text(
-                                                      "Let's Discuss Your Project",
-                                                      textAlign:
-                                                      TextAlign.left,
-                                                      style:
-                                                      GoogleFonts.poppins(
-                                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                                            ? 8   // Font size for screens smaller than 300px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                                            ? 10  // Font size for screens between 300px and 400px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                            ? 11  // Font size for screens between 400px and 500px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                            ? 12  // Font size for screens between 500px and 600px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                                            ? 14  // Font size for screens between 600px and 700px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                            ? 16  // Font size for screens between 700px and 765px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                                            ? 22  // Font size for screens between 765px and 800px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                                            ? 28  // Font size for screens between 800px and 900px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                            ? 32  // Font size for screens between 900px and 1000px
-                                                            : 38,  // Font size for screens larger than 1000px
-                                                        fontWeight:
-                                                        FontWeight.w300,
-                                                        color: Colors.black
-                                                            .withOpacity(
-                                                            0.75),
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      height: 26.h,
-                                                    ),
-                                                    Text(
-                                                      "Ready to take your business to the next level? Contact us today to discuss your project and how we can help you achieve your goals.",
-                                                      textAlign:
-                                                      TextAlign
-                                                          .left,
-                                                      style: GoogleFonts
-                                                          .poppins(
-                                                        fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                                            ? 8   // Font size for screens smaller than 300px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                                            ? 10  // Font size for screens between 300px and 400px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                            ? 12  // Font size for screens between 400px and 500px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                            ? 14  // Font size for screens between 500px and 600px
-                                                            : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                            ? 16  // Font size for screens between 600px and 765px
-                                                            : 18,  // Font size for screens larger than 765px
-
-                                                        fontWeight:
-                                                        FontWeight
-                                                            .w300,
-                                                        color: Colors
-                                                            .black
-                                                            .withOpacity(
-                                                            0.75),
-                                                      ),
-                                                    ),
-
-                                                    const SizedBox(
-                                                      height: 50,
-                                                    ),
-                                                    CustomizableTextField(
-                                                      controller:
-                                                          yourNameEditingController,
-                                                      hintText: yourNameText,
-                                                      focusNode:
-                                                          yourNameFocusNode,
-                                                      validator: (value) {
-                                                        // if (value!.isEmpty) {
-                                                        //   return cnicEmptyValidationText;
-                                                        // } else if (value!.length < 15) {
-                                                        //   return cnicValidationText;
-                                                        // } else {
-                                                        return null;
-                                                        // }
-                                                      },
-                                                      onChanged: (value) {
-                                                        // ref.read(cnicLoginProvider.notifier).state = value;
-                                                      },
-                                                      prefixIcon: null,
-                                                      suffixIcon: null,
-                                                      prefixWidget: null,
-                                                      //Prefix Widget != null
-                                                      prefixPadding:
-                                                          EdgeInsets.zero,
-                                                      suffixPadding:
-                                                          EdgeInsets.symmetric(
-                                                        horizontal: 10.w,
-                                                        vertical: 16.h,
-                                                      ),
-                                                      focusedIconColor:
-                                                          Colors.black,
-                                                      unfocusedIconColor:
-                                                          Colors.grey,
-                                                      hideText: false,
-                                                      textInputType:
-                                                          TextInputType.number,
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 20,
-                                                    ),
-                                                    CustomizableTextField(
-                                                      controller:
-                                                          yourPhoneEditingController,
-                                                      hintText: yourPhoneText,
-                                                      focusNode:
-                                                          yourPhoneFocusNode,
-                                                      validator: (value) {
-                                                        // if (value!.isEmpty) {
-                                                        //   return cnicEmptyValidationText;
-                                                        // } else if (value!.length < 15) {
-                                                        //   return cnicValidationText;
-                                                        // } else {
-                                                        return null;
-                                                        // }
-                                                      },
-                                                      onChanged: (value) {
-                                                        // ref.read(cnicLoginProvider.notifier).state = value;
-                                                      },
-                                                      prefixIcon: null,
-                                                      suffixIcon: null,
-                                                      prefixWidget: null,
-                                                      //Prefix Widget != null
-                                                      prefixPadding:
-                                                          EdgeInsets.zero,
-                                                      suffixPadding:
-                                                          EdgeInsets.symmetric(
-                                                        horizontal: 10.w,
-                                                        vertical: 16.h,
-                                                      ),
-                                                      focusedIconColor:
-                                                          Colors.black,
-                                                      unfocusedIconColor:
-                                                          Colors.grey,
-                                                      hideText: false,
-                                                      textInputType:
-                                                          TextInputType.number,
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 20,
-                                                    ),
-                                                    CustomizableTextField(
-                                                      controller:
-                                                          yourEmailEditingController,
-                                                      hintText: yourEmailText,
-                                                      focusNode:
-                                                          yourEmailFocusNode,
-                                                      validator: (value) {
-                                                        // if (value!.isEmpty) {
-                                                        //   return cnicEmptyValidationText;
-                                                        // } else if (value!.length < 15) {
-                                                        //   return cnicValidationText;
-                                                        // } else {
-                                                        return null;
-                                                        // }
-                                                      },
-                                                      onChanged: (value) {
-                                                        // ref.read(cnicLoginProvider.notifier).state = value;
-                                                      },
-                                                      prefixIcon: null,
-                                                      suffixIcon: null,
-                                                      prefixWidget: null,
-                                                      //Prefix Widget != null
-                                                      prefixPadding:
-                                                          EdgeInsets.zero,
-                                                      suffixPadding:
-                                                          EdgeInsets.symmetric(
-                                                        horizontal: 10.w,
-                                                        vertical: 16.h,
-                                                      ),
-                                                      focusedIconColor:
-                                                          Colors.black,
-                                                      unfocusedIconColor:
-                                                          Colors.grey,
-                                                      hideText: false,
-                                                      textInputType:
-                                                          TextInputType.number,
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 20,
-                                                    ),
-                                                    CustomizableTextField(
-                                                      controller:
-                                                          yourMessageEditingController,
-                                                      hintText: yourMessageText,
-                                                      focusNode:
-                                                          yourMessageFocusNode,
-                                                      validator: (value) {
-                                                        // if (value!.isEmpty) {
-                                                        //   return cnicEmptyValidationText;
-                                                        // } else if (value!.length < 15) {
-                                                        //   return cnicValidationText;
-                                                        // } else {
-                                                        return null;
-                                                        // }
-                                                      },
-                                                      onChanged: (value) {
-                                                        // ref.read(cnicLoginProvider.notifier).state = value;
-                                                      },
-                                                      prefixIcon: null,
-                                                      suffixIcon: null,
-                                                      prefixWidget: null,
-                                                      //Prefix Widget != null
-                                                      prefixPadding:
-                                                          EdgeInsets.zero,
-                                                      suffixPadding:
-                                                          EdgeInsets.symmetric(
-                                                        horizontal: 10.w,
-                                                        vertical: 16.h,
-                                                      ),
-                                                      focusedIconColor:
-                                                          Colors.black,
-                                                      unfocusedIconColor:
-                                                          Colors.grey,
-                                                      hideText: false,
-                                                      textInputType:
-                                                          TextInputType.number,
-                                                      maxLines: 5,
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 20,
-                                                    ),
-                                                    CustomizableTextButton(
-                                                      prefixButtonIcon: null,
-                                                      suffixButtonIcon: null,
-                                                      isFullWidth: false,
-                                                      isOutlined: false,
-                                                      buttonTitle: "Submit Now"
-                                                          .toUpperCase(),
-                                                      onPressed: () async {
-                                                        _sendEmail();
-                                                      },
-                                                      buttonTitleStyle:
-                                                          const TextStyle(
-                                                        fontSize: 16,
-                                                        color: Colors.white,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                      ),
-                                                      buttonBorderRadius: 60,
-                                                      buttonColor: primaryColor,
-                                                      horizontalPadding: 40,
-                                                      verticalPadding: 16,
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                      ],
-                                    )
-                                  : Row(
+                                crossAxisAlignment:
+                                CrossAxisAlignment.center,
+                                children: [
+                                  (ResponsiveBreakpoints
+                                      .of(context)
+                                      .screenWidth <
+                                      570)
+                                      ? Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 15),
+                                    child: Row(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
+                                      MainAxisAlignment.center,
                                       children: [
-                                        Container(
-                                          width:
-                                              (ResponsiveBreakpoints.of(context)
-                                                          .screenWidth <
-                                                      1280)
-                                                  ? 452
-                                                  : 633,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 15),
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              GradientText(
-                                                "Contact Us",
-                                                style: GoogleFonts.montserrat(
-                                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                      ? 18  // Font size for screens between 400px and 500px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                      ? 19  // Font size for screens between 500px and 600px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                                      ? 21  // Font size for screens between 600px and 700px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                                      ? 22  // Font size for screens between 700px and 800px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                                      ? 24  // Font size for screens between 800px and 900px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                      ? 28  // Font size for screens between 900px and 1000px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-                                                      ? 36  // Font size for screens between 1000px and 1200px
-                                                      : 36,
-                                                  fontWeight: FontWeight.w600,
-                                                ),
-                                                colors: [
-                                                  gradientColor1,
-                                                  gradientColor2,
-                                                  gradientColor3,
-                                                ],
+                                        Expanded(
+                                          child: Container(
+                                            height: (ResponsiveBreakpoints
+                                                .of(
+                                                context)
+                                                .screenWidth <
+                                                770)
+                                                ? 596.h
+                                                : 804,
+                                            width: (ResponsiveBreakpoints
+                                                .of(
+                                                context)
+                                                .screenWidth <
+                                                770)
+                                                ? 516.w
+                                                : 696,
+                                            decoration:
+                                            BoxDecoration(
+                                              image:
+                                              const DecorationImage(
+                                                image: AssetImage(
+                                                    contactUs),
+                                                fit:
+                                                BoxFit.cover,
                                               ),
-                                              SizedBox(
-                                                height: 12.h,
-                                              ),
-                                              Text(
-                                                "Get in Touch",
-                                                textAlign: TextAlign.left,
-                                                style: GoogleFonts.poppins(
-                                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                                      ? 12  // Font size for screens smaller than 300px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                                      ? 13  // Font size for screens between 300px and 400px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                      ? 14  // Font size for screens between 400px and 500px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                      ? 15  // Font size for screens between 500px and 600px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                                      ? 16  // Font size for screens between 600px and 700px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                      ? 17  // Font size for screens between 700px and 765px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                                      ? 18  // Font size for screens between 765px and 800px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                                      ? 25  // Font size for screens between 800px and 900px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                      ? 30  // Font size for screens between 900px and 1000px
-                                                      : 50,  // Font size for screens larger than 1000px
-                                                  fontWeight: FontWeight.w600,
-                                                  color: Colors.black
-                                                      .withOpacity(0.75),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                height: 12.h,
-                                              ),
-                                              Text(
-                                                "Let's Discuss Your Project",
-                                                textAlign: TextAlign.left,
-                                                style: GoogleFonts.poppins(
-                                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                                      ? 8   // Font size for screens smaller than 300px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                                      ? 10  // Font size for screens between 300px and 400px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                      ? 11  // Font size for screens between 400px and 500px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                      ? 12  // Font size for screens between 500px and 600px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                                                      ? 14  // Font size for screens between 600px and 700px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                      ? 16  // Font size for screens between 700px and 765px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                                      ? 22  // Font size for screens between 765px and 800px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 900)
-                                                      ? 28  // Font size for screens between 800px and 900px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                                                      ? 32  // Font size for screens between 900px and 1000px
-                                                      : 38,  // Font size for screens larger than 1000px
-                                                  fontWeight: FontWeight.w300,
-                                                  color: Colors.black
-                                                      .withOpacity(0.75),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                height: 26.h,
-                                              ),
-                                              Text(
-                                                "Ready to take your business to the next level? Contact us today to discuss your project and how we can help you achieve your goals.",
-                                                textAlign:
-                                                TextAlign
-                                                    .left,
-                                                style: GoogleFonts
-                                                    .poppins(
-                                                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                                                      ? 8   // Font size for screens smaller than 300px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                                                      ? 10  // Font size for screens between 300px and 400px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                                      ? 12  // Font size for screens between 400px and 500px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                                                      ? 14  // Font size for screens between 500px and 600px
-                                                      : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                                                      ? 16  // Font size for screens between 600px and 765px
-                                                      : 18,  // Font size for screens larger than 765px
-
-                                                  fontWeight:
-                                                  FontWeight
-                                                      .w300,
-                                                  color: Colors
-                                                      .black
-                                                      .withOpacity(
-                                                      0.75),
-                                                ),
-                                              ),
-
-                                              const SizedBox(
-                                                height: 50,
-                                              ),
-                                              CustomizableTextField(
-                                                controller:
-                                                    yourNameEditingController,
-                                                hintText: yourNameText,
-                                                focusNode: yourNameFocusNode,
-                                                validator: (value) {
-                                                  // if (value!.isEmpty) {
-                                                  //   return cnicEmptyValidationText;
-                                                  // } else if (value!.length < 15) {
-                                                  //   return cnicValidationText;
-                                                  // } else {
-                                                  return null;
-                                                  // }
-                                                },
-                                                onChanged: (value) {
-                                                  // ref.read(cnicLoginProvider.notifier).state = value;
-                                                },
-                                                prefixIcon: null,
-                                                suffixIcon: null,
-                                                prefixWidget: null,
-                                                //Prefix Widget != null
-                                                prefixPadding: EdgeInsets.zero,
-                                                suffixPadding:
-                                                    EdgeInsets.symmetric(
-                                                  horizontal: 10.w,
-                                                  vertical: 16.h,
-                                                ),
-                                                focusedIconColor: Colors.black,
-                                                unfocusedIconColor: Colors.grey,
-                                                hideText: false,
-                                                textInputType:
-                                                    TextInputType.number,
-                                              ),
-                                              const SizedBox(
-                                                height: 20,
-                                              ),
-                                              CustomizableTextField(
-                                                controller:
-                                                    yourPhoneEditingController,
-                                                hintText: yourPhoneText,
-                                                focusNode: yourPhoneFocusNode,
-                                                validator: (value) {
-                                                  // if (value!.isEmpty) {
-                                                  //   return cnicEmptyValidationText;
-                                                  // } else if (value!.length < 15) {
-                                                  //   return cnicValidationText;
-                                                  // } else {
-                                                  return null;
-                                                  // }
-                                                },
-                                                onChanged: (value) {
-                                                  // ref.read(cnicLoginProvider.notifier).state = value;
-                                                },
-                                                prefixIcon: null,
-                                                suffixIcon: null,
-                                                prefixWidget: null,
-                                                //Prefix Widget != null
-                                                prefixPadding: EdgeInsets.zero,
-                                                suffixPadding:
-                                                    EdgeInsets.symmetric(
-                                                  horizontal: 10.w,
-                                                  vertical: 16.h,
-                                                ),
-                                                focusedIconColor: Colors.black,
-                                                unfocusedIconColor: Colors.grey,
-                                                hideText: false,
-                                                textInputType:
-                                                    TextInputType.number,
-                                              ),
-                                              const SizedBox(
-                                                height: 20,
-                                              ),
-                                              CustomizableTextField(
-                                                controller:
-                                                    yourEmailEditingController,
-                                                hintText: yourEmailText,
-                                                focusNode: yourEmailFocusNode,
-                                                validator: (value) {
-                                                  // if (value!.isEmpty) {
-                                                  //   return cnicEmptyValidationText;
-                                                  // } else if (value!.length < 15) {
-                                                  //   return cnicValidationText;
-                                                  // } else {
-                                                  return null;
-                                                  // }
-                                                },
-                                                onChanged: (value) {
-                                                  // ref.read(cnicLoginProvider.notifier).state = value;
-                                                },
-                                                prefixIcon: null,
-                                                suffixIcon: null,
-                                                prefixWidget: null,
-                                                //Prefix Widget != null
-                                                prefixPadding: EdgeInsets.zero,
-                                                suffixPadding:
-                                                    EdgeInsets.symmetric(
-                                                  horizontal: 10.w,
-                                                  vertical: 16.h,
-                                                ),
-                                                focusedIconColor: Colors.black,
-                                                unfocusedIconColor: Colors.grey,
-                                                hideText: false,
-                                                textInputType:
-                                                    TextInputType.number,
-                                              ),
-                                              const SizedBox(
-                                                height: 20,
-                                              ),
-                                              CustomizableTextField(
-                                                controller:
-                                                    yourMessageEditingController,
-                                                hintText: yourMessageText,
-                                                focusNode: yourMessageFocusNode,
-                                                validator: (value) {
-                                                  // if (value!.isEmpty) {
-                                                  //   return cnicEmptyValidationText;
-                                                  // } else if (value!.length < 15) {
-                                                  //   return cnicValidationText;
-                                                  // } else {
-                                                  return null;
-                                                  // }
-                                                },
-                                                onChanged: (value) {
-                                                  // ref.read(cnicLoginProvider.notifier).state = value;
-                                                },
-                                                prefixIcon: null,
-                                                suffixIcon: null,
-                                                prefixWidget: null,
-                                                //Prefix Widget != null
-                                                prefixPadding: EdgeInsets.zero,
-                                                suffixPadding:
-                                                    EdgeInsets.symmetric(
-                                                  horizontal: 10.w,
-                                                  vertical: 16.h,
-                                                ),
-                                                focusedIconColor: Colors.black,
-                                                unfocusedIconColor: Colors.grey,
-                                                hideText: false,
-                                                textInputType:
-                                                    TextInputType.number,
-                                                maxLines: 5,
-                                              ),
-                                              const SizedBox(
-                                                height: 20,
-                                              ),
-                                              CustomizableTextButton(
-                                                prefixButtonIcon: null,
-                                                suffixButtonIcon: null,
-                                                isFullWidth: false,
-                                                isOutlined: false,
-                                                buttonTitle:
-                                                    "Submit Now".toUpperCase(),
-                                                onPressed: () async {
-                                                  _sendEmail();
-                                                },
-                                                buttonTitleStyle: const TextStyle(
-                                                  fontSize: 16,
-                                                  color: Colors.white,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                                buttonBorderRadius: 60,
-                                                buttonColor: primaryColor,
-                                                horizontalPadding: 40,
-                                                verticalPadding: 16,
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        const SizedBox(
-                                          width: 15,
-                                        ),
-                                        Container(
-                                          height:
-                                              (ResponsiveBreakpoints.of(context)
-                                                          .screenWidth <
-                                                      1280)
-                                                  ? 524
-                                                  : 696,
-                                          width:
-                                              (ResponsiveBreakpoints.of(context)
-                                                          .screenWidth <
-                                                      1280)
-                                                  ? 452
-                                                  : 633,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 15),
-                                          decoration: BoxDecoration(
-                                            image: const DecorationImage(
-                                              image: AssetImage(contactUs),
-                                              fit: BoxFit.fill,
+                                              borderRadius:
+                                              BorderRadius
+                                                  .circular(10),
                                             ),
-                                            borderRadius:
-                                                BorderRadius.circular(10),
                                           ),
                                         ),
                                       ],
                                     ),
+                                  )
+                                      : Container(
+                                    height:
+                                    (ResponsiveBreakpoints
+                                        .of(
+                                        context)
+                                        .screenWidth <
+                                        770)
+                                        ? 596
+                                        : 804,
+                                    width:
+                                    (ResponsiveBreakpoints
+                                        .of(
+                                        context)
+                                        .screenWidth <
+                                        770)
+                                        ? 516
+                                        : 696,
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 15),
+                                    decoration: BoxDecoration(
+                                      image: const DecorationImage(
+                                        image:
+                                        AssetImage(contactUs),
+                                        fit: BoxFit.fill,
+                                      ),
+                                      borderRadius:
+                                      BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 15,
+                                  ),
+                                  (ResponsiveBreakpoints
+                                      .of(context)
+                                      .screenWidth <
+                                      570)
+                                      ? Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 15),
+                                    child: Container(
+                                      width:
+                                      (ResponsiveBreakpoints
+                                          .of(
+                                          context)
+                                          .screenWidth <
+                                          770)
+                                          ? 516
+                                          : 696,
+                                      child: Column(
+                                        mainAxisAlignment:
+                                        MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment
+                                            .start,
+                                        children: [
+                                          GradientText(
+                                            "Contact Us",
+                                            style: GoogleFonts
+                                                .montserrat(
+                                              fontSize: (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 500)
+                                                  ? 18 // Font size for screens between 400px and 500px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 600)
+                                                  ? 19 // Font size for screens between 500px and 600px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 700)
+                                                  ? 21 // Font size for screens between 600px and 700px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 800)
+                                                  ? 22 // Font size for screens between 700px and 800px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 900)
+                                                  ? 24 // Font size for screens between 800px and 900px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 1000)
+                                                  ? 28 // Font size for screens between 900px and 1000px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 1200)
+                                                  ? 36 // Font size for screens between 1000px and 1200px
+                                                  : 36,
+                                              fontWeight:
+                                              FontWeight.w600,
+                                            ),
+                                            colors: [
+                                              gradientColor1,
+                                              gradientColor2,
+                                              gradientColor3,
+                                            ],
+                                          ),
+                                          SizedBox(
+                                            height: 12.h,
+                                          ),
+                                          Text(
+                                            "Get in Touch",
+                                            textAlign:
+                                            TextAlign.left,
+                                            style:
+                                            GoogleFonts.poppins(
+                                              fontSize: (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 300)
+                                                  ? 12 // Font size for screens smaller than 300px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 400)
+                                                  ? 13 // Font size for screens between 300px and 400px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 500)
+                                                  ? 14 // Font size for screens between 400px and 500px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 600)
+                                                  ? 15 // Font size for screens between 500px and 600px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 700)
+                                                  ? 16 // Font size for screens between 600px and 700px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 765)
+                                                  ? 17 // Font size for screens between 700px and 765px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 800)
+                                                  ? 18 // Font size for screens between 765px and 800px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 900)
+                                                  ? 25 // Font size for screens between 800px and 900px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 1000)
+                                                  ? 30 // Font size for screens between 900px and 1000px
+                                                  : 50,
+                                              // Font size for screens larger than 1000px
+
+                                              fontWeight:
+                                              FontWeight.w600,
+                                              color: Colors.black
+                                                  .withOpacity(
+                                                  0.75),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 12.h,
+                                          ),
+                                          Text(
+                                            "Let's Discuss Your Project",
+                                            textAlign:
+                                            TextAlign.left,
+                                            style:
+                                            GoogleFonts.poppins(
+                                              fontSize: (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 300)
+                                                  ? 8 // Font size for screens smaller than 300px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 400)
+                                                  ? 10 // Font size for screens between 300px and 400px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 500)
+                                                  ? 11 // Font size for screens between 400px and 500px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 600)
+                                                  ? 12 // Font size for screens between 500px and 600px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 700)
+                                                  ? 14 // Font size for screens between 600px and 700px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 765)
+                                                  ? 16 // Font size for screens between 700px and 765px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 800)
+                                                  ? 22 // Font size for screens between 765px and 800px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 900)
+                                                  ? 28 // Font size for screens between 800px and 900px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 1000)
+                                                  ? 32 // Font size for screens between 900px and 1000px
+                                                  : 38,
+                                              // Font size for screens larger than 1000px
+
+                                              fontWeight:
+                                              FontWeight.w300,
+                                              color: Colors.black
+                                                  .withOpacity(
+                                                  0.75),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 26.h,
+                                          ),
+                                          Text(
+                                            "Ready to take your business to the next level? Contact us today to discuss your project and how we can help you achieve your goals.",
+                                            textAlign:
+                                            TextAlign
+                                                .left,
+                                            style: GoogleFonts
+                                                .poppins(
+                                              fontSize: (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 300)
+                                                  ? 8 // Font size for screens smaller than 300px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 400)
+                                                  ? 10 // Font size for screens between 300px and 400px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 500)
+                                                  ? 12 // Font size for screens between 400px and 500px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 600)
+                                                  ? 14 // Font size for screens between 500px and 600px
+                                                  : (ResponsiveBreakpoints
+                                                  .of(context)
+                                                  .screenWidth < 765)
+                                                  ? 16 // Font size for screens between 600px and 765px
+                                                  : 14,
+                                              // Font size for screens larger than 765px
+                                              fontWeight:
+                                              FontWeight
+                                                  .w300,
+                                              color: Colors
+                                                  .black
+                                                  .withOpacity(
+                                                  0.75),
+                                            ),
+                                          ),
+
+
+                                          const SizedBox(
+                                            height: 50,
+                                          ),
+                                          CustomizableTextField(
+                                            controller:
+                                            yourNameEditingController,
+                                            hintText: yourNameText,
+                                            focusNode:
+                                            yourNameFocusNode,
+                                            validator: (value) {
+                                              // if (value!.isEmpty) {
+                                              //   return cnicEmptyValidationText;
+                                              // } else if (value!.length < 15) {
+                                              //   return cnicValidationText;
+                                              // } else {
+                                              return null;
+                                              // }
+                                            },
+                                            onChanged: (value) {
+                                              // ref.read(cnicLoginProvider.notifier).state = value;
+                                            },
+                                            prefixIcon: null,
+                                            suffixIcon: null,
+                                            prefixWidget: null,
+                                            //Prefix Widget != null
+                                            prefixPadding:
+                                            EdgeInsets.zero,
+                                            suffixPadding:
+                                            EdgeInsets
+                                                .symmetric(
+                                              horizontal: 10.w,
+                                              vertical: 16.h,
+                                            ),
+                                            focusedIconColor:
+                                            Colors.black,
+                                            unfocusedIconColor:
+                                            Colors.grey,
+                                            hideText: false,
+                                            textInputType:
+                                            TextInputType
+                                                .number,
+                                          ),
+                                          const SizedBox(
+                                            height: 20,
+                                          ),
+                                          CustomizableTextField(
+                                            controller:
+                                            yourPhoneEditingController,
+                                            hintText: yourPhoneText,
+                                            focusNode:
+                                            yourPhoneFocusNode,
+                                            validator: (value) {
+                                              // if (value!.isEmpty) {
+                                              //   return cnicEmptyValidationText;
+                                              // } else if (value!.length < 15) {
+                                              //   return cnicValidationText;
+                                              // } else {
+                                              return null;
+                                              // }
+                                            },
+                                            onChanged: (value) {
+                                              // ref.read(cnicLoginProvider.notifier).state = value;
+                                            },
+                                            prefixIcon: null,
+                                            suffixIcon: null,
+                                            prefixWidget: null,
+                                            //Prefix Widget != null
+                                            prefixPadding:
+                                            EdgeInsets.zero,
+                                            suffixPadding:
+                                            EdgeInsets
+                                                .symmetric(
+                                              horizontal: 10.w,
+                                              vertical: 16.h,
+                                            ),
+                                            focusedIconColor:
+                                            Colors.black,
+                                            unfocusedIconColor:
+                                            Colors.grey,
+                                            hideText: false,
+                                            textInputType:
+                                            TextInputType
+                                                .number,
+                                          ),
+                                          const SizedBox(
+                                            height: 20,
+                                          ),
+                                          CustomizableTextField(
+                                            controller:
+                                            yourEmailEditingController,
+                                            hintText: yourEmailText,
+                                            focusNode:
+                                            yourEmailFocusNode,
+                                            validator: (value) {
+                                              // if (value!.isEmpty) {
+                                              //   return cnicEmptyValidationText;
+                                              // } else if (value!.length < 15) {
+                                              //   return cnicValidationText;
+                                              // } else {
+                                              return null;
+                                              // }
+                                            },
+                                            onChanged: (value) {
+                                              // ref.read(cnicLoginProvider.notifier).state = value;
+                                            },
+                                            prefixIcon: null,
+                                            suffixIcon: null,
+                                            prefixWidget: null,
+                                            //Prefix Widget != null
+                                            prefixPadding:
+                                            EdgeInsets.zero,
+                                            suffixPadding:
+                                            EdgeInsets
+                                                .symmetric(
+                                              horizontal: 10.w,
+                                              vertical: 16.h,
+                                            ),
+                                            focusedIconColor:
+                                            Colors.black,
+                                            unfocusedIconColor:
+                                            Colors.grey,
+                                            hideText: false,
+                                            textInputType:
+                                            TextInputType
+                                                .number,
+                                          ),
+                                          const SizedBox(
+                                            height: 20,
+                                          ),
+                                          CustomizableTextField(
+                                            controller:
+                                            yourMessageEditingController,
+                                            hintText:
+                                            yourMessageText,
+                                            focusNode:
+                                            yourMessageFocusNode,
+                                            validator: (value) {
+                                              // if (value!.isEmpty) {
+                                              //   return cnicEmptyValidationText;
+                                              // } else if (value!.length < 15) {
+                                              //   return cnicValidationText;
+                                              // } else {
+                                              return null;
+                                              // }
+                                            },
+                                            onChanged: (value) {
+                                              // ref.read(cnicLoginProvider.notifier).state = value;
+                                            },
+                                            prefixIcon: null,
+                                            suffixIcon: null,
+                                            prefixWidget: null,
+                                            //Prefix Widget != null
+                                            prefixPadding:
+                                            EdgeInsets.zero,
+                                            suffixPadding:
+                                            EdgeInsets
+                                                .symmetric(
+                                              horizontal: 10.w,
+                                              vertical: 16.h,
+                                            ),
+                                            focusedIconColor:
+                                            Colors.black,
+                                            unfocusedIconColor:
+                                            Colors.grey,
+                                            hideText: false,
+                                            textInputType:
+                                            TextInputType
+                                                .number,
+                                            maxLines: 5,
+                                          ),
+                                          const SizedBox(
+                                            height: 20,
+                                          ),
+                                          CustomizableTextButton(
+                                            prefixButtonIcon: null,
+                                            suffixButtonIcon: null,
+                                            isFullWidth: false,
+                                            isOutlined: false,
+                                            buttonTitle:
+                                            "Submit Now"
+                                                .toUpperCase(),
+                                            onPressed: () async {
+                                              _sendEmail();
+                                            },
+                                            buttonTitleStyle:
+                                            const TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.white,
+                                              fontWeight:
+                                              FontWeight.w500,
+                                            ),
+                                            buttonBorderRadius: 60,
+                                            buttonColor:
+                                            primaryColor,
+                                            horizontalPadding: 40,
+                                            verticalPadding: 16,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  )
+                                      : Container(
+                                    width:
+                                    (ResponsiveBreakpoints
+                                        .of(
+                                        context)
+                                        .screenWidth <
+                                        770)
+                                        ? 516
+                                        : 696,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        GradientText(
+                                          "Contact Us",
+                                          style: GoogleFonts
+                                              .montserrat(
+                                            fontSize: (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 500)
+                                                ? 18 // Font size for screens between 400px and 500px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 600)
+                                                ? 19 // Font size for screens between 500px and 600px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 700)
+                                                ? 21 // Font size for screens between 600px and 700px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 800)
+                                                ? 22 // Font size for screens between 700px and 800px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 900)
+                                                ? 24 // Font size for screens between 800px and 900px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 1000)
+                                                ? 28 // Font size for screens between 900px and 1000px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 1200)
+                                                ? 36 // Font size for screens between 1000px and 1200px
+                                                : 36,
+                                            fontWeight:
+                                            FontWeight.w600,
+                                          ),
+                                          colors: [
+                                            gradientColor1,
+                                            gradientColor2,
+                                            gradientColor3,
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 12.h,
+                                        ),
+                                        Text(
+                                          "Get in Touch",
+                                          textAlign: TextAlign.left,
+                                          style:
+                                          GoogleFonts.poppins(
+                                            fontSize: (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 300)
+                                                ? 12 // Font size for screens smaller than 300px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 400)
+                                                ? 13 // Font size for screens between 300px and 400px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 500)
+                                                ? 14 // Font size for screens between 400px and 500px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 600)
+                                                ? 15 // Font size for screens between 500px and 600px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 700)
+                                                ? 16 // Font size for screens between 600px and 700px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 765)
+                                                ? 17 // Font size for screens between 700px and 765px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 800)
+                                                ? 18 // Font size for screens between 765px and 800px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 900)
+                                                ? 25 // Font size for screens between 800px and 900px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 1000)
+                                                ? 30 // Font size for screens between 900px and 1000px
+                                                : 50,
+                                            // Font size for screens larger than 1000px
+                                            fontWeight:
+                                            FontWeight.w600,
+                                            color: Colors.black
+                                                .withOpacity(0.75),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 12.h,
+                                        ),
+                                        Text(
+                                          "Let's Discuss Your Project",
+                                          textAlign:
+                                          TextAlign.left,
+                                          style:
+                                          GoogleFonts.poppins(
+                                            fontSize: (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 300)
+                                                ? 8 // Font size for screens smaller than 300px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 400)
+                                                ? 10 // Font size for screens between 300px and 400px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 500)
+                                                ? 11 // Font size for screens between 400px and 500px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 600)
+                                                ? 12 // Font size for screens between 500px and 600px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 700)
+                                                ? 14 // Font size for screens between 600px and 700px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 765)
+                                                ? 16 // Font size for screens between 700px and 765px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 800)
+                                                ? 22 // Font size for screens between 765px and 800px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 900)
+                                                ? 28 // Font size for screens between 800px and 900px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 1000)
+                                                ? 32 // Font size for screens between 900px and 1000px
+                                                : 38,
+                                            // Font size for screens larger than 1000px
+                                            fontWeight:
+                                            FontWeight.w300,
+                                            color: Colors.black
+                                                .withOpacity(
+                                                0.75),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 26.h,
+                                        ),
+                                        Text(
+                                          "Ready to take your business to the next level? Contact us today to discuss your project and how we can help you achieve your goals.",
+                                          textAlign:
+                                          TextAlign
+                                              .left,
+                                          style: GoogleFonts
+                                              .poppins(
+                                            fontSize: (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 300)
+                                                ? 8 // Font size for screens smaller than 300px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 400)
+                                                ? 10 // Font size for screens between 300px and 400px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 500)
+                                                ? 12 // Font size for screens between 400px and 500px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 600)
+                                                ? 14 // Font size for screens between 500px and 600px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 765)
+                                                ? 16 // Font size for screens between 600px and 765px
+                                                : 18,
+                                            // Font size for screens larger than 765px
+
+                                            fontWeight:
+                                            FontWeight
+                                                .w300,
+                                            color: Colors
+                                                .black
+                                                .withOpacity(
+                                                0.75),
+                                          ),
+                                        ),
+
+                                        const SizedBox(
+                                          height: 50,
+                                        ),
+                                        CustomizableTextField(
+                                          controller:
+                                          yourNameEditingController,
+                                          hintText: yourNameText,
+                                          focusNode:
+                                          yourNameFocusNode,
+                                          validator: (value) {
+                                            // if (value!.isEmpty) {
+                                            //   return cnicEmptyValidationText;
+                                            // } else if (value!.length < 15) {
+                                            //   return cnicValidationText;
+                                            // } else {
+                                            return null;
+                                            // }
+                                          },
+                                          onChanged: (value) {
+                                            // ref.read(cnicLoginProvider.notifier).state = value;
+                                          },
+                                          prefixIcon: null,
+                                          suffixIcon: null,
+                                          prefixWidget: null,
+                                          //Prefix Widget != null
+                                          prefixPadding:
+                                          EdgeInsets.zero,
+                                          suffixPadding:
+                                          EdgeInsets.symmetric(
+                                            horizontal: 10.w,
+                                            vertical: 16.h,
+                                          ),
+                                          focusedIconColor:
+                                          Colors.black,
+                                          unfocusedIconColor:
+                                          Colors.grey,
+                                          hideText: false,
+                                          textInputType:
+                                          TextInputType.number,
+                                        ),
+                                        const SizedBox(
+                                          height: 20,
+                                        ),
+                                        CustomizableTextField(
+                                          controller:
+                                          yourPhoneEditingController,
+                                          hintText: yourPhoneText,
+                                          focusNode:
+                                          yourPhoneFocusNode,
+                                          validator: (value) {
+                                            // if (value!.isEmpty) {
+                                            //   return cnicEmptyValidationText;
+                                            // } else if (value!.length < 15) {
+                                            //   return cnicValidationText;
+                                            // } else {
+                                            return null;
+                                            // }
+                                          },
+                                          onChanged: (value) {
+                                            // ref.read(cnicLoginProvider.notifier).state = value;
+                                          },
+                                          prefixIcon: null,
+                                          suffixIcon: null,
+                                          prefixWidget: null,
+                                          //Prefix Widget != null
+                                          prefixPadding:
+                                          EdgeInsets.zero,
+                                          suffixPadding:
+                                          EdgeInsets.symmetric(
+                                            horizontal: 10.w,
+                                            vertical: 16.h,
+                                          ),
+                                          focusedIconColor:
+                                          Colors.black,
+                                          unfocusedIconColor:
+                                          Colors.grey,
+                                          hideText: false,
+                                          textInputType:
+                                          TextInputType.number,
+                                        ),
+                                        const SizedBox(
+                                          height: 20,
+                                        ),
+                                        CustomizableTextField(
+                                          controller:
+                                          yourEmailEditingController,
+                                          hintText: yourEmailText,
+                                          focusNode:
+                                          yourEmailFocusNode,
+                                          validator: (value) {
+                                            // if (value!.isEmpty) {
+                                            //   return cnicEmptyValidationText;
+                                            // } else if (value!.length < 15) {
+                                            //   return cnicValidationText;
+                                            // } else {
+                                            return null;
+                                            // }
+                                          },
+                                          onChanged: (value) {
+                                            // ref.read(cnicLoginProvider.notifier).state = value;
+                                          },
+                                          prefixIcon: null,
+                                          suffixIcon: null,
+                                          prefixWidget: null,
+                                          //Prefix Widget != null
+                                          prefixPadding:
+                                          EdgeInsets.zero,
+                                          suffixPadding:
+                                          EdgeInsets.symmetric(
+                                            horizontal: 10.w,
+                                            vertical: 16.h,
+                                          ),
+                                          focusedIconColor:
+                                          Colors.black,
+                                          unfocusedIconColor:
+                                          Colors.grey,
+                                          hideText: false,
+                                          textInputType:
+                                          TextInputType.number,
+                                        ),
+                                        const SizedBox(
+                                          height: 20,
+                                        ),
+                                        CustomizableTextField(
+                                          controller:
+                                          yourMessageEditingController,
+                                          hintText: yourMessageText,
+                                          focusNode:
+                                          yourMessageFocusNode,
+                                          validator: (value) {
+                                            // if (value!.isEmpty) {
+                                            //   return cnicEmptyValidationText;
+                                            // } else if (value!.length < 15) {
+                                            //   return cnicValidationText;
+                                            // } else {
+                                            return null;
+                                            // }
+                                          },
+                                          onChanged: (value) {
+                                            // ref.read(cnicLoginProvider.notifier).state = value;
+                                          },
+                                          prefixIcon: null,
+                                          suffixIcon: null,
+                                          prefixWidget: null,
+                                          //Prefix Widget != null
+                                          prefixPadding:
+                                          EdgeInsets.zero,
+                                          suffixPadding:
+                                          EdgeInsets.symmetric(
+                                            horizontal: 10.w,
+                                            vertical: 16.h,
+                                          ),
+                                          focusedIconColor:
+                                          Colors.black,
+                                          unfocusedIconColor:
+                                          Colors.grey,
+                                          hideText: false,
+                                          textInputType:
+                                          TextInputType.number,
+                                          maxLines: 5,
+                                        ),
+                                        const SizedBox(
+                                          height: 20,
+                                        ),
+                                        CustomizableTextButton(
+                                          prefixButtonIcon: null,
+                                          suffixButtonIcon: null,
+                                          isFullWidth: false,
+                                          isOutlined: false,
+                                          buttonTitle: "Submit Now"
+                                              .toUpperCase(),
+                                          onPressed: () async {
+                                            _sendEmail();
+                                          },
+                                          buttonTitleStyle:
+                                          const TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.white,
+                                            fontWeight:
+                                            FontWeight.w500,
+                                          ),
+                                          buttonBorderRadius: 60,
+                                          buttonColor: primaryColor,
+                                          horizontalPadding: 40,
+                                          verticalPadding: 16,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              )
+                                  : Row(
+                                mainAxisAlignment:
+                                MainAxisAlignment.center,
+                                crossAxisAlignment:
+                                CrossAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    width:
+                                    (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth <
+                                        1280)
+                                        ? 452
+                                        : 633,
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 15),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        GradientText(
+                                          "Contact Us",
+                                          style: GoogleFonts.montserrat(
+                                            fontSize: (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 500)
+                                                ? 18 // Font size for screens between 400px and 500px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 600)
+                                                ? 19 // Font size for screens between 500px and 600px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 700)
+                                                ? 21 // Font size for screens between 600px and 700px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 800)
+                                                ? 22 // Font size for screens between 700px and 800px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 900)
+                                                ? 24 // Font size for screens between 800px and 900px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 1000)
+                                                ? 28 // Font size for screens between 900px and 1000px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 1200)
+                                                ? 36 // Font size for screens between 1000px and 1200px
+                                                : 36,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                          colors: [
+                                            gradientColor1,
+                                            gradientColor2,
+                                            gradientColor3,
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 12.h,
+                                        ),
+                                        Text(
+                                          "Get in Touch",
+                                          textAlign: TextAlign.left,
+                                          style: GoogleFonts.poppins(
+                                            fontSize: (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 300)
+                                                ? 12 // Font size for screens smaller than 300px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 400)
+                                                ? 13 // Font size for screens between 300px and 400px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 500)
+                                                ? 14 // Font size for screens between 400px and 500px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 600)
+                                                ? 15 // Font size for screens between 500px and 600px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 700)
+                                                ? 16 // Font size for screens between 600px and 700px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 765)
+                                                ? 17 // Font size for screens between 700px and 765px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 800)
+                                                ? 18 // Font size for screens between 765px and 800px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 900)
+                                                ? 25 // Font size for screens between 800px and 900px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 1000)
+                                                ? 30 // Font size for screens between 900px and 1000px
+                                                : 50,
+                                            // Font size for screens larger than 1000px
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.black
+                                                .withOpacity(0.75),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 12.h,
+                                        ),
+                                        Text(
+                                          "Let's Discuss Your Project",
+                                          textAlign: TextAlign.left,
+                                          style: GoogleFonts.poppins(
+                                            fontSize: (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 300)
+                                                ? 8 // Font size for screens smaller than 300px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 400)
+                                                ? 10 // Font size for screens between 300px and 400px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 500)
+                                                ? 11 // Font size for screens between 400px and 500px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 600)
+                                                ? 12 // Font size for screens between 500px and 600px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 700)
+                                                ? 14 // Font size for screens between 600px and 700px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 765)
+                                                ? 16 // Font size for screens between 700px and 765px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 800)
+                                                ? 22 // Font size for screens between 765px and 800px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 900)
+                                                ? 28 // Font size for screens between 800px and 900px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 1000)
+                                                ? 32 // Font size for screens between 900px and 1000px
+                                                : 38,
+                                            // Font size for screens larger than 1000px
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black
+                                                .withOpacity(0.75),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 26.h,
+                                        ),
+                                        Text(
+                                          "Ready to take your business to the next level? Contact us today to discuss your project and how we can help you achieve your goals.",
+                                          textAlign:
+                                          TextAlign
+                                              .left,
+                                          style: GoogleFonts
+                                              .poppins(
+                                            fontSize: (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 300)
+                                                ? 8 // Font size for screens smaller than 300px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 400)
+                                                ? 10 // Font size for screens between 300px and 400px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 500)
+                                                ? 12 // Font size for screens between 400px and 500px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 600)
+                                                ? 14 // Font size for screens between 500px and 600px
+                                                : (ResponsiveBreakpoints
+                                                .of(context)
+                                                .screenWidth < 765)
+                                                ? 16 // Font size for screens between 600px and 765px
+                                                : 18,
+                                            // Font size for screens larger than 765px
+
+                                            fontWeight:
+                                            FontWeight
+                                                .w300,
+                                            color: Colors
+                                                .black
+                                                .withOpacity(
+                                                0.75),
+                                          ),
+                                        ),
+
+                                        const SizedBox(
+                                          height: 50,
+                                        ),
+                                        CustomizableTextField(
+                                          controller:
+                                          yourNameEditingController,
+                                          hintText: yourNameText,
+                                          focusNode: yourNameFocusNode,
+                                          validator: (value) {
+                                            // if (value!.isEmpty) {
+                                            //   return cnicEmptyValidationText;
+                                            // } else if (value!.length < 15) {
+                                            //   return cnicValidationText;
+                                            // } else {
+                                            return null;
+                                            // }
+                                          },
+                                          onChanged: (value) {
+                                            // ref.read(cnicLoginProvider.notifier).state = value;
+                                          },
+                                          prefixIcon: null,
+                                          suffixIcon: null,
+                                          prefixWidget: null,
+                                          //Prefix Widget != null
+                                          prefixPadding: EdgeInsets.zero,
+                                          suffixPadding:
+                                          EdgeInsets.symmetric(
+                                            horizontal: 10.w,
+                                            vertical: 16.h,
+                                          ),
+                                          focusedIconColor: Colors.black,
+                                          unfocusedIconColor: Colors.grey,
+                                          hideText: false,
+                                          textInputType:
+                                          TextInputType.number,
+                                        ),
+                                        const SizedBox(
+                                          height: 20,
+                                        ),
+                                        CustomizableTextField(
+                                          controller:
+                                          yourPhoneEditingController,
+                                          hintText: yourPhoneText,
+                                          focusNode: yourPhoneFocusNode,
+                                          validator: (value) {
+                                            // if (value!.isEmpty) {
+                                            //   return cnicEmptyValidationText;
+                                            // } else if (value!.length < 15) {
+                                            //   return cnicValidationText;
+                                            // } else {
+                                            return null;
+                                            // }
+                                          },
+                                          onChanged: (value) {
+                                            // ref.read(cnicLoginProvider.notifier).state = value;
+                                          },
+                                          prefixIcon: null,
+                                          suffixIcon: null,
+                                          prefixWidget: null,
+                                          //Prefix Widget != null
+                                          prefixPadding: EdgeInsets.zero,
+                                          suffixPadding:
+                                          EdgeInsets.symmetric(
+                                            horizontal: 10.w,
+                                            vertical: 16.h,
+                                          ),
+                                          focusedIconColor: Colors.black,
+                                          unfocusedIconColor: Colors.grey,
+                                          hideText: false,
+                                          textInputType:
+                                          TextInputType.number,
+                                        ),
+                                        const SizedBox(
+                                          height: 20,
+                                        ),
+                                        CustomizableTextField(
+                                          controller:
+                                          yourEmailEditingController,
+                                          hintText: yourEmailText,
+                                          focusNode: yourEmailFocusNode,
+                                          validator: (value) {
+                                            // if (value!.isEmpty) {
+                                            //   return cnicEmptyValidationText;
+                                            // } else if (value!.length < 15) {
+                                            //   return cnicValidationText;
+                                            // } else {
+                                            return null;
+                                            // }
+                                          },
+                                          onChanged: (value) {
+                                            // ref.read(cnicLoginProvider.notifier).state = value;
+                                          },
+                                          prefixIcon: null,
+                                          suffixIcon: null,
+                                          prefixWidget: null,
+                                          //Prefix Widget != null
+                                          prefixPadding: EdgeInsets.zero,
+                                          suffixPadding:
+                                          EdgeInsets.symmetric(
+                                            horizontal: 10.w,
+                                            vertical: 16.h,
+                                          ),
+                                          focusedIconColor: Colors.black,
+                                          unfocusedIconColor: Colors.grey,
+                                          hideText: false,
+                                          textInputType:
+                                          TextInputType.number,
+                                        ),
+                                        const SizedBox(
+                                          height: 20,
+                                        ),
+                                        CustomizableTextField(
+                                          controller:
+                                          yourMessageEditingController,
+                                          hintText: yourMessageText,
+                                          focusNode: yourMessageFocusNode,
+                                          validator: (value) {
+                                            // if (value!.isEmpty) {
+                                            //   return cnicEmptyValidationText;
+                                            // } else if (value!.length < 15) {
+                                            //   return cnicValidationText;
+                                            // } else {
+                                            return null;
+                                            // }
+                                          },
+                                          onChanged: (value) {
+                                            // ref.read(cnicLoginProvider.notifier).state = value;
+                                          },
+                                          prefixIcon: null,
+                                          suffixIcon: null,
+                                          prefixWidget: null,
+                                          //Prefix Widget != null
+                                          prefixPadding: EdgeInsets.zero,
+                                          suffixPadding:
+                                          EdgeInsets.symmetric(
+                                            horizontal: 10.w,
+                                            vertical: 16.h,
+                                          ),
+                                          focusedIconColor: Colors.black,
+                                          unfocusedIconColor: Colors.grey,
+                                          hideText: false,
+                                          textInputType:
+                                          TextInputType.number,
+                                          maxLines: 5,
+                                        ),
+                                        const SizedBox(
+                                          height: 20,
+                                        ),
+                                        CustomizableTextButton(
+                                          prefixButtonIcon: null,
+                                          suffixButtonIcon: null,
+                                          isFullWidth: false,
+                                          isOutlined: false,
+                                          buttonTitle:
+                                          "Submit Now".toUpperCase(),
+                                          onPressed: () async {
+                                            _sendEmail();
+                                          },
+                                          buttonTitleStyle: const TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                          buttonBorderRadius: 60,
+                                          buttonColor: primaryColor,
+                                          horizontalPadding: 40,
+                                          verticalPadding: 16,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 15,
+                                  ),
+                                  Container(
+                                    height:
+                                    (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth <
+                                        1280)
+                                        ? 524
+                                        : 696,
+                                    width:
+                                    (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth <
+                                        1280)
+                                        ? 452
+                                        : 633,
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 15),
+                                    decoration: BoxDecoration(
+                                      image: const DecorationImage(
+                                        image: AssetImage(contactUs),
+                                        fit: BoxFit.fill,
+                                      ),
+                                      borderRadius:
+                                      BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             )
                           ],
                         ),
                       ),
                       Visibility(
-                          visible: false,
+                        visible: false,
                         child: Container(
-                          width: MediaQuery.of(context).size.width,
+                          width: MediaQuery
+                              .of(context)
+                              .size
+                              .width,
                           color: Colors.white,
                           child: Container(
                             width: /*(ResponsiveBreakpoints.of(context).screenWidth < 1270)
@@ -3772,7 +4563,7 @@ Example 2: Implemented a secure data management system for a financial instituti
                                         : 726
                                     : 966
                                 : */
-                                1266,
+                            1266,
                             padding: const EdgeInsets.symmetric(vertical: 120),
                             color: Colors.white,
                             child: Column(
@@ -3797,14 +4588,16 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   "We worked with brands",
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.poppins(
-                                    fontSize: (ResponsiveBreakpoints.of(context)
-                                                .screenWidth <
-                                            990)
-                                        ? (ResponsiveBreakpoints.of(context)
-                                                    .screenWidth <
-                                                575)
-                                            ? 32
-                                            : 40
+                                    fontSize: (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth <
+                                        990)
+                                        ? (ResponsiveBreakpoints
+                                        .of(context)
+                                        .screenWidth <
+                                        575)
+                                        ? 32
+                                        : 40
                                         : 50,
                                     fontWeight: FontWeight.w600,
                                     color: Colors.black.withOpacity(0.75),
@@ -3817,7 +4610,8 @@ Example 2: Implemented a secure data management system for a financial instituti
                                   child: Wrap(
                                     spacing: 30,
                                     runSpacing: 30,
-                                    crossAxisAlignment: WrapCrossAlignment.center,
+                                    crossAxisAlignment: WrapCrossAlignment
+                                        .center,
                                     alignment: WrapAlignment.center,
                                     children: [
                                       clientsImageWidget(image: brand1Image),
@@ -3836,588 +4630,601 @@ Example 2: Implemented a secure data management system for a financial instituti
                         ),
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width,
                         padding: EdgeInsets.symmetric(
                             vertical: 30,
                             horizontal:
-                                (ResponsiveBreakpoints.of(context).screenWidth <
-                                        575)
-                                    ? 0
-                                    : 50),
+                            (ResponsiveBreakpoints
+                                .of(context)
+                                .screenWidth <
+                                575)
+                                ? 0
+                                : 50),
                         color: Colors.black,
-                        child: (ResponsiveBreakpoints.of(context).screenWidth <
-                                990)
-                            ? (ResponsiveBreakpoints.of(context).screenWidth <
-                                    575)
-                                ? Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Expanded(
-                                            flex: 1,
-                                            child: Container(
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Image.asset(
-                                                    logoImageInvertedTechnologyWhite,
-                                                    height: 50,
-                                                    width: 100,
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 20,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Expanded(
-                                            flex: 1,
-                                            child: Container(
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  CustomizableTextButton(
-                                                    prefixButtonIcon: const Icon(
-                                                      FontAwesomeIcons
-                                                          .facebookF,
-                                                      color: Colors.white,
-                                                      size: 14,
-                                                    ),
-                                                    suffixButtonIcon: null,
-                                                    isFullWidth: false,
-                                                    isOutlined: true,
-                                                    buttonTitle: null,
-                                                    onPressed: () async {},
-                                                    buttonTitleStyle: const TextStyle(
-                                                      fontSize: 16,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                    ),
-                                                    buttonBorderRadius: 60,
-                                                    buttonColor: primaryColor,
-                                                    horizontalPadding: 40,
-                                                    verticalPadding: 16,
-                                                  ),
-                                                  const SizedBox(
-                                                    width: 10,
-                                                  ),
-                                                  CustomizableTextButton(
-                                                    prefixButtonIcon: const Icon(
-                                                      FontAwesomeIcons
-                                                          .linkedinIn,
-                                                      color: Colors.white,
-                                                      size: 14,
-                                                    ),
-                                                    suffixButtonIcon: null,
-                                                    isFullWidth: false,
-                                                    isOutlined: true,
-                                                    buttonTitle: null,
-                                                    onPressed: () async {},
-                                                    buttonTitleStyle: const TextStyle(
-                                                      fontSize: 16,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                    ),
-                                                    buttonBorderRadius: 60,
-                                                    buttonColor: primaryColor,
-                                                    horizontalPadding: 40,
-                                                    verticalPadding: 16,
-                                                  ),
-                                                  const SizedBox(
-                                                    width: 10,
-                                                  ),
-                                                  CustomizableTextButton(
-                                                    prefixButtonIcon: const Icon(
-                                                      FontAwesomeIcons.twitter,
-                                                      color: Colors.white,
-                                                      size: 14,
-                                                    ),
-                                                    suffixButtonIcon: null,
-                                                    isFullWidth: false,
-                                                    isOutlined: true,
-                                                    buttonTitle: null,
-                                                    onPressed: () async {},
-                                                    buttonTitleStyle: const TextStyle(
-                                                      fontSize: 16,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                    ),
-                                                    buttonBorderRadius: 60,
-                                                    buttonColor: primaryColor,
-                                                    horizontalPadding: 40,
-                                                    verticalPadding: 16,
-                                                  ),
-                                                  const SizedBox(
-                                                    width: 10,
-                                                  ),
-                                                  CustomizableTextButton(
-                                                    prefixButtonIcon: const Icon(
-                                                      FontAwesomeIcons
-                                                          .instagram,
-                                                      color: Colors.white,
-                                                      size: 14,
-                                                    ),
-                                                    suffixButtonIcon: null,
-                                                    isFullWidth: false,
-                                                    isOutlined: true,
-                                                    buttonTitle: null,
-                                                    onPressed: () async {},
-                                                    buttonTitleStyle: const TextStyle(
-                                                      fontSize: 16,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                    ),
-                                                    buttonBorderRadius: 60,
-                                                    buttonColor: primaryColor,
-                                                    horizontalPadding: 40,
-                                                    verticalPadding: 16,
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 20,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Expanded(
-                                            flex: 1,
-                                            child: Container(
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    "Copyright © 2024. All Rights Reserved",
-                                                    textAlign: TextAlign.center,
-                                                    style: GoogleFonts.poppins(
-                                                      fontSize: 14,
-                                                      fontWeight:
-                                                          FontWeight.w300,
-                                                      color: Colors.white
-                                                          .withOpacity(0.75),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  )
-                                : Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Expanded(
-                                            flex: 1,
-                                            child: Container(
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Image.asset(
-                                                    logoImageInvertedTechnologyWhite,
-                                                    height: (ResponsiveBreakpoints
-                                                                    .of(context)
-                                                                .screenWidth <
-                                                            750)
-                                                        ? 40
-                                                        : 50,
-                                                    width: (ResponsiveBreakpoints
-                                                                    .of(context)
-                                                                .screenWidth <
-                                                            750)
-                                                        ? 68
-                                                        : 100,
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Expanded(
-                                            flex: 1,
-                                            child: Container(
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  CustomizableTextButton(
-                                                    prefixButtonIcon: const Icon(
-                                                      FontAwesomeIcons
-                                                          .facebookF,
-                                                      color: Colors.white,
-                                                      size: 14,
-                                                    ),
-                                                    suffixButtonIcon: null,
-                                                    isFullWidth: false,
-                                                    isOutlined: true,
-                                                    buttonTitle: null,
-                                                    onPressed: () async {
-                                                      const url = 'https://www.facebook.com/invertedtec';
-                                                      if (await canLaunch(url)) {
-                                                        await launch(url);
-                                                      } else {
-                                                        throw 'Could not launch $url';
-                                                      }
-                                                    },
-                                                    buttonTitleStyle: const TextStyle(
-                                                      fontSize: 16,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                    ),
-                                                    buttonBorderRadius: 60,
-                                                    buttonColor: primaryColor,
-                                                    horizontalPadding: 40,
-                                                    verticalPadding: 16,
-                                                  ),
-                                                  const SizedBox(
-                                                    width: 10,
-                                                  ),
-                                                  CustomizableTextButton(
-                                                    prefixButtonIcon: const Icon(
-                                                      FontAwesomeIcons
-                                                          .linkedinIn,
-                                                      color: Colors.white,
-                                                      size: 14,
-                                                    ),
-                                                    suffixButtonIcon: null,
-                                                    isFullWidth: false,
-                                                    isOutlined: true,
-                                                    buttonTitle: null,
-                                                    onPressed: () async {
-                                                      const url = 'https://www.linkedin.com/in/inverted-technology-240029258/';
-                                                      if (await canLaunch(url)) {
-                                                        await launch(url);
-                                                      } else {
-                                                        throw 'Could not launch $url';
-                                                      }
-                                                    },
-                                                    buttonTitleStyle: const TextStyle(
-                                                      fontSize: 16,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                    ),
-                                                    buttonBorderRadius: 60,
-                                                    buttonColor: primaryColor,
-                                                    horizontalPadding: 40,
-                                                    verticalPadding: 16,
-                                                  ),
-                                                  const SizedBox(
-                                                    width: 10,
-                                                  ),
-                                                  CustomizableTextButton(
-                                                    prefixButtonIcon: const Icon(
-                                                      FontAwesomeIcons.twitter,
-                                                      color: Colors.white,
-                                                      size: 14,
-                                                    ),
-                                                    suffixButtonIcon: null,
-                                                    isFullWidth: false,
-                                                    isOutlined: true,
-                                                    buttonTitle: null,
-                                                    onPressed: () async {
-                                                      const url = 'https://x.com/invertedtec';
-                                                      if (await canLaunch(url)) {
-                                                        await launch(url);
-                                                      } else {
-                                                        throw 'Could not launch $url';
-                                                      }
-                                                    },
-                                                    buttonTitleStyle: const TextStyle(
-                                                      fontSize: 16,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                    ),
-                                                    buttonBorderRadius: 60,
-                                                    buttonColor: primaryColor,
-                                                    horizontalPadding: 40,
-                                                    verticalPadding: 16,
-                                                  ),
-                                                  const SizedBox(
-                                                    width: 10,
-                                                  ),
-                                                  CustomizableTextButton(
-                                                    prefixButtonIcon: const Icon(
-                                                      FontAwesomeIcons
-                                                          .instagram,
-                                                      color: Colors.white,
-                                                      size: 14,
-                                                    ),
-                                                    suffixButtonIcon: null,
-                                                    isFullWidth: false,
-                                                    isOutlined: true,
-                                                    buttonTitle: null,
-                                                    onPressed: () async {
-                                                      const url = 'https://www.instagram.com/invertedtechnology/';
-                                                      if (await canLaunch(url)) {
-                                                        await launch(url);
-                                                      } else {
-                                                        throw 'Could not launch $url';
-                                                      }
-                                                    },
-                                                    buttonTitleStyle: const TextStyle(
-                                                      fontSize: 16,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                    ),
-                                                    buttonBorderRadius: 60,
-                                                    buttonColor: primaryColor,
-                                                    horizontalPadding: 40,
-                                                    verticalPadding: 16,
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Expanded(
-                                            flex: 1,
-                                            child: Container(
-                                              height: (ResponsiveBreakpoints.of(
-                                                              context)
-                                                          .screenWidth <
-                                                      750)
-                                                  ? 40
-                                                  : 50,
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    "Copyright © 2024. All Rights Reserved",
-                                                    textAlign: TextAlign.center,
-                                                    style: GoogleFonts.poppins(
-                                                      fontSize: 14,
-                                                      fontWeight:
-                                                          FontWeight.w300,
-                                                      color: Colors.white
-                                                          .withOpacity(0.75),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  )
-                            : Row(
-                                children: [
-                                  Expanded(
-                                    flex: 1,
-                                    child: Container(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Image.asset(
-                                            logoImageInvertedTechnologyWhite,
-                                            height: (ResponsiveBreakpoints.of(
-                                                            context)
-                                                        .screenWidth <
-                                                    750)
-                                                ? 40
-                                                : 50,
-                                            width: (ResponsiveBreakpoints.of(
-                                                            context)
-                                                        .screenWidth <
-                                                    750)
-                                                ? 68
-                                                : 100,
-                                          ),
-                                        ],
-                                      ),
+                        child: (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth <
+                            990)
+                            ? (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth <
+                            575)
+                            ? Column(
+                          children: [
+                            Row(
+                              children: [
+                                Expanded(
+                                  flex: 1,
+                                  child: Container(
+                                    child: Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.center,
+                                      children: [
+                                        Image.asset(
+                                          logoImageInvertedTechnologyWhite,
+                                          height: 50,
+                                          width: 100,
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                  Expanded(
-                                    flex: 1,
-                                    child: Container(
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          CustomizableTextButton(
-                                            prefixButtonIcon: const Icon(
-                                              FontAwesomeIcons.facebookF,
-                                              color: Colors.white,
-                                              size: 14,
-                                            ),
-                                            suffixButtonIcon: null,
-                                            isFullWidth: false,
-                                            isOutlined: true,
-                                            buttonTitle: null,
-                                            onPressed: () async {
-                                              const url = 'https://www.facebook.com/invertedtec';
-                                              if (await canLaunch(url)) {
-                                                await launch(url);
-                                              } else {
-                                                throw 'Could not launch $url';
-                                              }
-                                            },
-                                            buttonTitleStyle: const TextStyle(
-                                              fontSize: 16,
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                            buttonBorderRadius: 60,
-                                            buttonColor: primaryColor,
-                                            horizontalPadding: 40,
-                                            verticalPadding: 16,
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: [
+                                Expanded(
+                                  flex: 1,
+                                  child: Container(
+                                    child: Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.center,
+                                      children: [
+                                        CustomizableTextButton(
+                                          prefixButtonIcon: const Icon(
+                                            FontAwesomeIcons
+                                                .facebookF,
+                                            color: Colors.white,
+                                            size: 14,
                                           ),
-                                          const SizedBox(
-                                            width: 10,
+                                          suffixButtonIcon: null,
+                                          isFullWidth: false,
+                                          isOutlined: true,
+                                          buttonTitle: null,
+                                          onPressed: () async {},
+                                          buttonTitleStyle: const TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.white,
+                                            fontWeight:
+                                            FontWeight.w500,
                                           ),
-                                          CustomizableTextButton(
-                                            prefixButtonIcon: const Icon(
-                                              FontAwesomeIcons.linkedinIn,
-                                              color: Colors.white,
-                                              size: 14,
-                                            ),
-                                            suffixButtonIcon: null,
-                                            isFullWidth: false,
-                                            isOutlined: true,
-                                            buttonTitle: null,
-                                            onPressed: () async {
-                                              const url = 'https://www.linkedin.com/in/inverted-technology-240029258/';
-                                              if (await canLaunch(url)) {
-                                                await launch(url);
-                                              } else {
-                                                throw 'Could not launch $url';
-                                              }
-                                            },
-                                            buttonTitleStyle: const TextStyle(
-                                              fontSize: 16,
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                            buttonBorderRadius: 60,
-                                            buttonColor: primaryColor,
-                                            horizontalPadding: 40,
-                                            verticalPadding: 16,
+                                          buttonBorderRadius: 60,
+                                          buttonColor: primaryColor,
+                                          horizontalPadding: 40,
+                                          verticalPadding: 16,
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        CustomizableTextButton(
+                                          prefixButtonIcon: const Icon(
+                                            FontAwesomeIcons
+                                                .linkedinIn,
+                                            color: Colors.white,
+                                            size: 14,
                                           ),
-                                          const SizedBox(
-                                            width: 10,
+                                          suffixButtonIcon: null,
+                                          isFullWidth: false,
+                                          isOutlined: true,
+                                          buttonTitle: null,
+                                          onPressed: () async {},
+                                          buttonTitleStyle: const TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.white,
+                                            fontWeight:
+                                            FontWeight.w500,
                                           ),
-                                          CustomizableTextButton(
-                                            prefixButtonIcon: const Icon(
-                                              FontAwesomeIcons.twitter,
-                                              color: Colors.white,
-                                              size: 14,
-                                            ),
-                                            suffixButtonIcon: null,
-                                            isFullWidth: false,
-                                            isOutlined: true,
-                                            buttonTitle: null,
-                                            onPressed: () async {
-                                              const url = 'https://x.com/invertedtec';
-                                              if (await canLaunch(url)) {
-                                                await launch(url);
-                                              } else {
-                                                throw 'Could not launch $url';
-                                              }
-                                            },
-                                            buttonTitleStyle: const TextStyle(
-                                              fontSize: 16,
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                            buttonBorderRadius: 60,
-                                            buttonColor: primaryColor,
-                                            horizontalPadding: 40,
-                                            verticalPadding: 16,
+                                          buttonBorderRadius: 60,
+                                          buttonColor: primaryColor,
+                                          horizontalPadding: 40,
+                                          verticalPadding: 16,
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        CustomizableTextButton(
+                                          prefixButtonIcon: const Icon(
+                                            FontAwesomeIcons.twitter,
+                                            color: Colors.white,
+                                            size: 14,
                                           ),
-                                          const SizedBox(
-                                            width: 10,
+                                          suffixButtonIcon: null,
+                                          isFullWidth: false,
+                                          isOutlined: true,
+                                          buttonTitle: null,
+                                          onPressed: () async {},
+                                          buttonTitleStyle: const TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.white,
+                                            fontWeight:
+                                            FontWeight.w500,
                                           ),
-                                          CustomizableTextButton(
-                                            prefixButtonIcon: const Icon(
-                                              FontAwesomeIcons.instagram,
-                                              color: Colors.white,
-                                              size: 14,
-                                            ),
-                                            suffixButtonIcon: null,
-                                            isFullWidth: false,
-                                            isOutlined: true,
-                                            buttonTitle: null,
-                                            onPressed: () async {
-                                              const url = 'https://www.instagram.com/invertedtechnology/';
-                                              if (await canLaunch(url)) {
-                                                await launch(url);
-                                              } else {
-                                                throw 'Could not launch $url';
-                                              }
-                                            },
-                                            buttonTitleStyle: const TextStyle(
-                                              fontSize: 16,
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                            buttonBorderRadius: 60,
-                                            buttonColor: primaryColor,
-                                            horizontalPadding: 40,
-                                            verticalPadding: 16,
+                                          buttonBorderRadius: 60,
+                                          buttonColor: primaryColor,
+                                          horizontalPadding: 40,
+                                          verticalPadding: 16,
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        CustomizableTextButton(
+                                          prefixButtonIcon: const Icon(
+                                            FontAwesomeIcons
+                                                .instagram,
+                                            color: Colors.white,
+                                            size: 14,
                                           ),
-                                        ],
-                                      ),
+                                          suffixButtonIcon: null,
+                                          isFullWidth: false,
+                                          isOutlined: true,
+                                          buttonTitle: null,
+                                          onPressed: () async {},
+                                          buttonTitleStyle: const TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.white,
+                                            fontWeight:
+                                            FontWeight.w500,
+                                          ),
+                                          buttonBorderRadius: 60,
+                                          buttonColor: primaryColor,
+                                          horizontalPadding: 40,
+                                          verticalPadding: 16,
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                  Expanded(
-                                    flex: 1,
-                                    child: Container(
-                                      height: (ResponsiveBreakpoints.of(context)
-                                                  .screenWidth <
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: [
+                                Expanded(
+                                  flex: 1,
+                                  child: Container(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "Copyright © 2024. All Rights Reserved",
+                                          textAlign: TextAlign.center,
+                                          style: GoogleFonts.poppins(
+                                            fontSize: 14,
+                                            fontWeight:
+                                            FontWeight.w300,
+                                            color: Colors.white
+                                                .withOpacity(0.75),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        )
+                            : Column(
+                          children: [
+                            Row(
+                              children: [
+                                Expanded(
+                                  flex: 1,
+                                  child: Container(
+                                    child: Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.center,
+                                      children: [
+                                        Image.asset(
+                                          logoImageInvertedTechnologyWhite,
+                                          height: (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth <
                                               750)
+                                              ? 40
+                                              : 50,
+                                          width: (ResponsiveBreakpoints
+                                              .of(context)
+                                              .screenWidth <
+                                              750)
+                                              ? 68
+                                              : 100,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 1,
+                                  child: Container(
+                                    child: Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.center,
+                                      children: [
+                                        CustomizableTextButton(
+                                          prefixButtonIcon: const Icon(
+                                            FontAwesomeIcons
+                                                .facebookF,
+                                            color: Colors.white,
+                                            size: 14,
+                                          ),
+                                          suffixButtonIcon: null,
+                                          isFullWidth: false,
+                                          isOutlined: true,
+                                          buttonTitle: null,
+                                          onPressed: () async {
+                                            const url = 'https://www.facebook.com/invertedtec';
+                                            if (await canLaunch(url)) {
+                                              await launch(url);
+                                            } else {
+                                              throw 'Could not launch $url';
+                                            }
+                                          },
+                                          buttonTitleStyle: const TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.white,
+                                            fontWeight:
+                                            FontWeight.w500,
+                                          ),
+                                          buttonBorderRadius: 60,
+                                          buttonColor: primaryColor,
+                                          horizontalPadding: 40,
+                                          verticalPadding: 16,
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        CustomizableTextButton(
+                                          prefixButtonIcon: const Icon(
+                                            FontAwesomeIcons
+                                                .linkedinIn,
+                                            color: Colors.white,
+                                            size: 14,
+                                          ),
+                                          suffixButtonIcon: null,
+                                          isFullWidth: false,
+                                          isOutlined: true,
+                                          buttonTitle: null,
+                                          onPressed: () async {
+                                            const url = 'https://www.linkedin.com/in/inverted-technology-240029258/';
+                                            if (await canLaunch(url)) {
+                                              await launch(url);
+                                            } else {
+                                              throw 'Could not launch $url';
+                                            }
+                                          },
+                                          buttonTitleStyle: const TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.white,
+                                            fontWeight:
+                                            FontWeight.w500,
+                                          ),
+                                          buttonBorderRadius: 60,
+                                          buttonColor: primaryColor,
+                                          horizontalPadding: 40,
+                                          verticalPadding: 16,
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        CustomizableTextButton(
+                                          prefixButtonIcon: const Icon(
+                                            FontAwesomeIcons.twitter,
+                                            color: Colors.white,
+                                            size: 14,
+                                          ),
+                                          suffixButtonIcon: null,
+                                          isFullWidth: false,
+                                          isOutlined: true,
+                                          buttonTitle: null,
+                                          onPressed: () async {
+                                            const url = 'https://x.com/invertedtec';
+                                            if (await canLaunch(url)) {
+                                              await launch(url);
+                                            } else {
+                                              throw 'Could not launch $url';
+                                            }
+                                          },
+                                          buttonTitleStyle: const TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.white,
+                                            fontWeight:
+                                            FontWeight.w500,
+                                          ),
+                                          buttonBorderRadius: 60,
+                                          buttonColor: primaryColor,
+                                          horizontalPadding: 40,
+                                          verticalPadding: 16,
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        CustomizableTextButton(
+                                          prefixButtonIcon: const Icon(
+                                            FontAwesomeIcons
+                                                .instagram,
+                                            color: Colors.white,
+                                            size: 14,
+                                          ),
+                                          suffixButtonIcon: null,
+                                          isFullWidth: false,
+                                          isOutlined: true,
+                                          buttonTitle: null,
+                                          onPressed: () async {
+                                            const url = 'https://www.instagram.com/invertedtechnology/';
+                                            if (await canLaunch(url)) {
+                                              await launch(url);
+                                            } else {
+                                              throw 'Could not launch $url';
+                                            }
+                                          },
+                                          buttonTitleStyle: const TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.white,
+                                            fontWeight:
+                                            FontWeight.w500,
+                                          ),
+                                          buttonBorderRadius: 60,
+                                          buttonColor: primaryColor,
+                                          horizontalPadding: 40,
+                                          verticalPadding: 16,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Expanded(
+                                  flex: 1,
+                                  child: Container(
+                                    height: (ResponsiveBreakpoints
+                                        .of(
+                                        context)
+                                        .screenWidth <
+                                        750)
+                                        ? 40
+                                        : 50,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "Copyright © 2024. All Rights Reserved",
+                                          textAlign: TextAlign.center,
+                                          style: GoogleFonts.poppins(
+                                            fontSize: 14,
+                                            fontWeight:
+                                            FontWeight.w300,
+                                            color: Colors.white
+                                                .withOpacity(0.75),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        )
+                            : Row(
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: Container(
+                                child: Row(
+                                  mainAxisAlignment:
+                                  MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      logoImageInvertedTechnologyWhite,
+                                      height: (ResponsiveBreakpoints
+                                          .of(
+                                          context)
+                                          .screenWidth <
+                                          750)
                                           ? 40
                                           : 50,
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Copyright © 2024. All Rights Reserved",
-                                            textAlign: TextAlign.center,
-                                            style: GoogleFonts.poppins(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w300,
-                                              color: Colors.white
-                                                  .withOpacity(0.75),
-                                            ),
-                                          ),
-                                        ],
+                                      width: (ResponsiveBreakpoints
+                                          .of(
+                                          context)
+                                          .screenWidth <
+                                          750)
+                                          ? 68
+                                          : 100,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Container(
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    CustomizableTextButton(
+                                      prefixButtonIcon: const Icon(
+                                        FontAwesomeIcons.facebookF,
+                                        color: Colors.white,
+                                        size: 14,
+                                      ),
+                                      suffixButtonIcon: null,
+                                      isFullWidth: false,
+                                      isOutlined: true,
+                                      buttonTitle: null,
+                                      onPressed: () async {
+                                        const url = 'https://www.facebook.com/invertedtec';
+                                        if (await canLaunch(url)) {
+                                          await launch(url);
+                                        } else {
+                                          throw 'Could not launch $url';
+                                        }
+                                      },
+                                      buttonTitleStyle: const TextStyle(
+                                        fontSize: 16,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                      buttonBorderRadius: 60,
+                                      buttonColor: primaryColor,
+                                      horizontalPadding: 40,
+                                      verticalPadding: 16,
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    CustomizableTextButton(
+                                      prefixButtonIcon: const Icon(
+                                        FontAwesomeIcons.linkedinIn,
+                                        color: Colors.white,
+                                        size: 14,
+                                      ),
+                                      suffixButtonIcon: null,
+                                      isFullWidth: false,
+                                      isOutlined: true,
+                                      buttonTitle: null,
+                                      onPressed: () async {
+                                        const url = 'https://www.linkedin.com/in/inverted-technology-240029258/';
+                                        if (await canLaunch(url)) {
+                                          await launch(url);
+                                        } else {
+                                          throw 'Could not launch $url';
+                                        }
+                                      },
+                                      buttonTitleStyle: const TextStyle(
+                                        fontSize: 16,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                      buttonBorderRadius: 60,
+                                      buttonColor: primaryColor,
+                                      horizontalPadding: 40,
+                                      verticalPadding: 16,
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    CustomizableTextButton(
+                                      prefixButtonIcon: const Icon(
+                                        FontAwesomeIcons.twitter,
+                                        color: Colors.white,
+                                        size: 14,
+                                      ),
+                                      suffixButtonIcon: null,
+                                      isFullWidth: false,
+                                      isOutlined: true,
+                                      buttonTitle: null,
+                                      onPressed: () async {
+                                        const url = 'https://x.com/invertedtec';
+                                        if (await canLaunch(url)) {
+                                          await launch(url);
+                                        } else {
+                                          throw 'Could not launch $url';
+                                        }
+                                      },
+                                      buttonTitleStyle: const TextStyle(
+                                        fontSize: 16,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                      buttonBorderRadius: 60,
+                                      buttonColor: primaryColor,
+                                      horizontalPadding: 40,
+                                      verticalPadding: 16,
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    CustomizableTextButton(
+                                      prefixButtonIcon: const Icon(
+                                        FontAwesomeIcons.instagram,
+                                        color: Colors.white,
+                                        size: 14,
+                                      ),
+                                      suffixButtonIcon: null,
+                                      isFullWidth: false,
+                                      isOutlined: true,
+                                      buttonTitle: null,
+                                      onPressed: () async {
+                                        const url = 'https://www.instagram.com/invertedtechnology/';
+                                        if (await canLaunch(url)) {
+                                          await launch(url);
+                                        } else {
+                                          throw 'Could not launch $url';
+                                        }
+                                      },
+                                      buttonTitleStyle: const TextStyle(
+                                        fontSize: 16,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                      buttonBorderRadius: 60,
+                                      buttonColor: primaryColor,
+                                      horizontalPadding: 40,
+                                      verticalPadding: 16,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Container(
+                                height: (ResponsiveBreakpoints
+                                    .of(context)
+                                    .screenWidth <
+                                    750)
+                                    ? 40
+                                    : 50,
+                                child: Column(
+                                  mainAxisAlignment:
+                                  MainAxisAlignment.center,
+                                  crossAxisAlignment:
+                                  CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "Copyright © 2024. All Rights Reserved",
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.poppins(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w300,
+                                        color: Colors.white
+                                            .withOpacity(0.75),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -4435,200 +5242,277 @@ Example 2: Implemented a secure data management system for a financial instituti
       padding: const EdgeInsets.all(25),
       child: Image.asset(
         image,
-        height: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
-            ? (ResponsiveBreakpoints.of(context).screenWidth < 970)
-                ? (ResponsiveBreakpoints.of(context).screenWidth < 740)
-                    ? 50
-                    : 70
-                : 80
+        height: (ResponsiveBreakpoints
+            .of(context)
+            .screenWidth < 1200)
+            ? (ResponsiveBreakpoints
+            .of(context)
+            .screenWidth < 970)
+            ? (ResponsiveBreakpoints
+            .of(context)
+            .screenWidth < 740)
+            ? 50
+            : 70
+            : 80
             : 110,
       ),
     );
   }
 
-  Widget companyGrowthWidget(
-      {
-        // required Widget image,
-        required String scores, required String description,}) {
-    return (ResponsiveBreakpoints.of(context).screenWidth < 575)
+  Widget companyGrowthWidget({
+    // required Widget image,
+    required String scores, required String description,}) {
+    return (ResponsiveBreakpoints
+        .of(context)
+        .screenWidth < 575)
         ? Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Container(
-                    // height: 380,
-                    width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                        ? 400 // Updated width for screens smaller than 755
-                        : 461 // Updated width for screens between 755 and 1250
-                        : 542, // Updated width for screens larger than 1250
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Container(
+              // height: 380,
+              width: (ResponsiveBreakpoints
+                  .of(context)
+                  .screenWidth < 1250)
+                  ? (ResponsiveBreakpoints
+                  .of(context)
+                  .screenWidth < 755)
+                  ? 400 // Updated width for screens smaller than 755
+                  : 461 // Updated width for screens between 755 and 1250
+                  : 542, // Updated width for screens larger than 1250
 
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Padding(
-                      padding: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                          ? const EdgeInsets.symmetric(horizontal: 20, vertical: 20) // Padding for screens smaller than 500px
-                          : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                          ? const EdgeInsets.symmetric(horizontal: 30, vertical: 30) // Padding for screens between 500px and 800px
-                          : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                          ? const EdgeInsets.symmetric(horizontal: 45, vertical: 35) // Padding for screens between 800px and 1250px
-                          : const EdgeInsets.symmetric(horizontal: 60, vertical: 40),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          // image,
-                          // const SizedBox(
-                          //   height: 20,
-                          // ),
-                          Text(
-                            scores,
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.poppins(
-                              fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                  ? 18 // Font size for screens smaller than 500px
-                                  : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                  ? 24 // Font size for screens between 500px and 800px
-                                  : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                  ? 24 // Font size for screens between 800px and 1250px
-                                  : 30, // Font size for screens larger than 1250px
-                              fontWeight: FontWeight.w600,
-                              color: Colors.black.withOpacity(0.75),
-                            ),
-                          ),
-                          SizedBox(
-                            height: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                ? 4 // Height for screens smaller than 500px
-                                : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                ? 5 // Height for screens between 500px and 800px
-                                : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                ? 6 // Height for screens between 800px and 1250px
-                                : 6, // Height for screens larger than 1250px
-                          ),
-                          Text(
-                            description,
-                            textAlign: TextAlign.justify,
-                            style: GoogleFonts.poppins(
-                              fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                                  ? 10 // Font size for screens smaller than 500px
-                                  : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                                  ? 12 // Font size for screens between 500px and 800px
-                                  : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                                  ? 13 // Font size for screens between 800px and 1250px
-                                  : 16, // Font size for screens larger than 1250px
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black.withOpacity(0.75),
-                            ),
-                          ),
-
-                        ],
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Padding(
+                padding: (ResponsiveBreakpoints
+                    .of(context)
+                    .screenWidth < 500)
+                    ? const EdgeInsets.symmetric(horizontal: 20,
+                    vertical: 20) // Padding for screens smaller than 500px
+                    : (ResponsiveBreakpoints
+                    .of(context)
+                    .screenWidth < 800)
+                    ? const EdgeInsets.symmetric(horizontal: 30,
+                    vertical: 30) // Padding for screens between 500px and 800px
+                    : (ResponsiveBreakpoints
+                    .of(context)
+                    .screenWidth < 1250)
+                    ? const EdgeInsets.symmetric(horizontal: 45,
+                    vertical: 35) // Padding for screens between 800px and 1250px
+                    : const EdgeInsets.symmetric(horizontal: 60, vertical: 40),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // image,
+                    // const SizedBox(
+                    //   height: 20,
+                    // ),
+                    Text(
+                      scores,
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.poppins(
+                        fontSize: (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 500)
+                            ? 18 // Font size for screens smaller than 500px
+                            : (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 800)
+                            ? 24 // Font size for screens between 500px and 800px
+                            : (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 1250)
+                            ? 24 // Font size for screens between 800px and 1250px
+                            : 30, // Font size for screens larger than 1250px
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black.withOpacity(0.75),
                       ),
                     ),
-                  ),
+                    SizedBox(
+                      height: (ResponsiveBreakpoints
+                          .of(context)
+                          .screenWidth < 500)
+                          ? 4 // Height for screens smaller than 500px
+                          : (ResponsiveBreakpoints
+                          .of(context)
+                          .screenWidth < 800)
+                          ? 5 // Height for screens between 500px and 800px
+                          : (ResponsiveBreakpoints
+                          .of(context)
+                          .screenWidth < 1250)
+                          ? 6 // Height for screens between 800px and 1250px
+                          : 6, // Height for screens larger than 1250px
+                    ),
+                    Text(
+                      description,
+                      textAlign: TextAlign.justify,
+                      style: GoogleFonts.poppins(
+                        fontSize: (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 500)
+                            ? 10 // Font size for screens smaller than 500px
+                            : (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 800)
+                            ? 12 // Font size for screens between 500px and 800px
+                            : (ResponsiveBreakpoints
+                            .of(context)
+                            .screenWidth < 1250)
+                            ? 13 // Font size for screens between 800px and 1250px
+                            : 16, // Font size for screens larger than 1250px
+                        fontWeight: FontWeight.w400,
+                        color: Colors.black.withOpacity(0.75),
+                      ),
+                    ),
+
+                  ],
                 ),
               ),
-            ],
-          )
+            ),
+          ),
+        ),
+      ],
+    )
         : Container(
-            // height: 380,
-      width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-          ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+      // height: 380,
+      width: (ResponsiveBreakpoints
+          .of(context)
+          .screenWidth < 1250)
+          ? (ResponsiveBreakpoints
+          .of(context)
+          .screenWidth < 755)
           ? 400 // Updated width for screens smaller than 755
           : 461 // Updated width for screens between 755 and 1250
           : 542, // Updated width for screens larger than 1250
 
       decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Padding(
-              padding: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                  ? const EdgeInsets.symmetric(horizontal: 20, vertical: 20) // Padding for screens smaller than 500px
-                  : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                  ? const EdgeInsets.symmetric(horizontal: 30, vertical: 30) // Padding for screens between 500px and 800px
-                  : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                  ? const EdgeInsets.symmetric(horizontal: 45, vertical: 35) // Padding for screens between 800px and 1250px
-                  : const EdgeInsets.symmetric(horizontal: 60, vertical: 40),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // image,
-                  // const SizedBox(
-                  //   height: 20,
-                  // ),
-                  Text(
-                    scores,
-                    textAlign: TextAlign.left,
-                    style: GoogleFonts.poppins(
-                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                          ? 18 // Font size for screens smaller than 500px
-                          : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                          ? 24 // Font size for screens between 500px and 800px
-                          : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                          ? 24 // Font size for screens between 800px and 1250px
-                          : 30, // Font size for screens larger than 1250px
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black.withOpacity(0.75),
-                    ),
-                  ),
-                  SizedBox(
-                    height: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                        ? 4 // Height for screens smaller than 500px
-                        : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                        ? 5 // Height for screens between 500px and 800px
-                        : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                        ? 6 // Height for screens between 800px and 1250px
-                        : 6, // Height for screens larger than 1250px
-                  ),
-                  Text(
-                    description,
-                    textAlign: TextAlign.justify,
-                    style: GoogleFonts.poppins(
-                      fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                          ? 10  // Font size for screens smaller than 500px
-                          : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                          ? 12  // Font size for screens between 500px and 600px
-                          : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                          ? 14  // Font size for screens between 600px and 765px
-                          : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                          ? 14  // Font size for screens between 765px and 1000px
-                          : 14,  // Font size for screens larger than 1000px
-                      fontWeight: FontWeight.w400,
-                      color: Colors.black.withOpacity(0.75),
-                    ),
-                  ),
-                ],
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Padding(
+        padding: (ResponsiveBreakpoints
+            .of(context)
+            .screenWidth < 500)
+            ? const EdgeInsets.symmetric(horizontal: 20,
+            vertical: 20) // Padding for screens smaller than 500px
+            : (ResponsiveBreakpoints
+            .of(context)
+            .screenWidth < 800)
+            ? const EdgeInsets.symmetric(horizontal: 30,
+            vertical: 30) // Padding for screens between 500px and 800px
+            : (ResponsiveBreakpoints
+            .of(context)
+            .screenWidth < 1250)
+            ? const EdgeInsets.symmetric(horizontal: 45,
+            vertical: 35) // Padding for screens between 800px and 1250px
+            : const EdgeInsets.symmetric(horizontal: 60, vertical: 40),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // image,
+            // const SizedBox(
+            //   height: 20,
+            // ),
+            Text(
+              scores,
+              textAlign: TextAlign.left,
+              style: GoogleFonts.poppins(
+                fontSize: (ResponsiveBreakpoints
+                    .of(context)
+                    .screenWidth < 500)
+                    ? 18 // Font size for screens smaller than 500px
+                    : (ResponsiveBreakpoints
+                    .of(context)
+                    .screenWidth < 800)
+                    ? 24 // Font size for screens between 500px and 800px
+                    : (ResponsiveBreakpoints
+                    .of(context)
+                    .screenWidth < 1250)
+                    ? 24 // Font size for screens between 800px and 1250px
+                    : 30, // Font size for screens larger than 1250px
+                fontWeight: FontWeight.w600,
+                color: Colors.black.withOpacity(0.75),
               ),
             ),
-          );
+            SizedBox(
+              height: (ResponsiveBreakpoints
+                  .of(context)
+                  .screenWidth < 500)
+                  ? 4 // Height for screens smaller than 500px
+                  : (ResponsiveBreakpoints
+                  .of(context)
+                  .screenWidth < 800)
+                  ? 5 // Height for screens between 500px and 800px
+                  : (ResponsiveBreakpoints
+                  .of(context)
+                  .screenWidth < 1250)
+                  ? 6 // Height for screens between 800px and 1250px
+                  : 6, // Height for screens larger than 1250px
+            ),
+            Text(
+              description,
+              textAlign: TextAlign.justify,
+              style: GoogleFonts.poppins(
+                fontSize: (ResponsiveBreakpoints
+                    .of(context)
+                    .screenWidth < 500)
+                    ? 10 // Font size for screens smaller than 500px
+                    : (ResponsiveBreakpoints
+                    .of(context)
+                    .screenWidth < 600)
+                    ? 12 // Font size for screens between 500px and 600px
+                    : (ResponsiveBreakpoints
+                    .of(context)
+                    .screenWidth < 765)
+                    ? 14 // Font size for screens between 600px and 765px
+                    : (ResponsiveBreakpoints
+                    .of(context)
+                    .screenWidth < 1000)
+                    ? 14 // Font size for screens between 765px and 1000px
+                    : 14, // Font size for screens larger than 1000px
+                fontWeight: FontWeight.w400,
+                color: Colors.black.withOpacity(0.75),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
 
-
   Widget companyStacksWidget(
-      {required Widget image,required String title,required String description}) {
-    return (ResponsiveBreakpoints.of(context).screenWidth < 575)
+      {required Widget image, required String title, required String description}) {
+    return (ResponsiveBreakpoints
+        .of(context)
+        .screenWidth < 575)
         ? Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-            Expanded(
-              child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Container(
-                    width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                        ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
-                        ? 185 // Updated width for screens smaller than 755px
-                        : 213 // Updated width for screens between 755px and 1250px
-                        : 250,   // Updated width for screens larger than 1250px
-                    decoration: BoxDecoration(
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Container(
+                width: (ResponsiveBreakpoints
+                    .of(context)
+                    .screenWidth < 1250)
+                    ? (ResponsiveBreakpoints
+                    .of(context)
+                    .screenWidth < 755)
+                    ? 185 // Updated width for screens smaller than 755px
+                    : 213 // Updated width for screens between 755px and 1250px
+                    : 250, // Updated width for screens larger than 1250px
+                decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 20, vertical: 20),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -4641,9 +5525,11 @@ Example 2: Implemented a secure data management system for a financial instituti
                         textAlign: TextAlign.left,
                         style: GoogleFonts.poppins(
                           fontSize:
-                          (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                              ?  13
-                          : 16,
+                          (ResponsiveBreakpoints
+                              .of(context)
+                              .screenWidth < 1250)
+                              ? 13
+                              : 16,
                           fontWeight: FontWeight.w600,
                           color: Colors.black.withOpacity(0.75),
                         ),
@@ -4656,7 +5542,9 @@ Example 2: Implemented a secure data management system for a financial instituti
                         textAlign: TextAlign.left,
                         style: GoogleFonts.poppins(
                           fontSize:
-                          (ResponsiveBreakpoints.of(context).screenWidth <
+                          (ResponsiveBreakpoints
+                              .of(context)
+                              .screenWidth <
                               1250)
                               ? 12
                               : 14,
@@ -4667,17 +5555,20 @@ Example 2: Implemented a secure data management system for a financial instituti
                     ],
                   ),
                 )),
-              ),
-            ),
-          ],
-        )
+          ),
+        ),
+      ],
+    )
         : Container(
-        width: (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-            ? (ResponsiveBreakpoints.of(context).screenWidth < 755)
+        width: (ResponsiveBreakpoints
+            .of(context)
+            .screenWidth < 1250)
+            ? (ResponsiveBreakpoints
+            .of(context)
+            .screenWidth < 755)
             ? 185 // Updated width for screens smaller than 755px
             : 213 // Updated width for screens between 755px and 1250px
-            : 250,   // Updated width for screens larger than 1250px
-
+            : 250, // Updated width for screens larger than 1250px
 
 
         decoration: BoxDecoration(
@@ -4686,7 +5577,7 @@ Example 2: Implemented a secure data management system for a financial instituti
         ),
 
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -4698,19 +5589,31 @@ Example 2: Implemented a secure data management system for a financial instituti
                 title,
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
-                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                      ? 10  // Font size for screens smaller than 550px
-                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                      ? 11  // Font size for screens between 550px and 600px
-                      : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                      ? 12  // Font size for screens between 600px and 700px
-                      : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                      ? 13  // Font size for screens between 700px and 800px
-                      : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                      ? 14  // Font size for screens between 800px and 1000px
-                      : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                      ? 15  // Font size for screens between 1000px and 1250px
-                      : 16,  // Font size for screens larger than 1250px
+                  fontSize: (ResponsiveBreakpoints
+                      .of(context)
+                      .screenWidth < 550)
+                      ? 10 // Font size for screens smaller than 550px
+                      : (ResponsiveBreakpoints
+                      .of(context)
+                      .screenWidth < 600)
+                      ? 11 // Font size for screens between 550px and 600px
+                      : (ResponsiveBreakpoints
+                      .of(context)
+                      .screenWidth < 700)
+                      ? 12 // Font size for screens between 600px and 700px
+                      : (ResponsiveBreakpoints
+                      .of(context)
+                      .screenWidth < 800)
+                      ? 13 // Font size for screens between 700px and 800px
+                      : (ResponsiveBreakpoints
+                      .of(context)
+                      .screenWidth < 1000)
+                      ? 14 // Font size for screens between 800px and 1000px
+                      : (ResponsiveBreakpoints
+                      .of(context)
+                      .screenWidth < 1250)
+                      ? 15 // Font size for screens between 1000px and 1250px
+                      : 16, // Font size for screens larger than 1250px
 
                   fontWeight: FontWeight.w600,
                   color: Colors.black.withOpacity(0.75),
@@ -4723,18 +5626,30 @@ Example 2: Implemented a secure data management system for a financial instituti
                 description,
                 textAlign: TextAlign.left,
                 style: GoogleFonts.poppins(
-                  fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 550)
-                      ? 10  // Font size for screens smaller than 550px
-                      : (ResponsiveBreakpoints.of(context).screenWidth < 600)
-                      ? 11  // Font size for screens between 550px and 600px
-                      : (ResponsiveBreakpoints.of(context).screenWidth < 700)
-                      ? 12  // Font size for screens between 600px and 700px
-                      : (ResponsiveBreakpoints.of(context).screenWidth < 800)
-                      ? 13  // Font size for screens between 700px and 800px
-                      : (ResponsiveBreakpoints.of(context).screenWidth < 1000)
-                      ? 14  // Font size for screens between 800px and 1000px
-                      : (ResponsiveBreakpoints.of(context).screenWidth < 1250)
-                      ? 14  // Font size for screens between 1000px and 1250px
+                  fontSize: (ResponsiveBreakpoints
+                      .of(context)
+                      .screenWidth < 550)
+                      ? 10 // Font size for screens smaller than 550px
+                      : (ResponsiveBreakpoints
+                      .of(context)
+                      .screenWidth < 600)
+                      ? 11 // Font size for screens between 550px and 600px
+                      : (ResponsiveBreakpoints
+                      .of(context)
+                      .screenWidth < 700)
+                      ? 12 // Font size for screens between 600px and 700px
+                      : (ResponsiveBreakpoints
+                      .of(context)
+                      .screenWidth < 800)
+                      ? 13 // Font size for screens between 700px and 800px
+                      : (ResponsiveBreakpoints
+                      .of(context)
+                      .screenWidth < 1000)
+                      ? 14 // Font size for screens between 800px and 1000px
+                      : (ResponsiveBreakpoints
+                      .of(context)
+                      .screenWidth < 1250)
+                      ? 14 // Font size for screens between 1000px and 1250px
                       : 14, // Font size for screens larger than 1250px
 
                   fontWeight: FontWeight.w400,
@@ -4795,7 +5710,8 @@ Example 2: Implemented a secure data management system for a financial instituti
   // }
 
 
-  Widget titleDescriptionWidget({required String title, required String description}) {
+  Widget titleDescriptionWidget(
+      {required String title, required String description}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -4804,7 +5720,9 @@ Example 2: Implemented a secure data management system for a financial instituti
           textAlign: TextAlign.left,
           style: GoogleFonts.poppins(
             fontSize:
-            (ResponsiveBreakpoints.of(context).screenWidth <
+            (ResponsiveBreakpoints
+                .of(context)
+                .screenWidth <
                 765)
                 ? 12
                 : 14,
@@ -4820,7 +5738,9 @@ Example 2: Implemented a secure data management system for a financial instituti
           textAlign: TextAlign.justify,
           style: GoogleFonts.poppins(
             fontSize:
-            (ResponsiveBreakpoints.of(context).screenWidth <
+            (ResponsiveBreakpoints
+                .of(context)
+                .screenWidth <
                 765)
                 ? 12
                 : 14,
@@ -4874,15 +5794,23 @@ Example 2: Implemented a secure data management system for a financial instituti
           title,
           textAlign: TextAlign.left,
           style: GoogleFonts.poppins(
-            fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                ? 12  // Font size for screens smaller than 300px
-                : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                ? 14  // Font size for screens between 300px and 400px
-                : (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                ? 16  // Font size for screens between 400px and 575px
-                : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                ? 16  // Font size for screens between 575px and 765px
-                : 18,  // Font size for screens larger than 765px
+            fontSize: (ResponsiveBreakpoints
+                .of(context)
+                .screenWidth < 300)
+                ? 12 // Font size for screens smaller than 300px
+                : (ResponsiveBreakpoints
+                .of(context)
+                .screenWidth < 400)
+                ? 14 // Font size for screens between 300px and 400px
+                : (ResponsiveBreakpoints
+                .of(context)
+                .screenWidth < 575)
+                ? 16 // Font size for screens between 400px and 575px
+                : (ResponsiveBreakpoints
+                .of(context)
+                .screenWidth < 765)
+                ? 16 // Font size for screens between 575px and 765px
+                : 18, // Font size for screens larger than 765px
             fontWeight: FontWeight.w600,
             color: Colors.black,
           ),
@@ -4894,17 +5822,27 @@ Example 2: Implemented a secure data management system for a financial instituti
           description,
           textAlign: TextAlign.left,
           style: GoogleFonts.poppins(
-            fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 300)
-                ? 12  // Font size for screens smaller than 300px
-                : (ResponsiveBreakpoints.of(context).screenWidth < 400)
-                ? 13  // Font size for screens between 300px and 400px
-                : (ResponsiveBreakpoints.of(context).screenWidth < 500)
-                ? 14  // Font size for screens between 400px and 500px
-                : (ResponsiveBreakpoints.of(context).screenWidth < 575)
-                ? 15  // Font size for screens between 500px and 575px
-                : (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                ? 16  // Font size for screens between 575px and 765px
-                : 18,  // Font size for screens larger than 765px
+            fontSize: (ResponsiveBreakpoints
+                .of(context)
+                .screenWidth < 300)
+                ? 12 // Font size for screens smaller than 300px
+                : (ResponsiveBreakpoints
+                .of(context)
+                .screenWidth < 400)
+                ? 13 // Font size for screens between 300px and 400px
+                : (ResponsiveBreakpoints
+                .of(context)
+                .screenWidth < 500)
+                ? 14 // Font size for screens between 400px and 500px
+                : (ResponsiveBreakpoints
+                .of(context)
+                .screenWidth < 575)
+                ? 15 // Font size for screens between 500px and 575px
+                : (ResponsiveBreakpoints
+                .of(context)
+                .screenWidth < 765)
+                ? 16 // Font size for screens between 575px and 765px
+                : 18, // Font size for screens larger than 765px
             fontWeight: FontWeight.w300,
             color: Colors.black.withOpacity(0.7),
           ),
@@ -4936,10 +5874,9 @@ Example 2: Implemented a secure data management system for a financial instituti
     );
   }
 
-  Widget navButton(
-      {required String title,
-      required VoidCallback onPressed,
-      Color? textColor}) {
+  Widget navButton({required String title,
+    required VoidCallback onPressed,
+    Color? textColor}) {
     return InkWell(
       onTap: onPressed,
       child: Container(
@@ -4950,10 +5887,14 @@ Example 2: Implemented a secure data management system for a financial instituti
           children: [
             Text(
               title,
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontSize: 16,
-                    color: textColor ?? Colors.white,
-                  ),
+              style: Theme
+                  .of(context)
+                  .textTheme
+                  .titleMedium
+                  ?.copyWith(
+                fontSize: 16,
+                color: textColor ?? Colors.white,
+              ),
             ),
           ],
         ),
@@ -4961,22 +5902,29 @@ Example 2: Implemented a secure data management system for a financial instituti
     );
   }
 
-  Widget serviceWidget(
-      {required VoidCallback onPressed,
-      required String title,
-      required String content,
-      required Widget icon}) {
+  Widget serviceWidget({required VoidCallback onPressed,
+    required String title,
+    required String content,
+    required Widget icon}) {
     return Container(
-      height: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
-          ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
-          ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
-          ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+      height: (ResponsiveBreakpoints
+          .of(context)
+          .screenWidth < 1270)
+          ? (ResponsiveBreakpoints
+          .of(context)
+          .screenWidth < 985)
+          ? (ResponsiveBreakpoints
+          .of(context)
+          .screenWidth < 765)
+          ? (ResponsiveBreakpoints
+          .of(context)
+          .screenWidth < 575)
           ? 632 // Updated from 586
           : 877 // Updated from 815
           : 700 // Updated from 650
           : 890 // Updated from 826
-          : 741, // Updated from 706
-
+          : 741,
+      // Updated from 706
 
 
       // height: (ResponsiveBreakpoints.of(context).screenWidth < 1200)
@@ -4988,21 +5936,34 @@ Example 2: Implemented a secure data management system for a financial instituti
       //             : 264
       //         : 336
       //     : 286,
-      width: (ResponsiveBreakpoints.of(context).screenWidth < 1270)
-          ? (ResponsiveBreakpoints.of(context).screenWidth < 985)
-          ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
-          ? (ResponsiveBreakpoints.of(context).screenWidth < 575)
+      width: (ResponsiveBreakpoints
+          .of(context)
+          .screenWidth < 1270)
+          ? (ResponsiveBreakpoints
+          .of(context)
+          .screenWidth < 985)
+          ? (ResponsiveBreakpoints
+          .of(context)
+          .screenWidth < 765)
+          ? (ResponsiveBreakpoints
+          .of(context)
+          .screenWidth < 575)
           ? 905 // 550 adjusted to 905
           : 400 // 243 adjusted to 400
           : 548 // 333 adjusted to 548
           : 494 // 300 adjusted to 494
-          : 605, // 380 adjusted to 625
+          : 605,
+      // 380 adjusted to 625
 
       padding: EdgeInsets.symmetric(
           horizontal:
-              (ResponsiveBreakpoints.of(context).screenWidth < 575) ? 23 : 30,
+          (ResponsiveBreakpoints
+              .of(context)
+              .screenWidth < 575) ? 23 : 30,
           vertical:
-              (ResponsiveBreakpoints.of(context).screenWidth < 575) ? 32 : 40),
+          (ResponsiveBreakpoints
+              .of(context)
+              .screenWidth < 575) ? 32 : 40),
       decoration: BoxDecoration(
         color: Colors.grey.withOpacity(0.05),
         borderRadius: BorderRadius.circular(6),
@@ -5013,10 +5974,14 @@ Example 2: Implemented a secure data management system for a financial instituti
           children: [
             Center(child: icon),
             SizedBox(
-              height: (ResponsiveBreakpoints.of(context).screenWidth < 985)
-                  ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                      ? 22
-                      : 10
+              height: (ResponsiveBreakpoints
+                  .of(context)
+                  .screenWidth < 985)
+                  ? (ResponsiveBreakpoints
+                  .of(context)
+                  .screenWidth < 765)
+                  ? 22
+                  : 10
                   : 22,
             ),
             Center(
@@ -5031,17 +5996,23 @@ Example 2: Implemented a secure data management system for a financial instituti
               ),
             ),
             SizedBox(
-              height: (ResponsiveBreakpoints.of(context).screenWidth < 985)
-                  ? (ResponsiveBreakpoints.of(context).screenWidth < 765)
-                      ? 20
-                      : 8
+              height: (ResponsiveBreakpoints
+                  .of(context)
+                  .screenWidth < 985)
+                  ? (ResponsiveBreakpoints
+                  .of(context)
+                  .screenWidth < 765)
+                  ? 20
+                  : 8
                   : 20,
             ),
             Text(
               content,
               textAlign: TextAlign.left,
               style: GoogleFonts.poppins(
-                fontSize: (ResponsiveBreakpoints.of(context).screenWidth < 765)
+                fontSize: (ResponsiveBreakpoints
+                    .of(context)
+                    .screenWidth < 765)
                     ? 13
                     : 15,
                 fontWeight: FontWeight.w300,
