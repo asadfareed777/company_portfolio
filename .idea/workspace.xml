@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bbcd18e6-3b2b-428a-a7fe-761c4ef96e64" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.last_build_id" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/AssetManifest.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/AssetManifest.bin.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/AssetManifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/FontManifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/NOTICES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/ai.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/ai_app_bg.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/about_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/about_image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/alarm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/android_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/apple_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/artificial_intelligence.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/automotive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/bg-home-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/brand_one_image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/brand_three_image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/brand_two_image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/car.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/chat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/client_centric_approach.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/coffee.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/contact_us.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/cui.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/customized_solutions.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/customized_solutions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/details_page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/doctor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/e-commerce.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/education.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/finance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/flutter_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/health_care.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/img_ai_blue.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/img_ai_new.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/img_facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/img_x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/img_youtube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/logo-InvertedTechnology-white.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/logo-dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/logoInvertedTechnology.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/logo_symbol_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/logo_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/player.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/portfolio_five_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/portfolio_four_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/portfolio_one.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/portfolio_one_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/portfolio_three.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/portfolio_three_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/portfolio_two.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/portfolio_two_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/project_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/proven_track_record.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/proven_track_record.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/quran_app.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/real_estate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/recipe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/secure_solutions.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/task.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/triange_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/web_development.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/svgs/details_page.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/svgs/ic_business_stratagy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/svgs/ic_heart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/svgs/ic_marketing_reporting.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/svgs/ic_mobile_app_development.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/svgs/ic_website_development.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/MaterialIcons-Regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/cupertino_icons/assets/CupertinoIcons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/flutter_image_compress_web/assets/pica.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/fluttertoast/assets/toastify.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/fluttertoast/assets/toastify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/getwidget/icons/dribble.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/getwidget/icons/facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/getwidget/icons/google.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/getwidget/icons/line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/getwidget/icons/linkedin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/getwidget/icons/pinterest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/getwidget/icons/slack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/getwidget/icons/twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/getwidget/icons/wechat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/getwidget/icons/whatsapp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/packages/getwidget/icons/youtube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/shaders/ink_sparkle.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvaskit/canvaskit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvaskit/canvaskit.js.symbols" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvaskit/canvaskit.wasm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvaskit/chromium/canvaskit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvaskit/chromium/canvaskit.js.symbols" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvaskit/chromium/canvaskit.wasm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvaskit/skwasm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvaskit/skwasm.js.symbols" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvaskit/skwasm.wasm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvaskit/skwasm.worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_service_worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/Icon-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/Icon-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/Icon-maskable-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/Icon-maskable-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.dart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/version.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev-faizan" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;faizanahmedofficial&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/asadfareed777/company_portfolio.git&quot;,
+    &quot;accountId&quot;: &quot;7d4e502a-b282-4f26-b2a6-d1e38135940d&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2nWbTaILuOJm0rSW9GPACw5tjQN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "deployment",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/faiza/StudioProjects/company_portfolio/facial",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\faiza\StudioProjects\company_portfolio\facial" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bbcd18e6-3b2b-428a-a7fe-761c4ef96e64" name="Changes" comment="" />
+      <created>1729091787406</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729091787406</updated>
+    </task>
+    <servers />
+  </component>
+</project>
