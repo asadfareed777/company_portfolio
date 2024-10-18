@@ -70133,13 +70133,13 @@ A.pg.prototype={
 S(a){return A.zb(new A.Un(),B.ac,new A.aI(this.c,this.d,t.Y),t.i)}}
 A.Un.prototype={
 $3(a,b,c){var s=null
-return new A.i_(B.l9,A.yQ("   - Real-time detection and recognition of registered users.\n   - Compares captured facial data with stored records to \n   identify individuals.\n   - Supports various lighting conditions and environments \n   for robust recognition.\n   - Provides feedback to users during the recognition \n   process to ensure accuracy.\n   - Utilizes advanced algorithms to handle variations \n   in facial expressions and poses.",20,B.jd,A.rv(s,s,B.i,s,s,s,s,s,s,s,s,b,s,s,s,s,s,!0,s,s,s,s,s,s,s,2)),s)},
+return new A.i_(B.l9,A.yQ("   - Real-time detection and recognition of registered users.\n   - Compares captured facial data with stored records to \n   identify individuals.\n   - Supports various lighting conditions and environments \n   for robust recognition.\n   - Provides feedback to users during the recognition \n   process to ensure accuracy.\n   - Utilizes advanced algorithms to handle variations \n   in facial expressions and poses.\n   - Anti-spoofing technology prevents recognition through \n   photos or videos.   \n- Works entirely offline with no internet dependency, \n   ensuring secure and fast recognition.",20,B.jd,A.rv(s,s,B.i,s,s,s,s,s,s,s,s,b,s,s,s,s,s,!0,s,s,s,s,s,s,s,2)),s)},
 $S:381}
 A.EV.prototype={
 S(a){var s=null,r=A.mF(20),q=A.a([B.h8,B.bP],t.t_)
 return A.a_y(!1,s,!0,A.mT(B.aA,A.xW(A.a([A.yQ("Download APK",s,s,A.by(a).p2.ax.a5x(B.i,B.aM,1.2)),B.O1,B.Fb],t.E),B.aw,B.bj),B.H,s,s,new A.et(s,s,s,r,B.GE,new A.k0(B.xp,B.xo,B.a7,q,s,s),B.aY),s,s,B.Ew,s),s,!0,s,s,s,s,s,s,s,s,s,new A.Xb(),s)}}
 A.Xb.prototype={
-$0(){A.Cr(A.fR("https://drive.google.com/file/d/1KqltoGi_tPx53JC9naAvaCjBcCpXjo1y/view?usp=sharing",0,null))},
+$0(){A.Cr(A.fR("https://drive.google.com/file/d/1laFPAUaWVcTLNAfRYWZMMfpiC3Qc1p6K/view?usp=sharing",0,null))},
 $S:0}
 A.nI.prototype={
 S(a){return new A.iC(new A.a3L(this),null)}}
