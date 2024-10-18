@@ -70133,7 +70133,7 @@ A.pg.prototype={
 S(a){return A.zb(new A.Un(),B.ac,new A.aI(this.c,this.d,t.Y),t.i)}}
 A.Un.prototype={
 $3(a,b,c){var s=null
-return new A.i_(B.l9,A.yQ("   - Real-time detection and recognition of registered users.\n   - Compares captured facial data with stored records to \n   identify individuals.\n   - Supports various lighting conditions and environments \n   for robust recognition.\n   - Provides feedback to users during the recognition \n   process to ensure accuracy.\n   - Utilizes advanced algorithms to handle variations \n   in facial expressions and poses.\n   - Anti-spoofing technology prevents recognition through \n   photos or videos.   \n- Works entirely offline with no internet dependency, \n   ensuring secure and fast recognition.",20,B.jd,A.rv(s,s,B.i,s,s,s,s,s,s,s,s,b,s,s,s,s,s,!0,s,s,s,s,s,s,s,2)),s)},
+return new A.i_(B.l9,A.yQ("   - Real-time detection and recognition of registered users.\n   - Compares captured facial data with stored records to \n   identify individuals.\n   - Supports various lighting conditions and environments \n   for robust recognition.\n   - Provides feedback to users during the recognition \n   process to ensure accuracy.\n   - Utilizes advanced algorithms to handle variations \n   in facial expressions and poses.\n   - Anti-spoofing technology prevents recognition through \n   photos or videos.\n   - Works entirely offline with no internet dependency, \n   ensuring secure and fast recognition.",20,B.jd,A.rv(s,s,B.i,s,s,s,s,s,s,s,s,b,s,s,s,s,s,!0,s,s,s,s,s,s,s,2)),s)},
 $S:381}
 A.EV.prototype={
 S(a){var s=null,r=A.mF(20),q=A.a([B.h8,B.bP],t.t_)
